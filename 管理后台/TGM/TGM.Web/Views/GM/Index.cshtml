@@ -1,0 +1,161 @@
+﻿@using TGM.API.Entity.Model
+@{
+    ViewBag.Title = "封号/冻结";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var platforms = ViewBag.Platform as List<Platform>;
+}
+
+@{
+    var error = ViewBag.Error;
+}
+@if (error < 1)
+{
+    <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <center> @ViewBag.Message</center>
+    </div>
+}
+
+@section css {}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="~/Home">首页</a>
+                    <span class="divider">/</span>
+                    <a href="~/GM/Index">封号/冻结</a>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+
+<html>
+<title></title>
+<body>
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN BASIC PORTLET-->
+            <div class="widget red">
+                <div class="widget-title">
+                    <h4><i class="icon-reorder"></i> 玩家封号/冻结</h4>
+                    <span class="tools"></span>
+                </div>
+                @using (Html.BeginForm("Index", "GM", FormMethod.Post))
+                {
+                    <div class="widget-body">
+                        <table class="table table-striped table-hover table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>服务器</td>
+                                    <td>
+                                        <select class="input-large " tabindex="1" name="run_platform" id="run_platform">
+                                            <option>--请选择--</option>
+                                            @foreach (var item in platforms)
+                                            {
+                                                <option value="@item.id">@item.name</option>
+                                            }
+                                        </select>
+                                        <select class="input-large " tabindex="1" name="server_select" id="server_select"></select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>玩家</td>
+                                    <td>
+                                        <select class="input-large " tabindex="1" name="search_type" id="search_type">
+                                            <option value="1">玩家账号</option>
+                                            <option value="2">玩家名称</option>
+                                        </select>
+                                        <input id="search" type="text" name="search" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="70px">操作类型</td>
+                                    <td>
+                                        <select class="input-large" tabindex="1" name="silent_type" id="silent_type">
+                                            <option value="1">冻结</option>
+                                            <option value="2">封号</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>时间限制</td>
+                                    <td>
+                                        <input id="time" type="text" class="input-medium" name="time" />  分钟
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>操作原因</td>
+                                    <td colspan="2">
+                                        <textarea id="reason" class="input-xxlarge" rows="3" name="reason" style="resize: none" title="请输入本次操作的原因"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><button type="submit" class="btn btn-success">确认提交</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                <!-- END BASIC PORTLET-->
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+@section Scripts {
+    <script type="text/javascript">
+
+        //绑定选择平台下来列表事件
+        $("#run_platform").change(function () {
+            get_server();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function get_server(obj) {
+            $("#server_select").empty(); //清空第二个下拉框数据
+            var sv = $("#run_platform").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Common/AjaxServer?id=" + sv,
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#server_select").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+        $("#silent_type").change(function () {
+            var type = $("#silent_type").find("option:selected").val();
+            if (type == 1) {
+                $("#time").removeAttr("disabled");
+            } else {
+                $("#time").attr("disabled", 'true');
+            }
+        });
+
+    </script>
+}

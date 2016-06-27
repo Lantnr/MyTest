@@ -1,0 +1,872 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CD2FD3E-C8AA-4AED-8783-4061BC97222C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGG.Core</RootNamespace>
+    <AssemblyName>TGG.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\TGG\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\TGG\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluorineFx, Version=1.0.0.17, Culture=neutral, PublicKeyToken=4007192d7d899646, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\FluorineFx\Net40\FluorineFx.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="NewLife.Core">
+      <HintPath>..\Reference\XCode\NewLife.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XCode">
+      <HintPath>..\Reference\XCode\XCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Solution Items\TGGAssemblyInfo.cs">
+      <Link>Properties\TGGAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AMF\AMFConvert.cs" />
+    <Compile Include="AMF\AmfEntityConvert.cs" />
+    <Compile Include="AMF\AutoParseASObject.cs" />
+    <Compile Include="AMF\Protocol.cs" />
+    <Compile Include="Base\BaseAppraise.cs" />
+    <Compile Include="Base\BaseArenaRankReward.cs" />
+    <Compile Include="Base\BaseBuildingReward.cs" />
+    <Compile Include="Base\BaseBuildProbability.cs" />
+    <Compile Include="Base\BaseBuyPower.cs" />
+    <Compile Include="Base\BaseCollectGoodsBuild.cs" />
+    <Compile Include="Base\BaseCollectGoodsSiege.cs" />
+    <Compile Include="Base\BaseDamingLog.cs" />
+    <Compile Include="Base\BaseEntryPointSiege.cs" />
+    <Compile Include="Base\BaseEquipAttRate.cs" />
+    <Compile Include="Base\BaseEquipRate.cs" />
+    <Compile Include="Base\BaseFamilyLevel.cs" />
+    <Compile Include="Base\BaseFamilyLog.cs" />
+    <Compile Include="Base\BaseFamilyPost.cs" />
+    <Compile Include="Base\BaseIdentity.cs" />
+    <Compile Include="Base\BaseLifeSkillEffect.cs" />
+    <Compile Include="Base\BaseFightSkillEffect.cs" />
+    <Compile Include="Base\BaseFightSkill.cs" />
+    <Compile Include="Base\BaseLifeSkill.cs" />
+    <Compile Include="Base\BaseModuleOpen.cs" />
+    <Compile Include="Base\BaseNpcHire.cs" />
+    <Compile Include="Base\BaseNpcMonster.cs" />
+    <Compile Include="Base\BaseNpcSiege.cs" />
+    <Compile Include="Base\BasePersonalNpc.cs" />
+    <Compile Include="Base\BaseRecruitRate.cs" />
+    <Compile Include="Base\BaseRoleGroup.cs" />
+    <Compile Include="Base\BaseRoleHome.cs" />
+    <Compile Include="Base\BaseRoleTitle.cs" />
+    <Compile Include="Base\BaseSiege.cs" />
+    <Compile Include="Base\BaseSiegeBossReward.cs" />
+    <Compile Include="Base\BaseSiegeReward.cs" />
+    <Compile Include="Base\BaseSpirit.cs" />
+    <Compile Include="Base\BaseStealProb.cs" />
+    <Compile Include="Base\BaseTaskNpc.cs" />
+    <Compile Include="Base\BaseTaskVocation.cs" />
+    <Compile Include="Base\BaseTaskVocationRd.cs" />
+    <Compile Include="Base\BaseTowerEloquence.cs" />
+    <Compile Include="Base\BaseTowerEnemy.cs" />
+    <Compile Include="Base\BaseTowerGame.cs" />
+    <Compile Include="Base\BaseTowerPass.cs" />
+    <Compile Include="Base\BaseTowerTea.cs" />
+    <Compile Include="Base\BaseTrain.cs" />
+    <Compile Include="Base\BaseVip.cs" />
+    <Compile Include="Base\BaseVocation.cs" />
+    <Compile Include="Base\BaseYinEffect.cs" />
+    <Compile Include="Base\BaseNpcBuild.cs" />
+    <Compile Include="Base\BaseCopyFamePass.cs" />
+    <Compile Include="Base\BaseEquip.cs" />
+    <Compile Include="Base\BaseGoodsPrice.cs" />
+    <Compile Include="Base\BaseNpcArmy.cs" />
+    <Compile Include="Base\BaseNpcRole.cs" />
+    <Compile Include="Base\BaseRoleLvUpdate.cs" />
+    <Compile Include="Base\BaseGoods.cs" />
+    <Compile Include="Base\BasePart.cs" />
+    <Compile Include="Base\BaseProp.cs" />
+    <Compile Include="Base\BaseRoleBornPoint.cs" />
+    <Compile Include="Base\BaseRoleInfo.cs" />
+    <Compile Include="Base\BaseRule.cs" />
+    <Compile Include="Base\BaseScene.cs" />
+    <Compile Include="Base\BaseTaskMain.cs" />
+    <Compile Include="Base\BaseTing.cs" />
+    <Compile Include="Base\BaseYin.cs" />
+    <Compile Include="Base\BaseTaskVocationProb.cs" />
+    <Compile Include="Base\BaseYouYiYuan.cs" />
+    <Compile Include="Base\BaseYouYiYuanReward.cs" />
+    <Compile Include="Common\EntityToVo.cs" />
+    <Compile Include="Common\FightCommon.cs" />
+    <Compile Include="Common\RandomRole.cs" />
+    <Compile Include="Common\TaskCommon.cs" />
+    <Compile Include="Common\Util\NEval.cs" />
+    <Compile Include="Entity\AttributeItem.cs" />
+    <Compile Include="Entity\code.Biz.cs">
+      <DependentUpon>code.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\code.cs" />
+    <Compile Include="Entity\Fight.cs" />
+    <Compile Include="Entity\FightPersonal.cs" />
+    <Compile Include="Entity\FightRole.cs" />
+    <Compile Include="Entity\FightRoleBuff.cs" />
+    <Compile Include="Entity\FightSkillEffects.cs" />
+    <Compile Include="Entity\FightStateType.cs" />
+    <Compile Include="Entity\GameItem.cs" />
+    <Compile Include="Entity\tg_daming_log.Biz.cs" />
+    <Compile Include="Entity\tg_daming_log.Biz.LDY.cs" />
+    <Compile Include="Entity\tg_daming_log.Biz.LZH.cs" />
+    <Compile Include="Entity\tg_daming_log.cs" />
+    <Compile Include="Entity\tg_game.Biz.cs" />
+    <Compile Include="Entity\tg_game.Biz.LGY.cs" />
+    <Compile Include="Entity\tg_game.Biz.LZH.cs" />
+    <Compile Include="Entity\tg_game.cs" />
+    <Compile Include="Entity\tg_log_operate.Biz.cs" />
+    <Compile Include="Entity\tg_log_operate.cs" />
+    <Compile Include="Entity\tg_log_run.Biz.cs" />
+    <Compile Include="Entity\tg_log_run.cs" />
+    <Compile Include="Entity\tg_module_open.Biz.cs">
+      <DependentUpon>tg_module_open.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_module_open.Biz.XLJ.cs">
+      <DependentUpon>tg_module_open.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_module_open.cs" />
+    <Compile Include="Entity\tg_task.Biz.LGY.cs" />
+    <Compile Include="Entity\tg_user_area.Biz.cs">
+      <DependentUpon>tg_user_area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_area.Biz.XLJ.cs">
+      <DependentUpon>tg_user_area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_area.cs" />
+    <Compile Include="Entity\tg_user_extend.Biz.LGR.cs">
+      <DependentUpon>tg_user_extend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_temp.Biz.cs" />
+    <Compile Include="Entity\tg_user_temp.cs" />
+    <Compile Include="Entity\tg_user_vip.Biz.cs">
+      <DependentUpon>tg_user_vip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_vip.Biz.XLJ.cs">
+      <DependentUpon>tg_user_vip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_vip.cs" />
+    <Compile Include="Entity\view_ranking_coin.Biz.cs">
+      <DependentUpon>view_ranking_coin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_ranking_coin.Biz.LGY.cs">
+      <DependentUpon>view_ranking_coin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_ranking_coin.cs" />
+    <Compile Include="Entity\view_ranking_game.Biz.cs" />
+    <Compile Include="Entity\view_ranking_game.Biz.LGR.cs" />
+    <Compile Include="Entity\view_ranking_game.cs" />
+    <Compile Include="Entity\view_ranking_honor.Biz.cs">
+      <DependentUpon>view_ranking_honor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_ranking_honor.Biz.LGY.cs">
+      <DependentUpon>view_ranking_honor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_ranking_honor.cs" />
+    <Compile Include="Entity\Window.cs" />
+    <Compile Include="Enum\Command\GameCommand.cs" />
+    <Compile Include="Enum\Command\GuideCommand.cs" />
+    <Compile Include="Enum\Command\WorkCommand.cs" />
+    <Compile Include="Enum\Type\BusinessType.cs" />
+    <Compile Include="Enum\Type\CDType.cs" />
+    <Compile Include="Enum\Type\DaMingRewardType.cs" />
+    <Compile Include="Enum\Type\DaMingType.cs" />
+    <Compile Include="Enum\Type\EquipPositionType.cs" />
+    <Compile Include="Enum\Type\ExitType.cs" />
+    <Compile Include="Enum\Type\FCMType.cs" />
+    <Compile Include="Enum\Type\FightRivalType.cs" />
+    <Compile Include="Enum\Type\FightShotType.cs" />
+    <Compile Include="Enum\Type\FightSkillType.cs" />
+    <Compile Include="Common\Util\ConcurrentQueueExtensions.cs" />
+    <Compile Include="Common\Util\CryptoHelper.cs" />
+    <Compile Include="Common\Util\EnumerableExtender.cs" />
+    <Compile Include="Common\Util\Expressions.cs" />
+    <Compile Include="Common\Randoms\Controller.cs" />
+    <Compile Include="Common\Randoms\Objects.cs" />
+    <Compile Include="Common\Randoms\ObjectsDouble.cs" />
+    <Compile Include="Common\Randoms\RandomSingle.cs" />
+    <Compile Include="Common\Randoms\RNG.cs" />
+    <Compile Include="Common\RuleConvert.cs" />
+    <Compile Include="Common\Scene.cs" />
+    <Compile Include="Common\Util\CommonHelper.cs" />
+    <Compile Include="Common\Randoms\LoadedDie.cs" />
+    <Compile Include="Common\Util\UConvert.cs" />
+    <Compile Include="Entity\ActivityItem.cs" />
+    <Compile Include="Entity\BagItem.cs" />
+    <Compile Include="Entity\BuildActivity.cs" />
+    <Compile Include="Entity\FightItem.cs" />
+    <Compile Include="Entity\BusinessOrder.cs" />
+    <Compile Include="Entity\ComandItem.cs" />
+    <Compile Include="Entity\GlobalGoods.cs" />
+    <Compile Include="Entity\log.cs" />
+    <Compile Include="Entity\Siege.cs" />
+    <Compile Include="Entity\ModuleCommand.cs" />
+    <Compile Include="Entity\Ninjutsu_position.cs" />
+    <Compile Include="Entity\Player.cs" />
+    <Compile Include="Entity\Prison_point.cs" />
+    <Compile Include="Entity\ResourcesItem.cs" />
+    <Compile Include="Entity\RoleItem.cs" />
+    <Compile Include="Entity\TaskItem.cs" />
+    <Compile Include="Entity\tg_activity_building.Biz.cs">
+      <DependentUpon>tg_activity_building.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_activity_building.cs" />
+    <Compile Include="Entity\tg_activity_building.Biz.LDY.cs">
+      <DependentUpon>tg_activity_building.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_arena.Biz.cs">
+      <DependentUpon>tg_arena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_arena.Biz.LGR.cs">
+      <DependentUpon>tg_arena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_arena.cs" />
+    <Compile Include="Entity\tg_arena_reports.Biz.cs">
+      <DependentUpon>tg_arena_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_arena_reports.Biz.LGR.cs">
+      <DependentUpon>tg_arena_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_arena_reports.cs" />
+    <Compile Include="Entity\tg_bag.Biz.cs">
+      <DependentUpon>tg_bag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_bag.Biz.LGR.cs">
+      <DependentUpon>tg_bag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_bag.Biz.LGY.cs">
+      <DependentUpon>tg_bag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_bag.Biz.LZH.cs">
+      <DependentUpon>tg_bag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_bag.Biz.XLJ.cs">
+      <DependentUpon>tg_bag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_bag.cs" />
+    <Compile Include="Entity\tg_bag_log.Biz.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>tg_bag_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_bag_log.cs" />
+    <Compile Include="Entity\tg_car.Biz.cs">
+      <DependentUpon>tg_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_car.Biz.LGR.cs">
+      <DependentUpon>tg_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_car.Biz.LGY.cs">
+      <DependentUpon>tg_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_car.Biz.LZH.cs">
+      <DependentUpon>tg_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_car.Biz.XLJ.cs">
+      <DependentUpon>tg_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_car.cs" />
+    <Compile Include="Entity\tg_duplicate_checkpoint.Biz.cs">
+      <DependentUpon>tg_duplicate_checkpoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_duplicate_checkpoint.Biz.LGY.cs">
+      <DependentUpon>tg_duplicate_checkpoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_duplicate_checkpoint.Biz.LZH.cs">
+      <DependentUpon>tg_duplicate_checkpoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_duplicate_checkpoint.cs" />
+    <Compile Include="Entity\tg_duplicate_shot.Biz.cs">
+      <DependentUpon>tg_duplicate_shot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_duplicate_shot.Biz.XLJ.cs">
+      <DependentUpon>tg_duplicate_shot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_duplicate_shot.cs" />
+    <Compile Include="Entity\tg_family.Biz.cs">
+      <DependentUpon>tg_family.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_family.Biz.LGY.cs">
+      <DependentUpon>tg_family.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_family.cs" />
+    <Compile Include="Entity\tg_family_apply.Biz.cs">
+      <DependentUpon>tg_family_apply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_family_apply.Biz.LGY.cs">
+      <DependentUpon>tg_family_apply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_family_apply.cs" />
+    <Compile Include="Entity\tg_family_log.Biz.cs">
+      <DependentUpon>tg_family_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_family_log.Biz.LGY.cs">
+      <DependentUpon>tg_family_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_family_log.cs" />
+    <Compile Include="Entity\tg_family_member.Biz.cs">
+      <DependentUpon>tg_family_member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_family_member.Biz.LGY.cs">
+      <DependentUpon>tg_family_member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_family_member.cs" />
+    <Compile Include="Entity\tg_fight_personal.Biz.cs">
+      <DependentUpon>tg_fight_personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_fight_personal.cs" />
+    <Compile Include="Entity\tg_fight_yin.Biz.cs">
+      <DependentUpon>tg_fight_yin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_fight_yin.Biz.LGR.cs">
+      <DependentUpon>tg_fight_yin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_fight_yin.cs" />
+    <Compile Include="Entity\tg_friends.Biz.cs">
+      <DependentUpon>tg_friends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_friends.Biz.LGR.cs">
+      <DependentUpon>tg_friends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_friends.Biz.XLJ.cs">
+      <DependentUpon>tg_friends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_friends.cs" />
+    <Compile Include="Entity\tg_gold_log.Biz.cs">
+      <DependentUpon>tg_gold_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_gold_log.cs" />
+    <Compile Include="Entity\tg_goods_business.Biz.cs">
+      <DependentUpon>tg_goods_business.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_goods_business.Biz.LGY.cs">
+      <DependentUpon>tg_goods_business.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_goods_business.cs" />
+    <Compile Include="Entity\tg_goods_item.Biz.cs">
+      <DependentUpon>tg_goods_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_goods_item.Biz.LGY.cs">
+      <DependentUpon>tg_goods_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_goods_item.Biz.LZH.cs">
+      <DependentUpon>tg_goods_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_goods_item.Biz.XLJ.cs">
+      <DependentUpon>tg_goods_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_goods_item.cs" />
+    <Compile Include="Entity\tg_messages.Biz.cs">
+      <DependentUpon>tg_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_messages.Biz.LGR.cs">
+      <DependentUpon>tg_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_messages.Biz.XLJ.cs">
+      <DependentUpon>tg_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_messages.cs" />
+    <Compile Include="Entity\tg_prison.Biz.cs">
+      <DependentUpon>tg_prison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_prison.Biz.LDY.cs">
+      <DependentUpon>tg_prison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_prison.cs" />
+    <Compile Include="Entity\tg_prison_messages.Biz.cs">
+      <DependentUpon>tg_prison_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_prison_messages.Biz.LDY.cs">
+      <DependentUpon>tg_prison_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_prison_messages.cs" />
+    <Compile Include="Entity\tg_role.Biz.cs">
+      <DependentUpon>tg_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role.Biz.LDY.cs">
+      <DependentUpon>tg_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role.Biz.LGR.cs">
+      <DependentUpon>tg_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role.Biz.LGY.cs">
+      <DependentUpon>tg_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role.Biz.LZH.cs">
+      <DependentUpon>tg_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role.Biz.XLJ.cs">
+      <DependentUpon>tg_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role.cs" />
+    <Compile Include="Entity\tg_role_fight_skill.Biz.cs">
+      <DependentUpon>tg_role_fight_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_fight_skill.Biz.LGY.cs">
+      <DependentUpon>tg_role_fight_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_fight_skill.cs" />
+    <Compile Include="Entity\tg_role_life_skill.Biz.cs">
+      <DependentUpon>tg_role_life_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_life_skill.Biz.LGY.cs">
+      <DependentUpon>tg_role_life_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_life_skill.Biz.LZH.cs">
+      <DependentUpon>tg_role_life_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_life_skill.Biz.XLJ.cs">
+      <DependentUpon>tg_role_life_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_life_skill.cs" />
+    <Compile Include="Entity\tg_role_fight_skill.Biz.LGR.cs">
+      <DependentUpon>tg_role_fight_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_fight_skill.Biz.LZH.cs">
+      <DependentUpon>tg_role_fight_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_recruit.Biz.cs">
+      <DependentUpon>tg_role_recruit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_recruit.Biz.LGR.cs">
+      <DependentUpon>tg_role_recruit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_recruit.cs" />
+    <Compile Include="Entity\tg_role_title.Biz.cs">
+      <DependentUpon>tg_role_title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_title.Biz.LZH.cs">
+      <DependentUpon>tg_role_title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_role_title.cs" />
+    <Compile Include="Entity\tg_scene.Biz.cs">
+      <DependentUpon>tg_scene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_scene.Biz.LDY.cs">
+      <DependentUpon>tg_scene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_scene.Biz.XLJ.cs">
+      <DependentUpon>tg_scene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_scene.cs" />
+    <Compile Include="Entity\tg_system_notice.Biz.cs">
+      <DependentUpon>tg_system_notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_system_notice.Biz.LGR.cs">
+      <DependentUpon>tg_system_notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_system_notice.cs" />
+    <Compile Include="Entity\tg_task.Biz.cs">
+      <DependentUpon>tg_task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_task.Biz.XLJ.cs">
+      <DependentUpon>tg_task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_task.cs" />
+    <Compile Include="Entity\tg_train_home.Biz.cs">
+      <DependentUpon>tg_train_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_train_home.Biz.LZH.cs">
+      <DependentUpon>tg_train_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_train_home.cs" />
+    <Compile Include="Entity\tg_train_role.Biz.cs">
+      <DependentUpon>tg_train_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_train_role.Biz.LGY.cs">
+      <DependentUpon>tg_train_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_train_role.cs" />
+    <Compile Include="Entity\tg_user.Biz.cs">
+      <DependentUpon>tg_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user.Biz.LGR.cs">
+      <DependentUpon>tg_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user.Biz.LGY.cs">
+      <DependentUpon>tg_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user.cs" />
+    <Compile Include="Entity\tg_user_extend.Biz.cs">
+      <DependentUpon>tg_user_extend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_extend.Biz.LGY.cs">
+      <DependentUpon>tg_user_extend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_extend.Biz.LZH.cs">
+      <DependentUpon>tg_user_extend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_extend.Biz.XLJ.cs">
+      <DependentUpon>tg_user_extend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_extend.cs" />
+    <Compile Include="Entity\tg_user_extend.Biz.LDY.cs">
+      <DependentUpon>tg_user_extend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_login_log.Biz.cs">
+      <DependentUpon>tg_user_login_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_login_log.Biz.LGY.cs">
+      <DependentUpon>tg_user_login_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_login_log.Biz.XLJ.cs">
+      <DependentUpon>tg_user_login_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_login_log.cs" />
+    <Compile Include="Entity\tg_user_ting.Biz.cs">
+      <DependentUpon>tg_user_ting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_ting.Biz.LGY.cs">
+      <DependentUpon>tg_user_ting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_ting.Biz.LZH.cs">
+      <DependentUpon>tg_user_ting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_ting.cs" />
+    <Compile Include="Entity\tg_user_title.Biz.cs">
+      <DependentUpon>tg_user_title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tg_user_title.cs" />
+    <Compile Include="Entity\view_arena_ranking.Biz.cs">
+      <DependentUpon>view_arena_ranking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_arena_ranking.Biz.LGR.cs">
+      <DependentUpon>view_arena_ranking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_arena_ranking.cs" />
+    <Compile Include="Entity\view_arena_report.Biz.cs">
+      <DependentUpon>view_arena_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_arena_report.Biz.LGR.cs">
+      <DependentUpon>view_arena_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_arena_report.cs" />
+    <Compile Include="Entity\view_messages.Biz.cs">
+      <DependentUpon>view_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_messages.Biz.LGR.cs">
+      <DependentUpon>view_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_messages.cs" />
+    <Compile Include="Entity\view_role.Biz.cs">
+      <DependentUpon>view_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_role.Biz.LZH.cs">
+      <DependentUpon>view_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_role.Biz.XLJ.cs">
+      <DependentUpon>view_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_role.cs" />
+    <Compile Include="Entity\view_role.Biz.LGR.cs">
+      <DependentUpon>view_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_scene_user.Biz.cs">
+      <DependentUpon>view_scene_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_scene_user.Biz.LDY.cs">
+      <DependentUpon>view_scene_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_scene_user.cs" />
+    <Compile Include="Entity\view_ting_not_car.Biz.cs">
+      <DependentUpon>view_ting_not_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_ting_not_car.Biz.LGR.cs">
+      <DependentUpon>view_ting_not_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_ting_not_car.cs" />
+    <Compile Include="Entity\view_user_role_family_apply.Biz.cs">
+      <DependentUpon>view_user_role_family_apply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_user_role_family_apply.Biz.LGY.cs">
+      <DependentUpon>view_user_role_family_apply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_user_role_family_apply.cs" />
+    <Compile Include="Entity\view_user_role_family_member.Biz.cs">
+      <DependentUpon>view_user_role_family_member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_user_role_family_member.Biz.LGY.cs">
+      <DependentUpon>view_user_role_family_member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_user_role_family_member.cs" />
+    <Compile Include="Entity\view_user_role_friend.Biz.cs">
+      <DependentUpon>view_user_role_friend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_user_role_friend.Biz.XLJ.cs">
+      <DependentUpon>view_user_role_friend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_user_role_friend.cs" />
+    <Compile Include="Entity\view_user_role_task.Biz.cs">
+      <DependentUpon>view_user_role_task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_user_role_task.Biz.LDY.cs">
+      <DependentUpon>view_user_role_task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\view_user_role_task.cs" />
+    <Compile Include="Enum\Command\AppraiseCommand.cs" />
+    <Compile Include="Enum\Command\ArenaCommand.cs" />
+    <Compile Include="Enum\Command\BuildingCommand.cs" />
+    <Compile Include="Enum\Command\BusinessCommand.cs" />
+    <Compile Include="Enum\Command\ChatsCommand.cs" />
+    <Compile Include="Enum\Command\DuplicateCommand.cs" />
+    <Compile Include="Enum\Command\EquipCommand.cs" />
+    <Compile Include="Enum\Command\FamilyCommand.cs" />
+    <Compile Include="Enum\Command\FightCommand.cs" />
+    <Compile Include="Enum\Command\FriendCommand.cs" />
+    <Compile Include="Enum\Command\HomeCommand.cs" />
+    <Compile Include="Enum\Command\MessageCommand.cs" />
+    <Compile Include="Enum\Command\PrisonCommand.cs" />
+    <Compile Include="Enum\Command\PropCommand.cs" />
+    <Compile Include="Enum\Command\RankingsCommand.cs" />
+    <Compile Include="Enum\Command\RoleCommand.cs" />
+    <Compile Include="Enum\Command\RoleTrainCommand.cs" />
+    <Compile Include="Enum\Command\SceneCommand.cs" />
+    <Compile Include="Enum\Command\SiegeCommand.cs" />
+    <Compile Include="Enum\Command\SingleFightCommand.cs" />
+    <Compile Include="Enum\Command\SkillCommand.cs" />
+    <Compile Include="Enum\Command\TaskCommand.cs" />
+    <Compile Include="Enum\ModuleNumber.cs" />
+    <Compile Include="Enum\Command\UserCommand.cs" />
+    <Compile Include="Enum\Command\NoticeCommand.cs" />
+    <Compile Include="Enum\Command\TitleCommand.cs" />
+    <Compile Include="Enum\Type\ActivityBuildType.cs" />
+    <Compile Include="Enum\Type\ArenaReportType.cs" />
+    <Compile Include="Enum\Type\BuildStepType.cs" />
+    <Compile Include="Enum\Type\DuplicateCardType.cs" />
+    <Compile Include="Enum\Type\DuplicateClearanceType.cs" />
+    <Compile Include="Enum\Type\DuplicateDifficultyType.cs" />
+    <Compile Include="Enum\Type\DuplicateEnemyType.cs" />
+    <Compile Include="Enum\Type\DuplicateRefreshType.cs" />
+    <Compile Include="Enum\Type\DuplicateRightType.cs" />
+    <Compile Include="Enum\Type\DuplicateTargetType.cs" />
+    <Compile Include="Enum\Type\DuplicateTowerType.cs" />
+    <Compile Include="Enum\Type\FamilySalaryReceiveType.cs" />
+    <Compile Include="Enum\Type\GameEnterType.cs" />
+    <Compile Include="Enum\Type\GameResultType.cs" />
+    <Compile Include="Enum\Type\GameRewardType.cs" />
+    <Compile Include="Enum\Type\GameType.cs" />
+    <Compile Include="Enum\Type\GradeType.cs" />
+    <Compile Include="Enum\Type\GuardTaskType.cs" />
+    <Compile Include="Enum\Type\LogType.cs" />
+    <Compile Include="Enum\Type\NoticeStateType.cs" />
+    <Compile Include="Enum\Type\OpenModelType.cs" />
+    <Compile Include="Enum\Type\RankingUserType.cs" />
+    <Compile Include="Enum\Type\RecruitType.cs" />
+    <Compile Include="Enum\Type\RoleCheckType.cs" />
+    <Compile Include="Enum\Type\SalaryStateType.cs" />
+    <Compile Include="Enum\Type\SamllGameType.cs" />
+    <Compile Include="Enum\Type\RecruitStateType.cs" />
+    <Compile Include="Enum\Type\CampType.cs" />
+    <Compile Include="Enum\Type\FamilyApplyType.cs" />
+    <Compile Include="Enum\Type\FamilyLogType.cs" />
+    <Compile Include="Enum\Type\FamilyPositionType.cs" />
+    <Compile Include="Enum\Type\FamilyRightType.cs" />
+    <Compile Include="Enum\Type\InfluenceType.cs" />
+    <Compile Include="Enum\Type\MessageSelectType.cs" />
+    <Compile Include="Enum\Type\ChatsPushType.cs" />
+    <Compile Include="Enum\Type\CarStatusType.cs" />
+    <Compile Include="Enum\Type\ChatsASObjectType.cs" />
+    <Compile Include="Enum\Type\ChatsType.cs" />
+    <Compile Include="Enum\Type\CityVisitType.cs" />
+    <Compile Include="Enum\Type\FightResultType.cs" />
+    <Compile Include="Enum\Type\LifeSkillOrAtt.cs" />
+    <Compile Include="Enum\Type\ActivityRewardType.cs" />
+    <Compile Include="Enum\Type\TaskFightType.cs" />
+    <Compile Include="Enum\Type\TaskKillType.cs" />
+    <Compile Include="Enum\Type\TaskVocationProbType.cs" />
+    <Compile Include="Enum\Type\TaskWatchType.cs" />
+    <Compile Include="Enum\Type\TitleGetType.cs" />
+    <Compile Include="Enum\Type\TitleState.cs" />
+    <Compile Include="Enum\Type\RoleTrainStatusType.cs" />
+    <Compile Include="Enum\Type\EffectRangeType.cs" />
+    <Compile Include="Enum\Type\EquipType.cs" />
+    <Compile Include="Enum\Type\FightingSkillType.cs" />
+    <Compile Include="Enum\Type\FightTargetType.cs" />
+    <Compile Include="Enum\Type\FightType.cs" />
+    <Compile Include="Enum\Type\GoodsType.cs" />
+    <Compile Include="Enum\Type\LifeSkillEffectType.cs" />
+    <Compile Include="Enum\Type\SkillLearnType.cs" />
+    <Compile Include="Enum\Type\LifeSkillType.cs" />
+    <Compile Include="Enum\Type\MessageIsAnnexType.cs" />
+    <Compile Include="Enum\Type\MessageIsReadType.cs" />
+    <Compile Include="Enum\Type\MessageType.cs" />
+    <Compile Include="Enum\Type\PlayerIsOnlineType.cs" />
+    <Compile Include="Enum\Type\ResponseType.cs" />
+    <Compile Include="Enum\Type\ResultType.cs" />
+    <Compile Include="Enum\Type\RoleAttributeType.cs" />
+    <Compile Include="Enum\Type\RoleDataType.cs" />
+    <Compile Include="Enum\Type\LoadStateType.cs" />
+    <Compile Include="Enum\Type\RoleGenreType.cs" />
+    <Compile Include="Enum\Type\RolePersonalSkillType.cs" />
+    <Compile Include="Enum\Type\RoleStateType.cs" />
+    <Compile Include="Enum\Type\SexType.cs" />
+    <Compile Include="Enum\Type\SiegeNpcType.cs" />
+    <Compile Include="Enum\Type\SiegePlayerType.cs" />
+    <Compile Include="Enum\Type\SiegePointType.cs" />
+    <Compile Include="Enum\Type\SiegeResultType.cs" />
+    <Compile Include="Enum\Type\SiegeType.cs" />
+    <Compile Include="Enum\Type\SkillType.cs" />
+    <Compile Include="Enum\Type\SpiritLockType.cs" />
+    <Compile Include="Enum\Type\TaskStateType.cs" />
+    <Compile Include="Enum\Type\TaskStepType.cs" />
+    <Compile Include="Enum\Type\TaskType.cs" />
+    <Compile Include="Enum\Type\TowerStarType.cs" />
+    <Compile Include="Enum\Type\TrainHomeStealType.cs" />
+    <Compile Include="Enum\Type\TrainHomeLimitType.cs" />
+    <Compile Include="Enum\Type\VocationType.cs" />
+    <Compile Include="Enum\Type\YinStateType.cs" />
+    <Compile Include="Global\Variable.BASE.cs">
+      <DependentUpon>Variable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\Variable.GMQ.cs">
+      <DependentUpon>Variable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\Variable.cs" />
+    <Compile Include="Vo\Activity\ActivityOpenVo.cs" />
+    <Compile Include="Vo\Appraise\RoleTaskVo .cs" />
+    <Compile Include="Vo\Arena\ArenaVo.cs" />
+    <Compile Include="Vo\Arena\DekaronPlayerVo.cs" />
+    <Compile Include="Vo\Arena\RankingVo.cs" />
+    <Compile Include="Vo\Arena\ReportVo.cs" />
+    <Compile Include="Vo\Duplicate\TowerPassVo.cs" />
+    <Compile Include="Vo\Family\FamilyApplyVo.cs" />
+    <Compile Include="Vo\Family\FamilyListVo.cs" />
+    <Compile Include="Vo\Family\FamilyLogVo.cs" />
+    <Compile Include="Vo\Family\FamilyMemberVo.cs" />
+    <Compile Include="Vo\Family\FamilyVo.cs" />
+    <Compile Include="Vo\Family\InviteReceiveVo.cs" />
+    <Compile Include="Vo\Fight\BuffVo.cs" />
+    <Compile Include="Vo\Fight\MovesVo.cs" />
+    <Compile Include="Vo\Fight\RoleFightVo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\ProtocolQueue.cs" />
+    <Compile Include="Vo\BaseVo.cs" />
+    <Compile Include="Vo\Business\BusinessCarVo.cs" />
+    <Compile Include="Vo\Business\BusinessGoodsVo.cs" />
+    <Compile Include="Vo\Fight\FightVo.cs" />
+    <Compile Include="Vo\Fight\MatrixVo.cs" />
+    <Compile Include="Vo\Fight\YinVo.cs" />
+    <Compile Include="Vo\Duplicate\ShotVo.cs" />
+    <Compile Include="Vo\Equip\EquipVo.cs" />
+    <Compile Include="Vo\Friend\FriendVo.cs" />
+    <Compile Include="Vo\Games\YouYiyuanVo.cs" />
+    <Compile Include="Vo\Guide\DaMingLingVo.cs" />
+    <Compile Include="Vo\Messages\MessagesVo.cs" />
+    <Compile Include="Vo\Prison\PrisonMessageVo.cs" />
+    <Compile Include="Vo\Prop\PropVo.cs" />
+    <Compile Include="Vo\ProtocolVo.cs" />
+    <Compile Include="Vo\Rankings\UserRankingVo.cs" />
+    <Compile Include="Vo\RewardVo.cs" />
+    <Compile Include="Vo\RoleTrain\NpcMonsterVo.cs" />
+    <Compile Include="Vo\RoleTrain\TrainVo.cs" />
+    <Compile Include="Vo\Role\HomeHireVo.cs" />
+    <Compile Include="Vo\Role\RecruitVo.cs" />
+    <Compile Include="Vo\Role\RoleInfoVo.cs" />
+    <Compile Include="Vo\Role\TitleVo.cs" />
+    <Compile Include="Vo\Role\SkillVo.cs" />
+    <Compile Include="Vo\Scene\SceneElementVo.cs" />
+    <Compile Include="Vo\Scene\ScenePlayerVo.cs" />
+    <Compile Include="Vo\Skill\FightSkillVo.cs" />
+    <Compile Include="Vo\Skill\LifeSkillVo.cs" />
+    <Compile Include="Vo\Task\VocationTaskVo.cs" />
+    <Compile Include="Vo\Task\TaskVo.cs" />
+    <Compile Include="Vo\User\UserInfoVo.cs" />
+    <Compile Include="Vo\User\VipVo.cs" />
+    <Compile Include="XML\Util.cs" />
+    <Compile Include="XML\XMLModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\tg_goods_business.Biz.LGR.cs">
+      <DependentUpon>tg_goods_business.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\tg_goods_item.Biz.LGR.cs">
+      <DependentUpon>tg_goods_item.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\tg_user.Biz.XLJ.cs">
+      <DependentUpon>tg_user.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\tg_goods_item.Biz.LDY.cs">
+      <DependentUpon>tg_goods_item.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\tg_fight_personal.Biz.LGR.cs">
+      <DependentUpon>tg_fight_personal.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\tg_task.Biz.LDY.cs">
+      <DependentUpon>tg_task.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TGG.Resources\TGG.Resources.csproj">
+      <Project>{cd106589-d026-4af2-8e42-3c8a701e8f79}</Project>
+      <Name>TGG.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum\Type\FriendStateType.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Enum\Type\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

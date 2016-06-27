@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Business.dll
+E:\Bin\TGG\Debug\TGG.Module.Business.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Business\obj\Debug\TGG.Module.Business.csprojResolveAssemblyReference.cache
+E:\192.168.1.254\TGG\第二期\TGG.Module.Business\obj\Debug\TGG.Module.Business.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Business\obj\Debug\TGG.Module.Business.pdb

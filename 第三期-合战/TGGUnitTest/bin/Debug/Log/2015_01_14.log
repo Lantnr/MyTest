@@ -1,0 +1,473 @@
+﻿#Software: vstest.executionengine.x86
+#ProcessID: 10812
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:51:56.940 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:51:56.961 10 N - PROP_CHARACTER_USE:特性道具使用
+
+#Software: vstest.executionengine.x86
+#ProcessID: 6628
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:52:47.200 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:52:47.219 10 N - PROP_CHARACTER_USE:特性道具使用
+17:52:49.026 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:52:49.027 10 N - 使用数据库方式：独占，加大缓存权重
+17:52:49.027 10 N - 一级缓存：关闭缓存
+17:52:49.070 10 N - [DB]GetSchema("MetaDataCollections")
+17:52:49.210 10 N - [DB]GetSchema("ReservedWords")
+17:52:49.227 10 N - [DB]GetSchema("Databases", "tgg")
+17:52:49.335 10 N - [DB]GetSchema("Tables")
+17:52:49.586 10 N - [DB]GetSchema("Columns")
+17:52:49.714 10 N - [DB]GetSchema("Indexes")
+17:52:49.761 10 N - [DB]GetSchema("IndexColumns")
+17:52:49.817 10 N - [DB]GetSchema("DataTypes")
+17:52:49.950 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+17:52:50.048 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+17:52:50.049 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+17:52:50.049 10 N - DB待检查表架构的实体个数：58
+17:52:50.362 10 N - 检查连接[DB/SqlServer]的数据库架构耗时411ms
+17:52:50.362 10 N - Select * From tg_bag Where id=4100001
+17:52:59.784 10 N - Select * From tg_role Where id=19
+
+#Software: vstest.executionengine.x86
+#ProcessID: 6884
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:53:40.107 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:53:40.127 10 N - PROP_CHARACTER_USE:特性道具使用
+17:53:42.810 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:53:42.810 10 N - 使用数据库方式：独占，加大缓存权重
+17:53:42.810 10 N - 一级缓存：关闭缓存
+17:53:42.855 10 N - [DB]GetSchema("MetaDataCollections")
+17:53:42.970 10 N - [DB]GetSchema("ReservedWords")
+17:53:42.993 10 N - [DB]GetSchema("Databases", "tgg")
+17:53:43.099 10 N - [DB]GetSchema("Tables")
+17:53:43.359 10 N - [DB]GetSchema("Columns")
+17:53:43.511 10 N - [DB]GetSchema("Indexes")
+17:53:43.558 10 N - [DB]GetSchema("IndexColumns")
+17:53:43.616 10 N - [DB]GetSchema("DataTypes")
+17:53:43.751 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+17:53:43.846 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+17:53:43.846 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+17:53:43.847 10 N - DB待检查表架构的实体个数：58
+17:53:44.187 10 N - 检查连接[DB/SqlServer]的数据库架构耗时436ms
+17:53:44.187 10 N - Select * From tg_bag Where id=53
+17:54:09.911 10 N - Select * From tg_role Where id=19
+17:55:44.847 10 N - Update tg_role Set character1=10001 Where id=19
+17:55:47.483 10 N - SET NOCOUNT ON;Insert Into tg_log_operate(user_id, module_number, command_number, type, [data], [time]) Values(12, 4, 13, 300, N'更新熔炼道具数量:53_99_98', {ts'2015-01-14 17:55:47'});Select SCOPE_IDENTITY()
+17:55:51.496 10 N - 背包整理 集合大小 1
+17:55:51.502 10 N - Select * From tg_bag Where [count]<99 And user_id=12 And type<>7 And base_id=4100001 And id Not In(53) Order By id Desc
+17:55:51.545 10 N - 待整理道具 集合大小 0
+17:55:51.548 10 N - 整理前集合大小 insert: update:0 detele:0
+17:55:51.549 10 N - 整理后集合大小 insert: update:0 detele:1
+17:55:51.549 10 N - Update tg_bag Set count=98 Where  id=53
+17:55:51.608 10 N - 整理道具结果 添加 0  更新 1  删除 0
+17:55:51.646 10 N - REWARDS:物品更新
+
+#Software: vstest.executionengine.x86
+#ProcessID: 10948
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:58:11.083 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:58:11.103 10 N - PROP_CHARACTER_USE:特性道具使用
+17:58:13.368 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:58:13.369 10 N - 使用数据库方式：独占，加大缓存权重
+17:58:13.369 10 N - 一级缓存：关闭缓存
+17:58:13.413 10 N - [DB]GetSchema("MetaDataCollections")
+17:58:13.527 10 N - [DB]GetSchema("ReservedWords")
+17:58:13.550 10 N - [DB]GetSchema("Databases", "tgg")
+17:58:13.656 10 N - [DB]GetSchema("Tables")
+17:58:13.913 10 N - [DB]GetSchema("Columns")
+17:58:14.058 10 N - [DB]GetSchema("Indexes")
+17:58:14.113 10 N - [DB]GetSchema("IndexColumns")
+17:58:14.173 10 N - [DB]GetSchema("DataTypes")
+17:58:14.313 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+17:58:14.410 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+17:58:14.410 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+17:58:14.411 10 N - DB待检查表架构的实体个数：58
+17:58:14.795 10 N - 检查连接[DB/SqlServer]的数据库架构耗时481ms
+17:58:14.795 10 N - Select * From tg_bag Where id=53
+17:58:15.373 10 N - Select * From tg_role Where id=19
+
+#Software: vstest.executionengine.x86
+#ProcessID: 10396
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:59:48.302 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:59:48.324 10 N - PROP_CHARACTER_USE:特性道具使用
+17:59:49.417 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:59:49.418 10 N - 使用数据库方式：独占，加大缓存权重
+17:59:49.418 10 N - 一级缓存：关闭缓存
+17:59:49.465 10 N - [DB]GetSchema("MetaDataCollections")
+17:59:49.581 10 N - [DB]GetSchema("ReservedWords")
+17:59:49.604 10 N - [DB]GetSchema("Databases", "tgg")
+17:59:49.710 10 N - [DB]GetSchema("Tables")
+17:59:49.951 10 N - [DB]GetSchema("Columns")
+17:59:50.089 10 N - [DB]GetSchema("Indexes")
+17:59:50.155 10 N - [DB]GetSchema("IndexColumns")
+17:59:50.210 10 N - [DB]GetSchema("DataTypes")
+17:59:50.347 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+17:59:50.447 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+17:59:50.447 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+17:59:50.447 10 N - DB待检查表架构的实体个数：58
+17:59:50.769 10 N - 检查连接[DB/SqlServer]的数据库架构耗时423ms
+17:59:50.769 10 N - Select * From tg_bag Where id=54
+17:59:51.412 10 N - Select * From tg_role Where id=19
+18:00:01.692 10 N - Update tg_role Set character2=10002 Where id=19
+18:00:04.305 10 N - SET NOCOUNT ON;Insert Into tg_log_operate(user_id, module_number, command_number, type, [data], [time]) Values(12, 4, 13, 300, N'更新熔炼道具数量:54_99_98', {ts'2015-01-14 18:00:04'});Select SCOPE_IDENTITY()
+18:00:05.176 10 N - 背包整理 集合大小 1
+18:00:05.183 10 N - Select * From tg_bag Where [count]<99 And user_id=12 And type<>7 And base_id=4100002 And id Not In(54) Order By id Desc
+18:00:05.225 10 N - 待整理道具 集合大小 0
+18:00:05.227 10 N - 整理前集合大小 insert: update:0 detele:0
+18:00:05.228 10 N - 整理后集合大小 insert: update:0 detele:1
+18:00:05.229 10 N - Update tg_bag Set count=98 Where  id=54
+18:00:05.271 10 N - 整理道具结果 添加 0  更新 1  删除 0
+18:00:05.308 10 N - REWARDS:物品更新
+18:00:55.997 10 N - 指令 TGG.Share 运行总耗时：00:00:40.2092044 毫秒
+
+#Software: vstest.executionengine.x86
+#ProcessID: 6348
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:02:52.242 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:02:52.263 10 N - PROP_CHARACTER_USE:特性道具使用
+18:02:53.819 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:02:53.819 10 N - 使用数据库方式：独占，加大缓存权重
+18:02:53.819 10 N - 一级缓存：关闭缓存
+18:02:53.861 10 N - [DB]GetSchema("MetaDataCollections")
+18:02:53.975 10 N - [DB]GetSchema("ReservedWords")
+18:02:53.998 10 N - [DB]GetSchema("Databases", "tgg")
+18:02:54.101 10 N - [DB]GetSchema("Tables")
+18:02:54.390 10 N - [DB]GetSchema("Columns")
+18:02:54.517 10 N - [DB]GetSchema("Indexes")
+18:02:54.573 10 N - [DB]GetSchema("IndexColumns")
+18:02:54.633 10 N - [DB]GetSchema("DataTypes")
+18:02:54.778 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+18:02:54.873 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:02:54.873 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:02:54.874 10 N - DB待检查表架构的实体个数：58
+18:02:55.146 10 N - 检查连接[DB/SqlServer]的数据库架构耗时369ms
+18:02:55.147 10 N - Select * From tg_bag Where id=54
+18:02:55.664 10 N - Select * From tg_role Where id=19
+
+#Software: vstest.executionengine.x86
+#ProcessID: 9044
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:03:24.978 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:03:24.992 10 N - PROP_CHARACTER_USE:特性道具使用
+18:03:26.090 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:03:26.090 10 N - 使用数据库方式：独占，加大缓存权重
+18:03:26.090 10 N - 一级缓存：关闭缓存
+18:03:26.133 10 N - [DB]GetSchema("MetaDataCollections")
+18:03:26.249 10 N - [DB]GetSchema("ReservedWords")
+18:03:26.273 10 N - [DB]GetSchema("Databases", "tgg")
+18:03:26.404 10 N - [DB]GetSchema("Tables")
+18:03:26.601 10 N - [DB]GetSchema("Columns")
+18:03:26.725 10 N - [DB]GetSchema("Indexes")
+18:03:26.782 10 N - [DB]GetSchema("IndexColumns")
+18:03:26.837 10 N - [DB]GetSchema("DataTypes")
+18:03:26.973 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+18:03:27.070 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:03:27.070 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:03:27.070 10 N - DB待检查表架构的实体个数：58
+18:03:27.370 10 N - 检查连接[DB/SqlServer]的数据库架构耗时397ms
+18:03:27.370 10 N - Select * From tg_bag Where id=55
+18:03:27.995 10 N - Select * From tg_role Where id=19
+18:03:33.992 10 N - Update tg_role Set character3=10003 Where id=19
+18:03:37.427 10 N - SET NOCOUNT ON;Insert Into tg_log_operate(user_id, module_number, command_number, type, [data], [time]) Values(12, 4, 13, 300, N'更新熔炼道具数量:55_99_98', {ts'2015-01-14 18:03:37'});Select SCOPE_IDENTITY()
+18:03:38.176 10 N - 背包整理 集合大小 1
+18:03:38.182 10 N - Select * From tg_bag Where [count]<99 And user_id=12 And type<>7 And base_id=4100003 And id Not In(55) Order By id Desc
+18:03:38.221 10 N - 待整理道具 集合大小 0
+18:03:38.224 10 N - 整理前集合大小 insert: update:0 detele:0
+18:03:38.225 10 N - 整理后集合大小 insert: update:0 detele:1
+18:03:38.225 10 N - Update tg_bag Set count=98 Where  id=55
+18:03:38.259 10 N - 整理道具结果 添加 0  更新 1  删除 0
+18:03:38.298 10 N - REWARDS:物品更新
+18:04:01.664 10 N - 指令 TGG.Share 运行总耗时：00:00:12.5787866 毫秒
+
+#Software: vstest.executionengine.x86
+#ProcessID: 9372
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:05:54.616 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:05:54.636 10 N - PROP_CHARACTER_USE:特性道具使用
+18:05:57.150 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:05:57.151 10 N - 使用数据库方式：独占，加大缓存权重
+18:05:57.151 10 N - 一级缓存：关闭缓存
+18:05:57.193 10 N - [DB]GetSchema("MetaDataCollections")
+18:05:57.314 10 N - [DB]GetSchema("ReservedWords")
+18:05:57.337 10 N - [DB]GetSchema("Databases", "tgg")
+18:05:57.454 10 N - [DB]GetSchema("Tables")
+18:05:57.657 10 N - [DB]GetSchema("Columns")
+18:05:57.786 10 N - [DB]GetSchema("Indexes")
+18:05:57.834 10 N - [DB]GetSchema("IndexColumns")
+18:05:57.897 10 N - [DB]GetSchema("DataTypes")
+18:05:58.030 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+18:05:58.127 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:05:58.127 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:05:58.128 10 N - DB待检查表架构的实体个数：58
+18:05:58.414 10 N - 检查连接[DB/SqlServer]的数据库架构耗时383ms
+18:05:58.414 10 N - Select * From tg_bag Where id=56
+18:05:59.133 10 N - Select * From tg_role Where id=19
+
+#Software: vstest.executionengine.x86
+#ProcessID: 10644
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:06:41.383 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:06:41.402 10 N - PROP_CHARACTER_USE:特性道具使用
+18:06:43.201 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:06:43.202 10 N - 使用数据库方式：独占，加大缓存权重
+18:06:43.202 10 N - 一级缓存：关闭缓存
+18:06:43.245 10 N - [DB]GetSchema("MetaDataCollections")
+18:06:43.361 10 N - [DB]GetSchema("ReservedWords")
+18:06:43.383 10 N - [DB]GetSchema("Databases", "tgg")
+18:06:43.491 10 N - [DB]GetSchema("Tables")
+18:06:43.699 10 N - [DB]GetSchema("Columns")
+18:06:43.828 10 N - [DB]GetSchema("Indexes")
+18:06:43.875 10 N - [DB]GetSchema("IndexColumns")
+18:06:43.934 10 N - [DB]GetSchema("DataTypes")
+18:06:44.070 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+18:06:44.168 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:06:44.168 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:06:44.168 10 N - DB待检查表架构的实体个数：58
+18:06:44.482 10 N - 检查连接[DB/SqlServer]的数据库架构耗时411ms
+18:06:44.482 10 N - Select * From tg_bag Where id=56
+18:06:45.188 10 N - Select * From tg_role Where id=19
+
+#Software: vstest.executionengine.x86
+#ProcessID: 10216
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:45:28.026 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:45:28.046 10 N - ROLE_CHARACTER_DELETE:删除武将特性
+
+#Software: vstest.executionengine.x86
+#ProcessID: 9332
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:47:31.038 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:47:31.058 10 N - ROLE_CHARACTER_DELETE:删除武将特性
+18:47:31.455 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:47:31.456 10 N - 使用数据库方式：独占，加大缓存权重
+18:47:31.456 10 N - 一级缓存：关闭缓存
+18:47:31.499 10 N - [DB]GetSchema("MetaDataCollections")
+18:47:31.617 10 N - [DB]GetSchema("ReservedWords")
+18:47:31.640 10 N - [DB]GetSchema("Databases", "tgg")
+18:47:31.762 10 N - [DB]GetSchema("Tables")
+18:47:32.001 10 N - [DB]GetSchema("Columns")
+18:47:32.141 10 N - [DB]GetSchema("Indexes")
+18:47:32.234 10 N - [DB]GetSchema("IndexColumns")
+18:47:32.299 10 N - [DB]GetSchema("DataTypes")
+18:47:32.437 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+18:47:32.535 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:47:32.535 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:47:32.536 10 N - DB待检查表架构的实体个数：58
+18:47:32.800 10 N - 检查连接[DB/SqlServer]的数据库架构耗时364ms
+18:47:32.801 10 N - Select * From tg_role Where id=19
+18:47:32.860 10 N - Update tg_role Set character1=10002, character2=10003, character3=0 Where id=19
+
+#Software: vstest.executionengine.x86
+#ProcessID: 8756
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:47:51.509 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:47:51.529 10 N - ROLE_CHARACTER_DELETE:删除武将特性
+18:47:54.738 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:47:54.738 10 N - 使用数据库方式：独占，加大缓存权重
+18:47:54.738 10 N - 一级缓存：关闭缓存
+18:47:54.780 10 N - [DB]GetSchema("MetaDataCollections")
+18:47:54.896 10 N - [DB]GetSchema("ReservedWords")
+18:47:54.919 10 N - [DB]GetSchema("Databases", "tgg")
+18:47:55.022 10 N - [DB]GetSchema("Tables")
+18:47:55.251 10 N - [DB]GetSchema("Columns")
+18:47:55.400 10 N - [DB]GetSchema("Indexes")
+18:47:55.461 10 N - [DB]GetSchema("IndexColumns")
+18:47:55.530 10 N - [DB]GetSchema("DataTypes")
+18:47:55.669 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+18:47:55.763 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:47:55.763 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:47:55.764 10 N - DB待检查表架构的实体个数：58
+18:47:56.027 10 N - 检查连接[DB/SqlServer]的数据库架构耗时357ms
+18:47:56.027 10 N - Select * From tg_role Where id=19
+
+#Software: vstest.executionengine.x86
+#ProcessID: 9612
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:50:22.257 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:50:22.271 10 N - ROLE_CHARACTER_DELETE:删除武将特性
+18:50:22.671 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:50:22.671 10 N - 使用数据库方式：独占，加大缓存权重
+18:50:22.671 10 N - 一级缓存：关闭缓存
+18:50:22.714 10 N - [DB]GetSchema("MetaDataCollections")
+18:50:22.830 10 N - [DB]GetSchema("ReservedWords")
+18:50:22.854 10 N - [DB]GetSchema("Databases", "tgg")
+18:50:22.974 10 N - [DB]GetSchema("Tables")
+18:50:23.182 10 N - [DB]GetSchema("Columns")
+18:50:23.318 10 N - [DB]GetSchema("Indexes")
+18:50:23.374 10 N - [DB]GetSchema("IndexColumns")
+18:50:23.439 10 N - [DB]GetSchema("DataTypes")
+18:50:23.581 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+18:50:23.677 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:50:23.677 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:50:23.678 10 N - DB待检查表架构的实体个数：58
+18:50:23.944 10 N - 检查连接[DB/SqlServer]的数据库架构耗时362ms
+18:50:23.945 10 N - Select * From tg_role Where id=19
+18:50:24.011 10 N - Update tg_role Set character1=10003, character2=0, character3=0 Where id=19
+
+#Software: vstest.executionengine.x86
+#ProcessID: 9748
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:50:51.115 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:50:51.135 10 N - ROLE_CHARACTER_DELETE:删除武将特性
+18:50:53.389 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:50:53.389 10 N - 使用数据库方式：独占，加大缓存权重
+18:50:53.389 10 N - 一级缓存：关闭缓存
+18:50:53.432 10 N - [DB]GetSchema("MetaDataCollections")
+18:50:53.553 10 N - [DB]GetSchema("ReservedWords")
+18:50:53.571 10 N - [DB]GetSchema("Databases", "tgg")
+18:50:53.680 10 N - [DB]GetSchema("Tables")
+18:50:53.893 10 N - [DB]GetSchema("Columns")
+18:50:54.025 10 N - [DB]GetSchema("Indexes")
+18:50:54.075 10 N - [DB]GetSchema("IndexColumns")
+18:50:54.132 10 N - [DB]GetSchema("DataTypes")
+18:50:54.281 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+18:50:54.376 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:50:54.376 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:50:54.376 10 N - DB待检查表架构的实体个数：58
+18:50:54.646 10 N - 检查连接[DB/SqlServer]的数据库架构耗时364ms
+18:50:54.646 10 N - Select * From tg_role Where id=19
+
+#Software: vstest.executionengine.x86
+#ProcessID: 10348
+#AppDomain: UnitTestAdapter: Running test
+#FileName: C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\TESTWINDOW\vstest.executionengine.x86.exe
+#BaseDirectory: E:\192.168.1.254\TGG\第三期-合战\TGGUnitTest\bin\Debug
+#CommandLine: /parentProcessId 7108
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 6.3 x64, TH/TH_KAER
+#Date: 2015-01-14
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:52:17.007 10 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:52:17.027 10 N - ROLE_CHARACTER_DELETE:删除武将特性
+18:52:17.424 10 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:52:17.425 10 N - 使用数据库方式：独占，加大缓存权重
+18:52:17.425 10 N - 一级缓存：关闭缓存
+18:52:17.467 10 N - [DB]GetSchema("MetaDataCollections")
+18:52:17.589 10 N - [DB]GetSchema("ReservedWords")
+18:52:17.604 10 N - [DB]GetSchema("Databases", "tgg")
+18:52:17.719 10 N - [DB]GetSchema("Tables")
+18:52:17.976 10 N - [DB]GetSchema("Columns")
+18:52:18.128 10 N - [DB]GetSchema("Indexes")
+18:52:18.199 10 N - [DB]GetSchema("IndexColumns")
+18:52:18.263 10 N - [DB]GetSchema("DataTypes")
+18:52:18.402 10 N - 开始检查连接[DB/SqlServer]的数据库架构……
+18:52:18.500 10 N - [DB]的所有实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:52:18.500 10 N - [DB]需要检查架构的实体类（77个）：tg_daming_log,tg_depot,tg_fusion,tg_game,tg_log_operate,tg_log_run,tg_module_open,tg_record_login,tg_task,tg_user_area,tg_user_extend,tg_user_vip,tg_war_area,tg_war_area_set,tg_war_army_type,tg_war_battle_queue,tg_war_carry,tg_war_city,tg_war_city_defense,tg_war_city_plan,tg_war_formation,tg_war_partner,tg_war_plan_area,tg_war_role,tg_war_user_area,view_city_defense_plan,view_ranking_coin,view_ranking_game,view_ranking_honor,view_user_area_set,view_war_city,view_war_partner,view_war_role,tg_activity_building,tg_arena,tg_arena_reports,tg_bag,tg_bag_log,tg_car,tg_duplicate_checkpoint,tg_duplicate_shot,tg_family,tg_family_apply,tg_family_log,tg_family_member,tg_fight_personal,tg_fight_yin,tg_friends,tg_gold_log,tg_goods_business,tg_goods_item,tg_messages,tg_prison,tg_prison_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_role_recruit,tg_role_title,tg_scene,tg_system_notice,tg_train_home,tg_train_role,tg_user,tg_user_login_log,tg_user_ting,tg_user_title,view_arena_ranking,view_arena_report,view_messages,view_role,view_scene_user,view_ting_not_car,view_user_role_family_apply,view_user_role_family_member,view_user_role_friend,view_user_role_task
+18:52:18.501 10 N - DB待检查表架构的实体个数：58
+18:52:18.826 10 N - 检查连接[DB/SqlServer]的数据库架构耗时424ms
+18:52:18.827 10 N - Select * From tg_role Where id=19
+18:52:18.883 10 N - Update tg_role Set character1=0, character2=0, character3=0 Where id=19

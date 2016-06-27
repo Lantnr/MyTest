@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6BF00DA-430F-4185-8496-A65B5BB174DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGG.Module.Consume</RootNamespace>
+    <AssemblyName>TGG.Module.Consume</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\TGG\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\TGG\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluorineFx">
+      <HintPath>..\Reference\FluorineFx\Net45\FluorineFx.dll</HintPath>
+    </Reference>
+    <Reference Include="NewLife.Core">
+      <HintPath>..\Reference\XCode\NewLife.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XCode">
+      <HintPath>..\Reference\XCode\XCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Solution Items\TGGAssemblyInfo.cs">
+      <Link>Properties\TGGAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ARENA_DEKARON_ADD.cs" />
+    <Compile Include="ARENA_REMOVE_COOLING.cs" />
+    <Compile Include="BREAK.cs" />
+    <Compile Include="BUSINESS_ACCELERATE.cs" />
+    <Compile Include="BUSINESS_AREA_OPEN.cs" />
+    <Compile Include="BUSINESS_BUY_BARGAIN.cs" />
+    <Compile Include="BUSINESS_BUY_CAR.cs" />
+    <Compile Include="BUSINESS_FREE_TAX.cs" />
+    <Compile Include="BUSINESS_GOODS_ADD.cs" />
+    <Compile Include="BUSINESS_GOODS_BUY.cs" />
+    <Compile Include="BUSINESS_PACKET_BUY.cs" />
+    <Compile Include="BUSINESS_PRICE_INFO.cs" />
+    <Compile Include="EQUIP_BUY.cs" />
+    <Compile Include="EQUIP_SPIRIT_LOCK.cs" />
+    <Compile Include="FAMILY_CREATE.cs" />
+    <Compile Include="FAMILY_DONATE.cs" />
+    <Compile Include="FAMILY_RECEIVE.cs" />
+    <Compile Include="IConsume.cs" />
+    <Compile Include="MESSAGE.cs" />
+    <Compile Include="POWER_BUY.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PROP_OPEN_GRID.cs" />
+    <Compile Include="RECRUIT_GET.cs" />
+    <Compile Include="RECRUIT_REFRESH.cs" />
+    <Compile Include="ROLE_HIRE.cs" />
+    <Compile Include="ROLE_POWER_BUY.cs" />
+    <Compile Include="TASK_BUY.cs" />
+    <Compile Include="TASK_REFLASH.cs" />
+    <Compile Include="TASK_VOCATION_BUY.cs" />
+    <Compile Include="TASK_VOCATION_REFRESH.cs" />
+    <Compile Include="TRAIN_HOME_FIGHT_BUY.cs" />
+    <Compile Include="TRAIN_HOME_NPC_REFRESH.cs" />
+    <Compile Include="TRAIN_ROLE_ACCELERATE.cs" />
+    <Compile Include="TRAIN_ROLE_LOCK.cs" />
+    <Compile Include="TRAIN_ROLE_START.cs" />
+    <Compile Include="TRAIN_TEA_INSIGHT.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\SuperSocket.Common.Net45.csproj">
+      <Project>{a24f4d38-ba9c-4fd6-95b7-4980de36131a}</Project>
+      <Name>SuperSocket.Common.Net45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocketBase\SuperSocket.SocketBase.Net45.csproj">
+      <Project>{40b77789-ea11-4c05-8f52-86711d7bcaaf}</Project>
+      <Name>SuperSocket.SocketBase.Net45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Core\TGG.Core.csproj">
+      <Project>{6cd2fd3e-c8aa-4aed-8783-4061bc97222c}</Project>
+      <Name>TGG.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Share\TGG.Share.csproj">
+      <Project>{08d53178-76f2-4e1b-b9ea-b769a293dd0b}</Project>
+      <Name>TGG.Share</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.SocketServer\TGG.SocketServer.csproj">
+      <Project>{ce9496ab-414e-4a34-838a-d781f41a6883}</Project>
+      <Name>TGG.SocketServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

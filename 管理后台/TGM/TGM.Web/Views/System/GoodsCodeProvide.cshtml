@@ -1,0 +1,246 @@
+﻿@using TGM.API.Entity.Model
+@{
+    ViewBag.Title = "福利卡激活码发放";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var platforms = ViewBag.Platform as List<Platform>;
+}
+
+@section css{
+    <link href="~/css/pagination.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget orange">
+                <div class="widget-title">
+                    <h4><i class="icon-reorder"></i> 激活码发放</h4>
+                    <span class="tools">
+                        <a href="javascript:;" class="icon-chevron-down"></a>
+                    </span>
+                </div>
+                <div class="widget-body">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    @if (ViewBag.Error > 0)
+                    {
+                        <div class="alert alert-success">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("GoodsCodeProvide", "System", FormMethod.Post))
+                    {
+                        <div class="control-group">
+                            <label class="btn-small">平台</label>
+                            <div class="controls">
+                                <select class="input-large" tabindex="1" name="platform" id="platform">
+                                    <option value="0">--请选择平台--</option>
+                                    @foreach (var item in platforms)
+                                    {
+                                        <option value="@item.id">@item.name </option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="btn-small">类型</label>
+                            <div class="controls">
+                                <select class="input-large" tabindex="1" name="give_type" id="give_type"></select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="btn-small">服务器名称</label>
+                            <div class="controls">
+                                <select class="input-large" tabindex="1" name="server" id="server"></select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="btn-small">输入激活码序号</label>
+                            <div class="controls">
+                                <select class="input-large" tabindex="1" id="order_number" name="order_number"></select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <a class="btn btn-small btn-info" data-toggle="modal" data-target="#codemodal" onclick="get_codelogs()"><i class="icon-ban-circle icon-white"></i> 查看当前平台激活码发放情况</a>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">发放</button>
+                            <a type="button" class="btn" href="javascript: history.go(-1)">取消</a>
+                        </div>
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+</div>
+
+<!--弹出激活码发放记录框-->
+<div id="codemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="codeLable" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 id="codeLable">当前服务器激活码发放记录</h4>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <table id="code_table" class="table table-striped table-hover table-bordered"></table>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+    </div>
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts
+{
+    <script type="text/javascript">
+
+        $("#platform").change(function () {
+            get_code_type();
+        });
+
+        $("#server").change(function () {
+            get_provide_code();
+        });
+
+        $("#give_type").change(function () {
+            get_provide_code();
+        });
+
+        //获取已生成激活码类型
+        function get_code_type() {
+            $("#give_type").empty();
+            var sid = $("#platform").find("option:selected").val();
+            if (sid == 0) {
+                $("#give_type").empty();
+            } else {
+                $.ajax({
+                    url: "/Common/AjaxCodeTypes?id=" + sid,
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        if (r.length > 0) {
+                            for (var i = 0; i < r.length; i++) {
+                                var typeId = r[i].type_id;
+                                var name = r[i].name;
+                                $("#give_type").append("<option value='" + typeId + "'>" + name + "</option>");
+                            }
+                        } else {
+                            alert("当前平台没有可发放激活码，请生成激活码！");
+                        }
+                        get_server();
+                    }
+                });
+            }
+        }
+
+        //获取服务器
+        function get_server() {
+            $("#server").empty();
+            var sv = $("#platform").find("option:selected").val();
+            if (sv == 0) {
+                $("#server").empty();
+            } else {
+                $.ajax({
+                    url: "/Common/AjaxServer?id=" + sv,
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        for (var n = 0; n < r.length; n++) {
+                            var v = r[n].id;
+                            var name = r[n].name;
+                            $("#server").append("<option value='" + v + "'>" + name + "</option>");
+                        }
+                        get_provide_code();
+                    }
+                });
+            }
+        }
+
+        //获取激活码序号
+        function get_provide_code() {
+            $("#order_number").empty();
+            var pid = $("#platform").find("option:selected").val();
+            var sid = $("#server").find("option:selected").val();
+            var type = $("#give_type").find("option:selected").val();
+            if (pid == 0 || sid == 0 || type == 0) {
+                $("#order_number").empty();
+            } else {
+                $.ajax({
+                    url: "/Common/AjaxCodes?id=" + pid + "&sid=" + sid + "&type=" + type,
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        if (r.length > 0) {
+                            for (var i = 0; i < r.length; i++) {
+                                var order = r[i];
+                                $("#order_number").append("<option value='" + order + "'>" + order + "</option>");
+                            }
+                        } else {
+                            alert("当前平台没有可发放激活码，请生成激活码！");
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function get_codelogs() {
+            var pid = $("#platform").find("option:selected").val();
+            if (pid == 0) {
+                alert("请选择平台！");
+                return;
+            }
+
+            $("#code_table").empty();
+            $.ajax({
+                url: "/System/AjaxCodeLog?pid=" + pid,
+                type: "get",
+                dataType: "json",
+                success: function(r) {
+                    if (r == null) return;
+                    var html = "<tr>" + "<th>" + '编号' + "</th>" + "<th>" + '平台名称' + "</th>" + "<th>" + '服务器名称' + "</th>" + "<th>" + '序号' + "</th>" + "<th>" + '类型' + "</th>" + "<th>" + '发放日期' + "</th>" + "</tr>";
+                    $("#code_table").append(html);
+                    for (var n = 0; n < r.length; n++) {
+                        var _html = "<tr>";
+                        _html += "<td>" + r[n].id + "</td>";
+                        _html += "<td>" + r[n].platform_name + "</td>";
+                        _html += "<td>" + r[n].server_name + "</td>";
+                        _html += "<td>" + r[n].kind + "</td>";
+                        _html += "<td>" + r[n].type + "</td>";
+                        _html += "<td>" + r[n].time + "</td>";
+                        _html += "</tr>";
+                        $("#code_table").append(_html);
+                    }
+                }
+            });
+        }
+    </script>
+}

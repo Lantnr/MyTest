@@ -1,0 +1,244 @@
+﻿@using TGM.API.Entity.Model;
+
+@model  List<Notice>
+
+@{
+    ViewBag.Title = "系统公告";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var platforms = ViewBag.Platform as List<Platform>;
+}
+@section css {
+    <link href="~/assets/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-title">
+                    <h4><i class="icon-reorder"></i>@ViewBag.Title</h4>
+                    <span class="tools">
+                        <a href="javascript:;" class="icon-chevron-down"></a>
+                    </span>
+                </div>
+                <div class="widget-body form-horizontal">
+
+                    <div class="portlet-scroll-1" style="overflow: hidden; outline: none;" tabindex="5001">
+                        @*<div class="control-group success">*@
+                        <table class="table table-striped table-hover table-bordered" id="editable-sample">
+
+                            <thead>
+                                <tr>
+                                    <td colspan="5"><center> <font size=3 color="black">公告列表</font> </center> </td>
+                                </tr>
+                                <tr>
+                                    <th>公告服务器</th>
+                                    <th>起始时间</th>
+                                    <th>公告内容</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in @Model)
+                                {
+                                    <tr class="">
+                                        <td>@item.platform _@item.server</td>
+                                        <td>@item.start_time 至 @item.end_time</td>
+                                        <td>@item.content</td>
+                                        @*<td><a class="edit" href="javascript:;">Copy</a></td>*@
+                                        <td>
+                                            <a class="btn btn-small btn-danger" href="~/Message/Delete/@item.id">
+                                                <i class="icon-remove icon-white"></i>
+                                                删除
+                                            </a>
+                                        </td>
+                                        @*<td><a class="delete" href="javascript:;">Delete</a></td>*@
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="row-fluid">
+                            @*@Html.ShowPageNavigate(Model.Pager.CurrentPageIndex, Model.Pager.PageSize, Model.Pager.RecordCount)*@
+                        </div>
+                        @*</div>*@
+                    </div>
+                </div>
+                <!-- BEGIN FORM-->
+                <div>
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                </div>
+                @using (Html.BeginForm("Index", "Message", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    <div>
+                        <p><p>
+                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                <tr>
+                                    <td><center><font size=3 color="black">发公告</font></center></td>
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                        <div class="control-group success">
+                                            <label class="control-label">所属平台</label>
+                                            <div class="controls">
+                                                <select class="input-xlarge" tabindex="1" name="platform" id="platform">
+                                                    <option value="">请选择</option>
+                                                    @foreach (var item in platforms)
+                                                    {
+                                                        <option value="@item.id">@item.name</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group success">
+                                            <label class="control-label">服务器</label>
+                                            <div class="controls">
+                                                <select class="chzn-select" tabindex="1"  name="server" id="server"></select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group success">
+                                            <label class="control-label">开始时间</label>
+                                            <div class="controls">
+                                                <div class="input-append date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input1">
+                                                    <input size="16" type="text" value="" name="starttime">
+                                                    <span class="add-on"><i class="icon-th"></i></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input1" value="" /><br />
+                                            </div>
+
+                                        </div>
+
+                                        <div class="control-group success">
+                                            <label class="control-label">结束时间</label>
+                                            <div class="controls">
+                                                <div class="input-append date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input2">
+                                                    <input size="16" type="text" value="" name="endtime">
+                                                    <span class="add-on"><i class="icon-th"></i></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="" /><br />
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group success">
+                                            <label class="control-label"> 公告间隔时间(秒)</label>
+                                            <div class="controls">
+                                                @*<select data-placeholder="Choose a Category" tabindex="1" name="interval">
+                                                    <option value="0">Select...</option>
+                                                    <option value="5">5</option>
+                                                    <option value="15">15</option>
+                                                    <option value="30">30</option>
+                                                    <option value="60">60</option>
+                                                </select>*@
+                                                <input size="16" type="text" value="" name="interval">
+                                                @*@Html.DropDownList("list")*@
+                                                <span class="help-inline"> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group success">
+                                            <label class="control-label">公告内容</label>
+                                            <div class="controls">
+                                                <textarea class="span6" rows="3" id="notice_content" name="notice_content"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            注：公告内容为200字以内
+                                            <button type="submit" class="btn btn-success"><i class="icon-ok"></i> 确定</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                    </div>
+
+                }
+                <!-- END FORM-->
+                @*</div>*@
+            </div>
+            <!-- END SAMPLE FORMPORTLET-->
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {
+    <script src="~/assets/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
+    <script src="~/js/form-component.js"></script>
+    <script src="~/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0
+        });
+    </script>
+    <script>
+        function show() {
+            $id = document.getElementById("show");
+            if ($id.style.display == 'none') {
+                $id.style.display = 'block';
+            } else {
+                $id.style.display = 'none';
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function CheckBoxSelect() {
+            var myChecks = document.getElementsByTagName("input");
+            var s = document.getElementById("server");
+            for (var i = 0; i < myChecks.length; i++) {
+                if (myChecks[i].type == "checkbox") {
+                    if (myChecks[i].checked == true) {
+                        s.value = myChecks[i].value;
+
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        //绑定第一个下拉选择事件
+        $("#platform").change(function () {
+            get_d_2();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function get_d_2(obj) {
+            $("#server").empty();                                  //清空第二个下拉框数据
+            var sv = $("#platform").find("option:selected").val();   //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Common/AjaxServer?id=" + sv, //mvc请求地址
+                type: "get",                    //ajax请求类型
+                dataType: "json",               //请求返还数据格式
+                success: function (r) {         //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#server").append("<option value='" + v + "'>" + name + "</option>");  //添加一项option
+                    }
+                }
+            });
+        }
+
+    </script>
+}

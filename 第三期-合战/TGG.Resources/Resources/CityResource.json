@@ -1,0 +1,1 @@
+[{"id":1,"name":"兵粮","min_buy":0.6 ,"max_buy":2.0,"count":2000},{"id":2,"name":"马匹","min_buy":2.0 ,"max_buy":4.0,"count":2000},{"id":3,"name":"铁炮","min_buy":2.0 ,"max_buy":4.0,"count":2000},{"id":4,"name":"薙刀","min_buy":1.0 ,"max_buy":3.0,"count":2000},{"id":5,"name":"苦无","min_buy":1.0 ,"max_buy":3.0,"count":2000}]

@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3F5BDC0-DE47-4E3F-BAE6-A78A53BB38F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGM.API.Entity</RootNamespace>
+    <AssemblyName>TGM.API.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="antlr.runtime, Version=2.7.6.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\antlr.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FluorineFx, Version=1.0.0.17, Culture=neutral, PublicKeyToken=4007192d7d899646, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\FluorineFx.dll</HintPath>
+    </Reference>
+    <Reference Include="NewLife.Core">
+      <HintPath>..\..\..\第二期\Reference\XCode\NewLife.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XCode">
+      <HintPath>..\..\..\第二期\Reference\XCode\XCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AMF\AMFConvert.cs" />
+    <Compile Include="AMF\AmfEntityConvert.cs" />
+    <Compile Include="AMF\AutoParseASObject.cs" />
+    <Compile Include="AMF\Protocol.cs" />
+    <Compile Include="Base\BaseBusinessArea.cs" />
+    <Compile Include="Base\BaseEquip.cs" />
+    <Compile Include="Base\BaseFightSkill.cs" />
+    <Compile Include="Base\BaseFusion.cs" />
+    <Compile Include="Base\BaseIdentity.cs" />
+    <Compile Include="Base\BaseOffice.cs" />
+    <Compile Include="Base\BaseProp.cs" />
+    <Compile Include="Base\BaseRoleInfo.cs" />
+    <Compile Include="Base\BaseRule.cs" />
+    <Compile Include="Common\Util\UConvert.cs" />
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="Enum\ApiType.cs" />
+    <Compile Include="Enum\GoodsCardState.cs" />
+    <Compile Include="Enum\GoodsCardType.cs" />
+    <Compile Include="Enum\GoodsType.cs" />
+    <Compile Include="Enum\LogType.cs" />
+    <Compile Include="Enum\PayType.cs" />
+    <Compile Include="Enum\RoleAttributeType.cs" />
+    <Compile Include="Enum\ServerOpenState.cs" />
+    <Compile Include="Helper\CryptoHelper.cs" />
+    <Compile Include="Helper\SerialNumber.cs" />
+    <Compile Include="Helper\ToEntity.cs" />
+    <Compile Include="Model\BaseEntity.cs" />
+    <Compile Include="Model\ChartHome.cs" />
+    <Compile Include="Model\ChartHours.cs" />
+    <Compile Include="Model\Email.cs" />
+    <Compile Include="Model\GmManage.cs" />
+    <Compile Include="Model\GoodsType.cs" />
+    <Compile Include="Model\IdentitySpread.cs" />
+    <Compile Include="Model\LevelSpread.cs" />
+    <Compile Include="Model\Notice.cs" />
+    <Compile Include="Model\PageGmManage.cs" />
+    <Compile Include="Model\PageLog.cs" />
+    <Compile Include="Model\PageQuery.cs" />
+    <Compile Include="Model\PagerGoodsType.cs" />
+    <Compile Include="Model\PagerKeep.cs" />
+    <Compile Include="Model\PagerPay.cs" />
+    <Compile Include="Model\PagerPlatform.cs" />
+    <Compile Include="Model\PagerRecord.cs" />
+    <Compile Include="Model\PagerServer.cs" />
+    <Compile Include="Model\PagerServerGold.cs" />
+    <Compile Include="Model\PagerServerGoodsCode.cs" />
+    <Compile Include="Model\PagerServerIdentity.cs" />
+    <Compile Include="Model\PagerServerLevel.cs" />
+    <Compile Include="Model\PagerTotalPay.cs" />
+    <Compile Include="Model\PagerUser.cs" />
+    <Compile Include="Model\PageServerPlayer.cs" />
+    <Compile Include="Model\Pay.cs" />
+    <Compile Include="Model\Platform.cs" />
+    <Compile Include="Model\PlayerBag.cs" />
+    <Compile Include="Model\PlayerCity.cs" />
+    <Compile Include="Model\PlayerDetailed.cs" />
+    <Compile Include="Model\PlayerGoldPercent.cs" />
+    <Compile Include="Model\PlayerLog.cs" />
+    <Compile Include="Model\PlayerReport.cs" />
+    <Compile Include="Model\PlayerRoles.cs" />
+    <Compile Include="Model\Prop.cs" />
+    <Compile Include="Model\Record.cs" />
+    <Compile Include="Model\RecordHours.cs" />
+    <Compile Include="Model\RecordKeep.cs" />
+    <Compile Include="Model\RecordServer.cs" />
+    <Compile Include="Model\ReportCode.cs" />
+    <Compile Include="Model\ServerCodeLog.cs" />
+    <Compile Include="Model\ServerGoldConsume.cs" />
+    <Compile Include="Model\ServerGoodsCode.cs" />
+    <Compile Include="Model\ServerPlayer.cs" />
+    <Compile Include="Model\SingleRecordPay.cs" />
+    <Compile Include="Model\SingleTypeLog.cs" />
+    <Compile Include="Model\TotalRecordPay.cs" />
+    <Compile Include="Model\Register.cs" />
+    <Compile Include="Model\Resource.cs" />
+    <Compile Include="Model\RoleFightSkill.cs" />
+    <Compile Include="Model\RoleLifeSkill.cs" />
+    <Compile Include="Model\RoleSkill.cs" />
+    <Compile Include="Model\Server.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQLResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_give_log.Biz.cs" />
+    <Compile Include="TGM\tgm_give_log.Biz.LZH.cs" />
+    <Compile Include="TGM\tgm_give_log.cs" />
+    <Compile Include="TGM\tgm_gm.Biz.LZH.cs">
+      <DependentUpon>tgm_gm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_gold_record.Biz.cs">
+      <DependentUpon>tgm_gold_record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_gold_record.Biz.LZH.cs">
+      <DependentUpon>tgm_gold_record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_gold_record.cs" />
+    <Compile Include="TGM\tgm_goods_code.Biz.cs" />
+    <Compile Include="TGM\tgm_goods_code.Biz.LZH.cs" />
+    <Compile Include="TGM\tgm_goods_code.cs" />
+    <Compile Include="TGM\tgm_goods_type.Biz.cs" />
+    <Compile Include="TGM\tgm_goods_type.Biz.LZH.cs" />
+    <Compile Include="TGM\tgm_goods_type.cs" />
+    <Compile Include="TGM\tgm_notice.Biz.cs">
+      <DependentUpon>tgm_notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_notice.Biz.LGY.cs">
+      <DependentUpon>tgm_notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_notice.cs" />
+    <Compile Include="TGM\tgm_platform.Biz.cs">
+      <DependentUpon>tgm_platform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_platform.Biz.LGY.cs">
+      <DependentUpon>tgm_platform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_platform.Biz.XLJ.cs">
+      <DependentUpon>tgm_platform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_platform.cs" />
+    <Compile Include="TGM\tgm_record_day.Biz.cs">
+      <DependentUpon>tgm_record_day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_day.Biz.LZH.cs">
+      <DependentUpon>tgm_record_day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_day.Biz.XLJ.cs">
+      <DependentUpon>tgm_record_day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_day.cs" />
+    <Compile Include="TGM\tgm_record_hours.Biz.cs">
+      <DependentUpon>tgm_record_hours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_hours.Biz.XLJ.cs">
+      <DependentUpon>tgm_record_hours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_hours.cs" />
+    <Compile Include="TGM\tgm_record_keep.Biz.cs">
+      <DependentUpon>tgm_record_keep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_keep.Biz.XLJ.cs">
+      <DependentUpon>tgm_record_keep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_keep.cs" />
+    <Compile Include="TGM\tgm_record_pay.Biz.cs">
+      <DependentUpon>tgm_record_pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_pay.Biz.LGY.cs">
+      <DependentUpon>tgm_record_pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_pay.Biz.XLJ.cs">
+      <DependentUpon>tgm_record_pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_pay.cs" />
+    <Compile Include="TGM\tgm_record_server.Biz.cs">
+      <DependentUpon>tgm_record_server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_server.Biz.XLJ.cs">
+      <DependentUpon>tgm_record_server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_record_server.cs" />
+    <Compile Include="TGM\tgm_resource.Biz.cs">
+      <DependentUpon>tgm_resource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_resource.Biz.LGY.cs">
+      <DependentUpon>tgm_resource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_resource.cs" />
+    <Compile Include="TGM\tgm_role.Biz.XLJ.cs">
+      <DependentUpon>tgm_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_server.Biz.LGY.cs">
+      <DependentUpon>tgm_server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_server.Biz.LZH.cs">
+      <DependentUpon>tgm_server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_gm.Biz.cs">
+      <DependentUpon>tgm_gm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_gm.cs" />
+    <Compile Include="TG\report_identity_day.Biz.LZH.cs">
+      <DependentUpon>report_identity_day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\report_level_day.Biz.LZH.cs">
+      <DependentUpon>report_level_day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\report_day.Biz.cs">
+      <DependentUpon>report_day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\report_day.Biz.XLJ.cs">
+      <DependentUpon>report_day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\report_day.cs" />
+    <Compile Include="TG\report_identity_day.Biz.cs">
+      <DependentUpon>report_identity_day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\report_identity_day.cs" />
+    <Compile Include="TG\report_level_day.Biz.cs">
+      <DependentUpon>report_level_day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\report_level_day.cs" />
+    <Compile Include="TG\tg_bag.Biz.cs">
+      <DependentUpon>tg_bag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_bag.Biz.LZH.cs">
+      <DependentUpon>tg_bag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_bag.cs" />
+    <Compile Include="TG\tg_car.Biz.cs">
+      <DependentUpon>tg_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_car.Biz.LZH.cs">
+      <DependentUpon>tg_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_car.cs" />
+    <Compile Include="TG\tg_goods.Biz.cs" />
+    <Compile Include="TG\tg_goods.Biz.LZH.cs" />
+    <Compile Include="TG\tg_goods.cs" />
+    <Compile Include="TG\tg_log_operate.Biz.cs">
+      <DependentUpon>tg_log_operate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_log_operate.Biz.LZH.cs">
+      <DependentUpon>tg_log_operate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_log_operate.Biz.XLJ.cs">
+      <DependentUpon>tg_log_operate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_log_operate.cs" />
+    <Compile Include="TG\tg_messages.Biz.cs">
+      <DependentUpon>tg_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_messages.Biz.LGY.cs" />
+    <Compile Include="TG\tg_messages.cs" />
+    <Compile Include="TG\tg_role.Biz.cs">
+      <DependentUpon>tg_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_role.Biz.LZH.cs">
+      <DependentUpon>tg_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_role.cs" />
+    <Compile Include="TG\tg_role_fight_skill.Biz.cs">
+      <DependentUpon>tg_role_fight_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_role_fight_skill.Biz.LZH.cs">
+      <DependentUpon>tg_role_fight_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_role_fight_skill.cs" />
+    <Compile Include="TG\tg_role_life_skill.Biz.cs">
+      <DependentUpon>tg_role_life_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_role_life_skill.Biz.LZH.cs">
+      <DependentUpon>tg_role_life_skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_role_life_skill.cs" />
+    <Compile Include="TG\tg_system_notice.Biz.cs">
+      <DependentUpon>tg_system_notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_system_notice.Biz.LGY.cs">
+      <DependentUpon>tg_system_notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_system_notice.cs" />
+    <Compile Include="TGM\tgm_role.Biz.cs">
+      <DependentUpon>tgm_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_role.cs" />
+    <Compile Include="TGM\tgm_server.Biz.cs">
+      <DependentUpon>tgm_server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_server.Biz.XLJ.cs">
+      <DependentUpon>tgm_server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGM\tgm_server.cs" />
+    <Compile Include="TG\tg_user.Biz.cs">
+      <DependentUpon>tg_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_user.Biz.LZH.cs">
+      <DependentUpon>tg_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_user.cs" />
+    <Compile Include="TG\tg_user_area.Biz.cs">
+      <DependentUpon>tg_user_area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_user_area.Biz.LZH.cs">
+      <DependentUpon>tg_user_area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_user_area.cs" />
+    <Compile Include="TG\tg_user_login_log.Biz.cs">
+      <DependentUpon>tg_user_login_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_user_login_log.Biz.LGY.cs">
+      <DependentUpon>tg_user_login_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_user_login_log.Biz.LZH.cs">
+      <DependentUpon>tg_user_login_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_user_login_log.cs" />
+    <Compile Include="TG\tg_user_vip.Biz.cs">
+      <DependentUpon>tg_user_vip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_user_vip.Biz.LZH.cs">
+      <DependentUpon>tg_user_vip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_user_vip.cs" />
+    <Compile Include="TG\tg_war_city.Biz.cs">
+      <DependentUpon>tg_war_city.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_war_city.Biz.LZH.cs">
+      <DependentUpon>tg_war_city.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_war_city.cs" />
+    <Compile Include="TG\tg_war_role.Biz.cs">
+      <DependentUpon>tg_war_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_war_role.Biz.LZH.cs">
+      <DependentUpon>tg_war_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\tg_war_role.cs" />
+    <Compile Include="TG\view_player_detail.Biz.cs">
+      <DependentUpon>view_player_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\view_player_detail.Biz.LZH.cs">
+      <DependentUpon>view_player_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TG\view_player_detail.cs" />
+    <Compile Include="Vo\BaseVo.cs" />
+    <Compile Include="Vo\ProtocolVo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\antlr.runtime.dll" />
+    <Content Include="lib\FluorineFx.dll" />
+    <Content Include="lib\log4net.dll" />
+    <None Include="Resources\BusinessArea.json" />
+    <None Include="Resources\Equip.json" />
+    <None Include="Resources\FightSkill.json" />
+    <None Include="Resources\Fusion.json" />
+    <None Include="Resources\Identity.json" />
+    <None Include="Resources\Office.json" />
+    <None Include="Resources\Prop.json" />
+    <None Include="Resources\RoleInfo.json" />
+    <None Include="Resources\Rule.json" />
+    <None Include="Resources\tgm_script.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SQLResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

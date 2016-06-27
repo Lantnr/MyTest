@@ -1,0 +1,1210 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TGM.API</name>
+    </assembly>
+    <members>
+        <member name="M:TGM.API.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action. 
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action. 
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action. 
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action. 
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,TGM.API.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:TGM.API.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:TGM.API.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:TGM.API.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:TGM.API.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,TGM.API.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,TGM.API.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create one using <see cref="T:TGM.API.Areas.HelpPage.ObjectGenerator"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},TGM.API.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:TGM.API.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleKey.#ctor(TGM.API.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:TGM.API.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,TGM.API.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:TGM.API.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:TGM.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TGM.API.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:TGM.API.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:TGM.API.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TGM.API.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:TGM.API.Command.CommandApi">
+            <summary>
+            游戏指令API类
+            </summary>
+        </member>
+        <member name="F:TGM.API.Command.CommandApi.MN">
+            <summary>模块号</summary>
+        </member>
+        <member name="M:TGM.API.Command.CommandApi.Finalize">
+            <summary>析构函数</summary>
+        </member>
+        <member name="M:TGM.API.Command.CommandApi.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:TGM.API.Command.CommandApi.#ctor(System.String,System.Int32,TGM.API.Command.ApiCommand)">
+            <summary>构造函数</summary>
+            <param name="ip">IP</param>
+            <param name="port">端口</param>
+            <param name="cn">指令号</param>
+        </member>
+        <member name="M:TGM.API.Command.CommandApi.Build(FluorineFx.ASObject)">
+            <summary>组建发送协议</summary>
+            <param name="aso">协议数据</param>
+        </member>
+        <member name="M:TGM.API.Command.CommandApi.Recharge(System.Int64,System.Int32)">
+            <summary>
+            充值
+            </summary>
+        </member>
+        <member name="M:TGM.API.Command.CommandApi.Gmoperate(System.Int64)">
+            <summary>
+            Gm操作玩家信息
+            </summary>
+        </member>
+        <member name="M:TGM.API.Command.CommandApi.NoticePush">
+            <summary>
+            发送即时公告
+            </summary>
+        </member>
+        <member name="M:TGM.API.Command.CommandApi.StopNotice(System.Int64)">
+            <summary>
+            停止公告
+            </summary>
+        </member>
+        <member name="P:TGM.API.Command.CommandApi.IP">
+            <summary>IP</summary>
+        </member>
+        <member name="P:TGM.API.Command.CommandApi.Port">
+            <summary>端口</summary>
+        </member>
+        <member name="P:TGM.API.Command.CommandApi.CN">
+            <summary>指令号</summary>
+        </member>
+        <member name="T:TGM.API.Command.ApiCommand">
+            <summary>
+            API 指令枚举
+            </summary>
+        </member>
+        <member name="T:TGM.API.Command.MvcSocket">
+            <summary>
+            socket类
+            </summary>
+        </member>
+        <member name="M:TGM.API.Command.MvcSocket.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:TGM.API.Command.MvcSocket.#ctor(System.String,System.Int32)">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:TGM.API.Command.MvcSocket.Finalize">
+            <summary>析构函数</summary>
+        </member>
+        <member name="M:TGM.API.Command.MvcSocket.Connection(System.String,System.Int32)">
+            <summary>打开端口</summary> 
+            <param name="url">URL或者:IP地址</param> 
+            <param name="port"></param> 
+        </member>
+        <member name="M:TGM.API.Command.MvcSocket.Send(System.String)">
+            <summary>发送Socket</summary> 
+        </member>
+        <member name="M:TGM.API.Command.MvcSocket.Send(System.Byte[])">
+            <summary>发送Socket</summary> 
+        </member>
+        <member name="M:TGM.API.Command.MvcSocket.Receive">
+            <summary>接收数据</summary> 
+        </member>
+        <member name="T:TGM.API.Controllers.CommonController">
+            <summary>
+            公共API
+            </summary>
+        </member>
+        <member name="T:TGM.API.Controllers.ControllerBase">
+            <summary>
+            API控制器基类
+            第一步:必须验证Token
+            操作后台数据库直接取 tgm_connection 属性字符串设置表连接字符串
+            第二步(针对游戏数据可靠)
+            必须设置SN(选择服务器)
+            操作游戏数据库 直接取db_connection 属性设置数据库表连接字符串
+            </summary>
+        </member>
+        <member name="M:TGM.API.Controllers.ControllerBase.IsToken(System.String)">
+            <summary>是否会话</summary>
+        </member>
+        <member name="F:TGM.API.Controllers.ControllerBase._tgm_connection">
+            <summary>后台连接字符串</summary>
+        </member>
+        <member name="F:TGM.API.Controllers.ControllerBase._db_connection">
+            <summary>游戏数据库连接字符串</summary>
+        </member>
+        <member name="P:TGM.API.Controllers.ControllerBase.Token">
+            <summary>会话</summary>
+        </member>
+        <member name="P:TGM.API.Controllers.ControllerBase.tgm_connection">
+            <summary>后台连接字符串</summary>
+        </member>
+        <member name="P:TGM.API.Controllers.ControllerBase.SN">
+            <summary>选择服务器</summary>
+        </member>
+        <member name="P:TGM.API.Controllers.ControllerBase.db_connection">
+            <summary>游戏数据库连接字符串</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.CommonController.PostPlatformAllList(System.String,System.Int32,System.Int32)">
+            <summary> 获取平台数据</summary>
+            <param name="pid">平台编号</param>
+            <param name="token">令牌</param>
+            <param name="role">角色</param>>
+        </member>
+        <member name="M:TGM.API.Controllers.CommonController.PostServerAllList(System.String,System.Int32,System.Boolean)">
+            <summary>获取平台服务器数据</summary>
+            <param name="pid">服务器编号</param>
+            <param name="token">令牌</param>
+            <param name="flag">标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.CommonController.PostPayment(System.String,System.String)">
+            <summary>充值接口</summary>
+            <param name="param">充值参数字符串
+            token|sid|user_code|order_id|channel|type|amount 
+            令牌|游戏服编号|玩家账号|订单号|渠道|充值类型|充值数值 
+            </param>
+            <param name="checksum">param的MD5校验和 
+            MD5字符串token|sid|user_code|order_id|channel|type|amount|key 
+            令牌|游戏服编号|玩家账号|订单号|渠道|充值类型|充值数值|平台加密字符串
+            </param>
+            <returns>充值后状态结果值</returns>
+        </member>
+        <member name="M:TGM.API.Controllers.CommonController.PostExcel(System.Int32,System.Int32,System.String)">
+            <summary>导出平台激活码</summary>
+            <param name="pid">平台pid</param>
+            <param name="type">权限</param>
+            <param name="order">标示</param>
+        </member>
+        <member name="M:TGM.API.Controllers.CommonController.PostPlatformCodes(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>获取平台激活码序列号集合</summary>    
+            <param name="token">令牌</param>
+            <param name="pid">平台编号</param>
+            <param name="sid">服务器编号</param>
+            <param name="type">福利卡类型</param>
+        </member>
+        <member name="M:TGM.API.Controllers.CommonController.PostCodeType(System.String,System.String,System.Int32,System.Byte)">
+            <summary>获取平台已发放激活码类型集合</summary>    
+            <param name="token">令牌</param>
+            <param name="name">用户名称</param>
+            <param name="pid">平台编号</param>
+            <param name="b">标识</param>
+        </member>
+        <member name="M:TGM.API.Controllers.GMController.PostGmManage(System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Int64,System.String)">
+            <summary>Gm管理</summary>
+            <param name="token">令牌</param>
+            <param name="name">用户名</param>
+            <param name="pid">平台id</param>
+            <param name="sid">服务器</param>
+            <param name="search">查询方式</param>
+            <param name="value">查询值</param>
+            <param name="type">操作类型</param>
+            <param name="time">时间限制</param>
+            <param name="reason">操作原因</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.GMController.PostGmRecords(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Gm记录操作</summary>
+            <param name="token">令牌</param>
+            <param name="role">用户权限</param>
+            <param name="pid">平台pid</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+        </member>
+        <member name="M:TGM.API.Controllers.GMController.PostPlayerGm(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>查询玩家GM记录信息</summary>
+            <param name="token">令牌</param>
+            <param name="name">用户名</param>
+            <param name="pid">平台pid</param>
+            <param name="sid">服务器sid</param>
+            <param name="state">查询状态  1：冻结  2：封号</param>
+            <param name="type">查询类型  1：账号  2：名称</param>
+            <param name="value">查询值</param>
+        </member>
+        <member name="M:TGM.API.Controllers.GMController.PostRescueGm(System.String,System.Int32)">
+            <summary>解冻  解封</summary>
+            <param name="token">令牌</param>
+            <param name="gid">Gm记录主键id</param>
+        </member>
+        <member name="M:TGM.API.Controllers.GoodsController.PostGoodsType(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>福利卡类型信息</summary>
+            <param name="token">令牌</param>
+            <param name="role">用户权限</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+        </member>
+        <member name="M:TGM.API.Controllers.GoodsController.PostAddType(System.String,System.Int32,System.String)">
+            <summary>添加福利卡类型信息</summary>
+            <param name="token">令牌</param>
+            <param name="type">福利卡枚举类型ID</param>
+            <param name="name">福利卡枚举类型名称</param>
+        </member>
+        <member name="M:TGM.API.Controllers.GoodsController.PostFindPlatform(System.String,System.Int32,System.Byte)">
+            <summary>获取福利卡单条类型信息</summary>
+            <param name="token">令牌</param>
+            <param name="gid">福利卡信息id</param>
+            <param name="b">标识</param>
+        </member>
+        <member name="M:TGM.API.Controllers.GoodsController.PostPlatformEdit(System.String,System.Int32,System.Int32,System.String,System.Byte)">
+            <summary>福利卡类型信息更新</summary>
+            <param name="token">令牌</param>
+            <param name="gid">福利卡类型主键Id</param> 
+            <param name="typeId">福利卡类型枚举ID</param>
+            <param name="name">福利卡类型枚举名称</param>
+            <param name="b">标示</param>
+        </member>
+        <member name="M:TGM.API.Controllers.GoodsController.PostDeleteType(System.String,System.Int32,System.Int32,System.Byte)">
+            <summary> 删除福利卡类型信息</summary>
+            <param name="token">令牌</param>
+            <param name="gid">福利卡信息主键id</param>
+            <param name="role">用户权限</param>
+            <param name="b">标示</param>
+        </member>
+        <member name="M:TGM.API.Controllers.GoodsController.PostFindGoodsType(System.String,System.Boolean)">
+            <summary>获取福利卡类型集合</summary>
+            <param name="token">令牌</param>
+            <param name="flag">标识</param>
+            <returns>处理结果信息</returns>
+        </member>
+        <member name="M:TGM.API.Controllers.MessageController.PostNotice(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.Int32,System.String)">
+            <summary> 发送系统公告 </summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器id</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="space">时间间隔</param>
+            <param name="content">内容</param>
+            <param name="roleid">玩家id</param>
+            <param name="role">角色权限</param>
+            <param name="pid">平台id</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.MessageController.PostDeleteNotice(System.Int32,System.String)">
+            <summary>删除公告</summary>
+            <param name="id">公告主键id</param>
+            <param name="token">令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.MessageController.PostFindNotices(System.String,System.Int64,System.Boolean)">
+            <summary>查询公告</summary>
+            <param name="token">令牌</param>
+            <param name="roleid">玩家id</param>
+            <param name="flag">标识</param>
+        </member>
+        <member name="M:TGM.API.Controllers.PayController.PostPay(System.String,System.Int32,System.Int32,System.Int64,System.Int64,System.Int32,System.Int32)">
+            <summary>查询玩家总充值信息</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台id</param>
+            <param name="sid">服务器id</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.PayController.GetPayList(TGM.API.Entity.tgm_server,System.Collections.Generic.IEnumerable{TGM.API.Entity.tgm_record_pay},System.String)">
+            <summary>查询单个服务器的充值信息集合</summary>
+            <param name="server">服务器</param>
+            <param name="plist">充值集合</param>
+            <param name="platform">平台名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.PayController.PostTotalPay(System.String,System.Int64,System.Int32,System.Boolean,System.Int32,System.Int32)">
+            <summary>进入界面时，显示充值所有记录</summary>
+            <param name="token"></param>
+            <param name="role"></param>
+            <param name="pid"></param>
+            <param name="sign"></param>
+            <param name="index"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.PayController.PostSinglePay(System.String,System.Int64,System.Int32,System.Int32,System.Int32)">
+            <summary>进入界面时，显示充值所有记录</summary>
+            <param name="token"></param>
+            <param name="role"></param>
+            <param name="pid"></param>
+            <param name="index"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.PayController.PostPlayerPay(System.String,System.Int32,System.Int32,System.Int64,System.Int64,System.Int32,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>查询玩家充值所有记录</summary>
+            <param name="token">令牌</param>
+            <param name="role">角色</param>
+            <param name="pid">平台id</param>
+            <param name="sid">服务器id</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="type">玩家昵称/账号</param>
+            <param name="playname">玩家昵称</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+            <param name="userpid">用户平台id</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.PayController.PostPayment(System.String,System.String)">
+            <summary>充值接口</summary>
+            <param name="key">平台key</param>
+            <param name="param">充值参数字符串</param>
+            <returns>充值后状态结果值</returns>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.PostDetailed(System.String,System.String,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>玩家详细信息</summary>
+            <param name="token">令牌</param>
+            <param name="name">用户名称</param>
+            <param name="pid">平台pid</param>
+            <param name="sid">服务器sid</param>
+            <param name="type">查询类型</param>
+            <param name="value">查询值</param>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.BuildData(TGM.API.Entity.Model.PlayerDetailed,System.Int64)">
+            <summary>组装玩家信息</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.PlayerRoles(System.Int64,System.Collections.Generic.List{TGM.API.Entity.Model.PlayerCity})">
+            <summary>查询玩家武将信息</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.State(System.Int32)">
+            <summary>武将状态</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.PlayerBags(System.Int64)">
+            <summary>查询玩家背包信息</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.PlayerCitys(System.Int64)">
+            <summary>查询玩家据点信息</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.GetAreaName(System.Int64)">
+            <summary>获取商圈信息</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.GetIdentity(System.Int32)">
+            <summary>查询身份</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.GetVocation(System.Int32,System.Int32)">
+            <summary>查询职业信息</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.GetOffice(System.Int32)">
+            <summary>查询官职信息</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.PostSkills(System.String,System.Int32,System.Int64)">
+            <summary>武将技能信息</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器sid</param>
+            <param name="rid">武将主键id</param>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.PostEquips(System.String,System.Int32,System.Int64,System.String)">
+            <summary>武将装备信息</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器sid</param>
+            <param name="rid">武将主键id</param>
+            /// <param name="name">name</param>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.SingleRoleEquips(TGG.Core.Entity.tg_role)">
+            <summary>武将装备信息</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.PostLogs(System.String,System.Int32,System.Int64,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>游戏记录</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器sid</param>
+            <param name="playerId">玩家主键id</param>
+            <param name="type">查询类型</param>
+            <param name="name">name</param>
+            <param name="index">页面索引</param>
+            <param name="size">页面数量</param>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.PostRole(System.String,System.Int32,System.Int64,System.String,System.String)">
+            <summary>武将属性信息</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务区sid</param>
+            <param name="rid">武将主键rid</param>
+            <param name="name">用户</param>
+            <param name="role">权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.PostPercent(System.String,System.Int32,System.Int64,System.Int32)">
+            <summary>元宝消耗明细</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器sid</param>
+            <param name="playerId">玩家id</param>
+            <param name="role">权限</param>
+        </member>
+        <member name="M:TGM.API.Controllers.PlayerController.ListLogs(System.Collections.Generic.List{TGG.Core.Entity.tg_log_operate},System.Int64)">
+            <summary>分组处理元宝消耗信息</summary>
+        </member>
+        <member name="M:TGM.API.Controllers.RecordController.PostServerList(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>服务器列表</summary>
+            <param name="token">令牌</param>
+            <param name="role">角色</param>
+            <param name="pid">平台编号</param>
+            <param name="sid">服务器编号</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+        </member>
+        <member name="M:TGM.API.Controllers.RecordController.PostRecordDayList(System.String,System.Int32,System.DateTime,System.DateTime,System.Int32,System.Int32)">
+            <summary>服务器每天分页列表</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器编号</param>
+            <param name="begin">开始时间</param>
+            <param name="end">结束</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+        </member>
+        <member name="M:TGM.API.Controllers.RecordController.PostRecordHoursList(System.String,System.Int32,System.DateTime)">
+            <summary>服务器每天图表</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器编号</param>
+            <param name="time">时间</param>
+        </member>
+        <member name="M:TGM.API.Controllers.RecordController.PostServerKeepList(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>获取平台服务器存留数据</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台编号</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+        </member>
+        <member name="M:TGM.API.Controllers.RecordController.PostServerGold(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>服务器元宝数据列表</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器sid</param>
+            <param name="index">分页索引值</param>
+            <param name="size">分页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.RecordController.PostServerIdentity(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>服务器身份数据列表信息</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器sid</param>
+            <param name="role">用户名</param>
+            <param name="index">分页索引值</param>
+            <param name="size">分页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.RecordController.PostLevel(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>等级分布信息</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台pid</param>
+            <param name="sid">服务器sid</param>
+            <param name="name">权限</param>
+            <param name="index">分页索引值</param>
+            <param name="size">分页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.RecordController.PostPlayer(System.String,System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>查询服务器玩家信息</summary>
+            <param name="token">令牌</param>
+            <param name="name">用户名</param>
+            <param name="sid">服务器sid</param>
+            <param name="type">查询类型</param>
+            <param name="value">查询值</param>
+            <param name="index">分页索引值</param>
+            <param name="size">分页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.ResourceController.PostPlatformAllList(System.String,System.Int32,System.Int32)">
+            <summary> 获取平台数据</summary>
+            <param name="pid">平台编号</param>
+            <param name="token">令牌</param>
+            <param name="role">角色</param>>
+        </member>
+        <member name="M:TGM.API.Controllers.ResourceController.BuildMessagesSend(System.Int64,System.String,System.String,System.String)">
+            <summary> 组装邮件实体并推送 </summary>
+            <param name="userid">接收用户Id</param>
+            <param name="title">邮件的title</param>
+            <param name="contents">邮件的contents</param>
+            <param name="attachment">附件 无附件填""</param>
+        </member>
+        <member name="M:TGM.API.Controllers.ResourceController.PostResourceList(System.String,System.Int32)">
+            <summary>获取所有平台的资源申请列表</summary>
+            <param name="token">令牌</param>
+            <param name="roleid">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.ResourceController.PostResourceByPidAndSid(System.String,System.Int64,System.Int64,System.Int32,System.Int32)">
+            <summary>获取所属平台，所属服务器的资源管理列表</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台id</param>
+            <param name="sid">服务器id</param>
+            <param name="roleid">用户id</param>
+            <param name="state">申请状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.ResourceController.PostUpdate(System.String,System.Int64,System.String)">
+            <summary>更改管理资源状态</summary>
+            <param name="token">令牌</param>
+            <param name="id">资源主键id</param>
+            <param name="name">操作人</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.ResourceController.PostDelete(System.String,System.Int64,System.Boolean)">
+            <summary>删除管理资源</summary>
+            <param name="token">令牌</param>
+            <param name="id">资源主键id</param>
+            <param name="flag">标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.ResourceController.PostUpdate(System.String,System.Int64,System.String,System.Boolean)">
+            <summary>更改管理资源状态</summary>
+            <param name="token">令牌</param>
+            <param name="id">资源主键id</param>
+            <param name="name">操作人</param>
+            <param name="flag">标识</param>
+            <returns></returns>
+        </member>
+        <member name="T:TGM.API.Controllers.SystemController">
+            <summary>
+            平台系统接口
+            </summary>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostFindPlatform(System.String,System.Int32,System.String,System.Byte)">
+            <summary>获取平台信息</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台id</param>
+            <param name="name">用户名称</param>
+            <param name="b">标识</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostPlatformEdit(System.String,System.Int32,System.String,System.String,System.Byte)">
+            <summary>平台信息更新</summary>
+            /// <param name="token">令牌</param>
+            <param name="pid">平台id</param>
+            <param name="pname">平台名称</param>
+            <param name="encrypt">加密字符串</param>
+            <param name="b">标示</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostServerGoodsCode(System.String,System.Int32,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>服务器福利卡激活码数据列表</summary>
+            <param name="token">令牌</param>
+            <param name="pid">服务器sid</param>
+            <param name="order">服务器sid</param>
+            <param name="type">卡牌类型</param>
+            <param name="index">分页索引值</param>
+            <param name="size">分页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostCreateCodes(System.String,System.Int32,System.String,System.Int32,System.Int32,System.Byte)">
+            <summary>生成平台福利卡激活码</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台pid</param>
+            <param name="data">生成批次</param>
+            <param name="type">生成类型</param>
+            <param name="number">生成数量</param>
+            <param name="b">标示</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostGameGoodsCode(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Byte)">
+            <summary>发放激活码信息</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台id</param>
+            <param name="sid">服务器id</param>
+            <param name="order">激活码序号</param>
+            <param name="type">发放类型</param>
+            <param name="b">标示</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostCodeLogs(System.String,System.Int32,System.Byte)">
+            <summary>查看激活码发放记录</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台pid</param>
+            <param name="b">标示</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostCodeLogs(System.String,System.Int32,System.Int32,System.Byte)">
+            <summary>导出平台激活码</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台pid</param>
+            <param name="role">权限</param>
+            <param name="b">标示</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostUpdateServerState(System.String,System.Int32,System.Int32,System.String,System.Byte)">
+            <summary>更改服务器状态</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器sid</param>
+            <param name="stateType">服务器修改状态</param>
+            <param name="startTime">服务器启服时间</param>
+            <param name="b">标示</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostLogin(System.String,System.String)">
+            <summary>后台登陆</summary>
+            <param name="name">用户名称</param>
+            <param name="password">密码(非加密密码)</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostFindServers(System.String,System.Boolean)">
+            <summary>根据令牌获取当前用户启服服务器</summary>
+            <param name="token">令牌</param>
+            <param name="flag">标识</param>
+            <returns>处理结果信息</returns>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostResetPassword(System.String,System.String,System.String,System.String)">
+            <summary>密码重置</summary>
+            <param name="token">令牌</param>
+            <param name="name">账号</param>
+            <param name="old">旧密码</param>
+            <param name="newpwd">新密码</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostUsers(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary> 账号管理</summary>
+            <param name="token">令牌</param>
+            <param name="role">角色</param>
+            <param name="pid">所属管理</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostRegister(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>后台账号注册</summary>
+            /// <param name="token">令牌</param>
+            <param name="name">注册账号名称</param>
+            <param name="pid">平台编号</param>
+            <param name="role">注册角色</param>
+            <param name="pwd">注册密码</param>
+            <returns>处理结果信息</returns>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostDeleteUser(System.Int32,System.String)">
+            <summary>删除用户</summary>
+            <param name="token">令牌</param>
+            <param name="id">账号主键id</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostPlatforms(System.String,System.Int32,System.Int32)">
+            <summary>获取平台信息</summary>
+            <param name="token">令牌</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostRegisterPlatform(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>平台注册</summary>
+            /// <param name="token">令牌</param>
+            <param name="pname">平台名称</param>
+            <param name="name">注册账号名称</param>
+            <param name="pwd">注册密码</param>
+            <param name="b">标识</param>
+            <returns>处理结果信息</returns>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostDeletePlatform(System.String,System.Int32)">
+            <summary>删除平台</summary>
+            <param name="token">令牌</param>
+            <param name="pid">平台编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostOpenServer(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>获取平台服务器信息</summary>
+            <param name="token">令牌</param>
+            <param name="type">类型</param>
+            <param name="index">分页索引</param>
+            <param name="size">分页大小</param>
+            <param name="role">角色</param>
+            <param name="pid">平台编号</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostRegisterServer(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>新服注册</summary>
+            /// <param name="token">令牌</param>
+            <param name="name">注册账号名称</param>
+            <param name="ip">IP</param>
+            <param name="pid">所属平台</param>
+            <param name="port">游戏端口</param>
+            <param name="policy">策略端口</param>
+            <param name="connect">数据库连接字符串</param>
+            <param name="tg_route">游戏访问接口</param>
+            <param name="tg_pay">支付接口</param>
+            <param name="game_domain">游戏域名</param>
+            <param name="game_pay">支付路径</param>
+            <returns>处理结果信息</returns>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostFindServer(System.String,System.Int32,System.Byte)">
+            <summary>获取服务器</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器标识</param>
+            <param name="b">标识</param>
+        </member>
+        <member name="M:TGM.API.Controllers.SystemController.PostServerEdit(System.String,System.Int32,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>服务器信息更新</summary>
+            /// <param name="token">令牌</param>
+            <param name="name">注册账号名称</param>
+            <param name="ip">IP</param>
+            <param name="id">所属平台</param>
+            <param name="port">游戏端口</param>
+            <param name="policy">策略端口</param>
+            <param name="connect">数据库连接字符串</param>
+            <param name="tgroute">游戏访问接口</param>
+            <param name="tgpay">支付接口</param>
+            <param name="gamedomain">游戏域名</param>
+            <param name="gamepay">支付路径</param>
+            <returns>处理结果信息</returns>
+        </member>
+        <member name="M:TGM.API.Controllers.HomeController.PostChartHome(System.String,System.Int32)">
+            <summary>获取首页图表数据</summary>
+            <param name="token">令牌</param>
+            <param name="sid">服务器id</param>
+        </member>
+        <member name="T:TGM.API.Controllers.ManageController">
+            <summary>
+            管理接口
+            </summary>
+        </member>
+        <member name="M:TGM.API.Controllers.ManageController.PostEmail(System.String,System.String,System.String,System.String)">
+            <summary>发送系统邮件</summary>
+            <param name="token">令牌</param>
+            <param name="sn">启服服务器名称</param>
+            <param name="title">邮件标题</param>
+            /// <param name="content">邮件内容</param>
+        </member>
+        <member name="M:TGM.API.Controllers.ManageController.PostNotice(System.String,System.String,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int32,System.String)">
+            <summary>
+            发送系统公告
+            </summary>
+            <param name="token">令牌</param>
+            <param name="sn">启服服务器名称</param>
+            <param name="playid">玩id</param>
+            <param name="sid">服务器主键id</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="space">时间间隔</param>
+            <param name="content">内容</param>
+            <param name="pid">平台主键id</param>
+            <returns></returns>
+        </member>
+        <member name="T:TGM.API.Helper.FixedResources">
+            <summary>
+            固定资源类
+            </summary>
+        </member>
+        <member name="F:TGM.API.Helper.FixedResources.BASE_ROLE">
+            <summary>武将信息基表数据</summary>
+        </member>
+        <member name="F:TGM.API.Helper.FixedResources.BASE_IDENTITY">
+            <summary>身份基表信息</summary>
+        </member>
+        <member name="F:TGM.API.Helper.FixedResources.BASE_OFFICE">
+            <summary>官职基表信息</summary>
+        </member>
+        <member name="F:TGM.API.Helper.FixedResources.BASE_BUSSINESS_AREA">
+            <summary>跑商商圈基表信息</summary>
+        </member>
+        <member name="F:TGM.API.Helper.FixedResources.BASE_FIGHT_SKILL">
+            <summary>战斗技能基表信息</summary>
+        </member>
+        <member name="F:TGM.API.Helper.FixedResources.BASE_FUSION">
+            <summary>炼化基表信息</summary>
+        </member>
+        <member name="F:TGM.API.Helper.FixedResources.BASE_EQUIP">
+            <summary>装备基表信息</summary>
+        </member>
+        <member name="F:TGM.API.Helper.FixedResources.BASE_PROP">
+            <summary>道具基表信息</summary>
+        </member>
+        <member name="F:TGM.API.Helper.FixedResources.BASE_RULE">
+            <summary>固定规则表信息</summary>
+        </member>
+        <member name="T:TGM.API.Helper.Util">
+            <summary>
+            公共帮助类
+            </summary>
+        </member>
+        <member name="M:TGM.API.Helper.Util.FromJson(System.String,System.Type)">
+            <summary>Json数据转换</summary>
+        </member>
+        <member name="M:TGM.API.Helper.Util.ReadBaseEntity">
+            <summary>读取基表</summary>
+        </member>
+        <member name="M:TGM.API.Helper.Util.GetRole">
+            <summary>获取武将信息</summary>
+        </member>
+        <member name="M:TGM.API.Helper.Util.GetBusinessArea">
+            <summary>获取跑商商圈信息</summary>
+        </member>
+        <member name="M:TGM.API.Helper.Util.GetSkill">
+            <summary>获取技能信息</summary>
+        </member>
+        <member name="M:TGM.API.Helper.Util.GetProp">
+            <summary>获取道具信息</summary>
+        </member>
+        <member name="M:TGM.API.Helper.Util.GetRule">
+            <summary>固定规则表信息</summary>
+        </member>
+        <member name="T:TGM.API.Helper.TimerWork">
+            <summary>
+            定时作业
+            </summary>
+        </member>
+        <member name="M:TGM.API.Helper.TimerWork.HoursRecord">
+            <summary>每小时作业</summary>
+        </member>
+        <member name="M:TGM.API.Helper.TimerWork.GetSingleServer(TGM.API.Entity.tgm_server)">
+            <summary>单服作业</summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:TGM.API.Helper.TimerWork.SetContent">
+            <summary>应用池回收的时候调用的方法</summary>
+        </member>
+        <member name="P:TGM.API.Helper.TimerWork.Content">
+            <summary>输出信息存储的地方</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Rankings.dll
+E:\Bin\TGG\Debug\TGG.Module.Rankings.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Rankings\obj\Debug\TGG.Module.Rankings.csprojResolveAssemblyReference.cache
+E:\192.168.1.254\TGG\第二期\TGG.Module.Rankings\obj\Debug\TGG.Module.Rankings.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Rankings\obj\Debug\TGG.Module.Rankings.pdb

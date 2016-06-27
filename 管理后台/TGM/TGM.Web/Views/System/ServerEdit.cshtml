@@ -1,0 +1,119 @@
+﻿@using TGM.API.Entity.Model;
+@model TGM.API.Entity.Model.Server
+
+@{
+    ViewBag.Title = "服务器信息编辑";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("ServerEdit", "System", FormMethod.Post))
+                    {
+                        <div class="control-group success">
+                            <label class="control-label">所属平台</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" readonly="readonly" value="@Model.platform_name" />
+                                <input type="hidden" class="input-xlarge" id="serverid" name="serverid" value="@Model.id" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("服务器名称")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_name" name="server_name" value="@Model.name" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("登陆网站")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_tg_route" name="server_tg_route" value="@Model.tg_route" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("游戏访问域名")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_game_domain" name="server_game_domain" value="@Model.game_domain" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("支付连接")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_tg_pay" name="server_tg_pay" value="@Model.tg_pay" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("游戏支付路径")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_game_pay" name="server_game_pay" value="@Model.game_pay" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("游戏IP")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_ip" name="server_ip" value="@Model.ip" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("游戏端口")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_port" name="server_port" value="@Model.port_server" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("策略端口")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_port_policy" name="server_port_policy" value="@Model.port_policy" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("数据库连接字符串")</label>
+                            <div class="controls">
+                                <input type="text" class="span8" id="server_connect_string" name="server_connect_string" value="@Model.connect_string" />
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">确认</button>
+                            <button type="button" class="btn" onclick="javascript: history.go(-1)">取消</button>
+                        </div>
+
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {}
+
+

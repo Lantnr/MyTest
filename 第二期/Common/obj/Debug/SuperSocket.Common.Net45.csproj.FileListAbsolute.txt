@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\SuperSocket.Common.dll
+E:\Bin\TGG\Debug\SuperSocket.Common.pdb
+E:\192.168.1.254\TGG\第二期\Common\obj\Debug\SuperSocket.Common.dll
+E:\192.168.1.254\TGG\第二期\Common\obj\Debug\SuperSocket.Common.pdb
+E:\192.168.1.254\TGG\第二期\Common\obj\Debug\SuperSocket.Common.Net45.csprojResolveAssemblyReference.cache

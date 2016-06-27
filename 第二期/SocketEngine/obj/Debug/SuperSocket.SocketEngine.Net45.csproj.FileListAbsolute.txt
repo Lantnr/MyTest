@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\SuperSocket.SocketEngine.dll
+E:\Bin\TGG\Debug\SuperSocket.SocketEngine.pdb
+E:\192.168.1.254\TGG\第二期\SocketEngine\obj\Debug\SuperSocket.SocketEngine.Net45.csprojResolveAssemblyReference.cache
+E:\192.168.1.254\TGG\第二期\SocketEngine\obj\Debug\SuperSocket.SocketEngine.dll
+E:\192.168.1.254\TGG\第二期\SocketEngine\obj\Debug\SuperSocket.SocketEngine.pdb

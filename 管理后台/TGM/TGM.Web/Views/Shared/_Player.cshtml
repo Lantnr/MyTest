@@ -1,0 +1,34 @@
+﻿ <!-- BEGIN BUTTON PORTLET-->
+@*@using (Html.BeginForm("PlayerPage", "Game", FormMethod.Post))*@
+@using (Ajax.BeginForm("PlayerPage", "Game", new AjaxOptions { UpdateTargetId = "myPnl" })) 
+{
+    <div class="widget">
+        <div class="widget-title">
+            <h4><i class="icon-search"></i> 查询 </h4>
+            <span class="tools">
+                <a href="javascript:;" class="icon-chevron-down"></a>
+            </span>
+        </div>
+        <div class="widget-body form-horizontal">
+            <div class="row-fluid">
+                <div class="span2">
+                    玩家ID
+                    @Html.TextBox("user_id", "", new { @class = "span8 popovers", @data_trigger = "hover", @data_content = "请输入玩家ID" })
+                </div>
+                <div class="span2">
+                    玩家名称
+                    @Html.TextBox("player_name", "", new { @class = "span8 popovers", @data_trigger = "hover", @data_content = "请输入玩家名称" })
+                </div>
+                <div class="span2">
+                    玩家账号
+                    @Html.TextBox("user_code", "", new { @class = "span8 popovers", @data_trigger = "hover", @data_content = "请输入玩家账号" })
+                </div>
+                <div class="span2">
+                    <button class="btn btn-primary" type="submit" name="player">查询</button>
+                    @Html.Hidden("PQ", @Request.Url.PathAndQuery)
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<!-- END BUTTON PORTLET-->

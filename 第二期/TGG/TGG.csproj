@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89D3FE4F-64CE-43C9-A3D4-C80B4D527830}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGG</RootNamespace>
+    <AssemblyName>TGG</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\TGG\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\TGG\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tgg.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewLife.Core, Version=4.2.5279.1935, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\XCode\NewLife.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XCode, Version=8.11.5279.1917, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\XCode\XCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Solution Items\TGGAssemblyInfo.cs">
+      <Link>Properties\TGGAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="FrmActivation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActivation.Designer.cs">
+      <DependentUpon>FrmActivation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDBTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDBTools.Designer.cs">
+      <DependentUpon>FrmDBTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmManageCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmManageCenter.Designer.cs">
+      <DependentUpon>FrmManageCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTools.Designer.cs">
+      <DependentUpon>FrmTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmActivation.resx">
+      <DependentUpon>FrmActivation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDBTools.resx">
+      <DependentUpon>FrmDBTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmManageCenter.resx">
+      <DependentUpon>FrmManageCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTools.resx">
+      <DependentUpon>FrmTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="..\Solution Items\log4net.config">
+      <Link>Config\log4net.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\Solution Items\Net45\App.config">
+      <Link>App.config</Link>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TGG.Core\TGG.Core.csproj">
+      <Project>{6CD2FD3E-C8AA-4AED-8783-4061BC97222C}</Project>
+      <Name>TGG.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Socket\TGG.Module.Socket.csproj">
+      <Project>{4a9e133b-a2bb-4506-a98c-597e792794c1}</Project>
+      <Name>TGG.Module.Socket</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Resources\TGG.Resources.csproj">
+      <Project>{cd106589-d026-4af2-8e42-3c8a701e8f79}</Project>
+      <Name>TGG.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Share\TGG.Share.csproj">
+      <Project>{08d53178-76f2-4e1b-b9ea-b769a293dd0b}</Project>
+      <Name>TGG.Share</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\start.png" />
+    <None Include="Resources\initial.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\jt.png" />
+    <Content Include="..\Reference\flash.xml">
+      <Link>Config\flash.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tgg.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

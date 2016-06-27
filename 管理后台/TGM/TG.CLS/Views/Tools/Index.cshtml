@@ -1,0 +1,52 @@
+﻿@model TG.CLS.Controllers.ToolsEnitiy
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "Tools", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>user:</td>
+            <td><input type="text" style="width: 400px;" id="user" name="user" value="@Model.user" /></td>
+        </tr>
+        <tr>
+            <td> domain/time:</td>
+            <td><input type="text" style="width: 400px;" id="domain" name="domain" value="@Model.domain" />&nbsp;
+            <input id="btn_time" type="button" value="button" onclick="click_time()" /></td>
+        </tr>
+        <tr>
+            <td> encrypt:</td>
+            <td><input type="text" class="input-xlarge" style="width: 400px;" id="encrypt" name="encrypt" value="@Model.encrypt" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">生成MD5</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text" style="width: 400px;" id="result" name="result" value="@Model.chksum" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text" style="width: 600px;" id="url1" name="url1" value="@Model.url1" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text" style="width: 600px;" id="url2" name="url2" value="@Model.url2" /></td>
+        </tr>
+    </table>
+
+}
+
+<script type="text/javascript">
+
+    function click_time() {
+        var timestamp = Date.parse(new Date()) / 1000;
+        document.getElementById('domain').value = timestamp;
+    }
+</script>

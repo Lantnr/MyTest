@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Command.Socket.dll
+E:\Bin\TGG\Debug\TGG.Command.Socket.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Command.Socket\obj\Debug\TGG.Command.Socket.csprojResolveAssemblyReference.cache
+E:\192.168.1.254\TGG\第二期\TGG.Command.Socket\obj\Debug\TGG.Command.Socket.dll
+E:\192.168.1.254\TGG\第二期\TGG.Command.Socket\obj\Debug\TGG.Command.Socket.pdb

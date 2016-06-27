@@ -1,0 +1,147 @@
+﻿@model TGM.API.Entity.Model.BaseEntity
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <title>MyGame</title>
+    <meta name="google" value="notranslate" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    @if (Model.result == 0)
+    {
+        <style type="text/css" media="screen">
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: auto;
+                text-align: center;
+                background-color: #000000;
+            }
+
+            object:focus {
+                outline: none;
+            }
+
+            #flashContent {
+                display: none;
+            }
+        </style>
+        <script src="~/js/swfobject.js"></script>
+        <script type="text/javascript">
+            var configData = new Object();
+            configData.version = "@ViewBag.version"; //版本号
+            configData.securityDomains = ["*"]; //["http://www.webgame.com"]; 安全域,*表示通用
+            configData.platform = -1; //-1:联盟，0:qq空间，1：qq朋友 ...
+
+            configData.serverIp = "192.168.1.254" //"www.webgame.com";
+            configData.port = 9000; //;
+            configData.portPolicy = 0; //; //策略数据socket端口,0为不指定
+
+            configData.languageType ="@ViewBag.languageType"; //0:简体中文 ,1:繁体中文 ,2:美国英文 ,3:英国英文
+            configData.resourceRootPath =  "@ViewBag.resourceRootPath"; //"http://www.webgame.com/" 资源根目录，前面必须有"http://"，后面必须有"/"
+            configData.rechargetUrl =  "@ViewBag.rechargetUrl"; //充值地址
+            configData.homeUrl = "@ViewBag.homeUrl" ; //主页地址，连接失败时跳转
+
+            function getConfig() {
+                return configData;
+            }
+        </script>
+        <script type="text/javascript">
+    ////获取浏览器地址参数
+    function getSearchData() {
+        var data = {};
+        var searchVar = @(new HtmlString(ViewBag.js));
+        var array = searchVar.split("&");
+        var values = null;
+
+        for (var i = 0; i < array.length; i++) {
+            values = array[i].split("=");
+            data[values[0]] = escape(values[1]);
+        }
+        return data;
+    }
+
+    // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection.
+
+    var swfVersionStr = "11.4.0";
+    // To use express install, set to playerProductInstall.swf, otherwise the empty string.
+    var xiSwfUrlStr = "@ViewBag.playerProductInstall";
+    var flashvars = getSearchData();
+    var params = {};
+    params.quality = "high";
+    params.bgcolor = "#000000";
+    params.allowscriptaccess = "always";
+    params.allowfullscreen = "true";
+    var attributes = {};
+    attributes.id = "index";
+    attributes.name = "index";
+    attributes.align = "middle";
+    swfobject.embedSWF(
+         "@ViewBag.index", "flashContent",
+        "100%", "100%",
+        swfVersionStr, xiSwfUrlStr,
+        flashvars, params, attributes);
+    // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
+    swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+</script>
+    }
+</head>
+<body>
+    @if (Model.result == 0)
+    {
+        <!-- SWFObject's dynamic embed method replaces this alternative HTML content with Flash content when enough
+            JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
+            when JavaScript is disabled.
+            -->
+        <div id="flashContent">
+            <p>
+                To view this page ensure that Adobe Flash Player version
+                11.4.0 or greater is installed.
+            </p>
+            <script type="text/javascript">
+                var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
+                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='"
+                    + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>");
+            </script>
+        </div>
+
+        <noscript>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="index">
+                <param name="movie" value="@ViewBag.index" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#000000" />
+                <param name="allowScriptAccess" value="always" />
+                <param name="allowFullScreen" value="true" />
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="@ViewBag.index" width="100%" height="100%">
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#000000" />
+                    <param name="allowScriptAccess" value="always" />
+                    <param name="allowFullScreen" value="true" />
+                    <!--<![endif]-->
+                    <!--[if gte IE 6]>-->
+                    <p>
+                        Either scripts and active content are not permitted to run or Adobe Flash Player version
+                        11.4.0 or greater is not installed.
+                    </p>
+                    <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflashplayer">
+                        <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" />
+                    </a>
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+        </noscript>
+    }
+    else
+    {
+        @Model.message
+    }
+</body>
+</html>

@@ -1,0 +1,4 @@
+E:\Bin\TGG\Debug\TGG.Module.Games.dll
+E:\Bin\TGG\Debug\TGG.Module.Games.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Games\obj\Debug\TGG.Module.Games.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Games\obj\Debug\TGG.Module.Games.pdb

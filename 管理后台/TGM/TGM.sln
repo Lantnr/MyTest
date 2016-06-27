@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31010.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGM.API", "TGM.API\TGM.API.csproj", "{AB376FC0-47CD-49EF-802B-EB590798A5F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGM.Web", "TGM.Web\TGM.Web.csproj", "{B3D506C5-0B81-49FE-A23A-A1F9283C4EFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGM.API.Entity", "TGM.API.Entity\TGM.API.Entity.csproj", "{E3F5BDC0-DE47-4E3F-BAE6-A78A53BB38F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AEB791B9-30AB-48A0-A097-D81FF2287335}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGM.Tools", "TGM.Tools\TGM.Tools.csproj", "{1A7C53D7-54D7-4817-8922-9525FFD2C735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TG.CLS", "TG.CLS\TG.CLS.csproj", "{ABC96D22-9D69-4326-933A-F73E9363C16E}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.254:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TGM.API.Entity\\TGM.API.Entity.csproj
+		SccProjectName1 = TGM.API.Entity
+		SccLocalPath1 = TGM.API.Entity
+		SccProjectUniqueName2 = TGM.Web\\TGM.Web.csproj
+		SccProjectName2 = TGM.Web
+		SccLocalPath2 = TGM.Web
+		SccProjectUniqueName3 = TGM.API\\TGM.API.csproj
+		SccProjectName3 = TGM.API
+		SccLocalPath3 = TGM.API
+		SccProjectUniqueName4 = TGM.Tools\\TGM.Tools.csproj
+		SccProjectName4 = TGM.Tools
+		SccLocalPath4 = TGM.Tools
+		SccProjectUniqueName5 = TG.CLS\\TG.CLS.csproj
+		SccProjectName5 = TG.CLS
+		SccLocalPath5 = TG.CLS
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB376FC0-47CD-49EF-802B-EB590798A5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB376FC0-47CD-49EF-802B-EB590798A5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB376FC0-47CD-49EF-802B-EB590798A5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB376FC0-47CD-49EF-802B-EB590798A5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D506C5-0B81-49FE-A23A-A1F9283C4EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D506C5-0B81-49FE-A23A-A1F9283C4EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D506C5-0B81-49FE-A23A-A1F9283C4EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D506C5-0B81-49FE-A23A-A1F9283C4EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F5BDC0-DE47-4E3F-BAE6-A78A53BB38F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F5BDC0-DE47-4E3F-BAE6-A78A53BB38F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F5BDC0-DE47-4E3F-BAE6-A78A53BB38F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F5BDC0-DE47-4E3F-BAE6-A78A53BB38F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A7C53D7-54D7-4817-8922-9525FFD2C735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A7C53D7-54D7-4817-8922-9525FFD2C735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A7C53D7-54D7-4817-8922-9525FFD2C735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A7C53D7-54D7-4817-8922-9525FFD2C735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC96D22-9D69-4326-933A-F73E9363C16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC96D22-9D69-4326-933A-F73E9363C16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC96D22-9D69-4326-933A-F73E9363C16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC96D22-9D69-4326-933A-F73E9363C16E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Fight.dll
+E:\Bin\TGG\Debug\TGG.Module.Fight.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Fight\obj\Debug\TGG.Module.Fight.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Fight\obj\Debug\TGG.Module.Fight.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Fight\obj\Debug\TGG.Module.Fight.csprojResolveAssemblyReference.cache

@@ -1,0 +1,639 @@
+﻿@using TGM.API.Entity.Model
+@model  PlayerDetailed
+@{
+    ViewBag.Title = "玩家信息查询";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var platforms = ViewBag.Platform as List<Platform>;
+}
+
+@section css {
+
+    <link href="~/css/pagination.css" rel="stylesheet" />
+}
+
+@{
+    var error = ViewBag.Error;
+}
+@if (error < 1)
+{
+    <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <center> @ViewBag.Message</center>
+    </div>
+}
+
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            玩家信息查询
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <a href="~/?Home">首页</a>
+            </li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("Index", "Player", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><label class="btn-small">平台</label></td>
+                <td>
+                    <select class="input-medium" tabindex="1" name="platform" id="platform">
+                        <option>--请选择--</option>
+                        @foreach (var item in platforms)
+                        {
+                            <option value="@item.id">@item.name</option>
+                        }
+                    </select>
+                </td>
+                <td><label class="btn-small">服务器</label></td>
+                <td>
+                    <select class="input-medium" tabindex="1" name="server" id="server"></select>
+                </td>
+                <td width="70px"></td>
+                <td>
+                    <select class="input-medium" tabindex="1" name="search_type" id="search_type">
+                        <option value="1">玩家账号</option>
+                        <option value="2">玩家名称</option>
+                    </select>
+                </td>
+                <td>
+                    <form class="hidden-phone">
+                        <div class="input-append search-input-area">
+                            <input class="text" id="appendedInputButton" type="text" name="value" title="请输入查询条件">
+                            <button class="btn" type="submit"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn-toolbar"></div>
+
+        <div class="row-fluid">
+            <div class="span12">
+                <!-- BEGIN INLINE TABS PORTLET-->
+                <div class="widget orange">
+                    <div class="widget-title">
+                        <h4><i class="icon-reorder"></i>玩家信息</h4>
+                        <span class="tools">
+                            <a href="javascript:;" class="icon-chevron-down"></a>
+                        </span>
+                    </div>
+                    <div class="widget-body">
+                        <div class="bs-docs-example">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a data-toggle="tab" href="#userinfo">详细信息</a></li>
+                                <li><a data-toggle="tab" href="#role">武将</a></li>
+                                <li><a data-toggle="tab" href="#bag">背包</a></li>
+                                <li><a data-toggle="tab" href="#record" onclick="get_search(0,@Model.sid,@Model.id)">游戏记录</a></li>
+                                <li><a data-toggle="tab" href="#cityquery">据点查询</a></li>
+                                <li><a data-toggle="tab" href="#goldcost" onclick="get_gold(0,@Model.sid,@Model.id)">元宝消耗记录</a></li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div id="userinfo" class="tab-pane fade in active">
+                                    <table class="table table-striped table-hover table-bordered">
+                                        <tbody>
+                                            <tr><th>账号：</th><td>@Model.code</td><th>名称：</th><td>@Model.name </td><th>职业：</th><td>@Model.vocation </td><th>是否在线：</th><td>@Model.login_state </td><td><a class="btn btn-small btn-info" data-toggle="modal" data-target="#skillmodal" onclick="get_skill(@Model.rid,@Model.sid)"><i class="icon-ban-circle icon-white"></i> 查看技能</a></td></tr>
+                                            <tr><th>VIP等级：</th><td>@Model.vip </td><th>身份：</th><td>@Model.identity  </td><th>等级：</th><td>@Model.level  </td><th>官职：</th><td>@Model.office  </td><td><a class="btn btn-small btn-info" data-toggle="modal" data-target="#bagmodal" onclick="get_equips(@Model.rid,@Model.sid)"><i class="icon-ban-circle icon-white"></i> 查看装备</a></td></tr>
+                                            <tr><th>元宝：</th><td>@Model.gold </td><th>金钱：</th><td>@Model.coin</td><th>魂：</th><td>@Model.spirit  </td><th>声望：</th><td>@Model.fame  </td><td><a class="btn btn-small btn-info" data-toggle="modal" data-target="#rolemodal" onclick="get_role(@Model.sid,@Model.rid)"><i class="icon-ban-circle icon-white"></i> 查看属性</a></td></tr>
+                                            <tr><th>战功值：</th><td>@Model.merit </td><th>功勋值：</th><td>@Model.honor  </td><th>拥有商车数量：</th><td>@Model.cars </td><td></td><td></td><td></td> </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="btn-toolbar"></div>
+                                    <table>
+                                        <tr>
+                                            <th>拥有商圈：</th>
+                                            @foreach (var item in Model.Areas)
+                                            {
+                                                <td width="45px">@item</td>
+                                            }
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="role" class="tab-pane fade">
+                                    <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                        <thead>
+                                            <tr>
+                                                <th>武将</th>
+                                                <th>等级</th>
+                                                <th>身份</th>
+                                                <th>品质</th>
+                                                <th>状态</th>
+                                                <th>所在据点</th>
+                                                <th>详情</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in @Model.Roles)
+                                            {
+                                                <tr class="">
+                                                    <td>@item.name</td>
+                                                    <td>@item.level</td>
+                                                    <td>@item.identity </td>
+                                                    <td>@item.quality </td>
+                                                    <td>@item.war_status</td>
+                                                    <td>@item.cityname</td>
+                                                    <td><a class="btn btn-small btn-info" data-toggle="modal" data-target="#skillmodal" onclick="get_skill(@item.id,@Model.sid)"><i class="icon-ban-circle icon-white"></i> 查看技能</a></td>
+                                                    <td><a class="btn btn-small btn-info" data-toggle="modal" data-target="#bagmodal" onclick="get_equips(@item.id,@Model.sid)"><i class="icon-ban-circle icon-white"></i> 查看装备</a></td>
+                                                    <td><a class="btn btn-small btn-info" data-toggle="modal" data-target="#rolemodal" onclick="get_role(@Model.sid,@item.id)"><i class="icon-ban-circle icon-white"></i> 查看属性</a></td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="bag" class="tab-pane fade">
+                                    <div class="portlet-scroll-1" style="overflow: hidden; outline: none; height: 350px; " tabindex="5001">
+                                        <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                            <thead>
+                                                <tr>
+                                                    <th>物品</th>
+                                                    <th>数量</th>
+                                                    <th>品质</th>
+                                                    <th>使用等级</th>
+                                                    <th>备注</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in @Model.Bags)
+                                                {
+                                                    <tr class="">
+                                                        <td>@item.name</td>
+                                                        <td>@item.count</td>
+                                                        <td>@item.quality</td>
+                                                        <td>@item.level</td>
+                                                        <td>@item.describe</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="record" class="tab-pane fade">
+                                    <div>
+                                        <select class="input-medium" tabindex="1" name="resourceType" id="resourceType">
+                                            <option value="0">全部</option>
+                                            <option value="1">金钱记录</option>
+                                            <option value="3">元宝记录</option>
+                                            <option value="6">道具记录</option>
+                                            <option value="11">体力记录</option>
+                                        </select>
+                                    </div>
+                                    <div><a class="btn btn-small btn-success" id="search" onclick="get_search(0,@Model.sid,@Model.id)"><i class="icon-search icon-white"></i> 查询</a></div>
+                                    <div class="btn-toolbar"></div>
+                                    <table class="table table-striped table-hover table-bordered" id="editable-sample-log">
+                                        <thead>
+                                            <tr><th>模块</th><th>操作</th><th>涉及资源</th><th>数量</th><th>操作时间</th></tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                    <div class="row-fluid" id="search_pager"></div>
+                                </div>
+                                <div id="cityquery" class="tab-pane fade">
+                                    <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                        <thead>
+                                            <tr>
+                                                <th>据点名称</th>
+                                                <th>规模</th>
+                                                <th>军粮</th>
+                                                <th>军资金</th>
+                                                <th>足轻</th>
+                                                <th>铁炮</th>
+                                                <th>马匹</th>
+                                                <th>雉刀</th>
+                                                <th>苦无</th>
+                                                <th>士气</th>
+                                                <th>治安</th>
+                                                <th>耐久度</th>
+                                                <th>繁荣度</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in @Model.Citys)
+                                            {
+                                                <tr class="">
+                                                    <td>@item.name</td>
+                                                    <td>@item.size</td>
+                                                    <td>@item.res_foods</td>
+                                                    <td>@item.res_funds</td>
+                                                    <td>@item.res_soldier</td>
+                                                    <td>@item.res_gun</td>
+                                                    <td>@item.res_horse</td>
+                                                    <td>@item.res_razor</td>
+                                                    <td>@item.res_kuwu</td>
+                                                    <td>@item.res_morale</td>
+                                                    <td>@item.peace</td>
+                                                    <td>@item.strong</td>
+                                                    <td>@item.boom</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="goldcost" class="tab-pane fade">
+                                    <table class="table table-striped table-hover table-bordered" id="editable-sample-gold">
+                                        <thead>
+                                            <tr><th>消耗类别</th><th>消耗时间</th><th>消耗元宝</th><th>剩余元宝</th></tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                    <div class="row-fluid" id="search_gold"></div>
+                                    <div class="btn-toolbar"></div>
+                                    <button class="btn  btn-success" type="button" data-toggle="modal" data-target="#goldpercent" onclick="get_percent(@Model.sid,@Model.id)">元宝消耗分析图</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END INLINE TABS PORTLET-->
+            </div>
+        </div>
+
+        <!--弹出技能框-->
+        <div id="skillmodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="skillLable" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="skillLable">技能详情</h4>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <table id="skill_table" class="table table-striped table-hover table-bordered"></table>
+                <table id="fight_skill_table1" class="table table-striped table-hover table-bordered"></table>
+                <table id="fight_skill_table2" class="table table-striped table-hover table-bordered"></table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
+
+        <!--弹出装备框-->
+        <div id="bagmodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="bagLable" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="bagLable">装备详情</h4>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <table id="bag_table" class="table table-striped table-hover table-bordered"></table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
+
+        <!--弹出属性框-->
+        <div id="rolemodal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="roleLable" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="roleLable">属性详情</h4>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <table id="role_table" class="table table-striped table-hover table-bordered"></table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
+
+        <!--弹出元宝消耗明细框-->
+        <div id="goldpercent" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="percentLable" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="percentLable">元宝消耗明细</h4>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <div class="widget green">
+                    <div class="widget-title" id="widget_title_percent">
+                        <h4 id="title"> 消耗日期</h4>
+                        <span class="tools">
+                            <a href="javascript:;" class="icon-chevron-down"></a>
+                        </span>
+                    </div>
+                    <div class="widget-body" id="widget_body_percent"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
+    }
+
+    @section Scripts
+    {
+        <script type="text/javascript">
+
+            //绑定选择平台下拉框事件
+            $("#platform").change(function () {
+                get_server();
+            });
+
+            //处理服务器选择项事件
+            function get_server() {
+                $("#server").empty();
+                //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+                var sv = $("#platform").find("option:selected").val();
+                $.ajax({
+                    url: "/Common/AjaxServer?id=" + sv,
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        for (var n = 0; n < r.length; n++) {
+                            var v = r[n].id;
+                            var name = r[n].name;
+                            $("#server").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                        }
+                    }
+                });
+            }
+        </script>
+
+        <script type="text/javascript">
+            function get_skill(rid, sid) {
+                $("#skill_table").empty();
+                $("#fight_skill_table1").empty();
+                $("#fight_skill_table2").empty();
+                $.ajax({
+                    url: "/Player/AjaxSkills?sid=" + sid + "&rid=" + rid,
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        var ls = r.LifeSkill;
+                        $("#skill_table").append("<tr>" + "<th>" + "礼法" + "</th>" + "<th>" + "算术" + "</th>" + "<th>" + "武艺" + "</th>" + "<th>" + "忍术" + "</th>" + "<th>" + "辩才" + "</th>" + "<th>" + "艺术" + "</th>" + "<th>" + "医术" + "</th>" + "<th>" + "茶道" + "</th>" + "</tr>" +
+                            "<tr>" + "<td>" + ls.sub_etiquette_level + "</td>" + "<td>" + ls.sub_calculate_level + "</td>" + "<td>" + ls.sub_martial_level + "</td>" + "<td>" + ls.sub_ninjitsu_level + "</td>" + "<td>" + ls.sub_eloquence_level + "</td>" + "<td>" + ls.sub_craft_level + "</td>" + "<td>" + ls.sub_medical_level + "</td>" + "<td>" + ls.sub_tea_level + "</td>" + "</tr>" +
+                            "<tr>" + "<th>" + "建筑" + "</th>" + "<th>" + "开垦" + "</th>" + "<th>" + "军学" + "</th>" + "<th>" + "矿山" + "</th>" + "<th>" + "足轻" + "</th>" + "<th>" + "弓术" + "</th>" + "<th>" + "铁炮" + "</th>" + "<th>" + "马术" + "</th>" + "</tr>" +
+                            "<tr>" + "<td>" + ls.sub_build_level + "</td>" + "<td>" + ls.sub_reclaimed_level + "</td>" + "<td>" + ls.sub_tactical_level + "</td>" + "<td>" + ls.sub_mine_level + "</td>" + "<td>" + ls.sub_ashigaru_level + "</td>" + "<td>" + ls.sub_archer_level + "</td>" + "<td>" + ls.sub_artillery_level + "</td>" + "<td>" + ls.sub_equestrian_level + "</td>" + "</tr>");
+
+                        var fs = r.FightSkill;
+                        var html1 = "<tr>" + "<th>" + '所属流派' + "</th>" + "<th>" + '技能名称' + "</th>" + "<th>" + '技能等级' + "</th>" + "</tr>";
+                        var html2 = "<tr>" + "<th>" + '所属忍者众' + "</th>" + "<th>" + '技能名称' + "</th>" + "<th>" + '技能等级' + "</th>" + "</tr>";
+                        for (var n = 0; n < fs.length; n++) {
+                            if (fs[n].genre <= 12) {
+                                html1 += "<tr>";
+                                html1 += "<td>" + fs[n].genreName + "</td>";
+                                html1 += "<td>" + fs[n].name + "</td>";
+                                html1 += "<td>" + fs[n].level + "</td>";
+                                html1 += "</tr>";
+                            } else {
+                                html2 += "<tr>";
+                                html2 += "<td>" + fs[n].genreName + "</td>";
+                                html2 += "<td>" + fs[n].name + "</td>";
+                                html2 += "<td>" + fs[n].level + "</td>";
+                                html2 += "</tr>";
+                            }
+                        }
+                        $("#fight_skill_table1").append(html1);
+                        $("#fight_skill_table2").append(html2);
+                    }
+                });
+            }
+        </script>
+
+        <script type="text/javascript">
+            function get_equips(rid, sid) {
+                $("#bag_table").empty();
+                $.ajax({
+                    url: "/Player/AjaxEquips?sid=" + sid + "&rid=" + rid,
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        if (r == null) return;
+                        var html = "<tr>" + "<th>" + '装备部位' + "</th>" + "<th>" + '装备名称' + "</th>" + "<th>" + '使用等级' + "</th>" + "<th>" + '装备属性1' + "</th>" + "<th>" + '装备属性2' + "</th>" + "<th>" + '装备属性3' + "</th>" + "</tr>";
+                        $("#bag_table").append(html);
+                        for (var n = 0; n < r.length; n++) {
+                            var _html = "<tr>";
+                            _html += "<td>" + r[n].position + "</td>";
+                            _html += "<td>" + r[n].name + "</td>";
+                            _html += "<td>" + r[n].level + "</td>";
+                            if (r[n].attribute1_type != 0) {
+                                if (r[n].attribute1_value_spirit != 0) {
+                                    _html += "<td>" + r[n].attribute1_name + '   (+' + r[n].attribute1_value_spirit + ")" + "</td>";
+                                } else {
+                                    _html += "<td>" + r[n].attribute1_name + "</td>";
+                                }
+                            } else {
+                                _html += "<td>" + "</td>";
+                            }
+                            if (r[n].attribute2_type != 0) {
+                                if (r[n].attribute2_value_spirit != 0) {
+                                    _html += "<td>" + r[n].attribute2_name + '   (+' + r[n].attribute2_value_spirit + ")" + "</td>";
+                                } else {
+                                    _html += "<td>" + r[n].attribute2_name + "</td>";
+                                }
+                            } else {
+                                _html += "<td>" + "</td>";
+                            }
+                            if (r[n].attribute3_type != 0) {
+                                if (r[n].attribute3_value_spirit != 0) {
+                                    _html += "<td>" + r[n].attribute3_name + '   (+' + r[n].attribute3_value_spirit + ")" + "</td>";
+                                } else {
+                                    _html += "<td>" + r[n].attribute3_name + "</td>";
+                                }
+                            } else {
+                                _html += "<td>" + "</td>";
+                            }
+                            _html += "</tr>";
+                            $("#bag_table").append(_html);
+                        }
+                    }
+                });
+            }
+
+        </script>
+
+        <script type="text/javascript">
+            function get_role(sid, rid) {
+                $("#role_table").empty();
+                $.ajax({
+                    url: "/Player/AjaxRole?sid=" + sid + "&rid=" + rid, //mvc请求地址
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        if (r == null) return;
+                        var _html = "<tr>" + "<th>" + '统率' + "</th>" + "<th>" + '武力' + "</th>" + "<th>" + '智谋' + "</th>" + "<th>" + '政务' + "</th>" + "<th>" + '魅力' + "</th>" + "</tr>";
+                        _html += "<tr>";
+                        _html += "<td>" + r.captain + "</td>";
+                        _html += "<td>" + r.force + "</td>";
+                        _html += "<td>" + r.brains + "</td>";
+                        _html += "<td>" + r.govern + "</td>";
+                        _html += "<td>" + r.charm + "</td>";
+                        _html += "</tr>";
+                        $("#role_table").append(_html);
+                    }
+                });
+            }
+        </script>
+
+        <script src="~/js/jquery.pagination.js"></script>
+        <script type="text/javascript">
+
+            var pageIndex = 0; //页面索引初始值
+            var pageSize = 10; //每页显示条数初始化，修改显示条数，修改这里即可
+
+            var sid = '@Model.sid';
+            var playerId = '@Model.id';
+
+            //翻页调用
+            function PageRecordCallback(pageIndex) {
+                get_search(pageIndex, sid, playerId);
+            }
+
+            //查询方法
+            function get_search(pageIndex, sid, playerId) {
+                if (playerId == 0 || sid == 0) return;
+                var type = $("#resourceType").find("option:selected").val();
+                $.ajax({
+                    url: "/Player/AjaxLogs?sid=" + sid + "&playerId=" + playerId + "&type=" + type + "&page=" + pageIndex + "&size=" + pageSize, //mvc请求地址
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        $("#editable-sample-log tbody").empty();
+                        if (r.length > 0) return;
+                        var logs = r.Logs;
+                        if (r.result < 0) {
+                            alert(r.message);
+                            return;
+                        }
+                        for (var n = 0; n < logs.length; n++) {
+                            var _html = "<tr>";
+                            _html += "<td>" + logs[n].module_name + "</td>";
+                            _html += "<td>" + logs[n].command_name + "</td>";
+                            _html += "<td>" + logs[n].resources_name + "</td>";
+                            if (logs[n].changes_type == 1000 && logs[n].count > 0) {
+                                _html += "<td>" + '-' + logs[n].count + "</td>";
+                            } else if (logs[n].changes_type == 2000 && logs[n].count > 0) {
+                                _html += "<td>" + '+' + logs[n].count + "</td>";
+                            } else {
+                                _html += "<td>" + logs[n].count + "</td>";
+                            }
+                            _html += "<td>" + logs[n].time + "</td>";
+                            _html += "</tr>";
+                            $("#editable-sample-log tbody").append(_html);
+                        }
+
+                        var p = r.Pager;
+                        pageSize = p.PageSize;
+                        pageIndex = p.CurrentPageIndex;
+
+                        //分页，PageCount是总条目数，这是必选参数，其它参数都是可选
+                        $("#search_pager").pagination(p.RecordCount, {
+                            callback: PageRecordCallback,
+                            prev_text: '上一页', //上一页按钮里text
+                            next_text: '下一页', //下一页按钮里text
+                            items_per_page: pageSize, //显示条数
+                            num_display_entries: 5, //连续分页主体部分分页条目数
+                            current_page: pageIndex, //当前页索引
+                            num_edge_entries: 3 //两侧首尾分页条目数
+                        });
+                    }
+                });
+            }
+        </script>
+
+        <script type="text/javascript">
+
+            var index = 0; //页面索引初始值
+            var size = 10; //每页显示条数初始化，修改显示条数，修改这里即可
+
+            var sid = '@Model.sid';
+            var playerId = '@Model.id';
+
+            //翻页调用
+            function PageCallback(index) {
+                get_gold(index, sid, playerId);
+            }
+
+            //查询方法
+            function get_gold(index, sid, playerId) {
+                if (playerId == 0 || sid == 0) return;
+
+                $.ajax({
+                    url: "/Player/AjaxGolds?sid=" + sid + "&playerId=" + playerId + "&page=" + index + "&size=" + size,
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        $("#editable-sample-gold tbody").empty();
+                        if (r.length > 0) return;
+                        var logs = r.Logs;
+                        if (r.result < 0) {
+                            alert(r.message);
+                            return;
+                        }
+                        for (var n = 0; n < logs.length; n++) {
+                            var _html = "<tr>";
+                            _html += "<td>" + logs[n].command_name + "</td>";
+                            _html += "<td>" + logs[n].time + "</td>";
+                            _html += "<td>" + logs[n].count + "</td>";
+                            _html += "<td>" + logs[n].surplus + "</td>";
+                            _html += "</tr>";
+                            $("#editable-sample-gold tbody").append(_html);
+                        }
+
+                        var pg = r.Pager;
+                        size = pg.PageSize;
+                        index = pg.CurrentPageIndex;
+
+                        //分页，PageCount是总条目数，这是必选参数，其它参数都是可选
+                        $("#search_gold").pagination(pg.RecordCount, {
+                            callback: PageCallback,
+                            prev_text: '上一页', //上一页按钮里text
+                            next_text: '下一页', //下一页按钮里text
+                            items_per_page: size, //显示条数
+                            num_display_entries: 5, //连续分页主体部分分页条目数
+                            current_page: index, //当前页索引
+                            num_edge_entries: 3 //两侧首尾分页条目数
+                        });
+                    }
+                });
+            }
+        </script>
+
+        <script type="text/javascript">
+            function get_percent(sid, playerId) {
+                if (sid == 0 || playerId == 0) return;
+                $("#title").empty();
+                $("#widget_body_percent").empty();
+                $.ajax({
+                    url: "/Player/AjaxPercent?sid=" + sid + "&playerId=" + playerId,
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        if (r == null) return;
+                        if (r.result < 0) {
+                            $("#title").append('消耗日期');
+                            return;
+                        }
+                        var total = r.total_gold;
+                        var start = r.start_time;
+                        var nowDate = new Date();
+                        var now = nowDate.getFullYear() + "-" + (nowDate.getMonth() + 1) + "-" + nowDate.getDate();
+
+                        var title = start + "~" + now + "----- " + "消费元宝：" + total;
+                        $("#title").append(title);
+
+                        var logs = r.ListLogs;
+                        for (var n = 0; n < logs.length; n++) {
+                            var name = logs[n].name;
+                            var gold = logs[n].gold;
+                            var percent = logs[n].percent;
+
+                            var html = "<div>" + name + "</div>";
+                            html += "<div style=\"float:right\">" + gold + "(" + percent + "%" + ")" + "</div>";
+                            html += "<div class=\"progress progress-success\" style=\"width :400px\">" + "<div style=\"width:" + percent + "%;\" class=\"bar\">" + "</div>" + "</div";
+                            $("#widget_body_percent").append(html);
+                        }
+                    }
+                });
+            }
+        </script>
+    }
+</body>
+</html>

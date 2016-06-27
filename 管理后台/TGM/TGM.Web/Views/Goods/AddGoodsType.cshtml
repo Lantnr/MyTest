@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "添加福利卡类型";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget orange">
+                <div class="widget-title">
+                    <h4><i class="icon-reorder"></i> 添加福利卡类型</h4>
+                    <span class="tools">
+                        <a href="javascript:;" class="icon-chevron-down"></a>
+                    </span>
+                </div>
+                <div class="widget-body">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    @if (ViewBag.Error > 0)
+                    {
+                        <div class="alert alert-success">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("AddGoodsType", "Goods", FormMethod.Post))
+                    {
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">福利卡类型枚举ID</label>
+                            <div class="controls">
+                                <input type="text" class="input-small" id="type" name="type" onkeyup=" this.value = this.value.replace(/[^\d]/g, '') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" />
+                            </div>
+                        </div>
+
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">福利卡类型名称</label>
+                            <div class="controls">
+                                <input type="text" class="input-large" id="name" name="name" />
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">添加</button>
+                            <button type="button" class="btn" onclick="javascript: history.go(-1)">取消</button>
+                        </div>
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts{
+}

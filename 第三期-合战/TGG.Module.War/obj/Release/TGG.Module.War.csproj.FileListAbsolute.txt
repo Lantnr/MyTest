@@ -1,0 +1,5 @@
+E:\Bin\TGG\Release\TGG.Module.War.dll
+E:\Bin\TGG\Release\TGG.Module.War.pdb
+E:\192.168.1.254\TGG\第三期-合战\TGG.Module.War\obj\Release\TGG.Module.War.dll
+E:\192.168.1.254\TGG\第三期-合战\TGG.Module.War\obj\Release\TGG.Module.War.pdb
+E:\192.168.1.254\TGG\第三期-合战\TGG.Module.War\obj\Release\TGG.Module.War.csprojResolveAssemblyReference.cache

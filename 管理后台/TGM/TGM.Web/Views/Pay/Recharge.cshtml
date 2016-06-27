@@ -1,0 +1,125 @@
+﻿@model TGM.API.Entity.Model.User
+@{
+    ViewBag.Title = "充值";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section css {}
+
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="~/Home">首页</a>
+                    <span class="divider">/</span>
+                </li>
+
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body form-horizontal">
+                    
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    @if (ViewBag.Error > 0)
+                    {
+                        <div class="alert alert-success">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+
+                    <!-- BEGIN FORM -->
+                    @using (Html.BeginForm("Recharge", "Pay", FormMethod.Post))
+                    {
+                        //token|sid|user_code|player_id|player_name|order_id|channel|type|amount|key
+                        <div class="control-group  success">
+                            <label class="control-label"> 令牌</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="pay_token" name="pay_token" value="@Model.token">                              
+                            </div>
+                        </div>
+                        <div class="control-group  success">
+                            <label class="control-label">游戏服务器标识</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="pay_sid" name="pay_sid">
+                            </div>
+                        </div>
+                        <div class="control-group  success">
+                            <label class="control-label"> 玩家账号</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="pay_user_code" name="pay_user_code">
+                            </div>
+                        </div>
+                        @*<div class="control-group  success">
+                            <label class="control-label"> 玩家标识</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="pay_player_id" name="pay_player_id">
+                            </div>
+                        </div>
+                        <div class="control-group  success">
+                            <label class="control-label"> 玩家名称</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="pay_player_name" name="pay_player_name">
+                            </div>
+                        </div>*@
+                        <div class="control-group  success">
+                            <label class="control-label"> 订单编号</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="pay_order_id" name="pay_order_id">
+                            </div>
+                        </div>
+                        <div class="control-group  success">
+                            <label class="control-label"> 渠道</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="pay_channel" name="pay_channel">
+                            </div>
+                        </div>
+                        <div class="control-group  success">
+                            <label class="control-label"> 充值类型</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="pay_type" name="pay_type">
+                            </div>
+                        </div>
+                        <div class="control-group  success">
+                            <label class="control-label"> 充值金额</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="pay_amount" name="pay_amount">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success"><i class="icon-ok"></i> 确定</button>
+                        </div>
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END SAMPLE FORMPORTLET-->
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {}

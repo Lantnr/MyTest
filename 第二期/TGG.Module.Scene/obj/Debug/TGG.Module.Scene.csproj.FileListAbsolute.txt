@@ -1,0 +1,4 @@
+E:\Bin\TGG\Debug\TGG.Module.Scene.dll
+E:\Bin\TGG\Debug\TGG.Module.Scene.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Scene\obj\Debug\TGG.Module.Scene.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Scene\obj\Debug\TGG.Module.Scene.pdb

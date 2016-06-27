@@ -1,0 +1,4 @@
+E:\Bin\TGG\Debug\TGG.Module.Friend.dll
+E:\Bin\TGG\Debug\TGG.Module.Friend.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Friend\obj\Debug\TGG.Module.Friend.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Friend\obj\Debug\TGG.Module.Friend.pdb

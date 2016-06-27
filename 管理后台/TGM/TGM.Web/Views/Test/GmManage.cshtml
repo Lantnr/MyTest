@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "GM 管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            Gm信息管理
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <a href="~/?Home">首页</a>
+                <span class="divider">/</span>
+                <a href="">玩家禁言 冻结</a>
+            </li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+
+<html>
+<title></title>
+<body>
+    <div class="span6">
+        <!-- BEGIN BASIC PORTLET-->
+        <div class="widget red">
+            <div class="widget-title">
+                <h4><i class="icon-reorder"></i> 玩家禁言/冻结</h4>
+                <span class="tools">
+                    <a href="javascript:;" class="icon-chevron-down"></a>
+                    <a href="javascript:;" class="icon-remove"></a>
+                </span>
+            </div>
+            <div class="widget-body">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>服务器</td>
+                            <td>
+                                <select class="input-medium" tabindex="1" name="run_platform" id="run_platform">
+                                    <option>运营平台</option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="input-medium" tabindex="1" name="server_select" id="server_select">
+                                    <option>所有服务器</option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>玩家</td>
+                            <td>
+                                <select class="input-medium" tabindex="1" name="search_type" id="search_type">
+                                    <option>玩家账号</option>
+                                    <option>玩家名称</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input id="search" type="text" name="search" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="70px">操作类型</td>
+                            <td>
+                                <select class="input-large   " tabindex="1" name="silent_type" id="silent_type">
+                                    <option>禁言（禁止在聊天窗发言）</option>
+                                    <option>冻结（冻结玩家账号）</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>时间限制</td>
+                            <td>
+                                <input id="time" type="text" class="input-medium" name="time" />分钟
+                            </td>
+                            <td>立即解禁请输入0，永久禁请输入 9999999</td>
+                        </tr>
+                        <tr>
+                            <td>操作原因</td>
+                            <td width="100px">
+                                <textarea id="reason" class="input-large " rows="3" name="reason" style="resize:none"></textarea>  输入本次操作的原因
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="submit" class="btn btn-success">确认提交</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- END BASIC PORTLET-->
+    </div>
+</body>
+</html>

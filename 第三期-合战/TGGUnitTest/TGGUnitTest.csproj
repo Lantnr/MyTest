@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0E141E9-FD28-4BF0-AD5E-FE06F044963D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGGUnitTest</RootNamespace>
+    <AssemblyName>TGGUnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluorineFx">
+      <HintPath>..\Reference\FluorineFx\Net40\FluorineFx.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NewLife.Core">
+      <HintPath>..\Reference\XCode\NewLife.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="XCode">
+      <HintPath>..\Reference\XCode\XCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest.LDY.cs" />
+    <Compile Include="UnitTest_LGR.cs" />
+    <Compile Include="UnitTest_LGY.cs" />
+    <Compile Include="UnitTest.LZH.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\SuperSocket.Common.Net45.csproj">
+      <Project>{a24f4d38-ba9c-4fd6-95b7-4980de36131a}</Project>
+      <Name>SuperSocket.Common.Net45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocketBase\SuperSocket.SocketBase.Net45.csproj">
+      <Project>{40B77789-EA11-4C05-8F52-86711D7BCAAF}</Project>
+      <Name>SuperSocket.SocketBase.Net45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocketEngine\SuperSocket.SocketEngine.Net45.csproj">
+      <Project>{153fef72-191c-43d9-be71-2b351c7ac760}</Project>
+      <Name>SuperSocket.SocketEngine.Net45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Core\TGG.Core.csproj">
+      <Project>{6CD2FD3E-C8AA-4AED-8783-4061BC97222C}</Project>
+      <Name>TGG.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Arena\TGG.Module.Arena.csproj">
+      <Project>{f72b3066-235e-42f0-adb2-b7de98a5f603}</Project>
+      <Name>TGG.Module.Arena</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Building\TGG.Module.Building.csproj">
+      <Project>{7773492c-459b-4b48-819c-86057878f63b}</Project>
+      <Name>TGG.Module.Building</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Business\TGG.Module.Business.csproj">
+      <Project>{1775e364-9d4e-487c-804f-f8c89f9898eb}</Project>
+      <Name>TGG.Module.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Chat\TGG.Module.Chat.csproj">
+      <Project>{f9ac9bdd-d4fe-4f2f-af49-63ad8f6b62fb}</Project>
+      <Name>TGG.Module.Chat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Consume\TGG.Module.Consume.csproj">
+      <Project>{a6bf00da-430f-4185-8496-a65b5bb174db}</Project>
+      <Name>TGG.Module.Consume</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Duplicate\TGG.Module.Duplicate.csproj">
+      <Project>{7f27113e-ac20-422a-a9ba-6c5ad693e5ce}</Project>
+      <Name>TGG.Module.Duplicate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Equip\TGG.Module.Equip.csproj">
+      <Project>{2e1e49af-8027-497d-b586-0032ac892a3e}</Project>
+      <Name>TGG.Module.Equip</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Family\TGG.Module.Family.csproj">
+      <Project>{634125a0-20a5-44d5-8985-3c7f5f699bfa}</Project>
+      <Name>TGG.Module.Family</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Fight\TGG.Module.Fight.csproj">
+      <Project>{b91994bc-c577-44c6-9e67-d4df9bcf8fb9}</Project>
+      <Name>TGG.Module.Fight</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Fusion\TGG.Module.Fusion.csproj">
+      <Project>{ae0b28a6-a9cd-48ba-80a4-f741e46baf3d}</Project>
+      <Name>TGG.Module.Fusion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Games\TGG.Module.Games.csproj">
+      <Project>{f066fc5d-051c-4366-aaba-726033c3773d}</Project>
+      <Name>TGG.Module.Games</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Guide\TGG.Module.Guide.csproj">
+      <Project>{fb7ee1da-0975-42dc-89a3-f03a3fcccdcd}</Project>
+      <Name>TGG.Module.Guide</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Notice\TGG.Module.Notice.csproj">
+      <Project>{db966310-fd22-4af1-954e-ce86887ed540}</Project>
+      <Name>TGG.Module.Notice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Props\TGG.Module.Props.csproj">
+      <Project>{5d39da86-664b-445c-9f87-977e1c059956}</Project>
+      <Name>TGG.Module.Props</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Rankings\TGG.Module.Rankings.csproj">
+      <Project>{f88f0a54-b973-4f4b-8004-11d3ac588392}</Project>
+      <Name>TGG.Module.Rankings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.RoleTrain\TGG.Module.RoleTrain.csproj">
+      <Project>{a713f720-88f0-498f-bd3d-5a31ae28e812}</Project>
+      <Name>TGG.Module.RoleTrain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Role\TGG.Module.Role.csproj">
+      <Project>{ba262f6f-cde8-4547-91c6-1ee8fa5980e5}</Project>
+      <Name>TGG.Module.Role</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Scene\TGG.Module.Scene.csproj">
+      <Project>{f8bd17a4-130c-471b-a036-5a3bba77556d}</Project>
+      <Name>TGG.Module.Scene</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.SingleFight\TGG.Module.SingleFight.csproj">
+      <Project>{0e7f6dd9-c809-421b-b362-36a0bff39ec7}</Project>
+      <Name>TGG.Module.SingleFight</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Skill\TGG.Module.Skill.csproj">
+      <Project>{a5b27c94-ca79-4d52-80c2-19be0336a34b}</Project>
+      <Name>TGG.Module.Skill</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Task\TGG.Module.Task.csproj">
+      <Project>{2796f436-cfd0-48cc-a806-fafdbc12a72b}</Project>
+      <Name>TGG.Module.Task</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.Title\TGG.Module.Title.csproj">
+      <Project>{dc8873b3-30f2-466b-993b-2d74e75d1cb5}</Project>
+      <Name>TGG.Module.Title</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.User\TGG.Module.User.csproj">
+      <Project>{9687e45b-3bb3-4c1a-ae81-02ca2923614e}</Project>
+      <Name>TGG.Module.User</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Module.War\TGG.Module.War.csproj">
+      <Project>{c21c03ca-c279-48ae-92c3-1b3692e63d2e}</Project>
+      <Name>TGG.Module.War</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.Share\TGG.Share.csproj">
+      <Project>{08d53178-76f2-4e1b-b9ea-b769a293dd0b}</Project>
+      <Name>TGG.Share</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG.SocketServer\TGG.SocketServer.csproj">
+      <Project>{CE9496AB-414E-4A34-838A-D781F41A6883}</Project>
+      <Name>TGG.SocketServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Solution Items\log4net.config">
+      <Link>Config\log4net.config</Link>
+    </None>
+    <None Include="..\Solution Items\Net45\App.config">
+      <Link>App.config</Link>
+    </None>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

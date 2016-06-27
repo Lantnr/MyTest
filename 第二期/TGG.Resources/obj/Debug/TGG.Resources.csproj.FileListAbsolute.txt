@@ -1,0 +1,7 @@
+E:\Bin\TGG\Debug\TGG.Resources.dll
+E:\Bin\TGG\Debug\TGG.Resources.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Resources\obj\Debug\TGG.Resources.Resource.resources
+E:\192.168.1.254\TGG\第二期\TGG.Resources\obj\Debug\TGG.Resources.csproj.GenerateResource.Cache
+E:\192.168.1.254\TGG\第二期\TGG.Resources\obj\Debug\TGG.Resources.dll
+E:\192.168.1.254\TGG\第二期\TGG.Resources\obj\Debug\TGG.Resources.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Resources\obj\Debug\TGG.Resources.csprojResolveAssemblyReference.cache

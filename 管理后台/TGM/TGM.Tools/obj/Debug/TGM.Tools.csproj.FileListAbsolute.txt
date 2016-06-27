@@ -1,0 +1,17 @@
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\TGM.Tools.exe.config
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\TGM.Tools.exe
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\TGM.Tools.pdb
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\NewLife.Core.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\TGM.API.Entity.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\XCode.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\FluorineFx.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\antlr.runtime.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\log4net.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\bin\Debug\TGM.API.Entity.pdb
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\obj\Debug\TGM.Tools.csprojResolveAssemblyReference.cache
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\obj\Debug\TGM.Tools.FrmMain.resources
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\obj\Debug\TGM.Tools.FrmTest.resources
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\obj\Debug\TGM.Tools.Properties.Resources.resources
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\obj\Debug\TGM.Tools.csproj.GenerateResource.Cache
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\obj\Debug\TGM.Tools.exe
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.Tools\obj\Debug\TGM.Tools.pdb

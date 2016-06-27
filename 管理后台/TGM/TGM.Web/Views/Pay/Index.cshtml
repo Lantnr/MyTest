@@ -1,0 +1,241 @@
+﻿@using TGM.API.Entity.Model
+
+@model  List<TotalRecordPay>
+
+@{
+    ViewBag.Title = "充值统计";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var platforms = ViewBag.Platform as List<Platform>;
+}
+
+@section css {
+    <link href="~/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="~/css/pagination.css" rel="stylesheet" />
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="~/Home">首页</a>
+                    <span class="divider">/</span>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+
+            @if (ViewBag.Error < 0)
+            {
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">×</button>
+                    <center> @ViewBag.Message</center>
+                </div>
+            }
+            <div class="widget green">
+                <div class="widget-title">
+                    <h4><i class="icon-reorder"></i>@ViewBag.Title</h4>
+                    <span class="tools">
+                        <a href="javascript:;" class="icon-chevron-down"></a>
+                    </span>
+                </div>
+                <div class="widget-body form-horizontal">
+                    @*@using (Html.BeginForm("Index", "Pay", FormMethod.Post))
+                        {*@
+                    <div>
+                        <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                            <tbody>
+                                <tr>
+                                    <td width="10%">
+                                        <label class="control-label">所属平台</label>
+                                    </td>
+                                    <td>
+                                        <select class="input-medium" tabindex="1" name="platform" id="platform">
+                                            <option value="0">请选择</option>
+                                            @foreach (var item in platforms)
+                                            {
+                                                <option value="@item.id">@item.name</option>
+                                            }
+                                        </select>
+                                    </td>
+                                    <td width="10%"> <label class="control-label">服务器</label>
+
+                                    <td>
+                                        <select class="input-medium" tabindex="1" name="server" id="server">
+                                            <option value="0">请选择</option>
+                                        </select>
+                                    <td rowspan="2">
+                                        <div class="control-group success span2">
+                                            <a class="btn btn-small btn-success" id="search_record" onclick="get_search(0)"><i class="icon-search icon-white"></i> 查询</a>
+                                        </div>
+
+                                <tr>
+                                    <td width="10%"><label class="control-label">开始时间</label>
+                                    <td>
+                                        <div class="input-append date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input1">
+                                            <input size="10" type="text" value="" name="starttime" id="starttime">
+                                            <span class="add-on"><i class="icon-th"></i></span>
+                                        </div>
+                                        <input type="hidden" id="dtp_input1" value="" /><br />
+                                    </td>
+
+                                    <td width="10%"><label class="control-label">结束时间</label></td>
+                                    <td>
+                                        <div class="input-append date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input2">
+                                            <input size="10" type="text" value="" name="endtime" id="endtime">
+                                            <span class="add-on"><i class="icon-th"></i></span>
+                                        </div>
+                                        <input type="hidden" id="dtp_input2" value="" /><br />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="goldcost" class="tab-pane fade"></div>
+                    <table class="table table-striped table-hover table-bordered" id="editable-sample-total">
+                        <thead>
+                            <tr>
+                                <td>平台服务器</td>
+                                <td>昵称</td>
+                                <td>充值金额</td>
+                                <td>充值次数</td>
+                                <td>最近一次充值时间</td>
+                                <td>最近一次登陆时间</td>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                    <div class="row-fluid" id="search_pager"></div>
+                    @*}*@
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {
+    <script src="~/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        //绑定第一个下拉选择事件
+        $("#platform").change(function() {
+            get_d_2();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function get_d_2(obj) {
+            $("#server").empty(); //清空第二个下拉框数据
+            var sv = $("#platform").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Common/AjaxServer?id=" + sv, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function(r) { //ajax请求成功数据处理
+                    $("#server").append("<option value='0'>全服</option>"); //添加一项option
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#server").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+    </script>
+
+    <script src="~/js/jquery.pagination.js"></script>
+    <script type="text/javascript">
+
+        var pageIndex = 0; //页面索引初始值
+        var pageSize = 10; //每页显示条数初始化，修改显示条数，修改这里即可
+
+        get_search(0);
+
+        //翻页调用
+        function PageCallback(pageIndex, jq) {
+            get_search(pageIndex);
+        }
+
+        //查询方法
+        function get_search(pageIndex) {
+
+            var q1 = $("#platform").find("option:selected").val();
+            var q2 = $("#server").find("option:selected").val();
+            var start = document.getElementById("starttime").value;
+            var end = document.getElementById("endtime").value;
+
+            $.ajax({
+                url: "/Pay/TotalPagerHandler?page=" + pageIndex + "&size=" + pageSize + "&pid=" + q1 + "&sid=" + q2 + "&start=" + start + "&end=" + end, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                //data: "page=" + index + "&pageSize=" + pageSize + "&where=",
+                success: function(r) { //ajax请求成功数据处理
+                    $("#editable-sample-total tbody").empty();
+                    if (r.length > 0) return;
+                    if (r.result < 0) {
+                        alert(r.message);
+                        return;
+                    }
+                    var records = r.Recordpay;
+                    for (var n = 0; n < records.length; n++) {
+                        var _html = "<tr>";
+                        _html += "<td>" + records[n].platform + "_" + records[n].server + "</td>";
+                        _html += "<td>" + records[n].playername + "</td>";
+                        _html += "<td>" + records[n].paytotal + "</td>";
+                        _html += "<td>" + records[n].count + "</td>";
+                        _html += "<td>" + records[n].paytime + "</td>";
+                        _html += "<td>" + records[n].logintime + "</td>";
+
+                        //_html += "<td><a class=\"btn btn-small btn-info\"><i class=\"icon-ban-circle icon-white\"></i> 详细查询</a> <a class=\"btn btn-small btn-info\"><i class=\"icon-ban-circle icon-white\"></i> " +
+                        //   "玩家查询</a></td>";
+                        _html += "</tr>";
+                        $("#editable-sample-total tbody").append(_html);
+                    }
+
+                    var p = r.Pager;
+                    pageSize = p.PageSize;
+                    pageIndex = p.CurrentPageIndex;
+
+                    //分页，PageCount是总条目数，这是必选参数，其它参数都是可选
+                    $("#search_pager").pagination(p.RecordCount, {
+                        callback: PageCallback,
+                        prev_text: '上一页', //上一页按钮里text
+                        next_text: '下一页', //下一页按钮里text
+                        items_per_page: pageSize, //显示条数
+                        num_display_entries: 5, //连续分页主体部分分页条目数
+                        current_page: pageIndex, //当前页索引
+                        num_edge_entries: 3, //两侧首尾分页条目数
+                    });
+                }
+            });
+        }
+    </script>
+}

@@ -1,0 +1,44 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.SiteMapNodeModel
+@using System.Web.Mvc.Html
+@using TGM.API.Entity.Model
+
+@{
+    var IsChild = Model.Children.Any();
+    var IsClick = Model.IsClickable;
+    var isCheck = Model.IsCurrentNode && Model.SourceMetadata["HtmlHelper"].ToString() != "MvcSiteMapProvider.Web.Html.MenuHelper";
+    var user = Session["user"] as User;
+    if (user != null)
+    {
+        IsClick = user.role >= Convert.ToInt32(Model.Attributes["role"]);
+    }
+    else { IsClick = false; }
+    var icon = @Model.Attributes["icon"].ToString();
+}
+
+@if (isCheck)
+{
+    <a href="@Model.Controller"><span>@Model.Title</span></a>
+}
+else if (IsClick)
+{
+    if (@Model.Children.Any())
+    {
+        <a href="javascript:;" class="">
+            <i class="@icon"></i>
+            <span>@Model.Title</span>
+            <span class="arrow"></span>
+        </a>
+    }
+    else
+    {
+        <a class="" href="@Model.Url">
+            @if (!string.IsNullOrEmpty(icon))
+            {
+                <i class="@icon"></i>
+            }        
+            <span>@Model.Title</span>
+        </a>
+    }
+
+
+}

@@ -1,0 +1,1749 @@
+﻿#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-1-130658476264611455
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+10:07:09.610 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+10:07:09.619 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+10:07:09.620 1 N - 使用数据库方式：独占，加大缓存权重
+10:07:09.620 1 N - 一级缓存：关闭缓存
+10:07:09.661 1 N - [DB]GetSchema("MetaDataCollections")
+10:07:09.671 1 N - [DB]GetSchema("ReservedWords")
+10:07:09.687 1 N - [DB]GetSchema("Databases", "tgm")
+10:07:09.697 1 N - [DB]GetSchema("Tables")
+10:07:09.741 1 N - [DB]GetSchema("Columns")
+10:07:09.775 1 N - [DB]GetSchema("Indexes")
+10:07:09.778 1 N - [DB]GetSchema("IndexColumns")
+10:07:09.791 1 N - [DB]GetSchema("DataTypes")
+10:07:09.850 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+10:07:09.913 1 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+10:07:09.913 1 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+10:07:09.913 1 N - DB待检查表架构的实体个数：20
+10:07:09.997 1 N - 检查连接[DB/SqlServer]的数据库架构耗时146ms
+10:07:09.997 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+10:07:10.006 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+10:07:10.007 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+10:07:10.281 8 W - [tgm]GetSchema("MetaDataCollections")
+10:07:10.284 8 W - [tgm]GetSchema("ReservedWords")
+10:07:10.291 8 W - [tgm]GetSchema("Databases", "tgm")
+10:07:10.296 8 W - [tgm]GetSchema("Tables")
+10:07:10.339 8 W - [tgm]GetSchema("Columns")
+10:07:10.373 8 W - [tgm]GetSchema("Indexes")
+10:07:10.376 8 W - [tgm]GetSchema("IndexColumns")
+10:07:10.379 8 W - [tgm]GetSchema("DataTypes")
+10:07:10.395 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+10:07:10.396 8 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+10:07:10.440 8 W - [tgm]的所有实体类（0个）：
+10:07:10.440 8 W - [tgm]需要检查架构的实体类（0个）：
+10:07:10.440 8 W - 检查连接[tgm/SqlServer]的数据库架构耗时44ms
+10:07:10.440 8 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:07:10.453 8 W - Select * From tgm_platform Where id=1
+10:07:10.667 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:07:10.711 8 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+10:07:10.714 8 W - Select * From tgm_platform Where id=1
+10:07:10.716 8 W - Select * From tgm_platform Where id=1
+10:07:16.192 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:07:16.194 9 W - Select * From tgm_platform Order By  createtime desc
+10:07:34.980 5 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:07:34.982 5 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+10:07:34.983 5 W - Select * From tgm_platform Where id=1
+10:07:34.983 5 W - Select * From tgm_platform Where id=1
+10:07:35.002 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:07:35.003 8 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+10:07:35.004 8 W - Select * From tgm_platform Where id=1
+10:07:35.005 8 W - Select * From tgm_platform Where id=1
+10:08:02.756 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:08:02.758 12 W - Select * From tgm_platform Where id=1
+10:08:02.759 12 W - Select * From tgm_server Where id=1
+10:08:10.017 13 Y - Select * From tgm_server Order By id Desc
+10:08:10.033 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:08:10.045 13 Y - [tgm]GetSchema("Tables")
+10:08:10.089 13 Y - [tgm]GetSchema("Columns")
+10:08:10.124 13 Y - [tgm]GetSchema("Indexes")
+10:08:10.127 13 Y - [tgm]GetSchema("IndexColumns")
+10:08:10.157 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 42, 42, 0, 0, 635569996900390681);Select SCOPE_IDENTITY()
+10:08:10.172 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:08:10.174 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 42, 42, 0, 0, 635569996901738810);Select SCOPE_IDENTITY()
+10:08:10.214 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:08:10.216 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 42, 42, 0, 0, 635569996902153959);Select SCOPE_IDENTITY()
+10:09:10.026 9 Y - Select * From tgm_server Order By id Desc
+10:09:10.028 9 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:09:10.030 9 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 42, 42, 0, 0, 635569997500292148);Select SCOPE_IDENTITY()
+10:09:10.032 9 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:09:10.034 9 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 42, 42, 0, 0, 635569997500332174);Select SCOPE_IDENTITY()
+10:09:10.035 9 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:09:10.037 9 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 42, 42, 0, 0, 635569997500362198);Select SCOPE_IDENTITY()
+10:10:10.034 11 Y - Select * From tgm_server Order By id Desc
+10:10:10.036 11 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:10:10.038 11 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 42, 42, 0, 0, 635569998100374969);Select SCOPE_IDENTITY()
+10:10:10.040 11 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:10:10.042 11 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 42, 42, 0, 0, 635569998100414996);Select SCOPE_IDENTITY()
+10:10:10.044 11 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:10:10.045 11 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 42, 42, 0, 0, 635569998100445638);Select SCOPE_IDENTITY()
+10:11:10.035 9 Y - Select * From tgm_server Order By id Desc
+10:11:10.037 9 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:11:10.039 9 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 42, 42, 0, 0, 635569998700384187);Select SCOPE_IDENTITY()
+10:11:10.052 9 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:11:10.055 9 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 42, 42, 0, 0, 635569998700544903);Select SCOPE_IDENTITY()
+10:11:10.071 9 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:11:10.073 9 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 42, 42, 0, 0, 635569998700725905);Select SCOPE_IDENTITY()
+10:12:10.043 11 Y - Select * From tgm_server Order By id Desc
+10:12:10.045 11 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:12:10.048 11 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 42, 42, 0, 0, 635569999300476649);Select SCOPE_IDENTITY()
+10:12:10.052 11 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:12:10.054 11 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 42, 42, 0, 0, 635569999300537144);Select SCOPE_IDENTITY()
+10:12:10.056 11 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:12:10.059 11 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 42, 42, 0, 0, 635569999300577171);Select SCOPE_IDENTITY()
+10:13:10.058 13 Y - Select * From tgm_server Order By id Desc
+10:13:10.060 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:13:10.063 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 42, 42, 0, 0, 635569999900622499);Select SCOPE_IDENTITY()
+10:13:10.065 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:13:10.067 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 42, 42, 0, 0, 635569999900662535);Select SCOPE_IDENTITY()
+10:13:10.069 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:13:10.071 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 42, 42, 0, 0, 635569999900702726);Select SCOPE_IDENTITY()
+10:14:10.058 18 Y - Select * From tgm_server Order By id Desc
+10:14:10.059 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:14:10.062 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 42, 42, 0, 0, 635570000500616255);Select SCOPE_IDENTITY()
+10:14:10.064 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:14:10.066 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 42, 42, 0, 0, 635570000500656272);Select SCOPE_IDENTITY()
+10:14:10.068 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:14:10.070 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 42, 42, 0, 0, 635570000500696298);Select SCOPE_IDENTITY()
+10:14:23.299 13 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:14:23.301 13 W - Select * From tgm_platform Where id=1
+10:14:23.362 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:14:23.363 14 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+10:14:23.364 14 W - Select * From tgm_platform Where id=1
+10:14:23.365 14 W - Select * From tgm_platform Where id=1
+10:14:29.562 17 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:14:29.564 17 W - Select * From tgm_platform Order By  createtime desc
+10:15:10.059 12 Y - Select * From tgm_server Order By id Desc
+10:15:10.061 12 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:15:10.063 12 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 42, 42, 0, 0, 635570001100622634);Select SCOPE_IDENTITY()
+10:15:10.065 12 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:15:10.067 12 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 42, 42, 0, 0, 635570001100662978);Select SCOPE_IDENTITY()
+10:15:10.069 12 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:15:10.071 12 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 42, 42, 0, 0, 635570001100703322);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-2-130658494922657432
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+10:38:15.132 50 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+10:38:15.141 50 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+10:38:15.141 50 N - 使用数据库方式：独占，加大缓存权重
+10:38:15.141 50 N - 一级缓存：关闭缓存
+10:38:15.161 50 N - [DB]GetSchema("MetaDataCollections")
+10:38:15.168 50 N - [DB]GetSchema("ReservedWords")
+10:38:15.183 50 N - [DB]GetSchema("Databases", "tgm")
+10:38:15.193 50 N - [DB]GetSchema("Tables")
+10:38:15.235 50 N - [DB]GetSchema("Columns")
+10:38:15.270 50 N - [DB]GetSchema("Indexes")
+10:38:15.273 50 N - [DB]GetSchema("IndexColumns")
+10:38:15.280 50 N - [DB]GetSchema("DataTypes")
+10:38:15.323 50 N - 开始检查连接[DB/SqlServer]的数据库架构……
+10:38:15.386 50 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+10:38:15.386 50 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+10:38:15.386 50 N - DB待检查表架构的实体个数：20
+10:38:15.466 50 N - 检查连接[DB/SqlServer]的数据库架构耗时143ms
+10:38:15.466 50 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+10:38:15.476 50 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+10:38:15.477 50 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+10:38:15.708 49 W - [tgm]GetSchema("MetaDataCollections")
+10:38:15.711 49 W - [tgm]GetSchema("ReservedWords")
+10:38:15.717 49 W - [tgm]GetSchema("Databases", "tgm")
+10:38:15.723 49 W - [tgm]GetSchema("Tables")
+10:38:15.764 49 W - [tgm]GetSchema("Columns")
+10:38:15.800 49 W - [tgm]GetSchema("Indexes")
+10:38:15.803 49 W - [tgm]GetSchema("IndexColumns")
+10:38:15.808 49 W - [tgm]GetSchema("DataTypes")
+10:38:15.827 49 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+10:38:15.829 49 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+10:38:15.897 49 W - [tgm]的所有实体类（0个）：
+10:38:15.897 49 W - [tgm]需要检查架构的实体类（0个）：
+10:38:15.897 49 W - 检查连接[tgm/SqlServer]的数据库架构耗时68ms
+10:38:15.898 49 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:38:15.909 49 W - Select * From tgm_platform Where id=1
+10:38:16.083 47 W - [tgm]GetSchema("Tables")
+10:38:16.126 47 W - [tgm]GetSchema("Columns")
+10:38:16.160 47 W - [tgm]GetSchema("Indexes")
+10:38:16.162 47 W - [tgm]GetSchema("IndexColumns")
+10:38:16.168 47 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:38:16.212 47 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+10:38:16.215 47 W - Select * From tgm_platform Where id=1
+10:38:16.216 47 W - Select * From tgm_platform Where id=1
+10:38:19.667 49 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:38:19.668 49 W - Select * From tgm_platform Order By  createtime desc
+10:39:03.866 47 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:39:03.867 47 W - Select * From tgm_platform Where id=1
+10:39:03.929 38 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:39:03.930 38 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+10:39:03.931 38 W - Select * From tgm_platform Where id=1
+10:39:03.932 38 W - Select * From tgm_platform Where id=1
+10:39:10.626 47 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:39:10.627 47 W - Select * From tgm_platform Order By  createtime desc
+10:39:15.481 49 Y - Select * From tgm_server Order By id Desc
+10:39:15.491 49 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:39:15.497 49 Y - [tgm]GetSchema("Tables")
+10:39:15.537 49 Y - [tgm]GetSchema("Columns")
+10:39:15.572 49 Y - [tgm]GetSchema("Indexes")
+10:39:15.576 49 Y - [tgm]GetSchema("IndexColumns")
+10:39:15.601 49 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570015554937573);Select SCOPE_IDENTITY()
+10:39:15.615 49 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:39:15.617 49 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570015556162889);Select SCOPE_IDENTITY()
+10:39:15.619 49 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:39:15.620 49 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570015556192919);Select SCOPE_IDENTITY()
+10:40:15.479 44 Y - Select * From tgm_server Order By id Desc
+10:40:15.481 44 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:40:15.484 44 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570016154834680);Select SCOPE_IDENTITY()
+10:40:15.486 44 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:40:15.489 44 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570016154885073);Select SCOPE_IDENTITY()
+10:40:15.491 44 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:40:15.493 44 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570016154925401);Select SCOPE_IDENTITY()
+10:41:15.479 43 Y - Select * From tgm_server Order By id Desc
+10:41:15.481 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:41:15.484 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570016754830800);Select SCOPE_IDENTITY()
+10:41:15.486 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:41:15.489 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570016754881324);Select SCOPE_IDENTITY()
+10:41:15.491 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:41:15.494 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570016754931617);Select SCOPE_IDENTITY()
+10:42:15.479 38 Y - Select * From tgm_server Order By id Desc
+10:42:15.481 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:42:15.483 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570017354824651);Select SCOPE_IDENTITY()
+10:42:15.485 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:42:15.487 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570017354864671);Select SCOPE_IDENTITY()
+10:42:15.489 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:42:15.490 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570017354894926);Select SCOPE_IDENTITY()
+10:43:15.479 38 Y - Select * From tgm_server Order By id Desc
+10:43:15.481 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:43:15.484 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570017954837782);Select SCOPE_IDENTITY()
+10:43:15.486 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:43:15.488 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570017954877802);Select SCOPE_IDENTITY()
+10:43:15.490 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:43:15.492 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570017954918111);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-3-130658498520846699
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+10:44:14.943 50 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+10:44:14.952 50 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+10:44:14.952 50 N - 使用数据库方式：独占，加大缓存权重
+10:44:14.952 50 N - 一级缓存：关闭缓存
+10:44:14.972 50 N - [DB]GetSchema("MetaDataCollections")
+10:44:14.978 50 N - [DB]GetSchema("ReservedWords")
+10:44:14.994 50 N - [DB]GetSchema("Databases", "tgm")
+10:44:15.004 50 N - [DB]GetSchema("Tables")
+10:44:15.047 50 N - [DB]GetSchema("Columns")
+10:44:15.080 50 N - [DB]GetSchema("Indexes")
+10:44:15.083 50 N - [DB]GetSchema("IndexColumns")
+10:44:15.090 50 N - [DB]GetSchema("DataTypes")
+10:44:15.132 50 N - 开始检查连接[DB/SqlServer]的数据库架构……
+10:44:15.195 50 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+10:44:15.195 50 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+10:44:15.195 50 N - DB待检查表架构的实体个数：20
+10:44:15.263 50 N - 检查连接[DB/SqlServer]的数据库架构耗时129ms
+10:44:15.263 50 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+10:44:15.272 50 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+10:44:15.273 50 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+10:44:15.522 43 W - [tgm]GetSchema("MetaDataCollections")
+10:44:15.525 43 W - [tgm]GetSchema("ReservedWords")
+10:44:15.532 43 W - [tgm]GetSchema("Databases", "tgm")
+10:44:15.537 43 W - [tgm]GetSchema("Tables")
+10:44:15.579 43 W - [tgm]GetSchema("Columns")
+10:44:15.613 43 W - [tgm]GetSchema("Indexes")
+10:44:15.617 43 W - [tgm]GetSchema("IndexColumns")
+10:44:15.621 43 W - [tgm]GetSchema("DataTypes")
+10:44:15.636 43 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+10:44:15.638 43 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+10:44:15.686 43 W - [tgm]的所有实体类（0个）：
+10:44:15.686 43 W - [tgm]需要检查架构的实体类（0个）：
+10:44:15.686 43 W - 检查连接[tgm/SqlServer]的数据库架构耗时48ms
+10:44:15.686 43 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:44:15.698 43 W - Select * From tgm_platform Where id=1
+10:44:15.865 38 W - [tgm]GetSchema("Tables")
+10:44:15.905 38 W - [tgm]GetSchema("Columns")
+10:44:15.939 38 W - [tgm]GetSchema("Indexes")
+10:44:15.942 38 W - [tgm]GetSchema("IndexColumns")
+10:44:15.948 38 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:44:15.991 38 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+10:44:15.994 38 W - Select * From tgm_platform Where id=1
+10:44:15.996 38 W - Select * From tgm_platform Where id=1
+10:44:21.033 39 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:44:21.035 39 W - Select * From tgm_platform Order By  createtime desc
+10:45:15.293 42 Y - Select * From tgm_server Order By id Desc
+10:45:15.306 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:45:15.316 42 Y - [tgm]GetSchema("Tables")
+10:45:15.361 42 Y - [tgm]GetSchema("Columns")
+10:45:15.398 42 Y - [tgm]GetSchema("Indexes")
+10:45:15.401 42 Y - [tgm]GetSchema("IndexColumns")
+10:45:15.431 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570019153105858);Select SCOPE_IDENTITY()
+10:45:15.448 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:45:15.450 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570019154495358);Select SCOPE_IDENTITY()
+10:45:15.452 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:45:15.454 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570019154535381);Select SCOPE_IDENTITY()
+10:46:15.301 46 Y - Select * From tgm_server Order By id Desc
+10:46:15.303 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:46:15.305 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570019753041383);Select SCOPE_IDENTITY()
+10:46:15.307 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:46:15.309 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570019753081384);Select SCOPE_IDENTITY()
+10:46:15.312 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:46:15.314 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570019753131414);Select SCOPE_IDENTITY()
+10:47:15.301 39 Y - Select * From tgm_server Order By id Desc
+10:47:15.302 39 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:47:15.305 39 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570020353046617);Select SCOPE_IDENTITY()
+10:47:15.307 39 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:47:15.309 39 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570020353086653);Select SCOPE_IDENTITY()
+10:47:15.310 39 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:47:15.312 39 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570020353116673);Select SCOPE_IDENTITY()
+10:48:04.065 45 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:48:04.067 45 W - Select * From tgm_platform Where id=1
+10:48:04.124 46 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:48:04.125 46 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+10:48:04.127 46 W - Select * From tgm_platform Where id=1
+10:48:04.128 46 W - Select * From tgm_platform Where id=1
+10:48:08.156 38 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:48:08.157 38 W - Select * From tgm_platform Order By  createtime desc
+10:48:15.310 38 Y - Select * From tgm_server Order By id Desc
+10:48:15.312 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:48:15.314 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570020953133806);Select SCOPE_IDENTITY()
+10:48:15.316 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:48:15.319 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570020953173849);Select SCOPE_IDENTITY()
+10:48:15.321 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:48:15.324 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570020953233892);Select SCOPE_IDENTITY()
+10:49:15.312 39 Y - Select * From tgm_server Order By id Desc
+10:49:15.314 39 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:49:15.317 39 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570021553161729);Select SCOPE_IDENTITY()
+10:49:15.330 39 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:49:15.333 39 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570021553311842);Select SCOPE_IDENTITY()
+10:49:15.371 39 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:49:15.373 39 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570021553724970);Select SCOPE_IDENTITY()
+10:50:14.266 42 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:50:14.268 42 W - Select * From tgm_platform Where id=1
+10:50:14.334 46 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:50:14.335 46 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+10:50:14.337 46 W - Select * From tgm_platform Where id=1
+10:50:14.337 46 W - Select * From tgm_platform Where id=1
+10:50:15.324 43 Y - Select * From tgm_server Order By id Desc
+10:50:15.325 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:50:15.328 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570022153273832);Select SCOPE_IDENTITY()
+10:50:15.345 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:50:15.348 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570022153473959);Select SCOPE_IDENTITY()
+10:50:15.411 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:50:15.414 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570022154124396);Select SCOPE_IDENTITY()
+10:50:20.923 38 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:50:20.924 38 W - Select * From tgm_platform Order By  createtime desc
+10:51:15.323 42 Y - Select * From tgm_server Order By id Desc
+10:51:15.326 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:51:15.328 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570022753276475);Select SCOPE_IDENTITY()
+10:51:15.330 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:51:15.333 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570022753326509);Select SCOPE_IDENTITY()
+10:51:15.335 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:51:15.337 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570022753366917);Select SCOPE_IDENTITY()
+10:52:15.324 46 Y - Select * From tgm_server Order By id Desc
+10:52:15.326 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:52:15.328 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570023353272918);Select SCOPE_IDENTITY()
+10:52:15.331 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:52:15.333 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570023353323510);Select SCOPE_IDENTITY()
+10:52:15.335 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:52:15.338 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570023353363601);Select SCOPE_IDENTITY()
+10:53:15.325 45 Y - Select * From tgm_server Order By id Desc
+10:53:15.327 45 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:53:15.330 45 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570023953292146);Select SCOPE_IDENTITY()
+10:53:15.332 45 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:53:15.334 45 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570023953332984);Select SCOPE_IDENTITY()
+10:53:15.337 45 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:53:15.339 45 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570023953382895);Select SCOPE_IDENTITY()
+10:54:15.339 43 Y - Select * From tgm_server Order By id Desc
+10:54:15.341 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:54:15.344 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570024553435722);Select SCOPE_IDENTITY()
+10:54:15.346 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:54:15.349 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570024553486689);Select SCOPE_IDENTITY()
+10:54:15.352 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:54:15.354 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570024553537114);Select SCOPE_IDENTITY()
+10:55:15.340 43 Y - Select * From tgm_server Order By id Desc
+10:55:15.341 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:55:15.344 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570025153439629);Select SCOPE_IDENTITY()
+10:55:15.346 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:55:15.348 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570025153479655);Select SCOPE_IDENTITY()
+10:55:15.349 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:55:15.351 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570025153509669);Select SCOPE_IDENTITY()
+10:56:15.356 44 Y - Select * From tgm_server Order By id Desc
+10:56:15.358 44 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:56:15.361 44 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570025753593067);Select SCOPE_IDENTITY()
+10:56:15.363 44 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:56:15.364 44 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570025753643091);Select SCOPE_IDENTITY()
+10:56:15.366 44 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:56:15.368 44 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570025753673121);Select SCOPE_IDENTITY()
+10:56:28.602 44 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:56:28.605 44 W - Select * From tgm_platform Where id=1
+10:56:28.666 38 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:56:28.667 38 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+10:56:28.668 38 W - Select * From tgm_platform Where id=1
+10:56:28.669 38 W - Select * From tgm_platform Where id=1
+10:56:37.921 44 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:56:37.923 44 W - Select * From tgm_platform Order By  createtime desc
+10:56:46.123 38 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:56:46.124 38 W - Select * From tgm_platform Order By  createtime desc
+10:56:50.623 47 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:56:50.624 47 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-4-130658506570281332
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+10:57:39.827 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+10:57:39.835 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+10:57:39.836 1 N - 使用数据库方式：独占，加大缓存权重
+10:57:39.836 1 N - 一级缓存：关闭缓存
+10:57:39.857 1 N - [DB]GetSchema("MetaDataCollections")
+10:57:39.863 1 N - [DB]GetSchema("ReservedWords")
+10:57:39.878 1 N - [DB]GetSchema("Databases", "tgm")
+10:57:39.888 1 N - [DB]GetSchema("Tables")
+10:57:39.933 1 N - [DB]GetSchema("Columns")
+10:57:39.971 1 N - [DB]GetSchema("Indexes")
+10:57:39.975 1 N - [DB]GetSchema("IndexColumns")
+10:57:39.989 1 N - [DB]GetSchema("DataTypes")
+10:57:40.056 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+10:57:40.125 1 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+10:57:40.125 1 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+10:57:40.126 1 N - DB待检查表架构的实体个数：20
+10:57:40.208 1 N - 检查连接[DB/SqlServer]的数据库架构耗时153ms
+10:57:40.209 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+10:57:40.217 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+10:57:40.219 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+10:57:40.481 47 W - [tgm]GetSchema("MetaDataCollections")
+10:57:40.484 47 W - [tgm]GetSchema("ReservedWords")
+10:57:40.490 47 W - [tgm]GetSchema("Databases", "tgm")
+10:57:40.495 47 W - [tgm]GetSchema("Tables")
+10:57:40.536 47 W - [tgm]GetSchema("Columns")
+10:57:40.571 47 W - [tgm]GetSchema("Indexes")
+10:57:40.574 47 W - [tgm]GetSchema("IndexColumns")
+10:57:40.577 47 W - [tgm]GetSchema("DataTypes")
+10:57:40.594 47 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+10:57:40.596 47 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+10:57:40.663 47 W - [tgm]的所有实体类（0个）：
+10:57:40.663 47 W - [tgm]需要检查架构的实体类（0个）：
+10:57:40.663 47 W - 检查连接[tgm/SqlServer]的数据库架构耗时67ms
+10:57:40.663 47 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:57:40.675 47 W - Select * From tgm_platform Where id=1
+10:57:40.846 38 W - [tgm]GetSchema("Tables")
+10:57:40.885 38 W - [tgm]GetSchema("Columns")
+10:57:40.920 38 W - [tgm]GetSchema("Indexes")
+10:57:40.923 38 W - [tgm]GetSchema("IndexColumns")
+10:57:40.928 38 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:57:40.972 38 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+10:57:40.975 38 W - Select * From tgm_platform Where id=1
+10:57:40.976 38 W - Select * From tgm_platform Where id=1
+10:57:45.556 43 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:57:45.557 43 W - Select * From tgm_platform Order By  createtime desc
+10:57:47.898 45 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:57:55.720 47 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:57:55.722 47 W - Select * From tgm_platform Order By  createtime desc
+10:58:01.684 45 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+10:58:40.234 47 Y - Select * From tgm_server Order By id Desc
+10:58:40.247 47 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:58:40.256 47 Y - [tgm]GetSchema("Tables")
+10:58:40.296 47 Y - [tgm]GetSchema("Columns")
+10:58:40.330 47 Y - [tgm]GetSchema("Indexes")
+10:58:40.333 47 Y - [tgm]GetSchema("IndexColumns")
+10:58:40.352 47 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570027202512764);Select SCOPE_IDENTITY()
+10:58:40.366 47 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:58:40.368 47 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570027203679436);Select SCOPE_IDENTITY()
+10:58:40.370 47 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:58:40.371 47 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570027203719424);Select SCOPE_IDENTITY()
+10:59:40.229 42 Y - Select * From tgm_server Order By id Desc
+10:59:40.231 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:59:40.233 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 40, 42, 0, 0, 635570027802325726);Select SCOPE_IDENTITY()
+10:59:40.234 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:59:40.236 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 40, 42, 0, 0, 635570027802356048);Select SCOPE_IDENTITY()
+10:59:40.237 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+10:59:40.239 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 40, 42, 0, 0, 635570027802386318);Select SCOPE_IDENTITY()
+11:00:40.245 45 Y - Select * From tgm_server Order By id Desc
+11:00:40.247 45 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:00:40.250 45 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 40, 42, 0, 0, 635570028402492667);Select SCOPE_IDENTITY()
+11:00:40.252 45 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:00:40.254 45 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 40, 42, 0, 0, 635570028402533336);Select SCOPE_IDENTITY()
+11:00:40.256 45 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:00:40.258 45 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 40, 42, 0, 0, 635570028402573747);Select SCOPE_IDENTITY()
+11:01:40.245 38 Y - Select * From tgm_server Order By id Desc
+11:01:40.247 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:01:40.249 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570029002499659);Select SCOPE_IDENTITY()
+11:01:40.253 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:01:40.255 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570029002540013);Select SCOPE_IDENTITY()
+11:01:40.256 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:01:40.258 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570029002570036);Select SCOPE_IDENTITY()
+11:02:40.245 39 Y - Select * From tgm_server Order By id Desc
+11:02:40.247 39 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:02:40.249 39 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570029602489691);Select SCOPE_IDENTITY()
+11:02:40.253 39 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:02:40.254 39 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570029602540039);Select SCOPE_IDENTITY()
+11:02:40.256 39 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:02:40.258 39 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570029602570395);Select SCOPE_IDENTITY()
+11:03:40.260 38 Y - Select * From tgm_server Order By id Desc
+11:03:40.261 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:03:40.264 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570030202635323);Select SCOPE_IDENTITY()
+11:03:40.265 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:03:40.267 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570030202665347);Select SCOPE_IDENTITY()
+11:03:40.268 38 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:03:40.270 38 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570030202695367);Select SCOPE_IDENTITY()
+11:04:40.261 44 Y - Select * From tgm_server Order By id Desc
+11:04:40.263 44 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:04:40.265 44 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570030802641449);Select SCOPE_IDENTITY()
+11:04:40.268 44 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:04:40.270 44 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570030802691486);Select SCOPE_IDENTITY()
+11:04:40.271 44 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:04:40.273 44 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570030802721493);Select SCOPE_IDENTITY()
+11:05:20.968 44 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:05:20.971 44 W - Select * From tgm_platform Where id=1
+11:05:21.032 39 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:05:21.033 39 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:05:21.034 39 W - Select * From tgm_platform Where id=1
+11:05:21.034 39 W - Select * From tgm_platform Where id=1
+11:05:25.324 45 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:05:25.325 45 W - Select * From tgm_platform Order By  createtime desc
+11:05:40.261 43 Y - Select * From tgm_server Order By id Desc
+11:05:40.263 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:05:40.265 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570031402656613);Select SCOPE_IDENTITY()
+11:05:40.267 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:05:40.269 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570031402687271);Select SCOPE_IDENTITY()
+11:05:40.270 43 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:05:40.272 43 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570031402717333);Select SCOPE_IDENTITY()
+11:05:45.615 45 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:06:40.277 45 Y - Select * From tgm_server Order By id Desc
+11:06:40.279 45 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:06:40.281 45 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 41, 42, 0, 0, 635570032002801610);Select SCOPE_IDENTITY()
+11:06:40.284 45 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:06:40.285 45 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 41, 42, 0, 0, 635570032002841643);Select SCOPE_IDENTITY()
+11:06:40.287 45 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:06:40.288 45 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 41, 42, 0, 0, 635570032002871660);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-5-130658512214113667
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:07:04.288 19 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:07:04.297 19 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:07:04.297 19 N - 使用数据库方式：独占，加大缓存权重
+11:07:04.297 19 N - 一级缓存：关闭缓存
+11:07:04.318 19 N - [DB]GetSchema("MetaDataCollections")
+11:07:04.324 19 N - [DB]GetSchema("ReservedWords")
+11:07:04.339 19 N - [DB]GetSchema("Databases", "tgm")
+11:07:04.349 19 N - [DB]GetSchema("Tables")
+11:07:04.391 19 N - [DB]GetSchema("Columns")
+11:07:04.425 19 N - [DB]GetSchema("Indexes")
+11:07:04.428 19 N - [DB]GetSchema("IndexColumns")
+11:07:04.435 19 N - [DB]GetSchema("DataTypes")
+11:07:04.478 19 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:07:04.541 19 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:07:04.541 19 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:07:04.541 19 N - DB待检查表架构的实体个数：20
+11:07:04.608 19 N - 检查连接[DB/SqlServer]的数据库架构耗时130ms
+11:07:04.608 19 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:07:04.617 19 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:07:04.618 19 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:07:04.851 46 W - [tgm]GetSchema("MetaDataCollections")
+11:07:04.854 46 W - [tgm]GetSchema("ReservedWords")
+11:07:04.860 46 W - [tgm]GetSchema("Databases", "tgm")
+11:07:04.865 46 W - [tgm]GetSchema("Tables")
+11:07:04.906 46 W - [tgm]GetSchema("Columns")
+11:07:04.941 46 W - [tgm]GetSchema("Indexes")
+11:07:04.944 46 W - [tgm]GetSchema("IndexColumns")
+11:07:04.949 46 W - [tgm]GetSchema("DataTypes")
+11:07:04.967 46 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:07:04.969 46 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:07:05.029 46 W - [tgm]的所有实体类（0个）：
+11:07:05.029 46 W - [tgm]需要检查架构的实体类（0个）：
+11:07:05.029 46 W - 检查连接[tgm/SqlServer]的数据库架构耗时60ms
+11:07:05.029 46 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:07:05.040 46 W - Select * From tgm_platform Where id=1
+11:07:05.211 47 W - [tgm]GetSchema("Tables")
+11:07:05.251 47 W - [tgm]GetSchema("Columns")
+11:07:05.285 47 W - [tgm]GetSchema("Indexes")
+11:07:05.288 47 W - [tgm]GetSchema("IndexColumns")
+11:07:05.294 47 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:07:05.348 47 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:07:05.351 47 W - Select * From tgm_platform Where id=1
+11:07:05.352 47 W - Select * From tgm_platform Where id=1
+11:07:10.604 46 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:07:10.606 46 W - Select * From tgm_platform Order By  createtime desc
+11:07:12.826 43 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:07:12.827 43 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-6-130658513132392755
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:08:36.067 19 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:08:36.076 19 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:08:36.076 19 N - 使用数据库方式：独占，加大缓存权重
+11:08:36.077 19 N - 一级缓存：关闭缓存
+11:08:36.097 19 N - [DB]GetSchema("MetaDataCollections")
+11:08:36.103 19 N - [DB]GetSchema("ReservedWords")
+11:08:36.118 19 N - [DB]GetSchema("Databases", "tgm")
+11:08:36.128 19 N - [DB]GetSchema("Tables")
+11:08:36.171 19 N - [DB]GetSchema("Columns")
+11:08:36.206 19 N - [DB]GetSchema("Indexes")
+11:08:36.208 19 N - [DB]GetSchema("IndexColumns")
+11:08:36.216 19 N - [DB]GetSchema("DataTypes")
+11:08:36.260 19 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:08:36.324 19 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:08:36.324 19 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:08:36.324 19 N - DB待检查表架构的实体个数：20
+11:08:36.390 19 N - 检查连接[DB/SqlServer]的数据库架构耗时131ms
+11:08:36.390 19 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:08:36.399 19 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:08:36.401 19 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:08:36.641 46 W - [tgm]GetSchema("MetaDataCollections")
+11:08:36.644 46 W - [tgm]GetSchema("ReservedWords")
+11:08:36.650 46 W - [tgm]GetSchema("Databases", "tgm")
+11:08:36.657 46 W - [tgm]GetSchema("Tables")
+11:08:36.770 46 W - [tgm]GetSchema("Columns")
+11:08:36.806 46 W - [tgm]GetSchema("Indexes")
+11:08:36.808 46 W - [tgm]GetSchema("IndexColumns")
+11:08:36.812 46 W - [tgm]GetSchema("DataTypes")
+11:08:36.827 46 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:08:36.829 46 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:08:36.871 46 W - [tgm]的所有实体类（0个）：
+11:08:36.871 46 W - [tgm]需要检查架构的实体类（0个）：
+11:08:36.871 46 W - 检查连接[tgm/SqlServer]的数据库架构耗时42ms
+11:08:36.871 46 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:08:36.883 46 W - Select * From tgm_platform Where id=1
+11:08:37.054 40 W - [tgm]GetSchema("Tables")
+11:08:37.094 40 W - [tgm]GetSchema("Columns")
+11:08:37.128 40 W - [tgm]GetSchema("Indexes")
+11:08:37.132 40 W - [tgm]GetSchema("IndexColumns")
+11:08:37.138 40 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:08:37.187 40 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:37.192 40 W - Select * From tgm_platform Where id=1
+11:08:37.194 40 W - Select * From tgm_platform Where id=1
+11:08:40.571 47 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:08:40.573 47 W - Select * From tgm_platform Order By  createtime desc
+11:08:47.981 47 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:09:36.421 40 Y - Select * From tgm_server Order By id Desc
+11:09:36.434 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:09:36.444 40 Y - [tgm]GetSchema("Tables")
+11:09:36.485 40 Y - [tgm]GetSchema("Columns")
+11:09:36.520 40 Y - [tgm]GetSchema("Indexes")
+11:09:36.523 40 Y - [tgm]GetSchema("IndexColumns")
+11:09:36.553 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 40, 42, 0, 0, 635570033764384668);Select SCOPE_IDENTITY()
+11:09:36.570 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:09:36.572 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 40, 42, 0, 0, 635570033765719677);Select SCOPE_IDENTITY()
+11:09:36.574 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:09:36.576 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 40, 42, 0, 0, 635570033765759671);Select SCOPE_IDENTITY()
+11:10:36.417 18 Y - Select * From tgm_server Order By id Desc
+11:10:36.420 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:10:36.422 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 40, 42, 0, 0, 635570034364211389);Select SCOPE_IDENTITY()
+11:10:36.424 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:10:36.426 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 40, 42, 0, 0, 635570034364251673);Select SCOPE_IDENTITY()
+11:10:36.428 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:10:36.430 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 40, 42, 0, 0, 635570034364291978);Select SCOPE_IDENTITY()
+11:11:36.420 46 Y - Select * From tgm_server Order By id Desc
+11:11:36.422 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:11:36.425 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 40, 42, 0, 0, 635570034964243693);Select SCOPE_IDENTITY()
+11:11:36.427 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:11:36.430 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 40, 42, 0, 0, 635570034964284143);Select SCOPE_IDENTITY()
+11:11:36.431 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:11:36.433 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 40, 42, 0, 0, 635570034964324166);Select SCOPE_IDENTITY()
+11:12:36.433 46 Y - Select * From tgm_server Order By id Desc
+11:12:36.434 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:12:36.457 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 40, 42, 0, 0, 635570035564564820);Select SCOPE_IDENTITY()
+11:12:36.459 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:12:36.461 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 40, 42, 0, 0, 635570035564604866);Select SCOPE_IDENTITY()
+11:12:36.462 46 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:12:36.464 46 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 40, 42, 0, 0, 635570035564634883);Select SCOPE_IDENTITY()
+11:13:36.433 47 Y - Select * From tgm_server Order By id Desc
+11:13:36.435 47 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:13:36.437 47 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 40, 42, 0, 0, 635570036164368802);Select SCOPE_IDENTITY()
+11:13:36.439 47 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:13:36.442 47 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 40, 42, 0, 0, 635570036164418794);Select SCOPE_IDENTITY()
+11:13:36.443 47 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:13:36.445 47 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 40, 42, 0, 0, 635570036164448814);Select SCOPE_IDENTITY()
+11:14:36.449 40 Y - Select * From tgm_server Order By id Desc
+11:14:36.451 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:14:36.453 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 40, 42, 0, 0, 635570036764521295);Select SCOPE_IDENTITY()
+11:14:36.455 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:14:36.457 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 40, 42, 0, 0, 635570036764561321);Select SCOPE_IDENTITY()
+11:14:36.459 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:14:36.461 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 40, 42, 0, 0, 635570036764601348);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-7-130658517571500352
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:16:00.155 50 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:16:00.163 50 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:16:00.164 50 N - 使用数据库方式：独占，加大缓存权重
+11:16:00.164 50 N - 一级缓存：关闭缓存
+11:16:00.185 50 N - [DB]GetSchema("MetaDataCollections")
+11:16:00.192 50 N - [DB]GetSchema("ReservedWords")
+11:16:00.206 50 N - [DB]GetSchema("Databases", "tgm")
+11:16:00.217 50 N - [DB]GetSchema("Tables")
+11:16:00.263 50 N - [DB]GetSchema("Columns")
+11:16:00.298 50 N - [DB]GetSchema("Indexes")
+11:16:00.301 50 N - [DB]GetSchema("IndexColumns")
+11:16:00.309 50 N - [DB]GetSchema("DataTypes")
+11:16:00.369 50 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:16:00.431 50 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:16:00.431 50 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:16:00.431 50 N - DB待检查表架构的实体个数：20
+11:16:00.500 50 N - 检查连接[DB/SqlServer]的数据库架构耗时131ms
+11:16:00.500 50 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:16:00.509 50 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:16:00.511 50 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:16:00.754 10 W - [tgm]GetSchema("MetaDataCollections")
+11:16:00.757 10 W - [tgm]GetSchema("ReservedWords")
+11:16:00.764 10 W - [tgm]GetSchema("Databases", "tgm")
+11:16:00.770 10 W - [tgm]GetSchema("Tables")
+11:16:00.811 10 W - [tgm]GetSchema("Columns")
+11:16:00.846 10 W - [tgm]GetSchema("Indexes")
+11:16:00.849 10 W - [tgm]GetSchema("IndexColumns")
+11:16:00.854 10 W - [tgm]GetSchema("DataTypes")
+11:16:00.871 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:16:00.873 10 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:16:00.934 10 W - [tgm]的所有实体类（0个）：
+11:16:00.934 10 W - [tgm]需要检查架构的实体类（0个）：
+11:16:00.934 10 W - 检查连接[tgm/SqlServer]的数据库架构耗时61ms
+11:16:00.934 10 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:16:00.946 10 W - Select * From tgm_platform Where id=1
+11:16:01.121 40 W - [tgm]GetSchema("Tables")
+11:16:01.161 40 W - [tgm]GetSchema("Columns")
+11:16:01.195 40 W - [tgm]GetSchema("Indexes")
+11:16:01.197 40 W - [tgm]GetSchema("IndexColumns")
+11:16:01.203 40 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:16:01.247 40 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:16:01.250 40 W - Select * From tgm_platform Where id=1
+11:16:01.251 40 W - Select * From tgm_platform Where id=1
+11:16:04.678 47 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:16:04.680 47 W - Select * From tgm_platform Order By  createtime desc
+11:16:40.495 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:17:00.515 14 Y - Select * From tgm_server Order By id Desc
+11:17:00.523 14 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:17:00.530 14 Y - [tgm]GetSchema("Tables")
+11:17:00.571 14 Y - [tgm]GetSchema("Columns")
+11:17:00.606 14 Y - [tgm]GetSchema("Indexes")
+11:17:00.608 14 Y - [tgm]GetSchema("IndexColumns")
+11:17:00.624 14 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 42, 43, 1, 0, 635570038205263760);Select SCOPE_IDENTITY()
+11:17:00.635 14 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:17:00.637 14 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 42, 43, 1, 0, 635570038206362451);Select SCOPE_IDENTITY()
+11:17:00.638 14 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:17:00.640 14 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 42, 43, 1, 0, 635570038206392487);Select SCOPE_IDENTITY()
+11:18:00.526 40 Y - Select * From tgm_server Order By id Desc
+11:18:00.528 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:18:00.530 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 42, 43, 1, 0, 635570038805304342);Select SCOPE_IDENTITY()
+11:18:00.532 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:18:00.534 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 42, 43, 1, 0, 635570038805334362);Select SCOPE_IDENTITY()
+11:18:00.536 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:18:00.539 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 42, 43, 1, 0, 635570038805384809);Select SCOPE_IDENTITY()
+11:19:00.526 48 Y - Select * From tgm_server Order By id Desc
+11:19:00.529 48 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:19:00.531 48 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 42, 43, 1, 0, 635570039405304954);Select SCOPE_IDENTITY()
+11:19:00.533 48 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:19:00.535 48 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 42, 43, 1, 0, 635570039405345020);Select SCOPE_IDENTITY()
+11:19:00.537 48 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:19:00.540 48 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 42, 43, 1, 0, 635570039405395406);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-8-130658519672033201
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:19:30.024 50 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:19:30.033 50 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:19:30.034 50 N - 使用数据库方式：独占，加大缓存权重
+11:19:30.034 50 N - 一级缓存：关闭缓存
+11:19:30.054 50 N - [DB]GetSchema("MetaDataCollections")
+11:19:30.060 50 N - [DB]GetSchema("ReservedWords")
+11:19:30.074 50 N - [DB]GetSchema("Databases", "tgm")
+11:19:30.085 50 N - [DB]GetSchema("Tables")
+11:19:30.129 50 N - [DB]GetSchema("Columns")
+11:19:30.163 50 N - [DB]GetSchema("Indexes")
+11:19:30.166 50 N - [DB]GetSchema("IndexColumns")
+11:19:30.174 50 N - [DB]GetSchema("DataTypes")
+11:19:30.217 50 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:19:30.280 50 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:19:30.281 50 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:19:30.281 50 N - DB待检查表架构的实体个数：20
+11:19:30.351 50 N - 检查连接[DB/SqlServer]的数据库架构耗时133ms
+11:19:30.351 50 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:19:30.361 50 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:19:30.362 50 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:19:30.637 40 W - [tgm]GetSchema("MetaDataCollections")
+11:19:30.640 40 W - [tgm]GetSchema("ReservedWords")
+11:19:30.646 40 W - [tgm]GetSchema("Databases", "tgm")
+11:19:30.652 40 W - [tgm]GetSchema("Tables")
+11:19:30.697 40 W - [tgm]GetSchema("Columns")
+11:19:30.734 40 W - [tgm]GetSchema("Indexes")
+11:19:30.737 40 W - [tgm]GetSchema("IndexColumns")
+11:19:30.742 40 W - [tgm]GetSchema("DataTypes")
+11:19:30.760 40 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:19:30.762 40 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:19:30.817 40 W - [tgm]的所有实体类（0个）：
+11:19:30.817 40 W - [tgm]需要检查架构的实体类（0个）：
+11:19:30.817 40 W - 检查连接[tgm/SqlServer]的数据库架构耗时54ms
+11:19:30.817 40 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:19:30.828 40 W - Select * From tgm_platform Where id=1
+11:19:31.001 10 W - [tgm]GetSchema("Tables")
+11:19:31.043 10 W - [tgm]GetSchema("Columns")
+11:19:31.079 10 W - [tgm]GetSchema("Indexes")
+11:19:31.082 10 W - [tgm]GetSchema("IndexColumns")
+11:19:31.087 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:19:31.131 10 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:19:31.135 10 W - Select * From tgm_platform Where id=1
+11:19:31.136 10 W - Select * From tgm_platform Where id=1
+11:19:35.655 40 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:19:35.656 40 W - Select * From tgm_platform Order By  createtime desc
+11:19:45.919 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-9-130658520205085106
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:20:23.418 50 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:20:23.426 50 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:20:23.427 50 N - 使用数据库方式：独占，加大缓存权重
+11:20:23.427 50 N - 一级缓存：关闭缓存
+11:20:23.449 50 N - [DB]GetSchema("MetaDataCollections")
+11:20:23.455 50 N - [DB]GetSchema("ReservedWords")
+11:20:23.470 50 N - [DB]GetSchema("Databases", "tgm")
+11:20:23.480 50 N - [DB]GetSchema("Tables")
+11:20:23.525 50 N - [DB]GetSchema("Columns")
+11:20:23.563 50 N - [DB]GetSchema("Indexes")
+11:20:23.567 50 N - [DB]GetSchema("IndexColumns")
+11:20:23.581 50 N - [DB]GetSchema("DataTypes")
+11:20:23.638 50 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:20:23.701 50 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:20:23.701 50 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:20:23.702 50 N - DB待检查表架构的实体个数：20
+11:20:23.771 50 N - 检查连接[DB/SqlServer]的数据库架构耗时133ms
+11:20:23.771 50 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:20:23.780 50 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:20:23.782 50 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:20:24.074 10 W - [tgm]GetSchema("MetaDataCollections")
+11:20:24.077 10 W - [tgm]GetSchema("ReservedWords")
+11:20:24.083 10 W - [tgm]GetSchema("Databases", "tgm")
+11:20:24.089 10 W - [tgm]GetSchema("Tables")
+11:20:24.130 10 W - [tgm]GetSchema("Columns")
+11:20:24.165 10 W - [tgm]GetSchema("Indexes")
+11:20:24.167 10 W - [tgm]GetSchema("IndexColumns")
+11:20:24.171 10 W - [tgm]GetSchema("DataTypes")
+11:20:24.186 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:20:24.187 10 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:20:24.229 10 W - [tgm]的所有实体类（0个）：
+11:20:24.229 10 W - [tgm]需要检查架构的实体类（0个）：
+11:20:24.229 10 W - 检查连接[tgm/SqlServer]的数据库架构耗时42ms
+11:20:24.230 10 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:20:24.242 10 W - Select * From tgm_platform Where id=1
+11:20:24.412 48 W - [tgm]GetSchema("Tables")
+11:20:24.452 48 W - [tgm]GetSchema("Columns")
+11:20:24.487 48 W - [tgm]GetSchema("Indexes")
+11:20:24.489 48 W - [tgm]GetSchema("IndexColumns")
+11:20:24.495 48 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:20:24.546 48 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:20:24.549 48 W - Select * From tgm_platform Where id=1
+11:20:24.550 48 W - Select * From tgm_platform Where id=1
+11:20:28.925 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:20:28.926 10 W - Select * From tgm_platform Order By  createtime desc
+11:20:43.799 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:21:23.803 14 Y - Select * From tgm_server Order By id Desc
+11:21:23.815 14 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:21:23.834 14 Y - [tgm]GetSchema("Tables")
+11:21:23.875 14 Y - [tgm]GetSchema("Columns")
+11:21:23.911 14 Y - [tgm]GetSchema("Indexes")
+11:21:23.915 14 Y - [tgm]GetSchema("IndexColumns")
+11:21:23.945 14 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 42, 43, 1, 0, 635570040838304476);Select SCOPE_IDENTITY()
+11:21:23.965 14 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:21:23.967 14 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 42, 43, 1, 0, 635570040839660915);Select SCOPE_IDENTITY()
+11:21:23.969 14 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:21:23.971 14 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 42, 43, 1, 0, 635570040839700964);Select SCOPE_IDENTITY()
+11:22:23.809 10 Y - Select * From tgm_server Order By id Desc
+11:22:23.811 10 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:22:23.813 10 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 42, 43, 1, 0, 635570041438128531);Select SCOPE_IDENTITY()
+11:22:23.815 10 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:22:23.817 10 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 42, 43, 1, 0, 635570041438169055);Select SCOPE_IDENTITY()
+11:22:23.819 10 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:22:23.820 10 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 42, 43, 1, 0, 635570041438209066);Select SCOPE_IDENTITY()
+11:23:23.824 40 Y - Select * From tgm_server Order By id Desc
+11:23:23.826 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:23:23.828 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 42, 43, 1, 0, 635570042038280001);Select SCOPE_IDENTITY()
+11:23:23.831 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:23:23.833 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 42, 43, 1, 0, 635570042038320740);Select SCOPE_IDENTITY()
+11:23:23.835 40 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:23:23.838 40 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 42, 43, 1, 0, 635570042038371090);Select SCOPE_IDENTITY()
+11:24:23.840 15 Y - Select * From tgm_server Order By id Desc
+11:24:23.843 15 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:24:23.845 15 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 42, 43, 1, 0, 635570042638444046);Select SCOPE_IDENTITY()
+11:24:23.848 15 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:24:23.851 15 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 42, 43, 1, 0, 635570042638504490);Select SCOPE_IDENTITY()
+11:24:23.853 15 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:24:23.856 15 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 42, 43, 1, 0, 635570042638554953);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-10-130658523339346471
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:25:36.758 50 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:25:36.767 50 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:25:36.768 50 N - 使用数据库方式：独占，加大缓存权重
+11:25:36.768 50 N - 一级缓存：关闭缓存
+11:25:36.789 50 N - [DB]GetSchema("MetaDataCollections")
+11:25:36.795 50 N - [DB]GetSchema("ReservedWords")
+11:25:36.810 50 N - [DB]GetSchema("Databases", "tgm")
+11:25:36.820 50 N - [DB]GetSchema("Tables")
+11:25:36.864 50 N - [DB]GetSchema("Columns")
+11:25:36.899 50 N - [DB]GetSchema("Indexes")
+11:25:36.902 50 N - [DB]GetSchema("IndexColumns")
+11:25:36.909 50 N - [DB]GetSchema("DataTypes")
+11:25:36.953 50 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:25:37.016 50 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:25:37.016 50 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:25:37.017 50 N - DB待检查表架构的实体个数：20
+11:25:37.083 50 N - 检查连接[DB/SqlServer]的数据库架构耗时130ms
+11:25:37.083 50 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:25:37.093 50 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:25:37.094 50 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:25:37.340 10 W - [tgm]GetSchema("MetaDataCollections")
+11:25:37.343 10 W - [tgm]GetSchema("ReservedWords")
+11:25:37.348 10 W - [tgm]GetSchema("Databases", "tgm")
+11:25:37.354 10 W - [tgm]GetSchema("Tables")
+11:25:37.394 10 W - [tgm]GetSchema("Columns")
+11:25:37.428 10 W - [tgm]GetSchema("Indexes")
+11:25:37.431 10 W - [tgm]GetSchema("IndexColumns")
+11:25:37.435 10 W - [tgm]GetSchema("DataTypes")
+11:25:37.449 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:25:37.451 10 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:25:37.498 10 W - [tgm]的所有实体类（0个）：
+11:25:37.498 10 W - [tgm]需要检查架构的实体类（0个）：
+11:25:37.498 10 W - 检查连接[tgm/SqlServer]的数据库架构耗时47ms
+11:25:37.498 10 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:25:37.511 10 W - Select * From tgm_platform Where id=1
+11:25:37.682 36 W - [tgm]GetSchema("Tables")
+11:25:37.723 36 W - [tgm]GetSchema("Columns")
+11:25:37.756 36 W - [tgm]GetSchema("Indexes")
+11:25:37.759 36 W - [tgm]GetSchema("IndexColumns")
+11:25:37.764 36 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:25:37.808 36 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:25:37.811 36 W - Select * From tgm_platform Where id=1
+11:25:37.812 36 W - Select * From tgm_platform Where id=1
+11:25:41.674 15 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:25:41.676 15 W - Select * From tgm_platform Order By  createtime desc
+11:25:48.533 15 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:26:37.110 10 Y - Select * From tgm_server Order By id Desc
+11:26:37.123 10 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:26:37.134 10 Y - [tgm]GetSchema("Tables")
+11:26:37.174 10 Y - [tgm]GetSchema("Columns")
+11:26:37.209 10 Y - [tgm]GetSchema("Indexes")
+11:26:37.212 10 Y - [tgm]GetSchema("IndexColumns")
+11:26:37.231 10 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 1, 42, 43, 1, 0, 635570043971279063);Select SCOPE_IDENTITY()
+11:26:37.252 10 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:26:37.254 10 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 1, 42, 43, 1, 0, 635570043972535612);Select SCOPE_IDENTITY()
+11:26:37.257 10 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:26:37.259 10 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 1, 42, 43, 1, 0, 635570043972585931);Select SCOPE_IDENTITY()
+11:27:37.121 12 Y - Select * From tgm_server Order By id Desc
+11:27:37.122 12 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:27:37.125 12 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 41, 43, 1, 0, 635570044571249973);Select SCOPE_IDENTITY()
+11:27:37.127 12 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:27:37.131 12 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 41, 43, 1, 0, 635570044571300289);Select SCOPE_IDENTITY()
+11:27:37.133 12 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:27:37.136 12 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 41, 43, 1, 0, 635570044571350723);Select SCOPE_IDENTITY()
+11:28:37.126 18 Y - Select * From tgm_server Order By id Desc
+11:28:37.128 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:28:37.131 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 3, 40, 43, 1, 0, 635570045171304741);Select SCOPE_IDENTITY()
+11:28:37.133 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:28:37.136 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 3, 40, 43, 1, 0, 635570045171354771);Select SCOPE_IDENTITY()
+11:28:37.138 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:28:37.141 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 3, 40, 43, 1, 0, 635570045171395057);Select SCOPE_IDENTITY()
+11:29:37.136 13 Y - Select * From tgm_server Order By id Desc
+11:29:37.138 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:29:37.141 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 4, 39, 43, 1, 0, 635570045771402020);Select SCOPE_IDENTITY()
+11:29:37.144 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:29:37.147 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 4, 39, 43, 1, 0, 635570045771463138);Select SCOPE_IDENTITY()
+11:29:37.149 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:29:37.152 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 4, 39, 43, 1, 0, 635570045771513168);Select SCOPE_IDENTITY()
+11:30:37.138 36 Y - Select * From tgm_server Order By id Desc
+11:30:37.139 36 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:30:37.139 36 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 6, 38, 44, 2, 1, 635570046371391975);Select SCOPE_IDENTITY()
+11:30:37.139 36 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:30:37.139 36 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 6, 38, 44, 2, 1, 635570046371391975);Select SCOPE_IDENTITY()
+11:30:37.139 36 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:30:37.139 36 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 6, 38, 44, 2, 1, 635570046371391975);Select SCOPE_IDENTITY()
+11:31:37.150 36 Y - Select * From tgm_server Order By id Desc
+11:31:37.153 36 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:31:37.155 36 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 5, 39, 44, 2, 1, 635570046971550019);Select SCOPE_IDENTITY()
+11:31:37.157 36 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:31:37.159 36 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 5, 39, 44, 2, 1, 635570046971580415);Select SCOPE_IDENTITY()
+11:31:37.161 36 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:31:37.163 36 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 5, 39, 44, 2, 1, 635570046971620441);Select SCOPE_IDENTITY()
+11:32:37.155 18 Y - Select * From tgm_server Order By id Desc
+11:32:37.155 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:32:37.155 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 5, 39, 44, 2, 1, 635570047571552412);Select SCOPE_IDENTITY()
+11:32:37.155 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:32:37.155 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 5, 39, 44, 2, 1, 635570047571552412);Select SCOPE_IDENTITY()
+11:32:37.155 18 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:32:37.155 18 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 5, 39, 44, 2, 1, 635570047571552412);Select SCOPE_IDENTITY()
+11:33:37.168 20 Y - Select * From tgm_server Order By id Desc
+11:33:37.171 20 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:33:37.173 20 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 5, 39, 44, 2, 1, 635570048171726846);Select SCOPE_IDENTITY()
+11:33:37.175 20 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:33:37.178 20 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 5, 39, 44, 2, 1, 635570048171777103);Select SCOPE_IDENTITY()
+11:33:37.180 20 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:33:37.183 20 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 5, 39, 44, 2, 1, 635570048171827993);Select SCOPE_IDENTITY()
+11:34:37.183 13 Y - Select * From tgm_server Order By id Desc
+11:34:37.185 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:34:37.188 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 6, 39, 45, 3, 2, 635570048771872969);Select SCOPE_IDENTITY()
+11:34:37.191 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:34:37.193 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 6, 39, 45, 3, 2, 635570048771933313);Select SCOPE_IDENTITY()
+11:34:37.195 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:34:37.198 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 6, 39, 45, 3, 2, 635570048771973616);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-11-130658529136173751
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:35:16.391 50 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:35:16.400 50 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:35:16.400 50 N - 使用数据库方式：独占，加大缓存权重
+11:35:16.401 50 N - 一级缓存：关闭缓存
+11:35:16.421 50 N - [DB]GetSchema("MetaDataCollections")
+11:35:16.427 50 N - [DB]GetSchema("ReservedWords")
+11:35:16.442 50 N - [DB]GetSchema("Databases", "tgm")
+11:35:16.453 50 N - [DB]GetSchema("Tables")
+11:35:16.498 50 N - [DB]GetSchema("Columns")
+11:35:16.532 50 N - [DB]GetSchema("Indexes")
+11:35:16.535 50 N - [DB]GetSchema("IndexColumns")
+11:35:16.543 50 N - [DB]GetSchema("DataTypes")
+11:35:16.585 50 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:35:16.648 50 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:35:16.648 50 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:35:16.648 50 N - DB待检查表架构的实体个数：20
+11:35:16.718 50 N - 检查连接[DB/SqlServer]的数据库架构耗时131ms
+11:35:16.718 50 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:35:16.727 50 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:35:16.729 50 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:35:16.974 13 W - [tgm]GetSchema("MetaDataCollections")
+11:35:16.977 13 W - [tgm]GetSchema("ReservedWords")
+11:35:16.983 13 W - [tgm]GetSchema("Databases", "tgm")
+11:35:16.989 13 W - [tgm]GetSchema("Tables")
+11:35:17.030 13 W - [tgm]GetSchema("Columns")
+11:35:17.064 13 W - [tgm]GetSchema("Indexes")
+11:35:17.068 13 W - [tgm]GetSchema("IndexColumns")
+11:35:17.073 13 W - [tgm]GetSchema("DataTypes")
+11:35:17.091 13 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:35:17.093 13 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:35:17.152 13 W - [tgm]的所有实体类（0个）：
+11:35:17.152 13 W - [tgm]需要检查架构的实体类（0个）：
+11:35:17.152 13 W - 检查连接[tgm/SqlServer]的数据库架构耗时59ms
+11:35:17.152 13 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:35:17.164 13 W - Select * From tgm_platform Where id=1
+11:35:17.336 42 W - [tgm]GetSchema("Tables")
+11:35:17.376 42 W - [tgm]GetSchema("Columns")
+11:35:17.410 42 W - [tgm]GetSchema("Indexes")
+11:35:17.413 42 W - [tgm]GetSchema("IndexColumns")
+11:35:17.419 42 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:35:17.463 42 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:35:17.466 42 W - Select * From tgm_platform Where id=1
+11:35:17.467 42 W - Select * From tgm_platform Where id=1
+11:35:23.847 36 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:35:23.849 36 W - Select * From tgm_platform Order By  createtime desc
+11:35:30.251 36 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:36:16.751 20 Y - Select * From tgm_server Order By id Desc
+11:36:16.764 20 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:36:16.771 20 Y - [tgm]GetSchema("Tables")
+11:36:16.812 20 Y - [tgm]GetSchema("Columns")
+11:36:16.846 20 Y - [tgm]GetSchema("Indexes")
+11:36:16.849 20 Y - [tgm]GetSchema("IndexColumns")
+11:36:16.865 20 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 6, 39, 45, 3, 1, 635570049767671181);Select SCOPE_IDENTITY()
+11:36:16.876 20 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:36:16.878 20 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 6, 39, 45, 3, 1, 635570049768776155);Select SCOPE_IDENTITY()
+11:36:16.881 20 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:36:16.883 20 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 6, 39, 45, 3, 1, 635570049768826188);Select SCOPE_IDENTITY()
+11:37:16.745 20 Y - Select * From tgm_server Order By id Desc
+11:37:16.747 20 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:37:16.761 20 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 6, 39, 45, 3, 1, 635570050367608912);Select SCOPE_IDENTITY()
+11:37:16.763 20 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:37:16.765 20 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 6, 39, 45, 3, 1, 635570050367648923);Select SCOPE_IDENTITY()
+11:37:16.767 20 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:37:16.769 20 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 6, 39, 45, 3, 1, 635570050367688966);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 8080
+#AppDomain: /LM/W3SVC/2/ROOT-12-130658530745956106
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:37:57.422 15 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:37:57.430 15 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:37:57.431 15 N - 使用数据库方式：独占，加大缓存权重
+11:37:57.431 15 N - 一级缓存：关闭缓存
+11:37:57.452 15 N - [DB]GetSchema("MetaDataCollections")
+11:37:57.458 15 N - [DB]GetSchema("ReservedWords")
+11:37:57.473 15 N - [DB]GetSchema("Databases", "tgm")
+11:37:57.483 15 N - [DB]GetSchema("Tables")
+11:37:57.528 15 N - [DB]GetSchema("Columns")
+11:37:57.563 15 N - [DB]GetSchema("Indexes")
+11:37:57.567 15 N - [DB]GetSchema("IndexColumns")
+11:37:57.580 15 N - [DB]GetSchema("DataTypes")
+11:37:57.643 15 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:37:57.712 15 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:37:57.712 15 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:37:57.712 15 N - DB待检查表架构的实体个数：20
+11:37:57.787 15 N - 检查连接[DB/SqlServer]的数据库架构耗时144ms
+11:37:57.787 15 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:37:57.798 15 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:37:57.799 15 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:37:58.040 36 W - [tgm]GetSchema("MetaDataCollections")
+11:37:58.043 36 W - [tgm]GetSchema("ReservedWords")
+11:37:58.049 36 W - [tgm]GetSchema("Databases", "tgm")
+11:37:58.055 36 W - [tgm]GetSchema("Tables")
+11:37:58.097 36 W - [tgm]GetSchema("Columns")
+11:37:58.131 36 W - [tgm]GetSchema("Indexes")
+11:37:58.134 36 W - [tgm]GetSchema("IndexColumns")
+11:37:58.137 36 W - [tgm]GetSchema("DataTypes")
+11:37:58.153 36 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:37:58.154 36 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:37:58.229 36 W - [tgm]的所有实体类（0个）：
+11:37:58.229 36 W - [tgm]需要检查架构的实体类（0个）：
+11:37:58.229 36 W - 检查连接[tgm/SqlServer]的数据库架构耗时75ms
+11:37:58.229 36 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:37:58.243 36 W - Select * From tgm_platform Where id=1
+11:37:58.412 42 W - [tgm]GetSchema("Tables")
+11:37:58.452 42 W - [tgm]GetSchema("Columns")
+11:37:58.487 42 W - [tgm]GetSchema("Indexes")
+11:37:58.489 42 W - [tgm]GetSchema("IndexColumns")
+11:37:58.495 42 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:37:58.539 42 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:37:58.542 42 W - Select * From tgm_platform Where id=1
+11:37:58.543 42 W - Select * From tgm_platform Where id=1
+11:38:01.736 49 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:38:01.737 49 W - Select * From tgm_platform Order By  createtime desc
+11:38:06.954 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:38:57.810 42 Y - Select * From tgm_server Order By id Desc
+11:38:57.818 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:38:57.824 42 Y - [tgm]GetSchema("Tables")
+11:38:57.866 42 Y - [tgm]GetSchema("Columns")
+11:38:57.902 42 Y - [tgm]GetSchema("Indexes")
+11:38:57.905 42 Y - [tgm]GetSchema("IndexColumns")
+11:38:57.931 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 6, 39, 45, 3, 1, 635570051378215547);Select SCOPE_IDENTITY()
+11:38:57.945 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:38:57.947 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 6, 39, 45, 3, 1, 635570051379464309);Select SCOPE_IDENTITY()
+11:38:57.949 42 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:38:57.950 42 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 6, 39, 45, 3, 1, 635570051379504326);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 8332
+#AppDomain: /LM/W3SVC/2/ROOT-1-130658531922236874
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:39:56.433 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:39:56.442 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:39:56.442 1 N - 使用数据库方式：独占，加大缓存权重
+11:39:56.442 1 N - 一级缓存：关闭缓存
+11:39:56.481 1 N - [DB]GetSchema("MetaDataCollections")
+11:39:56.525 1 N - [DB]GetSchema("ReservedWords")
+11:39:56.539 1 N - [DB]GetSchema("Databases", "tgm")
+11:39:56.624 1 N - [DB]GetSchema("Tables")
+11:39:56.766 1 N - [DB]GetSchema("Columns")
+11:39:56.831 1 N - [DB]GetSchema("Indexes")
+11:39:56.861 1 N - [DB]GetSchema("IndexColumns")
+11:39:56.898 1 N - [DB]GetSchema("DataTypes")
+11:39:57.008 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:39:57.079 1 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:39:57.079 1 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:39:57.080 1 N - DB待检查表架构的实体个数：20
+11:39:57.230 1 N - 检查连接[DB/SqlServer]的数据库架构耗时221ms
+11:39:57.230 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:39:57.258 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:39:57.287 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:40:51.936 7 W - [tgm]GetSchema("MetaDataCollections")
+11:40:51.939 7 W - [tgm]GetSchema("ReservedWords")
+11:40:51.945 7 W - [tgm]GetSchema("Databases", "tgm")
+11:40:52.099 7 W - [tgm]GetSchema("Tables")
+11:40:52.349 7 W - [tgm]GetSchema("Columns")
+11:40:52.452 7 W - [tgm]GetSchema("Indexes")
+11:40:52.524 7 W - [tgm]GetSchema("IndexColumns")
+11:40:52.600 7 W - [tgm]GetSchema("DataTypes")
+11:40:52.766 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:40:52.837 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:40:52.890 7 W - [tgm]的所有实体类（0个）：
+11:40:52.890 7 W - [tgm]需要检查架构的实体类（0个）：
+11:40:52.890 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时53ms
+11:40:52.890 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:40:52.965 7 W - Select * From tgm_platform Where id=1
+11:40:54.242 8 W - [tgm]GetSchema("Tables")
+11:40:54.510 8 W - [tgm]GetSchema("Columns")
+11:40:54.616 8 W - [tgm]GetSchema("Indexes")
+11:40:54.690 8 W - [tgm]GetSchema("IndexColumns")
+11:40:54.775 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:40:55.085 8 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:40:55.149 8 W - Select * From tgm_platform Where id=1
+11:40:55.223 8 W - Select * From tgm_platform Where id=1
+11:40:57.307 7 Y - Select * From tgm_server Order By id Desc
+11:40:57.337 7 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:40:57.502 7 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 0, 45, 3, 1, 635570052573582281);Select SCOPE_IDENTITY()
+11:40:57.534 7 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:40:57.552 7 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 0, 45, 3, 1, 635570052575504414);Select SCOPE_IDENTITY()
+11:40:57.571 7 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:40:57.588 7 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 0, 45, 3, 1, 635570052575864644);Select SCOPE_IDENTITY()
+11:41:03.272 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:41:03.337 11 W - Select * From tgm_platform Order By  createtime desc
+11:41:18.373 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7212
+#AppDomain: /LM/W3SVC/2/ROOT-1-130658534468688459
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:44:12.874 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:44:12.882 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:44:12.883 1 N - 使用数据库方式：独占，加大缓存权重
+11:44:12.883 1 N - 一级缓存：关闭缓存
+11:44:12.911 1 N - [DB]GetSchema("MetaDataCollections")
+11:44:12.935 1 N - [DB]GetSchema("ReservedWords")
+11:44:12.948 1 N - [DB]GetSchema("Databases", "tgm")
+11:44:13.037 1 N - [DB]GetSchema("Tables")
+11:44:13.162 1 N - [DB]GetSchema("Columns")
+11:44:13.227 1 N - [DB]GetSchema("Indexes")
+11:44:13.269 1 N - [DB]GetSchema("IndexColumns")
+11:44:13.307 1 N - [DB]GetSchema("DataTypes")
+11:44:13.417 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:44:13.488 1 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:44:13.488 1 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:44:13.489 1 N - DB待检查表架构的实体个数：20
+11:44:13.639 1 N - 检查连接[DB/SqlServer]的数据库架构耗时222ms
+11:44:13.639 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:44:13.667 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:44:13.695 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:44:21.296 7 W - [tgm]GetSchema("MetaDataCollections")
+11:44:21.299 7 W - [tgm]GetSchema("ReservedWords")
+11:44:21.305 7 W - [tgm]GetSchema("Databases", "tgm")
+11:44:21.468 7 W - [tgm]GetSchema("Tables")
+11:44:21.715 7 W - [tgm]GetSchema("Columns")
+11:44:21.825 7 W - [tgm]GetSchema("Indexes")
+11:44:21.899 7 W - [tgm]GetSchema("IndexColumns")
+11:44:21.975 7 W - [tgm]GetSchema("DataTypes")
+11:44:22.143 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:44:22.212 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:44:22.263 7 W - [tgm]的所有实体类（0个）：
+11:44:22.263 7 W - [tgm]需要检查架构的实体类（0个）：
+11:44:22.263 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时51ms
+11:44:22.264 7 W - Select Top 1 * From tgm_role Where name=N'ADMIN' Order By id Desc
+11:44:34.913 8 W - Select Top 1 * From tgm_role Where name=N'ADMIN' Order By id Desc
+11:44:34.983 8 W - Select * From tgm_platform Where id=1
+11:44:36.195 9 W - [tgm]GetSchema("Tables")
+11:44:36.446 9 W - [tgm]GetSchema("Columns")
+11:44:36.558 9 W - [tgm]GetSchema("Indexes")
+11:44:36.635 9 W - [tgm]GetSchema("IndexColumns")
+11:44:36.717 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:44:37.166 9 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:44:37.240 9 W - Select * From tgm_platform Where id=1
+11:44:37.310 9 W - Select * From tgm_platform Where id=1
+11:44:42.223 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:44:42.292 7 W - Select * From tgm_platform Order By  createtime desc
+11:44:52.826 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:44:52.891 7 W - Select Top 10 * From tgm_record_pay Order By id Desc
+11:45:13.729 8 Y - Select * From tgm_server Order By id Desc
+11:45:13.767 8 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:45:13.833 8 Y - [tgm]GetSchema("Tables")
+11:45:13.992 8 Y - [tgm]GetSchema("Columns")
+11:45:14.064 8 Y - [tgm]GetSchema("Indexes")
+11:45:14.095 8 Y - [tgm]GetSchema("IndexColumns")
+11:45:14.140 8 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 0, 45, 3, 1, 635570055137933478);Select SCOPE_IDENTITY()
+11:45:14.174 8 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:45:14.192 8 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 0, 45, 3, 1, 635570055141912177);Select SCOPE_IDENTITY()
+11:45:14.211 8 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:45:14.228 8 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 0, 45, 3, 1, 635570055142272558);Select SCOPE_IDENTITY()
+11:45:16.388 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:45:16.453 7 W - Select * From tgm_platform Order By  createtime desc
+11:45:22.193 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:45:22.258 8 W - Select * From tgm_platform Order By  createtime desc
+11:45:45.752 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:45:47.689 7 W - Select Top 10 * From tgm_record_pay Order By id Desc
+11:46:18.288 9 Y - Select * From tgm_server Order By id Desc
+11:46:19.349 9 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:46:19.418 9 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 0, 45, 3, 1, 635570055794057475);Select SCOPE_IDENTITY()
+11:46:19.477 9 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:46:19.504 9 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 0, 45, 3, 1, 635570055795046208);Select SCOPE_IDENTITY()
+11:46:19.578 9 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:46:19.615 9 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 0, 45, 3, 1, 635570055796100798);Select SCOPE_IDENTITY()
+11:46:47.881 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:46:47.957 7 W - Select * From tgm_platform Order By  createtime desc
+11:46:53.072 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:46:53.143 7 W - Select * From tgm_platform Order By  createtime desc
+11:47:00.406 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:47:00.478 9 W - Select Top 10 * From tgm_record_pay Order By id Desc
+11:47:27.513 13 Y - Select * From tgm_server Order By id Desc
+11:47:27.544 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:47:27.570 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 0, 45, 3, 1, 635570056475692898);Select SCOPE_IDENTITY()
+11:47:28.299 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:47:28.327 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 0, 45, 3, 1, 635570056483251643);Select SCOPE_IDENTITY()
+11:47:28.351 13 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+11:47:28.372 13 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 0, 45, 3, 1, 635570056483711953);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 4068
+#AppDomain: /LM/W3SVC/2/ROOT-1-130658538087498906
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:50:11.174 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:50:11.183 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:50:11.183 1 N - 使用数据库方式：独占，加大缓存权重
+11:50:11.183 1 N - 一级缓存：关闭缓存
+11:50:11.249 1 N - [DB]GetSchema("MetaDataCollections")
+11:50:11.273 1 N - [DB]GetSchema("ReservedWords")
+11:50:11.287 1 N - [DB]GetSchema("Databases", "tgm")
+11:50:11.379 1 N - [DB]GetSchema("Tables")
+11:50:11.517 1 N - [DB]GetSchema("Columns")
+11:50:11.600 1 N - [DB]GetSchema("Indexes")
+11:50:11.636 1 N - [DB]GetSchema("IndexColumns")
+11:50:11.678 1 N - [DB]GetSchema("DataTypes")
+11:50:11.789 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:50:11.845 1 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:50:11.845 1 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+11:50:11.846 1 N - DB待检查表架构的实体个数：20
+11:50:12.003 1 N - 检查连接[DB/SqlServer]的数据库架构耗时214ms
+11:50:12.003 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:50:12.031 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:50:12.061 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:50:27.029 7 W - [tgm]GetSchema("MetaDataCollections")
+11:50:27.033 7 W - [tgm]GetSchema("ReservedWords")
+11:50:27.039 7 W - [tgm]GetSchema("Databases", "tgm")
+11:50:27.209 7 W - [tgm]GetSchema("Tables")
+11:50:27.456 7 W - [tgm]GetSchema("Columns")
+11:50:27.561 7 W - [tgm]GetSchema("Indexes")
+11:50:27.633 7 W - [tgm]GetSchema("IndexColumns")
+11:50:27.707 7 W - [tgm]GetSchema("DataTypes")
+11:50:27.870 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:50:27.938 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:50:27.978 7 W - [tgm]的所有实体类（0个）：
+11:50:27.978 7 W - [tgm]需要检查架构的实体类（0个）：
+11:50:27.979 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时41ms
+11:50:27.979 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:50:28.052 7 W - Select * From tgm_platform Where id=1
+11:50:29.310 9 W - [tgm]GetSchema("Tables")
+11:50:29.557 9 W - [tgm]GetSchema("Columns")
+11:50:29.668 9 W - [tgm]GetSchema("Indexes")
+11:50:29.744 9 W - [tgm]GetSchema("IndexColumns")
+11:50:29.823 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:50:30.130 9 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:50:30.194 9 W - Select * From tgm_platform Where id=1
+11:50:30.263 9 W - Select * From tgm_platform Where id=1
+11:50:34.487 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:50:34.551 7 W - Select * From tgm_platform Order By  createtime desc
+11:50:44.335 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:50:44.402 9 W - Select Top 10 * From tgm_record_pay Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 5920
+#AppDomain: /LM/W3SVC/2/ROOT-1-130658545674764642
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+12:02:52.737 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+12:02:52.746 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+12:02:52.746 1 N - 使用数据库方式：独占，加大缓存权重
+12:02:52.746 1 N - 一级缓存：关闭缓存
+12:02:52.773 1 N - [DB]GetSchema("MetaDataCollections")
+12:02:52.819 1 N - [DB]GetSchema("ReservedWords")
+12:02:52.833 1 N - [DB]GetSchema("Databases", "tgm")
+12:02:52.923 1 N - [DB]GetSchema("Tables")
+12:02:53.053 1 N - [DB]GetSchema("Columns")
+12:02:53.119 1 N - [DB]GetSchema("Indexes")
+12:02:53.154 1 N - [DB]GetSchema("IndexColumns")
+12:02:53.194 1 N - [DB]GetSchema("DataTypes")
+12:02:53.309 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+12:02:53.394 1 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+12:02:53.394 1 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+12:02:53.395 1 N - DB待检查表架构的实体个数：20
+12:02:53.543 1 N - 检查连接[DB/SqlServer]的数据库架构耗时234ms
+12:02:53.543 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+12:02:53.570 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:02:53.599 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+12:03:04.251 8 W - [tgm]GetSchema("MetaDataCollections")
+12:03:04.254 8 W - [tgm]GetSchema("ReservedWords")
+12:03:04.260 8 W - [tgm]GetSchema("Databases", "tgm")
+12:03:04.414 8 W - [tgm]GetSchema("Tables")
+12:03:04.659 8 W - [tgm]GetSchema("Columns")
+12:03:04.762 8 W - [tgm]GetSchema("Indexes")
+12:03:04.834 8 W - [tgm]GetSchema("IndexColumns")
+12:03:04.911 8 W - [tgm]GetSchema("DataTypes")
+12:03:05.071 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:03:05.138 8 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+12:03:05.189 8 W - [tgm]的所有实体类（0个）：
+12:03:05.189 8 W - [tgm]需要检查架构的实体类（0个）：
+12:03:05.189 8 W - 检查连接[tgm/SqlServer]的数据库架构耗时51ms
+12:03:05.189 8 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+12:03:05.265 8 W - Select * From tgm_platform Where id=1
+12:03:06.579 9 W - [tgm]GetSchema("Tables")
+12:03:06.827 9 W - [tgm]GetSchema("Columns")
+12:03:06.932 9 W - [tgm]GetSchema("Indexes")
+12:03:07.005 9 W - [tgm]GetSchema("IndexColumns")
+12:03:07.089 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:03:07.406 9 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+12:03:07.470 9 W - Select * From tgm_platform Where id=1
+12:03:07.539 9 W - Select * From tgm_platform Where id=1
+12:03:23.919 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:03:23.984 7 W - Select * From tgm_platform Order By  createtime desc
+12:03:34.265 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:03:34.334 11 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:03:34.403 11 W - Select Count(*) From tgm_record_pay
+12:03:34.464 11 W - Select Top 10 * From tgm_record_pay Order By id Desc
+12:03:59.216 8 Y - Select * From tgm_server Order By id Desc
+12:03:59.251 8 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:03:59.827 8 Y - [tgm]GetSchema("Tables")
+12:03:59.959 8 Y - [tgm]GetSchema("Columns")
+12:04:00.023 8 Y - [tgm]GetSchema("Indexes")
+12:04:00.060 8 Y - [tgm]GetSchema("IndexColumns")
+12:04:00.103 8 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 0, 45, 3, 1, 635570066392745623);Select SCOPE_IDENTITY()
+12:04:00.137 8 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:04:00.156 8 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 0, 45, 3, 1, 635570066401557065);Select SCOPE_IDENTITY()
+12:04:00.176 8 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:04:00.193 8 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 0, 45, 3, 1, 635570066401927312);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 9012
+#AppDomain: /LM/W3SVC/2/ROOT-1-130658548619501619
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+12:07:46.994 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+12:07:47.003 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+12:07:47.003 1 N - 使用数据库方式：独占，加大缓存权重
+12:07:47.003 1 N - 一级缓存：关闭缓存
+12:07:47.033 1 N - [DB]GetSchema("MetaDataCollections")
+12:07:47.058 1 N - [DB]GetSchema("ReservedWords")
+12:07:47.072 1 N - [DB]GetSchema("Databases", "tgm")
+12:07:47.156 1 N - [DB]GetSchema("Tables")
+12:07:47.280 1 N - [DB]GetSchema("Columns")
+12:07:47.347 1 N - [DB]GetSchema("Indexes")
+12:07:47.379 1 N - [DB]GetSchema("IndexColumns")
+12:07:47.417 1 N - [DB]GetSchema("DataTypes")
+12:07:47.526 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+12:07:47.604 1 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+12:07:47.604 1 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+12:07:47.604 1 N - DB待检查表架构的实体个数：20
+12:07:47.758 1 N - 检查连接[DB/SqlServer]的数据库架构耗时232ms
+12:07:47.758 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+12:07:47.792 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:07:47.823 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+12:08:01.505 9 W - [tgm]GetSchema("MetaDataCollections")
+12:08:01.509 9 W - [tgm]GetSchema("ReservedWords")
+12:08:01.515 9 W - [tgm]GetSchema("Databases", "tgm")
+12:08:01.673 9 W - [tgm]GetSchema("Tables")
+12:08:01.947 9 W - [tgm]GetSchema("Columns")
+12:08:02.056 9 W - [tgm]GetSchema("Indexes")
+12:08:02.130 9 W - [tgm]GetSchema("IndexColumns")
+12:08:02.206 9 W - [tgm]GetSchema("DataTypes")
+12:08:02.380 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:08:02.448 9 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+12:08:02.498 9 W - [tgm]的所有实体类（0个）：
+12:08:02.499 9 W - [tgm]需要检查架构的实体类（0个）：
+12:08:02.499 9 W - 检查连接[tgm/SqlServer]的数据库架构耗时51ms
+12:08:02.499 9 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+12:08:02.572 9 W - Select * From tgm_platform Where id=1
+12:08:03.940 8 W - [tgm]GetSchema("Tables")
+12:08:04.197 8 W - [tgm]GetSchema("Columns")
+12:08:04.307 8 W - [tgm]GetSchema("Indexes")
+12:08:04.382 8 W - [tgm]GetSchema("IndexColumns")
+12:08:04.463 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:08:04.814 8 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+12:08:04.885 8 W - Select * From tgm_platform Where id=1
+12:08:04.955 8 W - Select * From tgm_platform Where id=1
+12:08:11.750 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:08:11.823 8 W - Select * From tgm_platform Order By  createtime desc
+12:08:18.391 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:08:18.456 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:08:18.521 7 W - Select Count(*) From tgm_record_pay
+12:08:18.589 7 W - Select Top 10 * From tgm_record_pay Order By id Desc
+12:08:47.846 7 Y - Select * From tgm_server Order By id Desc
+12:08:47.902 7 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:08:47.963 7 Y - [tgm]GetSchema("Tables")
+12:08:48.082 7 Y - [tgm]GetSchema("Columns")
+12:08:48.148 7 Y - [tgm]GetSchema("Indexes")
+12:08:48.181 7 Y - [tgm]GetSchema("IndexColumns")
+12:08:48.239 7 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 0, 0, 45, 3, 1, 635570069279273598);Select SCOPE_IDENTITY()
+12:08:48.271 7 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:08:48.289 7 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 0, 0, 45, 3, 1, 635570069282899684);Select SCOPE_IDENTITY()
+12:08:48.308 7 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:08:48.323 7 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 0, 0, 45, 3, 1, 635570069283239920);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 7996
+#AppDomain: /LM/W3SVC/2/ROOT-1-130658556988103478
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+12:21:44.308 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+12:21:44.316 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+12:21:44.317 1 N - 使用数据库方式：独占，加大缓存权重
+12:21:44.317 1 N - 一级缓存：关闭缓存
+12:21:44.345 1 N - [DB]GetSchema("MetaDataCollections")
+12:21:44.369 1 N - [DB]GetSchema("ReservedWords")
+12:21:44.383 1 N - [DB]GetSchema("Databases", "tgm")
+12:21:44.479 1 N - [DB]GetSchema("Tables")
+12:21:44.600 1 N - [DB]GetSchema("Columns")
+12:21:44.663 1 N - [DB]GetSchema("Indexes")
+12:21:44.695 1 N - [DB]GetSchema("IndexColumns")
+12:21:44.734 1 N - [DB]GetSchema("DataTypes")
+12:21:44.847 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+12:21:44.917 1 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+12:21:44.917 1 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+12:21:44.917 1 N - DB待检查表架构的实体个数：20
+12:21:45.073 1 N - 检查连接[DB/SqlServer]的数据库架构耗时227ms
+12:21:45.073 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+12:21:45.102 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:21:45.131 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+12:21:58.924 5 W - [tgm]GetSchema("MetaDataCollections")
+12:21:58.928 5 W - [tgm]GetSchema("ReservedWords")
+12:21:58.933 5 W - [tgm]GetSchema("Databases", "tgm")
+12:21:59.089 5 W - [tgm]GetSchema("Tables")
+12:21:59.328 5 W - [tgm]GetSchema("Columns")
+12:21:59.434 5 W - [tgm]GetSchema("Indexes")
+12:21:59.506 5 W - [tgm]GetSchema("IndexColumns")
+12:21:59.576 5 W - [tgm]GetSchema("DataTypes")
+12:21:59.741 5 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:21:59.807 5 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+12:21:59.859 5 W - [tgm]的所有实体类（0个）：
+12:21:59.859 5 W - [tgm]需要检查架构的实体类（0个）：
+12:21:59.859 5 W - 检查连接[tgm/SqlServer]的数据库架构耗时51ms
+12:21:59.859 5 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+12:21:59.932 5 W - Select * From tgm_platform Where id=1
+12:22:01.254 7 W - [tgm]GetSchema("Tables")
+12:22:01.494 7 W - [tgm]GetSchema("Columns")
+12:22:01.603 7 W - [tgm]GetSchema("Indexes")
+12:22:01.675 7 W - [tgm]GetSchema("IndexColumns")
+12:22:01.753 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:22:02.054 7 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+12:22:02.118 7 W - Select * From tgm_platform Where id=1
+12:22:02.183 7 W - Select * From tgm_platform Where id=1
+12:22:07.950 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:22:08.013 6 W - Select * From tgm_platform Order By  createtime desc
+12:22:11.422 5 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:22:11.482 5 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:22:11.550 5 W - Select Count(*) From tgm_record_pay
+12:22:11.606 5 W - Select Top 10 * From tgm_record_pay Order By id Desc
+12:22:45.168 6 Y - Select * From tgm_server Order By id Desc
+12:22:45.201 6 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:22:45.252 6 Y - [tgm]GetSchema("Tables")
+12:22:45.377 6 Y - [tgm]GetSchema("Columns")
+12:22:45.440 6 Y - [tgm]GetSchema("Indexes")
+12:22:45.471 6 Y - [tgm]GetSchema("IndexColumns")
+12:22:45.513 6 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 5, 46, 4, 2, 635570077652215144);Select SCOPE_IDENTITY()
+12:22:45.552 6 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:22:45.570 6 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 5, 46, 4, 2, 635570077655696730);Select SCOPE_IDENTITY()
+12:22:45.604 6 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:22:45.620 6 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 5, 46, 4, 2, 635570077656197968);Select SCOPE_IDENTITY()
+12:23:45.183 5 Y - Select * From tgm_server Order By id Desc
+12:23:45.223 5 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:23:45.245 5 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(7, 2, 5, 46, 4, 2, 635570078252443659);Select SCOPE_IDENTITY()
+12:23:45.267 5 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:23:45.282 5 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(6, 2, 5, 46, 4, 2, 635570078252813912);Select SCOPE_IDENTITY()
+12:23:45.301 5 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]
+12:23:45.323 5 Y - SET NOCOUNT ON;Insert Into tgm_record_game(sid, online, offline, total, register, build, createtime) Values(1, 2, 5, 46, 4, 2, 635570078253224288);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 9380
+#AppDomain: /LM/W3SVC/2/ROOT-1-130658585612835985
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-16
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+13:09:27.389 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+13:09:27.398 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+13:09:27.399 1 N - 使用数据库方式：独占，加大缓存权重
+13:09:27.399 1 N - 一级缓存：关闭缓存
+13:09:27.430 1 N - [DB]GetSchema("MetaDataCollections")
+13:09:27.475 1 N - [DB]GetSchema("ReservedWords")
+13:09:27.490 1 N - [DB]GetSchema("Databases", "tgm")
+13:09:27.570 1 N - [DB]GetSchema("Tables")
+13:09:27.701 1 N - [DB]GetSchema("Columns")
+13:09:27.768 1 N - [DB]GetSchema("Indexes")
+13:09:27.802 1 N - [DB]GetSchema("IndexColumns")
+13:09:27.843 1 N - [DB]GetSchema("DataTypes")
+13:09:27.971 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+13:09:28.051 1 N - [DB]的所有实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+13:09:28.051 1 N - [DB]需要检查架构的实体类（21个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_pay,tgm_resource,tgm_role,tgm_server,tg_bag,tg_car,tg_messages,tg_role,tg_role_fight_skill,tg_role_life_skill,tg_system_notice,tg_user,tg_user_area,tg_user_login_log,tg_user_vip,tg_war_city,tg_war_role
+13:09:28.051 1 N - DB待检查表架构的实体个数：20
+13:09:28.198 1 N - 检查连接[DB/SqlServer]的数据库架构耗时227ms
+13:09:28.199 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+13:09:28.229 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+13:09:28.257 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+13:09:38.414 7 W - [tgm]GetSchema("MetaDataCollections")
+13:09:38.418 7 W - [tgm]GetSchema("ReservedWords")
+13:09:38.424 7 W - [tgm]GetSchema("Databases", "tgm")
+13:09:38.580 7 W - [tgm]GetSchema("Tables")
+13:09:38.829 7 W - [tgm]GetSchema("Columns")
+13:09:38.933 7 W - [tgm]GetSchema("Indexes")
+13:09:39.006 7 W - [tgm]GetSchema("IndexColumns")
+13:09:39.084 7 W - [tgm]GetSchema("DataTypes")
+13:09:39.301 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+13:09:39.371 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+13:09:39.423 7 W - [tgm]的所有实体类（0个）：
+13:09:39.423 7 W - [tgm]需要检查架构的实体类（0个）：
+13:09:39.423 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时52ms
+13:09:39.423 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+13:09:39.499 7 W - Select * From tgm_platform Where id=1
+13:09:40.872 9 W - [tgm]GetSchema("Tables")
+13:09:41.123 9 W - [tgm]GetSchema("Columns")
+13:09:41.232 9 W - [tgm]GetSchema("Indexes")
+13:09:41.307 9 W - [tgm]GetSchema("IndexColumns")
+13:09:41.391 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+13:09:41.701 9 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+13:09:41.765 9 W - Select * From tgm_platform Where id=1
+13:09:41.834 9 W - Select * From tgm_platform Where id=1
+13:09:57.143 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+13:09:57.213 7 W - Select * From tgm_platform Order By  createtime desc
+13:10:00.749 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+13:10:00.816 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+13:10:00.886 10 W - Select Count(*) From tgm_record_pay
+13:10:00.946 10 W - Select Top 10 * From tgm_record_pay Order By id Desc
+13:10:06.717 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+13:10:06.784 9 W - Select * From tgm_platform Order By  createtime desc
+13:10:12.342 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+13:10:12.407 8 W - Select * From tgm_platform Order By  createtime desc
+13:10:13.764 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+13:10:13.827 7 W - Select Count(*) From tgm_record_pay
+13:10:13.898 7 W - Select Top 10 * From tgm_record_pay Order By id Desc
+13:10:23.528 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+13:10:23.595 7 W - Select * From tgm_platform Order By  createtime desc
+13:10:26.739 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+13:10:26.804 7 W - Select * From tgm_platform Order By  createtime desc
+13:10:28.186 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+13:10:28.253 9 W - Select Count(*) From tgm_record_pay
+13:10:28.315 9 W - Select Top 10 * From tgm_record_pay Order By id Desc
+13:10:28.441 8 Y - Select * From tgm_server Order By id Desc
+13:10:28.811 8 Y - [StoredProcedure]sp_record_user[Int64:@bengin_time=635569632000000000, Int64:@end_time=635570496000000000]

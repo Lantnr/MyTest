@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Equip.dll
+E:\Bin\TGG\Debug\TGG.Module.Equip.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Equip\obj\Debug\TGG.Module.Equip.csprojResolveAssemblyReference.cache
+E:\192.168.1.254\TGG\第二期\TGG.Module.Equip\obj\Debug\TGG.Module.Equip.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Equip\obj\Debug\TGG.Module.Equip.pdb

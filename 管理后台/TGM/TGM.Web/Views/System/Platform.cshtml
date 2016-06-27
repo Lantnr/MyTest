@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "注册平台";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("Platform", "System", FormMethod.Post))
+                    {
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("平台名称")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="platform_name" name="platform_name" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("账号")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="role_name" name="role_name" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label">@Html.Label("密码")</label>
+                            <div class="controls">
+                                <input type="password" class="input-xlarge" id="role_password" name="role_password" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label">@Html.Label("确认密码")</label>
+                            <div class="controls">
+                                <input type="password" class="input-xlarge" id="role_confirmpassword" name="role_confirmpassword" />
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">注册</button>
+                            <a type="button" class="btn" href="javascript: history.go(-1)">取消</a>
+                        </div>
+
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {}
+
+

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<!-- BEGIN HEAD -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/bootstrap/css")
+    @Styles.Render("~/Content/css")
+
+    @RenderSection("css", required: false)
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+
+    @*@{Html.RenderPartial("~/Views/Shared/_Header.cshtml");}*@
+    @Html.Action("HeaderResult", "Home")
+
+    <!-- BEGIN CONTAINER -->
+    <div id="container" class="row-fluid">
+        @{Html.RenderPartial("~/Views/Shared/_Menu.cshtml");}
+
+        <!-- BEGIN PAGE -->
+        <div id="main-content">
+            @RenderBody()
+        </div>
+        <!-- END PAGE -->
+        <!-- END CONTAINER -->
+        @{Html.RenderPartial("~/Views/Shared/_Footer.cshtml");}
+
+        @Scripts.Render("~/bundles/common")
+        @RenderSection("scripts", required: false)
+
+</body>
+<!-- END BODY -->
+</html>

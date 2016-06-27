@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Core.dll
+E:\Bin\TGG\Debug\TGG.Core.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Core\obj\Debug\TGG.Core.csprojResolveAssemblyReference.cache
+E:\192.168.1.254\TGG\第二期\TGG.Core\obj\Debug\TGG.Core.dll
+E:\192.168.1.254\TGG\第二期\TGG.Core\obj\Debug\TGG.Core.pdb

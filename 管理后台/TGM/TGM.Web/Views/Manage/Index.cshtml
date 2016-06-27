@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "邮件管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var error = ViewBag.error;
+}
+
+
+@section css {}
+
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                邮件
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="~/Home">首页</a>
+                    <span class="divider">/</span>
+                </li>
+
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body form-horizontal">
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("Email", "Manage", FormMethod.Post))
+                    {
+                        <div class="control-group  success">
+                            <label class="control-label"> 输入标题</label>
+                            <div class="controls">
+                                <input type="text" class="span6" id="email_title" name="email_title">
+                                <span class="help-inline"> </span>
+                            </div>
+                        </div>
+                        <div class="control-group  success">
+                            <label class="control-label">邮件内容</label>
+                            <div class="controls">
+                                <textarea class="span6" rows="3" id="email_content" name="email_content"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success"><i class="icon-ok"></i> 确定</button>
+                        </div>
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END SAMPLE FORMPORTLET-->
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {}

@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "系统公告功能";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css {
+
+    <link href="~/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+}
+
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                公告
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="~/Home">首页</a>
+                    <span class="divider">/</span>
+                </li>
+
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body form-horizontal">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("Notice", "Manage", FormMethod.Post))
+                    {
+                        <div class="control-group success">
+                            <label class="control-label">开始时间</label>
+                            <div class="controls">
+                                <div class="input-append date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input1">
+                                    <input size="16" type="text" value="" name="starttime">
+                                    <span class="add-on"><i class="icon-th"></i></span>
+                                </div>
+                                <input type="hidden" id="dtp_input1" value="" /><br />
+                            </div>
+                        </div>
+
+                        <div class="control-group success">
+                            <label class="control-label">结束时间</label>
+                            <div class="controls">
+                                <div class="input-append date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input2">
+                                    <input size="16" type="text" value="" name="endtime">
+                                    <span class="add-on"><i class="icon-th"></i></span>
+                                </div>
+                                <input type="hidden" id="dtp_input2" value="" /><br />
+                            </div>
+                        </div>
+
+                        <div class="control-group success">
+                            <label class="control-label"> 时间间隔（秒）</label>
+                            <div class="controls">
+                                <input type="text" class="input-mini" id="interval" name="interval">
+                                <span class="help-inline"> </span>
+                            </div>
+                        </div>
+
+                        <div class="control-group success">
+                            <label class="control-label">公告内容</label>
+                            <div class="controls">
+                                <textarea class="span6" rows="3" id="notice_content" name="notice_content"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success"><i class="icon-ok"></i> 确定</button>
+                        </div>
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END SAMPLE FORMPORTLET-->
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {
+
+    <script src="~/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0
+        });
+    </script>
+}

@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Appraise.dll
+E:\Bin\TGG\Debug\TGG.Module.Appraise.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Appraise\obj\Debug\TGG.Module.Appraise.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Appraise\obj\Debug\TGG.Module.Appraise.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Appraise\obj\Debug\TGG.Module.Appraise.csprojResolveAssemblyReference.cache

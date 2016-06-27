@@ -1,0 +1,4 @@
+E:\Bin\TGG\Debug\TGG.Module.Work.dll
+E:\Bin\TGG\Debug\TGG.Module.Work.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Work\obj\Debug\TGG.Module.Work.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Work\obj\Debug\TGG.Module.Work.pdb

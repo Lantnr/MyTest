@@ -1,0 +1,2486 @@
+﻿#Software: iisexpress
+#ProcessID: 7408
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710378900798709
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:52:18.588 9 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:52:18.596 9 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:52:18.597 9 W - 使用数据库方式：独占，加大缓存权重
+11:52:18.597 9 W - 一级缓存：关闭缓存
+11:52:18.628 9 W - [tgm]GetSchema("MetaDataCollections")
+11:52:18.641 9 W - [tgm]GetSchema("ReservedWords")
+11:52:18.663 9 W - [tgm]GetSchema("Databases", "tgm")
+11:52:18.734 9 W - [tgm]GetSchema("Tables")
+11:52:18.851 9 W - [tgm]GetSchema("Columns")
+11:52:18.893 9 W - [tgm]GetSchema("Indexes")
+11:52:18.914 9 W - [tgm]GetSchema("IndexColumns")
+11:52:18.939 9 W - [tgm]GetSchema("DataTypes")
+11:52:19.024 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:52:19.049 9 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:52:19.131 9 W - [tgm]的所有实体类（0个）：
+11:52:19.131 9 W - [tgm]需要检查架构的实体类（0个）：
+11:52:19.131 9 W - 检查连接[tgm/SqlServer]的数据库架构耗时81ms
+11:52:19.131 9 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:52:19.178 9 W - [DB]GetSchema("MetaDataCollections")
+11:52:19.180 9 W - [DB]GetSchema("ReservedWords")
+11:52:19.188 9 W - [DB]GetSchema("Databases", "tgm")
+11:52:19.265 9 W - [DB]GetSchema("Tables")
+11:52:19.403 9 W - [DB]GetSchema("Columns")
+11:52:19.442 9 W - [DB]GetSchema("Indexes")
+11:52:19.463 9 W - [DB]GetSchema("IndexColumns")
+11:52:19.483 9 W - [DB]GetSchema("DataTypes")
+11:52:19.540 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:52:19.560 9 W - 开始检查连接[DB/SqlServer]的数据库架构……
+11:52:19.610 9 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+11:52:19.610 9 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+11:52:19.610 9 W - DB待检查表架构的实体个数：14
+11:52:19.739 9 W - 检查连接[DB/SqlServer]的数据库架构耗时179ms
+11:52:19.739 9 W - Select * From tgm_platform Where id=1
+11:52:20.385 6 W - [tgm]GetSchema("Tables")
+11:52:20.502 6 W - [tgm]GetSchema("Columns")
+11:52:20.541 6 W - [tgm]GetSchema("Indexes")
+11:52:20.563 6 W - [tgm]GetSchema("IndexColumns")
+11:52:20.589 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:52:20.608 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:52:20.625 6 W - Select * From tgm_platform Order By  createtime desc
+11:52:24.861 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:52:24.879 9 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 7416
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710380911802268
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:55:04.043 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:55:04.053 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:55:04.053 6 W - 使用数据库方式：独占，加大缓存权重
+11:55:04.053 6 W - 一级缓存：关闭缓存
+11:55:04.110 6 W - [tgm]GetSchema("MetaDataCollections")
+11:55:04.128 6 W - [tgm]GetSchema("ReservedWords")
+11:55:04.147 6 W - [tgm]GetSchema("Databases", "tgm")
+11:55:04.209 6 W - [tgm]GetSchema("Tables")
+11:55:04.334 6 W - [tgm]GetSchema("Columns")
+11:55:04.374 6 W - [tgm]GetSchema("Indexes")
+11:55:04.394 6 W - [tgm]GetSchema("IndexColumns")
+11:55:04.420 6 W - [tgm]GetSchema("DataTypes")
+11:55:04.496 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:55:04.522 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:55:04.605 6 W - [tgm]的所有实体类（0个）：
+11:55:04.605 6 W - [tgm]需要检查架构的实体类（0个）：
+11:55:04.605 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时83ms
+11:55:04.605 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:55:04.641 6 W - [DB]GetSchema("MetaDataCollections")
+11:55:04.644 6 W - [DB]GetSchema("ReservedWords")
+11:55:04.651 6 W - [DB]GetSchema("Databases", "tgm")
+11:55:04.698 6 W - [DB]GetSchema("Tables")
+11:55:04.834 6 W - [DB]GetSchema("Columns")
+11:55:04.873 6 W - [DB]GetSchema("Indexes")
+11:55:04.894 6 W - [DB]GetSchema("IndexColumns")
+11:55:04.915 6 W - [DB]GetSchema("DataTypes")
+11:55:04.971 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:55:04.990 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+11:55:05.028 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+11:55:05.028 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+11:55:05.028 6 W - DB待检查表架构的实体个数：14
+11:55:05.154 6 W - 检查连接[DB/SqlServer]的数据库架构耗时165ms
+11:55:05.154 6 W - Select * From tgm_platform Where id=1
+11:55:05.678 7 W - [tgm]GetSchema("Tables")
+11:55:05.792 7 W - [tgm]GetSchema("Columns")
+11:55:05.831 7 W - [tgm]GetSchema("Indexes")
+11:55:05.851 7 W - [tgm]GetSchema("IndexColumns")
+11:55:05.878 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:55:05.896 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:55:05.912 7 W - Select * From tgm_platform Order By  createtime desc
+11:55:08.946 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:55:08.966 6 W - Select * From tgm_platform Order By  createtime desc
+11:58:36.786 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:58:36.803 8 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 8560
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710383430649353
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:59:16.150 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:59:16.158 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:59:16.158 6 W - 使用数据库方式：独占，加大缓存权重
+11:59:16.159 6 W - 一级缓存：关闭缓存
+11:59:16.214 6 W - [tgm]GetSchema("MetaDataCollections")
+11:59:16.233 6 W - [tgm]GetSchema("ReservedWords")
+11:59:16.250 6 W - [tgm]GetSchema("Databases", "tgm")
+11:59:16.313 6 W - [tgm]GetSchema("Tables")
+11:59:16.443 6 W - [tgm]GetSchema("Columns")
+11:59:16.482 6 W - [tgm]GetSchema("Indexes")
+11:59:16.518 6 W - [tgm]GetSchema("IndexColumns")
+11:59:16.543 6 W - [tgm]GetSchema("DataTypes")
+11:59:16.620 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:59:16.655 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:59:16.726 6 W - [tgm]的所有实体类（0个）：
+11:59:16.726 6 W - [tgm]需要检查架构的实体类（0个）：
+11:59:16.726 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时71ms
+11:59:16.727 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:59:16.762 6 W - [DB]GetSchema("MetaDataCollections")
+11:59:16.765 6 W - [DB]GetSchema("ReservedWords")
+11:59:16.773 6 W - [DB]GetSchema("Databases", "tgm")
+11:59:16.816 6 W - [DB]GetSchema("Tables")
+11:59:16.929 6 W - [DB]GetSchema("Columns")
+11:59:16.967 6 W - [DB]GetSchema("Indexes")
+11:59:16.998 6 W - [DB]GetSchema("IndexColumns")
+11:59:17.020 6 W - [DB]GetSchema("DataTypes")
+11:59:17.074 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:59:17.095 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+11:59:17.133 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+11:59:17.133 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+11:59:17.134 6 W - DB待检查表架构的实体个数：14
+11:59:17.286 6 W - 检查连接[DB/SqlServer]的数据库架构耗时191ms
+11:59:17.286 6 W - Select * From tgm_platform Where id=1
+11:59:17.829 7 W - [tgm]GetSchema("Tables")
+11:59:17.942 7 W - [tgm]GetSchema("Columns")
+11:59:17.989 7 W - [tgm]GetSchema("Indexes")
+11:59:18.027 7 W - [tgm]GetSchema("IndexColumns")
+11:59:18.058 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:59:18.082 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:59:18.105 7 W - Select * From tgm_platform Order By  createtime desc
+11:59:21.243 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:59:21.259 6 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 7772
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710384175489613
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+12:00:34.738 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+12:00:34.746 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+12:00:34.746 6 W - 使用数据库方式：独占，加大缓存权重
+12:00:34.746 6 W - 一级缓存：关闭缓存
+12:00:34.804 6 W - [tgm]GetSchema("MetaDataCollections")
+12:00:34.821 6 W - [tgm]GetSchema("ReservedWords")
+12:00:34.838 6 W - [tgm]GetSchema("Databases", "tgm")
+12:00:34.903 6 W - [tgm]GetSchema("Tables")
+12:00:35.042 6 W - [tgm]GetSchema("Columns")
+12:00:35.107 6 W - [tgm]GetSchema("Indexes")
+12:00:35.139 6 W - [tgm]GetSchema("IndexColumns")
+12:00:35.175 6 W - [tgm]GetSchema("DataTypes")
+12:00:35.262 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:00:35.288 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+12:00:35.358 6 W - [tgm]的所有实体类（0个）：
+12:00:35.358 6 W - [tgm]需要检查架构的实体类（0个）：
+12:00:35.358 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时70ms
+12:00:35.358 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+12:00:35.394 6 W - [DB]GetSchema("MetaDataCollections")
+12:00:35.397 6 W - [DB]GetSchema("ReservedWords")
+12:00:35.404 6 W - [DB]GetSchema("Databases", "tgm")
+12:00:35.449 6 W - [DB]GetSchema("Tables")
+12:00:35.588 6 W - [DB]GetSchema("Columns")
+12:00:35.640 6 W - [DB]GetSchema("Indexes")
+12:00:35.661 6 W - [DB]GetSchema("IndexColumns")
+12:00:35.682 6 W - [DB]GetSchema("DataTypes")
+12:00:35.739 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:00:35.758 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+12:00:35.796 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+12:00:35.796 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+12:00:35.797 6 W - DB待检查表架构的实体个数：14
+12:00:35.938 6 W - 检查连接[DB/SqlServer]的数据库架构耗时179ms
+12:00:35.938 6 W - Select * From tgm_platform Where id=1
+12:00:36.493 7 W - [tgm]GetSchema("Tables")
+12:00:36.625 7 W - [tgm]GetSchema("Columns")
+12:00:36.670 7 W - [tgm]GetSchema("Indexes")
+12:00:36.695 7 W - [tgm]GetSchema("IndexColumns")
+12:00:36.726 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:00:36.750 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:00:36.768 7 W - Select * From tgm_platform Order By  createtime desc
+12:00:43.230 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:00:43.251 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 7352
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710385011540776
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+12:02:02.860 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+12:02:02.868 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+12:02:02.869 7 W - 使用数据库方式：独占，加大缓存权重
+12:02:02.869 7 W - 一级缓存：关闭缓存
+12:02:02.925 7 W - [tgm]GetSchema("MetaDataCollections")
+12:02:02.942 7 W - [tgm]GetSchema("ReservedWords")
+12:02:02.960 7 W - [tgm]GetSchema("Databases", "tgm")
+12:02:03.024 7 W - [tgm]GetSchema("Tables")
+12:02:03.160 7 W - [tgm]GetSchema("Columns")
+12:02:03.199 7 W - [tgm]GetSchema("Indexes")
+12:02:03.220 7 W - [tgm]GetSchema("IndexColumns")
+12:02:03.264 7 W - [tgm]GetSchema("DataTypes")
+12:02:03.340 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:02:03.365 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+12:02:03.438 7 W - [tgm]的所有实体类（0个）：
+12:02:03.438 7 W - [tgm]需要检查架构的实体类（0个）：
+12:02:03.438 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时74ms
+12:02:03.439 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+12:02:03.473 7 W - [DB]GetSchema("MetaDataCollections")
+12:02:03.477 7 W - [DB]GetSchema("ReservedWords")
+12:02:03.484 7 W - [DB]GetSchema("Databases", "tgm")
+12:02:03.548 7 W - [DB]GetSchema("Tables")
+12:02:03.682 7 W - [DB]GetSchema("Columns")
+12:02:03.721 7 W - [DB]GetSchema("Indexes")
+12:02:03.741 7 W - [DB]GetSchema("IndexColumns")
+12:02:03.764 7 W - [DB]GetSchema("DataTypes")
+12:02:03.835 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:02:03.854 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+12:02:03.894 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+12:02:03.894 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+12:02:03.895 7 W - DB待检查表架构的实体个数：14
+12:02:04.040 7 W - 检查连接[DB/SqlServer]的数据库架构耗时186ms
+12:02:04.040 7 W - Select * From tgm_platform Where id=1
+12:02:04.574 11 W - [tgm]GetSchema("Tables")
+12:02:04.705 11 W - [tgm]GetSchema("Columns")
+12:02:04.744 11 W - [tgm]GetSchema("Indexes")
+12:02:04.764 11 W - [tgm]GetSchema("IndexColumns")
+12:02:04.787 11 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+12:02:04.825 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:02:04.841 11 W - Select * From tgm_platform Order By  createtime desc
+12:02:08.475 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:02:08.492 11 W - Select * From tgm_platform Order By  createtime desc
+12:04:51.469 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+12:04:51.492 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 6432
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710556910202943
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:48:29.257 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:48:29.285 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:48:29.286 6 W - 使用数据库方式：独占，加大缓存权重
+16:48:29.286 6 W - 一级缓存：关闭缓存
+16:48:29.318 6 W - [tgm]GetSchema("MetaDataCollections")
+16:48:29.337 6 W - [tgm]GetSchema("ReservedWords")
+16:48:29.354 6 W - [tgm]GetSchema("Databases", "tgm")
+16:48:29.421 6 W - [tgm]GetSchema("Tables")
+16:48:29.538 6 W - [tgm]GetSchema("Columns")
+16:48:29.576 6 W - [tgm]GetSchema("Indexes")
+16:48:29.596 6 W - [tgm]GetSchema("IndexColumns")
+16:48:29.620 6 W - [tgm]GetSchema("DataTypes")
+16:48:29.697 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:48:29.722 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:48:29.804 6 W - [tgm]的所有实体类（0个）：
+16:48:29.804 6 W - [tgm]需要检查架构的实体类（0个）：
+16:48:29.804 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时82ms
+16:48:29.804 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+16:48:29.840 6 W - [DB]GetSchema("MetaDataCollections")
+16:48:29.843 6 W - [DB]GetSchema("ReservedWords")
+16:48:29.851 6 W - [DB]GetSchema("Databases", "tgm")
+16:48:29.896 6 W - [DB]GetSchema("Tables")
+16:48:30.007 6 W - [DB]GetSchema("Columns")
+16:48:30.050 6 W - [DB]GetSchema("Indexes")
+16:48:30.071 6 W - [DB]GetSchema("IndexColumns")
+16:48:30.093 6 W - [DB]GetSchema("DataTypes")
+16:48:30.148 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:48:30.167 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:48:30.218 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:48:30.218 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:48:30.218 6 W - DB待检查表架构的实体个数：14
+16:48:30.352 6 W - 检查连接[DB/SqlServer]的数据库架构耗时185ms
+16:48:30.352 6 W - Select * From tgm_platform Where id=1
+16:48:31.022 7 W - [tgm]GetSchema("Tables")
+16:48:31.156 7 W - [tgm]GetSchema("Columns")
+16:48:31.198 7 W - [tgm]GetSchema("Indexes")
+16:48:31.218 7 W - [tgm]GetSchema("IndexColumns")
+16:48:31.242 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:48:31.260 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:48:31.276 7 W - Select * From tgm_platform Order By  createtime desc
+16:48:50.613 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:48:50.647 6 W - [tgm]GetSchema("Tables")
+16:48:50.766 6 W - [tgm]GetSchema("Columns")
+16:48:50.813 6 W - [tgm]GetSchema("Indexes")
+16:48:50.835 6 W - [tgm]GetSchema("IndexColumns")
+16:48:50.862 6 W - Select * From tgm_notice Where end_time>635622077306302732 and player_id=1 Order By id Desc
+16:48:51.324 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:48:51.341 7 W - Select * From tgm_platform Order By  createtime desc
+16:50:00.325 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:50:00.344 10 W - Select * From tgm_notice Where end_time>635622078003445420 and player_id=1 Order By id Desc
+16:50:00.827 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:50:00.847 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 9952
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710559301168307
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:52:26.082 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:52:26.091 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:52:26.091 7 W - 使用数据库方式：独占，加大缓存权重
+16:52:26.091 7 W - 一级缓存：关闭缓存
+16:52:26.121 7 W - [tgm]GetSchema("MetaDataCollections")
+16:52:26.161 7 W - [tgm]GetSchema("ReservedWords")
+16:52:26.179 7 W - [tgm]GetSchema("Databases", "tgm")
+16:52:26.241 7 W - [tgm]GetSchema("Tables")
+16:52:26.389 7 W - [tgm]GetSchema("Columns")
+16:52:26.450 7 W - [tgm]GetSchema("Indexes")
+16:52:26.488 7 W - [tgm]GetSchema("IndexColumns")
+16:52:26.515 7 W - [tgm]GetSchema("DataTypes")
+16:52:26.593 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:52:26.619 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:52:26.709 7 W - [tgm]的所有实体类（0个）：
+16:52:26.709 7 W - [tgm]需要检查架构的实体类（0个）：
+16:52:26.709 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时90ms
+16:52:26.709 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+16:52:26.763 7 W - [DB]GetSchema("MetaDataCollections")
+16:52:26.767 7 W - [DB]GetSchema("ReservedWords")
+16:52:26.773 7 W - [DB]GetSchema("Databases", "tgm")
+16:52:26.818 7 W - [DB]GetSchema("Tables")
+16:52:26.934 7 W - [DB]GetSchema("Columns")
+16:52:26.974 7 W - [DB]GetSchema("Indexes")
+16:52:26.996 7 W - [DB]GetSchema("IndexColumns")
+16:52:27.037 7 W - [DB]GetSchema("DataTypes")
+16:52:27.090 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:52:27.112 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:52:27.181 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:52:27.181 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:52:27.182 7 W - DB待检查表架构的实体个数：14
+16:52:27.311 7 W - 检查连接[DB/SqlServer]的数据库架构耗时199ms
+16:52:27.311 7 W - Select * From tgm_platform Where id=1
+16:52:27.995 6 W - [tgm]GetSchema("Tables")
+16:52:28.108 6 W - [tgm]GetSchema("Columns")
+16:52:28.148 6 W - [tgm]GetSchema("Indexes")
+16:52:28.190 6 W - [tgm]GetSchema("IndexColumns")
+16:52:28.214 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:52:28.234 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:52:28.252 6 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 9264
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710560525994689
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:54:26.321 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:54:26.330 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:54:26.330 6 W - 使用数据库方式：独占，加大缓存权重
+16:54:26.330 6 W - 一级缓存：关闭缓存
+16:54:26.361 6 W - [tgm]GetSchema("MetaDataCollections")
+16:54:26.380 6 W - [tgm]GetSchema("ReservedWords")
+16:54:26.398 6 W - [tgm]GetSchema("Databases", "tgm")
+16:54:26.464 6 W - [tgm]GetSchema("Tables")
+16:54:26.600 6 W - [tgm]GetSchema("Columns")
+16:54:26.643 6 W - [tgm]GetSchema("Indexes")
+16:54:26.663 6 W - [tgm]GetSchema("IndexColumns")
+16:54:26.687 6 W - [tgm]GetSchema("DataTypes")
+16:54:26.765 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:54:26.790 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:54:26.873 6 W - [tgm]的所有实体类（0个）：
+16:54:26.873 6 W - [tgm]需要检查架构的实体类（0个）：
+16:54:26.874 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时84ms
+16:54:26.874 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+16:54:26.909 6 W - [DB]GetSchema("MetaDataCollections")
+16:54:26.912 6 W - [DB]GetSchema("ReservedWords")
+16:54:26.919 6 W - [DB]GetSchema("Databases", "tgm")
+16:54:26.965 6 W - [DB]GetSchema("Tables")
+16:54:27.083 6 W - [DB]GetSchema("Columns")
+16:54:27.122 6 W - [DB]GetSchema("Indexes")
+16:54:27.144 6 W - [DB]GetSchema("IndexColumns")
+16:54:27.167 6 W - [DB]GetSchema("DataTypes")
+16:54:27.226 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:54:27.245 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:54:27.295 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:54:27.295 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:54:27.296 6 W - DB待检查表架构的实体个数：14
+16:54:27.425 6 W - 检查连接[DB/SqlServer]的数据库架构耗时181ms
+16:54:27.425 6 W - Select * From tgm_platform Where id=1
+16:54:28.048 10 W - [tgm]GetSchema("Tables")
+16:54:28.166 10 W - [tgm]GetSchema("Columns")
+16:54:28.206 10 W - [tgm]GetSchema("Indexes")
+16:54:28.227 10 W - [tgm]GetSchema("IndexColumns")
+16:54:28.253 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:54:28.272 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:54:28.302 10 W - Select * From tgm_platform Order By  createtime desc
+16:54:31.968 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:54:31.984 6 W - Select * From tgm_platform Order By  createtime desc
+16:55:06.634 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:55:06.672 9 W - [tgm]GetSchema("Tables")
+16:55:06.790 9 W - [tgm]GetSchema("Columns")
+16:55:06.838 9 W - [tgm]GetSchema("Indexes")
+16:55:06.860 9 W - [tgm]GetSchema("IndexColumns")
+16:55:06.885 9 W - Select * From tgm_notice Where end_time>635622081066521352 and player_id=1 Order By id Desc
+16:55:07.370 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:55:07.386 6 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 8724
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710561936441090
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:56:48.605 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:56:48.613 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:56:48.614 6 W - 使用数据库方式：独占，加大缓存权重
+16:56:48.614 6 W - 一级缓存：关闭缓存
+16:56:48.670 6 W - [tgm]GetSchema("MetaDataCollections")
+16:56:48.688 6 W - [tgm]GetSchema("ReservedWords")
+16:56:48.706 6 W - [tgm]GetSchema("Databases", "tgm")
+16:56:48.773 6 W - [tgm]GetSchema("Tables")
+16:56:48.914 6 W - [tgm]GetSchema("Columns")
+16:56:48.956 6 W - [tgm]GetSchema("Indexes")
+16:56:48.978 6 W - [tgm]GetSchema("IndexColumns")
+16:56:49.002 6 W - [tgm]GetSchema("DataTypes")
+16:56:49.084 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:56:49.110 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:56:49.182 6 W - [tgm]的所有实体类（0个）：
+16:56:49.182 6 W - [tgm]需要检查架构的实体类（0个）：
+16:56:49.182 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时72ms
+16:56:49.182 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+16:56:49.218 6 W - [DB]GetSchema("MetaDataCollections")
+16:56:49.221 6 W - [DB]GetSchema("ReservedWords")
+16:56:49.228 6 W - [DB]GetSchema("Databases", "tgm")
+16:56:49.273 6 W - [DB]GetSchema("Tables")
+16:56:49.391 6 W - [DB]GetSchema("Columns")
+16:56:49.430 6 W - [DB]GetSchema("Indexes")
+16:56:49.451 6 W - [DB]GetSchema("IndexColumns")
+16:56:49.475 6 W - [DB]GetSchema("DataTypes")
+16:56:49.531 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:56:49.550 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:56:49.591 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:56:49.591 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:56:49.591 6 W - DB待检查表架构的实体个数：14
+16:56:49.738 6 W - 检查连接[DB/SqlServer]的数据库架构耗时187ms
+16:56:49.738 6 W - Select * From tgm_platform Where id=1
+16:56:50.286 7 W - [tgm]GetSchema("Tables")
+16:56:50.401 7 W - [tgm]GetSchema("Columns")
+16:56:50.441 7 W - [tgm]GetSchema("Indexes")
+16:56:50.463 7 W - [tgm]GetSchema("IndexColumns")
+16:56:50.490 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:56:50.510 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:56:50.527 7 W - Select * From tgm_platform Order By  createtime desc
+16:56:53.758 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:56:53.903 6 W - Select * From tgm_notice Where end_time>635622082137759706 and player_id=1 Order By id Desc
+16:56:54.259 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:56:54.280 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 9964
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710563238715204
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:58:55.703 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:58:55.711 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:58:55.712 7 W - 使用数据库方式：独占，加大缓存权重
+16:58:55.712 7 W - 一级缓存：关闭缓存
+16:58:55.769 7 W - [tgm]GetSchema("MetaDataCollections")
+16:58:55.783 7 W - [tgm]GetSchema("ReservedWords")
+16:58:55.802 7 W - [tgm]GetSchema("Databases", "tgm")
+16:58:55.868 7 W - [tgm]GetSchema("Tables")
+16:58:55.991 7 W - [tgm]GetSchema("Columns")
+16:58:56.031 7 W - [tgm]GetSchema("Indexes")
+16:58:56.052 7 W - [tgm]GetSchema("IndexColumns")
+16:58:56.077 7 W - [tgm]GetSchema("DataTypes")
+16:58:56.158 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:58:56.185 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:58:56.259 7 W - [tgm]的所有实体类（0个）：
+16:58:56.259 7 W - [tgm]需要检查架构的实体类（0个）：
+16:58:56.259 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时74ms
+16:58:56.259 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+16:58:56.294 7 W - [DB]GetSchema("MetaDataCollections")
+16:58:56.297 7 W - [DB]GetSchema("ReservedWords")
+16:58:56.304 7 W - [DB]GetSchema("Databases", "tgm")
+16:58:56.351 7 W - [DB]GetSchema("Tables")
+16:58:56.473 7 W - [DB]GetSchema("Columns")
+16:58:56.512 7 W - [DB]GetSchema("Indexes")
+16:58:56.533 7 W - [DB]GetSchema("IndexColumns")
+16:58:56.555 7 W - [DB]GetSchema("DataTypes")
+16:58:56.612 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:58:56.632 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:58:56.672 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:58:56.672 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+16:58:56.672 7 W - DB待检查表架构的实体个数：14
+16:58:56.803 7 W - 检查连接[DB/SqlServer]的数据库架构耗时172ms
+16:58:56.803 7 W - Select * From tgm_platform Where id=1
+16:58:57.350 6 W - [tgm]GetSchema("Tables")
+16:58:57.483 6 W - [tgm]GetSchema("Columns")
+16:58:57.525 6 W - [tgm]GetSchema("Indexes")
+16:58:57.548 6 W - [tgm]GetSchema("IndexColumns")
+16:58:57.575 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+16:58:57.595 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:58:57.612 6 W - Select * From tgm_platform Order By  createtime desc
+16:59:00.457 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:59:00.587 6 W - Select * From tgm_notice Where end_time>635622083404760197 and player_id=1 Order By id Desc
+16:59:00.951 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+16:59:00.971 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 6460
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710565270394870
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:02:29.667 10 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:02:29.676 10 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:02:29.676 10 W - 使用数据库方式：独占，加大缓存权重
+17:02:29.676 10 W - 一级缓存：关闭缓存
+17:02:29.733 10 W - [tgm]GetSchema("MetaDataCollections")
+17:02:29.766 10 W - [tgm]GetSchema("ReservedWords")
+17:02:29.784 10 W - [tgm]GetSchema("Databases", "tgm")
+17:02:29.854 10 W - [tgm]GetSchema("Tables")
+17:02:30.001 10 W - [tgm]GetSchema("Columns")
+17:02:30.043 10 W - [tgm]GetSchema("Indexes")
+17:02:30.070 10 W - [tgm]GetSchema("IndexColumns")
+17:02:30.096 10 W - [tgm]GetSchema("DataTypes")
+17:02:30.178 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:02:30.204 10 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:02:30.278 10 W - [tgm]的所有实体类（0个）：
+17:02:30.278 10 W - [tgm]需要检查架构的实体类（0个）：
+17:02:30.278 10 W - 检查连接[tgm/SqlServer]的数据库架构耗时75ms
+17:02:30.279 10 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:02:30.313 10 W - [DB]GetSchema("MetaDataCollections")
+17:02:30.316 10 W - [DB]GetSchema("ReservedWords")
+17:02:30.323 10 W - [DB]GetSchema("Databases", "tgm")
+17:02:30.368 10 W - [DB]GetSchema("Tables")
+17:02:30.506 10 W - [DB]GetSchema("Columns")
+17:02:30.549 10 W - [DB]GetSchema("Indexes")
+17:02:30.569 10 W - [DB]GetSchema("IndexColumns")
+17:02:30.591 10 W - [DB]GetSchema("DataTypes")
+17:02:30.647 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:02:30.667 10 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:02:30.719 10 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:02:30.719 10 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:02:30.719 10 W - DB待检查表架构的实体个数：14
+17:02:30.873 10 W - 检查连接[DB/SqlServer]的数据库架构耗时207ms
+17:02:30.874 10 W - Select * From tgm_platform Where id=1
+17:02:31.407 6 W - [tgm]GetSchema("Tables")
+17:02:31.522 6 W - [tgm]GetSchema("Columns")
+17:02:31.560 6 W - [tgm]GetSchema("Indexes")
+17:02:31.583 6 W - [tgm]GetSchema("IndexColumns")
+17:02:31.605 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:02:31.624 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:02:31.640 6 W - Select * From tgm_platform Order By  createtime desc
+17:02:36.322 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:02:36.455 6 W - Select * From tgm_notice Where end_time>635622085563398266 and player_id=1 Order By id Desc
+17:02:36.832 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:02:36.849 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 8236
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710568112549429
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:07:04.458 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:07:04.467 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:07:04.468 7 W - 使用数据库方式：独占，加大缓存权重
+17:07:04.468 7 W - 一级缓存：关闭缓存
+17:07:04.525 7 W - [tgm]GetSchema("MetaDataCollections")
+17:07:04.543 7 W - [tgm]GetSchema("ReservedWords")
+17:07:04.561 7 W - [tgm]GetSchema("Databases", "tgm")
+17:07:04.625 7 W - [tgm]GetSchema("Tables")
+17:07:04.747 7 W - [tgm]GetSchema("Columns")
+17:07:04.786 7 W - [tgm]GetSchema("Indexes")
+17:07:04.806 7 W - [tgm]GetSchema("IndexColumns")
+17:07:04.830 7 W - [tgm]GetSchema("DataTypes")
+17:07:04.905 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:07:04.930 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:07:05.001 7 W - [tgm]的所有实体类（0个）：
+17:07:05.001 7 W - [tgm]需要检查架构的实体类（0个）：
+17:07:05.001 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时71ms
+17:07:05.001 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:07:05.038 7 W - [DB]GetSchema("MetaDataCollections")
+17:07:05.042 7 W - [DB]GetSchema("ReservedWords")
+17:07:05.049 7 W - [DB]GetSchema("Databases", "tgm")
+17:07:05.096 7 W - [DB]GetSchema("Tables")
+17:07:05.218 7 W - [DB]GetSchema("Columns")
+17:07:05.257 7 W - [DB]GetSchema("Indexes")
+17:07:05.278 7 W - [DB]GetSchema("IndexColumns")
+17:07:05.300 7 W - [DB]GetSchema("DataTypes")
+17:07:05.355 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:07:05.375 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:07:05.413 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:07:05.413 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:07:05.413 7 W - DB待检查表架构的实体个数：14
+17:07:05.541 7 W - 检查连接[DB/SqlServer]的数据库架构耗时166ms
+17:07:05.541 7 W - Select * From tgm_platform Where id=1
+17:07:06.069 10 W - [tgm]GetSchema("Tables")
+17:07:06.195 10 W - [tgm]GetSchema("Columns")
+17:07:06.237 10 W - [tgm]GetSchema("Indexes")
+17:07:06.266 10 W - [tgm]GetSchema("IndexColumns")
+17:07:06.289 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:07:06.309 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:07:06.325 10 W - Select * From tgm_platform Order By  createtime desc
+17:07:13.527 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:07:13.685 10 W - Select * From tgm_notice Where end_time>635622088335457798 and player_id=1 Order By id Desc
+17:07:22.227 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:07:22.244 11 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 8412
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710569634977569
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:09:36.446 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:09:36.455 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:09:36.455 6 W - 使用数据库方式：独占，加大缓存权重
+17:09:36.455 6 W - 一级缓存：关闭缓存
+17:09:36.513 6 W - [tgm]GetSchema("MetaDataCollections")
+17:09:36.532 6 W - [tgm]GetSchema("ReservedWords")
+17:09:36.549 6 W - [tgm]GetSchema("Databases", "tgm")
+17:09:36.613 6 W - [tgm]GetSchema("Tables")
+17:09:36.735 6 W - [tgm]GetSchema("Columns")
+17:09:36.774 6 W - [tgm]GetSchema("Indexes")
+17:09:36.799 6 W - [tgm]GetSchema("IndexColumns")
+17:09:36.824 6 W - [tgm]GetSchema("DataTypes")
+17:09:36.901 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:09:36.930 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:09:37.002 6 W - [tgm]的所有实体类（0个）：
+17:09:37.002 6 W - [tgm]需要检查架构的实体类（0个）：
+17:09:37.002 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时72ms
+17:09:37.002 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:09:37.038 6 W - [DB]GetSchema("MetaDataCollections")
+17:09:37.041 6 W - [DB]GetSchema("ReservedWords")
+17:09:37.048 6 W - [DB]GetSchema("Databases", "tgm")
+17:09:37.091 6 W - [DB]GetSchema("Tables")
+17:09:37.216 6 W - [DB]GetSchema("Columns")
+17:09:37.255 6 W - [DB]GetSchema("Indexes")
+17:09:37.297 6 W - [DB]GetSchema("IndexColumns")
+17:09:37.325 6 W - [DB]GetSchema("DataTypes")
+17:09:37.388 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:09:37.412 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:09:37.449 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:09:37.449 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:09:37.450 6 W - DB待检查表架构的实体个数：14
+17:09:37.596 6 W - 检查连接[DB/SqlServer]的数据库架构耗时184ms
+17:09:37.596 6 W - Select * From tgm_platform Where id=1
+17:09:38.138 7 W - [tgm]GetSchema("Tables")
+17:09:38.249 7 W - [tgm]GetSchema("Columns")
+17:09:38.293 7 W - [tgm]GetSchema("Indexes")
+17:09:38.314 7 W - [tgm]GetSchema("IndexColumns")
+17:09:38.337 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:09:38.358 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:09:38.379 7 W - Select * From tgm_platform Order By  createtime desc
+17:09:40.921 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:09:41.055 6 W - Select * From tgm_notice Where end_time>635622089809394848 and player_id=1 Order By id Desc
+17:09:41.421 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:09:41.438 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 10280
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710577617345009
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:22:55.638 9 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:22:55.646 9 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:22:55.646 9 W - 使用数据库方式：独占，加大缓存权重
+17:22:55.646 9 W - 一级缓存：关闭缓存
+17:22:55.678 9 W - [tgm]GetSchema("MetaDataCollections")
+17:22:55.696 9 W - [tgm]GetSchema("ReservedWords")
+17:22:55.714 9 W - [tgm]GetSchema("Databases", "tgm")
+17:22:55.781 9 W - [tgm]GetSchema("Tables")
+17:22:55.925 9 W - [tgm]GetSchema("Columns")
+17:22:55.968 9 W - [tgm]GetSchema("Indexes")
+17:22:55.989 9 W - [tgm]GetSchema("IndexColumns")
+17:22:56.014 9 W - [tgm]GetSchema("DataTypes")
+17:22:56.096 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:22:56.121 9 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:22:56.206 9 W - [tgm]的所有实体类（0个）：
+17:22:56.206 9 W - [tgm]需要检查架构的实体类（0个）：
+17:22:56.206 9 W - 检查连接[tgm/SqlServer]的数据库架构耗时85ms
+17:22:56.206 9 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:22:56.241 9 W - [DB]GetSchema("MetaDataCollections")
+17:22:56.244 9 W - [DB]GetSchema("ReservedWords")
+17:22:56.252 9 W - [DB]GetSchema("Databases", "tgm")
+17:22:56.298 9 W - [DB]GetSchema("Tables")
+17:22:56.428 9 W - [DB]GetSchema("Columns")
+17:22:56.475 9 W - [DB]GetSchema("Indexes")
+17:22:56.499 9 W - [DB]GetSchema("IndexColumns")
+17:22:56.525 9 W - [DB]GetSchema("DataTypes")
+17:22:56.582 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:22:56.601 9 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:22:56.652 9 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:22:56.652 9 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:22:56.652 9 W - DB待检查表架构的实体个数：14
+17:22:56.806 9 W - 检查连接[DB/SqlServer]的数据库架构耗时205ms
+17:22:56.806 9 W - Select * From tgm_platform Where id=1
+17:22:57.436 6 W - [tgm]GetSchema("Tables")
+17:22:57.551 6 W - [tgm]GetSchema("Columns")
+17:22:57.590 6 W - [tgm]GetSchema("Indexes")
+17:22:57.612 6 W - [tgm]GetSchema("IndexColumns")
+17:22:57.639 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:22:57.659 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:22:57.677 6 W - Select * From tgm_platform Order By  createtime desc
+17:23:00.456 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:23:00.587 9 W - Select * From tgm_notice Where end_time>635622097804774157 and player_id=1 Order By id Desc
+17:23:01.059 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:23:01.077 6 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 11060
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710578292599802
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:24:04.389 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:24:04.398 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:24:04.398 6 W - 使用数据库方式：独占，加大缓存权重
+17:24:04.398 6 W - 一级缓存：关闭缓存
+17:24:04.471 6 W - [tgm]GetSchema("MetaDataCollections")
+17:24:04.509 6 W - [tgm]GetSchema("ReservedWords")
+17:24:04.527 6 W - [tgm]GetSchema("Databases", "tgm")
+17:24:04.591 6 W - [tgm]GetSchema("Tables")
+17:24:04.712 6 W - [tgm]GetSchema("Columns")
+17:24:04.752 6 W - [tgm]GetSchema("Indexes")
+17:24:04.778 6 W - [tgm]GetSchema("IndexColumns")
+17:24:04.803 6 W - [tgm]GetSchema("DataTypes")
+17:24:04.878 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:24:04.909 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:24:04.983 6 W - [tgm]的所有实体类（0个）：
+17:24:04.983 6 W - [tgm]需要检查架构的实体类（0个）：
+17:24:04.983 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时75ms
+17:24:04.984 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:24:05.020 6 W - [DB]GetSchema("MetaDataCollections")
+17:24:05.023 6 W - [DB]GetSchema("ReservedWords")
+17:24:05.030 6 W - [DB]GetSchema("Databases", "tgm")
+17:24:05.074 6 W - [DB]GetSchema("Tables")
+17:24:05.192 6 W - [DB]GetSchema("Columns")
+17:24:05.231 6 W - [DB]GetSchema("Indexes")
+17:24:05.256 6 W - [DB]GetSchema("IndexColumns")
+17:24:05.278 6 W - [DB]GetSchema("DataTypes")
+17:24:05.332 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:24:05.355 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:24:05.396 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:24:05.396 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:24:05.396 6 W - DB待检查表架构的实体个数：14
+17:24:05.523 6 W - 检查连接[DB/SqlServer]的数据库架构耗时168ms
+17:24:05.523 6 W - Select * From tgm_platform Where id=1
+17:24:06.053 7 W - [tgm]GetSchema("Tables")
+17:24:06.167 7 W - [tgm]GetSchema("Columns")
+17:24:06.212 7 W - [tgm]GetSchema("Indexes")
+17:24:06.234 7 W - [tgm]GetSchema("IndexColumns")
+17:24:06.257 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:24:06.277 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:24:06.298 7 W - Select * From tgm_platform Order By  createtime desc
+17:24:08.600 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:24:08.735 6 W - Select * From tgm_notice Where end_time>635622098486246982 and player_id=1 Order By id Desc
+17:24:09.088 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:24:09.105 7 W - Select * From tgm_platform Order By  createtime desc
+17:24:18.677 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:24:18.715 6 W - [tgm]GetSchema("Tables")
+17:24:18.842 6 W - [tgm]GetSchema("Columns")
+17:24:18.881 6 W - [tgm]GetSchema("Indexes")
+17:24:18.901 6 W - [tgm]GetSchema("IndexColumns")
+17:24:18.924 6 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+17:24:18.943 6 W - Select * From tgm_platform Where id=1
+17:24:18.975 6 W - Select * From tgm_platform Where id=1
+17:24:18.992 6 W - Select * From tgm_platform Where id=1
+17:26:10.970 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:26:10.985 9 W - Select * From tgm_notice Where end_time>635622099709850649 and player_id=1 Order By id Desc
+17:26:11.002 9 W - Select * From tgm_platform Where id in (1,1) Order By id Desc
+17:26:11.017 9 W - Select * From tgm_server Where id in (1,1) Order By id Desc
+17:26:11.373 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:26:11.389 8 W - Select * From tgm_platform Order By  createtime desc
+17:26:13.569 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:26:14.907 9 W - Select * From tgm_server Where id=13
+17:26:18.828 9 W - Select * From tgm_role Where id=1
+17:26:29.250 9 W - Select * From tgm_platform Where id=1
+17:26:31.002 9 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+17:26:37.275 9 W - [13_1_DY-01]GetSchema("MetaDataCollections")
+17:26:37.282 9 W - [13_1_DY-01]GetSchema("Databases", "tgg")
+17:26:37.333 9 W - [13_1_DY-01]GetSchema("Tables")
+17:26:37.498 9 W - [13_1_DY-01]GetSchema("Columns")
+17:26:37.613 9 W - [13_1_DY-01]GetSchema("Indexes")
+17:26:37.639 9 W - [13_1_DY-01]GetSchema("IndexColumns")
+17:26:37.672 9 W - [13_1_DY-01]GetSchema("DataTypes")
+17:26:37.727 9 W - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+17:26:37.782 9 W - [13_1_DY-01]的所有实体类（0个）：
+17:26:37.782 9 W - [13_1_DY-01]需要检查架构的实体类（0个）：
+17:26:37.782 9 W - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时55ms
+17:26:37.793 9 W - [13_1_DY-01]GetSchema("ReservedWords")
+17:26:37.796 9 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622099758892569, 635622120090000000, 300, '头发和他', 0, 2);Select SCOPE_IDENTITY()
+17:26:47.692 9 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622099758892569, 635622120090000000, N'头发和他', 4457);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 4272
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710590521367369
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:44:30.200 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:44:30.208 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:44:30.208 6 W - 使用数据库方式：独占，加大缓存权重
+17:44:30.208 6 W - 一级缓存：关闭缓存
+17:44:30.252 6 W - [tgm]GetSchema("MetaDataCollections")
+17:44:30.269 6 W - [tgm]GetSchema("ReservedWords")
+17:44:30.287 6 W - [tgm]GetSchema("Databases", "tgm")
+17:44:30.352 6 W - [tgm]GetSchema("Tables")
+17:44:30.497 6 W - [tgm]GetSchema("Columns")
+17:44:30.545 6 W - [tgm]GetSchema("Indexes")
+17:44:30.575 6 W - [tgm]GetSchema("IndexColumns")
+17:44:30.600 6 W - [tgm]GetSchema("DataTypes")
+17:44:30.678 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:44:30.707 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:44:30.789 6 W - [tgm]的所有实体类（0个）：
+17:44:30.789 6 W - [tgm]需要检查架构的实体类（0个）：
+17:44:30.789 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时82ms
+17:44:30.789 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:44:30.823 6 W - [DB]GetSchema("MetaDataCollections")
+17:44:30.826 6 W - [DB]GetSchema("ReservedWords")
+17:44:30.832 6 W - [DB]GetSchema("Databases", "tgm")
+17:44:30.876 6 W - [DB]GetSchema("Tables")
+17:44:30.994 6 W - [DB]GetSchema("Columns")
+17:44:31.033 6 W - [DB]GetSchema("Indexes")
+17:44:31.056 6 W - [DB]GetSchema("IndexColumns")
+17:44:31.077 6 W - [DB]GetSchema("DataTypes")
+17:44:31.131 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:44:31.154 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:44:31.204 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:44:31.204 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:44:31.205 6 W - DB待检查表架构的实体个数：14
+17:44:31.331 6 W - 检查连接[DB/SqlServer]的数据库架构耗时177ms
+17:44:31.331 6 W - Select * From tgm_platform Where id=1
+17:44:31.947 7 W - [tgm]GetSchema("Tables")
+17:44:32.069 7 W - [tgm]GetSchema("Columns")
+17:44:32.109 7 W - [tgm]GetSchema("Indexes")
+17:44:32.130 7 W - [tgm]GetSchema("IndexColumns")
+17:44:32.153 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:44:32.176 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:44:32.194 7 W - Select * From tgm_platform Order By  createtime desc
+17:44:48.366 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:44:48.407 6 W - [tgm]GetSchema("Tables")
+17:44:48.518 6 W - [tgm]GetSchema("Columns")
+17:44:48.563 6 W - [tgm]GetSchema("Indexes")
+17:44:48.584 6 W - [tgm]GetSchema("IndexColumns")
+17:44:48.606 6 W - Select * From tgm_notice Where end_time>635622110883849314 and player_id=1 Order By id Desc
+17:44:48.625 6 W - Select * From tgm_platform Where id in (1) Order By id Desc
+17:44:48.755 6 W - Select * From tgm_server Where id in (1) Order By id Desc
+17:44:49.219 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:44:49.235 8 W - Select * From tgm_platform Order By  createtime desc
+17:45:08.207 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:45:08.226 6 W - Select * From tgm_notice Where id=37
+17:45:08.292 6 W - Delete From tgm_notice Where id=37
+17:45:08.321 6 W - Select * From tgm_server Where id=1
+
+#Software: iisexpress
+#ProcessID: 1728
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710592439143522
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:47:38.336 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:47:38.361 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:47:38.362 7 W - 使用数据库方式：独占，加大缓存权重
+17:47:38.362 7 W - 一级缓存：关闭缓存
+17:47:38.393 7 W - [tgm]GetSchema("MetaDataCollections")
+17:47:38.406 7 W - [tgm]GetSchema("ReservedWords")
+17:47:38.424 7 W - [tgm]GetSchema("Databases", "tgm")
+17:47:38.488 7 W - [tgm]GetSchema("Tables")
+17:47:38.608 7 W - [tgm]GetSchema("Columns")
+17:47:38.649 7 W - [tgm]GetSchema("Indexes")
+17:47:38.671 7 W - [tgm]GetSchema("IndexColumns")
+17:47:38.701 7 W - [tgm]GetSchema("DataTypes")
+17:47:38.778 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:47:38.805 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:47:38.889 7 W - [tgm]的所有实体类（0个）：
+17:47:38.889 7 W - [tgm]需要检查架构的实体类（0个）：
+17:47:38.889 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时84ms
+17:47:38.889 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:47:38.930 7 W - [DB]GetSchema("MetaDataCollections")
+17:47:38.933 7 W - [DB]GetSchema("ReservedWords")
+17:47:38.940 7 W - [DB]GetSchema("Databases", "tgm")
+17:47:38.987 7 W - [DB]GetSchema("Tables")
+17:47:39.119 7 W - [DB]GetSchema("Columns")
+17:47:39.158 7 W - [DB]GetSchema("Indexes")
+17:47:39.180 7 W - [DB]GetSchema("IndexColumns")
+17:47:39.205 7 W - [DB]GetSchema("DataTypes")
+17:47:39.259 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:47:39.279 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:47:39.330 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:47:39.330 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:47:39.331 7 W - DB待检查表架构的实体个数：14
+17:47:39.459 7 W - 检查连接[DB/SqlServer]的数据库架构耗时180ms
+17:47:39.460 7 W - Select * From tgm_platform Where id=1
+17:47:40.188 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:47:40.205 7 W - Select * From tgm_platform Order By  createtime desc
+17:47:50.316 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:47:50.356 6 W - [tgm]GetSchema("Tables")
+17:47:50.479 6 W - [tgm]GetSchema("Columns")
+17:47:50.539 6 W - [tgm]GetSchema("Indexes")
+17:47:50.564 6 W - [tgm]GetSchema("IndexColumns")
+17:47:50.588 6 W - Select * From tgm_notice Where end_time>635622112703385661 and player_id=1 Order By id Desc
+17:47:51.039 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:47:51.056 7 W - Select * From tgm_platform Order By  createtime desc
+17:47:55.606 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:47:55.638 7 W - [tgm]GetSchema("Tables")
+17:47:55.748 7 W - [tgm]GetSchema("Columns")
+17:47:55.786 7 W - [tgm]GetSchema("Indexes")
+17:47:55.815 7 W - [tgm]GetSchema("IndexColumns")
+17:47:55.840 7 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+17:47:55.859 7 W - Select * From tgm_platform Where id=1
+17:47:55.880 7 W - Select * From tgm_platform Where id=1
+17:47:55.897 7 W - Select * From tgm_platform Where id=1
+17:48:31.795 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:48:31.811 6 W - Select * From tgm_notice Where end_time>635622113118114132 and player_id=1 Order By id Desc
+17:48:32.251 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:48:32.267 7 W - Select * From tgm_platform Order By  createtime desc
+17:48:35.337 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:48:35.371 9 W - Select * From tgm_server Where id=13
+17:48:35.399 9 W - Select * From tgm_role Where id=1
+17:48:35.418 9 W - Select * From tgm_platform Where id=1
+17:48:35.434 9 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+17:48:35.458 9 W - [13_1_DY-01]GetSchema("MetaDataCollections")
+17:48:35.461 9 W - [13_1_DY-01]GetSchema("Databases", "tgg")
+17:48:35.505 9 W - [13_1_DY-01]GetSchema("Tables")
+17:48:35.675 9 W - [13_1_DY-01]GetSchema("Columns")
+17:48:35.790 9 W - [13_1_DY-01]GetSchema("Indexes")
+17:48:35.832 9 W - [13_1_DY-01]GetSchema("IndexColumns")
+17:48:35.862 9 W - [13_1_DY-01]GetSchema("DataTypes")
+17:48:35.917 9 W - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+17:48:35.968 9 W - [13_1_DY-01]的所有实体类（0个）：
+17:48:35.968 9 W - [13_1_DY-01]需要检查架构的实体类（0个）：
+17:48:35.968 9 W - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时51ms
+17:48:35.979 9 W - [13_1_DY-01]GetSchema("ReservedWords")
+17:48:35.982 9 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622113153986188, 635622132520000000, 300, 'fsadaf', 0, 2);Select SCOPE_IDENTITY()
+17:48:36.015 9 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622113153986188, 635622132520000000, N'fsadaf', 4471);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 7728
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710595157327929
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:52:12.809 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:52:12.817 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:52:12.818 6 W - 使用数据库方式：独占，加大缓存权重
+17:52:12.818 6 W - 一级缓存：关闭缓存
+17:52:12.848 6 W - [tgm]GetSchema("MetaDataCollections")
+17:52:12.866 6 W - [tgm]GetSchema("ReservedWords")
+17:52:12.883 6 W - [tgm]GetSchema("Databases", "tgm")
+17:52:12.955 6 W - [tgm]GetSchema("Tables")
+17:52:13.075 6 W - [tgm]GetSchema("Columns")
+17:52:13.117 6 W - [tgm]GetSchema("Indexes")
+17:52:13.139 6 W - [tgm]GetSchema("IndexColumns")
+17:52:13.164 6 W - [tgm]GetSchema("DataTypes")
+17:52:13.246 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:52:13.273 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:52:13.355 6 W - [tgm]的所有实体类（0个）：
+17:52:13.355 6 W - [tgm]需要检查架构的实体类（0个）：
+17:52:13.355 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时82ms
+17:52:13.355 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:52:13.392 6 W - [DB]GetSchema("MetaDataCollections")
+17:52:13.395 6 W - [DB]GetSchema("ReservedWords")
+17:52:13.402 6 W - [DB]GetSchema("Databases", "tgm")
+17:52:13.448 6 W - [DB]GetSchema("Tables")
+17:52:13.566 6 W - [DB]GetSchema("Columns")
+17:52:13.609 6 W - [DB]GetSchema("Indexes")
+17:52:13.630 6 W - [DB]GetSchema("IndexColumns")
+17:52:13.650 6 W - [DB]GetSchema("DataTypes")
+17:52:13.706 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:52:13.725 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:52:13.775 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:52:13.775 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:52:13.775 6 W - DB待检查表架构的实体个数：14
+17:52:13.904 6 W - 检查连接[DB/SqlServer]的数据库架构耗时180ms
+17:52:13.904 6 W - Select * From tgm_platform Where id=1
+17:52:14.541 8 W - [tgm]GetSchema("Tables")
+17:52:14.669 8 W - [tgm]GetSchema("Columns")
+17:52:14.712 8 W - [tgm]GetSchema("Indexes")
+17:52:14.732 8 W - [tgm]GetSchema("IndexColumns")
+17:52:14.757 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:52:14.776 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:52:14.792 8 W - Select * From tgm_platform Order By  createtime desc
+17:52:17.200 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:52:17.330 6 W - Select * From tgm_notice Where end_time>635622115372177600 and player_id=1 Order By id Desc
+17:52:17.347 6 W - Select * From tgm_platform Where id in (1) Order By id Desc
+17:52:17.476 6 W - Select * From tgm_server Where id in (13) Order By id Desc
+17:52:17.933 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:52:17.949 8 W - Select * From tgm_platform Order By  createtime desc
+17:52:23.882 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:52:23.898 7 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+17:52:23.914 7 W - Select * From tgm_platform Where id=1
+17:52:23.931 7 W - Select * From tgm_platform Where id=1
+17:52:23.947 7 W - Select * From tgm_platform Where id=1
+17:52:46.063 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:52:46.078 7 W - Select * From tgm_notice Where end_time>635622115660786531 and player_id=1 Order By id Desc
+17:52:46.110 7 W - Select * From tgm_platform Where id in (1) Order By id Desc
+17:52:46.125 7 W - Select * From tgm_server Where id in (13) Order By id Desc
+17:52:46.592 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:52:46.608 6 W - Select * From tgm_platform Order By  createtime desc
+17:52:47.126 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:52:47.143 8 W - Select * From tgm_server Where id=13
+17:52:47.159 8 W - Select * From tgm_role Where id=1
+17:52:47.177 8 W - Select * From tgm_platform Where id=1
+17:52:47.192 8 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+17:52:47.216 8 W - [13_1_DY-01]GetSchema("MetaDataCollections")
+17:52:47.219 8 W - [13_1_DY-01]GetSchema("Databases", "tgg")
+17:52:47.260 8 W - [13_1_DY-01]GetSchema("Tables")
+17:52:47.425 8 W - [13_1_DY-01]GetSchema("Columns")
+17:52:47.535 8 W - [13_1_DY-01]GetSchema("Indexes")
+17:52:47.579 8 W - [13_1_DY-01]GetSchema("IndexColumns")
+17:52:47.608 8 W - [13_1_DY-01]GetSchema("DataTypes")
+17:52:47.664 8 W - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+17:52:47.714 8 W - [13_1_DY-01]的所有实体类（0个）：
+17:52:47.714 8 W - [13_1_DY-01]需要检查架构的实体类（0个）：
+17:52:47.714 8 W - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时50ms
+17:52:47.725 8 W - [13_1_DY-01]GetSchema("ReservedWords")
+17:52:47.728 8 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622115671584886, 635622123190000000, 300, '哈喽', 0, 2);Select SCOPE_IDENTITY()
+17:52:47.761 8 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622115671584886, 635622123190000000, N'哈喽', 4472);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 5572
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710596240196659
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:53:57.895 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:53:57.904 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:53:57.904 7 W - 使用数据库方式：独占，加大缓存权重
+17:53:57.904 7 W - 一级缓存：关闭缓存
+17:53:57.935 7 W - [tgm]GetSchema("MetaDataCollections")
+17:53:57.953 7 W - [tgm]GetSchema("ReservedWords")
+17:53:57.971 7 W - [tgm]GetSchema("Databases", "tgm")
+17:53:58.036 7 W - [tgm]GetSchema("Tables")
+17:53:58.160 7 W - [tgm]GetSchema("Columns")
+17:53:58.199 7 W - [tgm]GetSchema("Indexes")
+17:53:58.223 7 W - [tgm]GetSchema("IndexColumns")
+17:53:58.250 7 W - [tgm]GetSchema("DataTypes")
+17:53:58.327 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:53:58.357 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:53:58.442 7 W - [tgm]的所有实体类（0个）：
+17:53:58.442 7 W - [tgm]需要检查架构的实体类（0个）：
+17:53:58.442 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时85ms
+17:53:58.442 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:53:58.477 7 W - [DB]GetSchema("MetaDataCollections")
+17:53:58.481 7 W - [DB]GetSchema("ReservedWords")
+17:53:58.488 7 W - [DB]GetSchema("Databases", "tgm")
+17:53:58.532 7 W - [DB]GetSchema("Tables")
+17:53:58.664 7 W - [DB]GetSchema("Columns")
+17:53:58.707 7 W - [DB]GetSchema("Indexes")
+17:53:58.733 7 W - [DB]GetSchema("IndexColumns")
+17:53:58.756 7 W - [DB]GetSchema("DataTypes")
+17:53:58.811 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:53:58.832 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:53:58.882 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:53:58.882 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:53:58.882 7 W - DB待检查表架构的实体个数：14
+17:53:59.025 7 W - 检查连接[DB/SqlServer]的数据库架构耗时192ms
+17:53:59.025 7 W - Select * From tgm_platform Where id=1
+17:53:59.596 9 W - [tgm]GetSchema("Tables")
+17:53:59.716 9 W - [tgm]GetSchema("Columns")
+17:53:59.755 9 W - [tgm]GetSchema("Indexes")
+17:53:59.781 9 W - [tgm]GetSchema("IndexColumns")
+17:53:59.806 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:53:59.826 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:53:59.843 9 W - Select * From tgm_platform Order By  createtime desc
+17:54:02.275 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:54:02.310 6 W - [tgm]GetSchema("Tables")
+17:54:02.419 6 W - [tgm]GetSchema("Columns")
+17:54:02.456 6 W - [tgm]GetSchema("Indexes")
+17:54:02.478 6 W - [tgm]GetSchema("IndexColumns")
+17:54:02.499 6 W - Select * From tgm_notice Where end_time>635622116422927014 and player_id=1 Order By id Desc
+17:54:02.516 6 W - Select * From tgm_platform Where id in (1,1) Order By id Desc
+17:54:02.645 6 W - Select * From tgm_server Where id in (13,13) Order By id Desc
+17:54:03.155 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:54:03.172 9 W - Select * From tgm_platform Order By  createtime desc
+17:54:07.088 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:54:07.104 7 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+17:54:07.121 7 W - Select * From tgm_platform Where id=1
+17:54:07.139 7 W - Select * From tgm_platform Where id=1
+17:54:07.154 7 W - Select * From tgm_platform Where id=1
+17:54:23.737 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:54:23.755 6 W - Select * From tgm_notice Where end_time>635622116637559709 and player_id=1 Order By id Desc
+17:54:23.770 6 W - Select * From tgm_platform Where id in (1,1) Order By id Desc
+17:54:23.784 6 W - Select * From tgm_server Where id in (13,13) Order By id Desc
+17:54:24.307 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:54:24.325 7 W - Select * From tgm_platform Order By  createtime desc
+17:54:24.844 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:54:24.862 9 W - Select * From tgm_server Where id=13
+17:54:24.878 9 W - Select * From tgm_role Where id=1
+17:54:24.892 9 W - Select * From tgm_platform Where id=1
+17:54:24.911 9 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+17:54:24.935 9 W - [13_1_DY-01]GetSchema("MetaDataCollections")
+17:54:24.938 9 W - [13_1_DY-01]GetSchema("Databases", "tgg")
+17:54:24.980 9 W - [13_1_DY-01]GetSchema("Tables")
+17:54:25.146 9 W - [13_1_DY-01]GetSchema("Columns")
+17:54:25.267 9 W - [13_1_DY-01]GetSchema("Indexes")
+17:54:25.297 9 W - [13_1_DY-01]GetSchema("IndexColumns")
+17:54:25.330 9 W - [13_1_DY-01]GetSchema("DataTypes")
+17:54:25.387 9 W - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+17:54:25.438 9 W - [13_1_DY-01]的所有实体类（0个）：
+17:54:25.438 9 W - [13_1_DY-01]需要检查架构的实体类（0个）：
+17:54:25.438 9 W - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时51ms
+17:54:25.449 9 W - [13_1_DY-01]GetSchema("ReservedWords")
+17:54:25.452 9 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622116648768265, 635622123040000000, 300, '哈喽', 0, 2);Select SCOPE_IDENTITY()
+17:54:25.482 9 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622116648768265, 635622123040000000, N'哈喽', 4473);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 7496
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710597469062920
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:56:04.672 9 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:56:04.679 9 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:56:04.679 9 W - 使用数据库方式：独占，加大缓存权重
+17:56:04.680 9 W - 一级缓存：关闭缓存
+17:56:04.710 9 W - [tgm]GetSchema("MetaDataCollections")
+17:56:04.722 9 W - [tgm]GetSchema("ReservedWords")
+17:56:04.745 9 W - [tgm]GetSchema("Databases", "tgm")
+17:56:04.813 9 W - [tgm]GetSchema("Tables")
+17:56:04.947 9 W - [tgm]GetSchema("Columns")
+17:56:04.989 9 W - [tgm]GetSchema("Indexes")
+17:56:05.009 9 W - [tgm]GetSchema("IndexColumns")
+17:56:05.034 9 W - [tgm]GetSchema("DataTypes")
+17:56:05.111 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:56:05.136 9 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+17:56:05.219 9 W - [tgm]的所有实体类（0个）：
+17:56:05.219 9 W - [tgm]需要检查架构的实体类（0个）：
+17:56:05.219 9 W - 检查连接[tgm/SqlServer]的数据库架构耗时83ms
+17:56:05.219 9 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+17:56:05.254 9 W - [DB]GetSchema("MetaDataCollections")
+17:56:05.257 9 W - [DB]GetSchema("ReservedWords")
+17:56:05.264 9 W - [DB]GetSchema("Databases", "tgm")
+17:56:05.311 9 W - [DB]GetSchema("Tables")
+17:56:05.425 9 W - [DB]GetSchema("Columns")
+17:56:05.467 9 W - [DB]GetSchema("Indexes")
+17:56:05.487 9 W - [DB]GetSchema("IndexColumns")
+17:56:05.508 9 W - [DB]GetSchema("DataTypes")
+17:56:05.563 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:56:05.583 9 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:56:05.632 9 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:56:05.632 9 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+17:56:05.632 9 W - DB待检查表架构的实体个数：14
+17:56:05.776 9 W - 检查连接[DB/SqlServer]的数据库架构耗时194ms
+17:56:05.776 9 W - Select * From tgm_platform Where id=1
+17:56:06.316 11 W - [tgm]GetSchema("Tables")
+17:56:06.448 11 W - [tgm]GetSchema("Columns")
+17:56:06.488 11 W - [tgm]GetSchema("Indexes")
+17:56:06.511 11 W - [tgm]GetSchema("IndexColumns")
+17:56:06.533 11 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:56:06.552 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:56:06.568 11 W - Select * From tgm_platform Order By  createtime desc
+17:56:08.681 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:56:08.811 9 W - Select * From tgm_notice Where end_time>635622117686981294 and player_id=1 Order By id Desc
+17:56:08.829 9 W - Select * From tgm_platform Where id in (1,1,1) Order By id Desc
+17:56:08.972 9 W - Select * From tgm_server Where id in (13,13,13) Order By id Desc
+17:56:09.437 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:56:09.453 9 W - Select * From tgm_platform Order By  createtime desc
+17:56:14.137 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+17:56:14.154 10 W - Select * From tgm_notice Where id=38
+17:56:14.168 10 W - Select * From tgm_server Where id=13
+
+#Software: iisexpress
+#ProcessID: 7652
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710630085193856
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:50:24.296 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:50:24.323 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:50:24.324 7 W - 使用数据库方式：独占，加大缓存权重
+18:50:24.324 7 W - 一级缓存：关闭缓存
+18:50:24.355 7 W - [tgm]GetSchema("MetaDataCollections")
+18:50:24.374 7 W - [tgm]GetSchema("ReservedWords")
+18:50:24.392 7 W - [tgm]GetSchema("Databases", "tgm")
+18:50:24.484 7 W - [tgm]GetSchema("Tables")
+18:50:24.603 7 W - [tgm]GetSchema("Columns")
+18:50:24.647 7 W - [tgm]GetSchema("Indexes")
+18:50:24.668 7 W - [tgm]GetSchema("IndexColumns")
+18:50:24.694 7 W - [tgm]GetSchema("DataTypes")
+18:50:24.776 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:50:24.801 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:50:24.896 7 W - [tgm]的所有实体类（0个）：
+18:50:24.896 7 W - [tgm]需要检查架构的实体类（0个）：
+18:50:24.896 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时95ms
+18:50:24.896 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+18:50:24.942 7 W - [DB]GetSchema("MetaDataCollections")
+18:50:24.945 7 W - [DB]GetSchema("ReservedWords")
+18:50:24.952 7 W - [DB]GetSchema("Databases", "tgm")
+18:50:25.001 7 W - [DB]GetSchema("Tables")
+18:50:25.118 7 W - [DB]GetSchema("Columns")
+18:50:25.160 7 W - [DB]GetSchema("Indexes")
+18:50:25.182 7 W - [DB]GetSchema("IndexColumns")
+18:50:25.205 7 W - [DB]GetSchema("DataTypes")
+18:50:25.264 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:50:25.284 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:50:25.334 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:50:25.334 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:50:25.334 7 W - DB待检查表架构的实体个数：14
+18:50:25.465 7 W - 检查连接[DB/SqlServer]的数据库架构耗时181ms
+18:50:25.465 7 W - Select * From tgm_platform Where id=1
+18:50:26.110 8 W - [tgm]GetSchema("Tables")
+18:50:26.227 8 W - [tgm]GetSchema("Columns")
+18:50:26.267 8 W - [tgm]GetSchema("Indexes")
+18:50:26.289 8 W - [tgm]GetSchema("IndexColumns")
+18:50:26.317 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:50:26.337 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:50:26.355 8 W - Select * From tgm_platform Order By  createtime desc
+18:50:28.914 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:50:29.045 7 W - Select * From tgm_notice Where end_time>635622150289320395 and player_id=1 Order By id Desc
+18:50:29.500 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:50:29.516 6 W - Select * From tgm_platform Order By  createtime desc
+18:50:34.093 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:50:34.126 6 W - [tgm]GetSchema("Tables")
+18:50:34.238 6 W - [tgm]GetSchema("Columns")
+18:50:34.275 6 W - [tgm]GetSchema("Indexes")
+18:50:34.295 6 W - [tgm]GetSchema("IndexColumns")
+18:50:34.321 6 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+18:50:34.339 6 W - Select * From tgm_platform Where id=1
+18:50:34.357 6 W - Select * From tgm_platform Where id=1
+18:50:34.373 6 W - Select * From tgm_platform Where id=1
+18:51:08.424 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:08.439 6 W - Select * From tgm_notice Where end_time>635622150684395309 and player_id=1 Order By id Desc
+18:51:08.877 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:08.894 7 W - Select * From tgm_platform Order By  createtime desc
+18:51:09.402 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:09.420 8 W - Select * From tgm_server Where id=13
+18:51:09.436 8 W - Select * From tgm_role Where id=1
+18:51:09.451 8 W - Select * From tgm_platform Where id=1
+18:51:09.470 8 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+18:51:09.500 8 W - [13_1_DY-01]GetSchema("MetaDataCollections")
+18:51:09.503 8 W - [13_1_DY-01]GetSchema("Databases", "tgg")
+18:51:09.545 8 W - [13_1_DY-01]GetSchema("Tables")
+18:51:09.692 8 W - [13_1_DY-01]GetSchema("Columns")
+18:51:09.802 8 W - [13_1_DY-01]GetSchema("Indexes")
+18:51:09.844 8 W - [13_1_DY-01]GetSchema("IndexColumns")
+18:51:09.899 8 W - [13_1_DY-01]GetSchema("DataTypes")
+18:51:09.955 8 W - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+18:51:10.005 8 W - [13_1_DY-01]的所有实体类（0个）：
+18:51:10.005 8 W - [13_1_DY-01]需要检查架构的实体类（0个）：
+18:51:10.005 8 W - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时50ms
+18:51:10.016 8 W - [13_1_DY-01]GetSchema("ReservedWords")
+18:51:10.020 8 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622150694351350, 635622153300000000, 2, '法撒旦', 0, 2);Select SCOPE_IDENTITY()
+18:51:10.051 8 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622150694351350, 635622153300000000, N'法撒旦', 4490);Select SCOPE_IDENTITY()
+18:51:33.582 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:33.597 7 W - Select * From tgm_notice Where end_time>635622150935973650 and player_id=1 Order By id Desc
+18:51:33.614 7 W - Select * From tgm_platform Where id in (1) Order By id Desc
+18:51:33.629 7 W - Select * From tgm_server Where id in (13) Order By id Desc
+18:51:34.209 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:34.230 6 W - Select * From tgm_platform Order By  createtime desc
+18:51:42.806 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:42.823 6 W - Select * From tgm_notice Where id=41
+18:51:42.841 6 W - Select * From tgm_server Where id=13
+18:51:42.857 6 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+18:51:42.873 6 W - Select * From tg_system_notice Where id=4490
+18:51:42.964 6 W - Update tg_system_notice Set [state]=-1 Where id=4490
+18:51:42.990 6 W - Delete From tgm_notice Where id=41
+18:51:43.571 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:43.586 8 W - Select * From tgm_notice Where end_time>635622151035860462 and player_id=1 Order By id Desc
+18:51:44.147 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:44.164 6 W - Select * From tgm_platform Order By  createtime desc
+18:52:01.627 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:52:01.646 7 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+18:52:01.661 7 W - Select * From tgm_platform Where id=1
+18:52:01.678 7 W - Select * From tgm_platform Where id=1
+18:52:01.694 7 W - Select * From tgm_platform Where id=1
+18:54:34.164 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:54:34.187 6 W - Select * From tgm_notice Where end_time>635622152741871640 and player_id=1 Order By id Desc
+18:54:34.767 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:54:34.783 12 W - Select * From tgm_platform Order By  createtime desc
+18:54:35.374 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:54:35.389 6 W - Select * From tgm_server Where id=13
+18:54:35.404 6 W - Select * From tgm_role Where id=1
+18:54:35.419 6 W - Select * From tgm_platform Where id=1
+18:54:35.439 6 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+18:54:35.455 6 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622152754049796, 635622156440000000, 5, '哈喽', 0, 2);Select SCOPE_IDENTITY()
+18:54:35.471 6 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622152754049796, 635622156440000000, N'哈喽', 4491);Select SCOPE_IDENTITY()
+18:55:16.208 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:55:16.224 12 W - Select * From tgm_notice Where end_time>635622153162242825 and player_id=1 Order By id Desc
+18:55:16.238 12 W - Select * From tgm_platform Where id in (1) Order By id Desc
+18:55:16.254 12 W - Select * From tgm_server Where id in (13) Order By id Desc
+18:55:16.846 15 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:55:16.869 15 W - Select * From tgm_platform Order By  createtime desc
+18:55:20.932 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:55:22.697 12 W - Select * From tgm_notice Where id=42
+18:55:26.510 12 W - Select * From tgm_server Where id=13
+18:55:28.011 12 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+18:55:28.612 12 W - Select * From tg_system_notice Where id=4491
+18:57:22.045 12 W - Update tg_system_notice Set [state]=-1 Where id=4491
+18:57:22.063 12 W - Delete From tgm_notice Where id=42
+
+#Software: iisexpress
+#ProcessID: 5924
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710635694782661
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:59:45.324 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:59:45.332 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:59:45.332 7 W - 使用数据库方式：独占，加大缓存权重
+18:59:45.332 7 W - 一级缓存：关闭缓存
+18:59:45.363 7 W - [tgm]GetSchema("MetaDataCollections")
+18:59:45.381 7 W - [tgm]GetSchema("ReservedWords")
+18:59:45.399 7 W - [tgm]GetSchema("Databases", "tgm")
+18:59:45.462 7 W - [tgm]GetSchema("Tables")
+18:59:45.588 7 W - [tgm]GetSchema("Columns")
+18:59:45.629 7 W - [tgm]GetSchema("Indexes")
+18:59:45.655 7 W - [tgm]GetSchema("IndexColumns")
+18:59:45.680 7 W - [tgm]GetSchema("DataTypes")
+18:59:45.755 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:59:45.784 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:59:45.868 7 W - [tgm]的所有实体类（0个）：
+18:59:45.868 7 W - [tgm]需要检查架构的实体类（0个）：
+18:59:45.868 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时84ms
+18:59:45.868 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+18:59:45.904 7 W - [DB]GetSchema("MetaDataCollections")
+18:59:45.907 7 W - [DB]GetSchema("ReservedWords")
+18:59:45.914 7 W - [DB]GetSchema("Databases", "tgm")
+18:59:45.955 7 W - [DB]GetSchema("Tables")
+18:59:46.095 7 W - [DB]GetSchema("Columns")
+18:59:46.139 7 W - [DB]GetSchema("Indexes")
+18:59:46.166 7 W - [DB]GetSchema("IndexColumns")
+18:59:46.187 7 W - [DB]GetSchema("DataTypes")
+18:59:46.240 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:59:46.263 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:59:46.312 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:59:46.312 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:59:46.312 7 W - DB待检查表架构的实体个数：14
+18:59:46.470 7 W - 检查连接[DB/SqlServer]的数据库架构耗时207ms
+18:59:46.470 7 W - Select * From tgm_platform Where id=1
+18:59:47.123 8 W - [tgm]GetSchema("Tables")
+18:59:47.241 8 W - [tgm]GetSchema("Columns")
+18:59:47.281 8 W - [tgm]GetSchema("Indexes")
+18:59:47.303 8 W - [tgm]GetSchema("IndexColumns")
+18:59:47.327 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:59:47.352 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:59:47.369 8 W - Select * From tgm_platform Order By  createtime desc
+18:59:49.918 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:59:50.051 7 W - Select * From tgm_notice Where end_time>635622155899409538 and player_id=1 Order By id Desc
+18:59:50.516 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:59:50.537 6 W - Select * From tgm_platform Order By  createtime desc
+18:59:54.447 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:59:54.487 6 W - [tgm]GetSchema("Tables")
+18:59:54.613 6 W - [tgm]GetSchema("Columns")
+18:59:54.663 6 W - [tgm]GetSchema("Indexes")
+18:59:54.688 6 W - [tgm]GetSchema("IndexColumns")
+18:59:54.710 6 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+18:59:54.728 6 W - Select * From tgm_platform Where id=1
+18:59:54.748 6 W - Select * From tgm_platform Where id=1
+18:59:54.769 6 W - Select * From tgm_platform Where id=1
+19:00:41.697 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:00:41.712 6 W - Select * From tgm_notice Where end_time>635622156417125854 and player_id=1 Order By id Desc
+19:00:42.160 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:00:42.180 8 W - Select * From tgm_platform Order By  createtime desc
+19:00:42.697 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:00:42.714 9 W - Select * From tgm_server Where id=13
+19:00:42.734 9 W - Select * From tgm_role Where id=1
+19:00:42.749 9 W - Select * From tgm_platform Where id=1
+19:00:42.764 9 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:00:42.789 9 W - [13_1_DY-01]GetSchema("MetaDataCollections")
+19:00:42.792 9 W - [13_1_DY-01]GetSchema("Databases", "tgg")
+19:00:42.839 9 W - [13_1_DY-01]GetSchema("Tables")
+19:00:42.983 9 W - [13_1_DY-01]GetSchema("Columns")
+19:00:43.099 9 W - [13_1_DY-01]GetSchema("Indexes")
+19:00:43.130 9 W - [13_1_DY-01]GetSchema("IndexColumns")
+19:00:43.168 9 W - [13_1_DY-01]GetSchema("DataTypes")
+19:00:43.229 9 W - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+19:00:43.282 9 W - [13_1_DY-01]的所有实体类（0个）：
+19:00:43.282 9 W - [13_1_DY-01]需要检查架构的实体类（0个）：
+19:00:43.282 9 W - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时52ms
+19:00:43.292 9 W - [13_1_DY-01]GetSchema("ReservedWords")
+19:00:43.296 9 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622156427332681, 635622159510000000, 10, '发大水发', 0, 2);Select SCOPE_IDENTITY()
+19:00:43.326 9 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622156427332681, 635622159510000000, N'发大水发', 4492);Select SCOPE_IDENTITY()
+19:00:45.481 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:00:45.496 6 W - Select * From tgm_notice Where end_time>635622156454961162 and player_id=1 Order By id Desc
+19:00:45.513 6 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:00:45.531 6 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:03:10.808 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:03:10.825 13 W - Select * From tgm_notice Where id=43
+19:03:10.840 13 W - Select * From tgm_server Where id=13
+19:03:10.858 13 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:03:10.873 13 W - Select * From tg_system_notice Where id=4492
+19:03:15.327 13 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:03:53.813 13 W - Update tg_system_notice Set [state]=-1 Where id=4492
+19:03:53.840 13 W - Delete From tgm_notice Where id=43
+19:03:54.464 17 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:03:54.480 17 W - Select * From tgm_notice Where end_time>635622158344805994 and player_id=1 Order By id Desc
+19:03:55.081 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:03:55.099 13 W - Select * From tgm_platform Order By  createtime desc
+19:04:34.570 17 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:04:34.585 17 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:04:34.600 17 W - Select * From tgm_platform Where id=1
+19:04:34.620 17 W - Select * From tgm_platform Where id=1
+19:04:34.636 17 W - Select * From tgm_platform Where id=1
+19:04:47.333 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:04:47.352 16 W - Select * From tgm_notice Where end_time>635622158873529676 and player_id=1 Order By id Desc
+19:04:47.950 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:04:47.966 13 W - Select * From tgm_platform Order By  createtime desc
+19:04:48.565 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:04:48.581 16 W - Select * From tgm_server Where id=13
+19:04:48.596 16 W - Select * From tgm_role Where id=1
+19:04:48.615 16 W - Select * From tgm_platform Where id=1
+19:04:48.630 16 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:04:48.645 16 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622158885967986, 635622159550000000, 12, '发士大夫', 0, 2);Select SCOPE_IDENTITY()
+19:04:48.661 16 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622158885967986, 635622159550000000, N'发士大夫', 4493);Select SCOPE_IDENTITY()
+19:04:49.285 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:04:49.300 13 W - Select * From tgm_notice Where end_time>635622158893002701 and player_id=1 Order By id Desc
+19:04:49.318 13 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:04:49.333 13 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:05:36.256 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:05:36.277 16 W - Select * From tgm_notice Where id=44
+19:05:36.292 16 W - Select * From tgm_server Where id=13
+19:05:36.307 16 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:05:36.322 16 W - Select * From tg_system_notice Where id=4493
+19:06:23.647 16 W - Update tg_system_notice Set [state]=-1 Where id=4493
+19:06:23.665 16 W - Delete From tgm_notice Where id=44
+19:06:24.325 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:06:24.345 13 W - Select * From tgm_notice Where end_time>635622159843452900 and player_id=1 Order By id Desc
+19:06:25.097 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:06:25.114 16 W - Select * From tgm_platform Order By  createtime desc
+19:07:47.326 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:07:47.342 13 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:07:47.357 13 W - Select * From tgm_platform Where id=1
+19:07:47.377 13 W - Select * From tgm_platform Where id=1
+19:07:47.393 13 W - Select * From tgm_platform Where id=1
+19:08:04.925 17 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:08:04.942 17 W - Select * From tgm_notice Where end_time>635622160849415799 and player_id=1 Order By id Desc
+19:08:05.532 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:08:05.548 13 W - Select * From tgm_platform Order By  createtime desc
+19:08:06.135 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:08:06.151 16 W - Select * From tgm_server Where id=13
+19:08:06.170 16 W - Select * From tgm_role Where id=1
+19:08:06.185 16 W - Select * From tgm_platform Where id=1
+19:08:06.199 16 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:08:06.214 16 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622160861704022, 635622231250000000, 15, '聊两句好听', 0, 2);Select SCOPE_IDENTITY()
+19:08:06.230 16 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622160861704022, 635622231250000000, N'聊两句好听', 4494);Select SCOPE_IDENTITY()
+19:08:06.851 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:08:06.870 13 W - Select * From tgm_notice Where end_time>635622160868708704 and player_id=1 Order By id Desc
+19:08:06.885 13 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:08:06.899 13 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:08:15.767 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:08:15.788 16 W - Select * From tgm_notice Where id=45
+19:08:15.805 16 W - Select * From tgm_server Where id=13
+19:08:15.821 16 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:08:15.838 16 W - Select * From tg_system_notice Where id=4494
+19:08:24.316 16 W - Update tg_system_notice Set [state]=-1 Where id=4494
+19:08:24.333 16 W - Delete From tgm_notice Where id=45
+19:08:24.928 15 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:08:24.943 15 W - Select * From tgm_notice Where end_time>635622161049439587 and player_id=1 Order By id Desc
+19:08:25.532 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:08:25.548 13 W - Select * From tgm_platform Order By  createtime desc
+19:09:05.692 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:09:05.708 16 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:09:05.722 16 W - Select * From tgm_platform Where id=1
+19:09:05.742 16 W - Select * From tgm_platform Where id=1
+19:09:05.757 16 W - Select * From tgm_platform Where id=1
+19:09:31.961 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:09:31.976 16 W - Select * From tgm_notice Where end_time>635622161719767986 and player_id=1 Order By id Desc
+19:09:32.554 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:09:32.575 13 W - Select * From tgm_platform Order By  createtime desc
+19:09:33.172 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:09:33.187 16 W - Select * From tgm_server Where id=13
+19:09:33.202 16 W - Select * From tgm_role Where id=1
+19:09:33.216 16 W - Select * From tgm_platform Where id=1
+19:09:33.234 16 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:09:33.250 16 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622161732026186, 635622189260000000, 15, '发射点法的', 0, 2);Select SCOPE_IDENTITY()
+19:09:33.265 16 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622161732026186, 635622189260000000, N'发射点法的', 4495);Select SCOPE_IDENTITY()
+19:09:33.891 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:09:33.907 13 W - Select * From tgm_notice Where end_time>635622161739070892 and player_id=1 Order By id Desc
+19:09:33.921 13 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:09:33.940 13 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:10:05.710 24 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:10:05.726 24 W - Select * From tgm_notice Where id=46
+19:10:05.745 24 W - Select * From tgm_server Where id=13
+19:10:05.761 24 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:10:05.776 24 W - Select * From tg_system_notice Where id=4495
+19:10:05.831 24 W - Update tg_system_notice Set [state]=-1 Where id=4495
+19:10:05.847 24 W - Delete From tgm_notice Where id=46
+19:10:06.458 15 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:10:06.478 15 W - Select * From tgm_notice Where end_time>635622162064788768 and player_id=1 Order By id Desc
+19:10:07.106 17 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:10:07.122 17 W - Select * From tgm_platform Order By  createtime desc
+19:10:52.977 17 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:10:52.998 17 W - Select * From tgm_platform Order By  createtime desc
+19:11:07.937 17 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:11:07.953 17 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:11:07.973 17 W - Select * From tgm_platform Where id=1
+19:11:07.988 17 W - Select * From tgm_platform Where id=1
+19:11:08.004 17 W - Select * From tgm_platform Where id=1
+19:12:55.695 30 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:12:55.712 30 W - Select * From tgm_platform Order By  createtime desc
+19:12:56.787 28 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:12:56.815 28 W - Select * From tgm_role Where id=1
+19:12:56.834 28 W - Select * From tgm_platform Where id=1
+19:12:56.878 28 W - [tgm]GetSchema("Tables")
+19:12:56.991 28 W - [tgm]GetSchema("Columns")
+19:12:57.029 28 W - [tgm]GetSchema("Indexes")
+19:12:57.050 28 W - [tgm]GetSchema("IndexColumns")
+19:12:57.075 28 W - SET NOCOUNT ON;Insert Into tgm_resource(name, pid, sid, player_name, user_code, [time], type, [state], content, attachment) Values(N'嘻嘻', 1, 13, N'', N'lgy', 635622163768598463, 2, 1, '哈哈哈', N'3_100|8_1000|7_6010001_0_1_1-100|7_6010001_0_1|12_4000038_1000');Select SCOPE_IDENTITY()
+19:12:57.102 28 W - Select * From tgm_server Where id=13
+19:13:00.233 25 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:13:00.251 25 W - Select * From tgm_role Where id=1
+19:13:00.267 25 W - Select * From tgm_resource Order By id Desc
+19:13:00.289 25 W - Select * From tgm_platform Where id in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) Order By id Desc
+19:13:00.305 25 W - Select * From tgm_server Where id in (13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13) Order By id Desc
+19:13:00.985 28 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:13:01.002 28 W - Select * From tgm_platform Order By  createtime desc
+19:13:06.477 27 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:13:06.495 27 W - Select * From tgm_resource Where id=42
+19:13:06.545 27 W - Update tgm_resource Set [state]=2, [operation]=N'admin' Where id=42
+19:13:06.561 27 W - Select * From tgm_server Where id=13
+19:13:06.576 27 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:13:06.595 27 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:13:06.698 27 W - [13_1_DY-01]GetSchema("Tables")
+19:13:06.844 27 W - [13_1_DY-01]GetSchema("Columns")
+19:13:06.956 27 W - [13_1_DY-01]GetSchema("Indexes")
+19:13:06.979 27 W - [13_1_DY-01]GetSchema("IndexColumns")
+19:13:07.018 27 W - Select Top 1 * From tg_user Where user_code=N'lgy' Order By id Desc
+19:13:07.243 27 W - SET NOCOUNT ON;Insert Into tg_messages(receive_id, send_id, type, title, contents, isread, isattachment, attachment, create_time) Values(4, 0, 1, N'游戏补偿', N'哈哈哈', 0, 1, N'3_100|8_1000|7_6010001_0_1_1-100|7_6010001_0_1|12_4000038_1000', 1426619587085);Select SCOPE_IDENTITY()
+19:13:07.271 27 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:13:08.082 26 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:13:08.099 26 W - Select * From tgm_role Where id=1
+19:13:08.115 26 W - Select * From tgm_resource Order By id Desc
+19:13:08.134 26 W - Select * From tgm_platform Where id in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) Order By id Desc
+19:13:08.151 26 W - Select * From tgm_server Where id in (13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13) Order By id Desc
+19:13:08.804 30 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:13:08.820 30 W - Select * From tgm_platform Order By  createtime desc
+19:14:03.280 26 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:14:03.302 26 W - Select * From tgm_platform Order By  createtime desc
+19:14:27.674 27 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:14:27.691 27 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:14:27.705 27 W - Select * From tgm_platform Where id=1
+19:14:27.725 27 W - Select * From tgm_platform Where id=1
+19:14:27.741 27 W - Select * From tgm_platform Where id=1
+19:15:07.631 27 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:15:07.648 27 W - Select * From tgm_platform Order By  createtime desc
+19:15:08.734 30 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:15:08.749 30 W - Select * From tgm_role Where id=1
+19:15:08.768 30 W - Select * From tgm_platform Where id=1
+19:15:08.784 30 W - SET NOCOUNT ON;Insert Into tgm_resource(name, pid, sid, player_name, user_code, [time], type, [state], content, attachment) Values('', 1, 13, N'', N'lgy', 635622165087832445, 2, 1, '你知道吗', N'12_4100002_1');Select SCOPE_IDENTITY()
+19:15:08.824 30 W - Select * From tgm_server Where id=13
+19:15:36.560 27 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:15:36.579 27 W - Select * From tgm_role Where id=1
+19:15:36.596 27 W - Select * From tgm_resource Order By id Desc
+19:15:36.612 27 W - Select * From tgm_platform Where id in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) Order By id Desc
+19:15:36.629 27 W - Select * From tgm_server Where id in (13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13) Order By id Desc
+19:15:37.276 32 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:15:37.293 32 W - Select * From tgm_platform Order By  createtime desc
+19:15:43.405 31 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:15:43.421 31 W - Select * From tgm_resource Where id=43
+19:15:43.437 31 W - Update tgm_resource Set [state]=2, [operation]=N'admin' Where id=43
+19:15:43.456 31 W - Select * From tgm_server Where id=13
+19:15:43.471 31 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:15:43.486 31 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:15:43.501 31 W - Select Top 1 * From tg_user Where user_code=N'lgy' Order By id Desc
+19:15:43.516 31 W - SET NOCOUNT ON;Insert Into tg_messages(receive_id, send_id, type, title, contents, isread, isattachment, attachment, create_time) Values(4, 0, 1, N'游戏补偿', N'你知道吗', 0, 1, N'12_4100002_1', 1426619743516);Select SCOPE_IDENTITY()
+19:15:43.535 31 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:15:44.227 30 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:15:44.248 30 W - Select * From tgm_role Where id=1
+19:15:44.264 30 W - Select * From tgm_resource Order By id Desc
+19:15:44.283 30 W - Select * From tgm_platform Where id in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) Order By id Desc
+19:15:44.298 30 W - Select * From tgm_server Where id in (13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13) Order By id Desc
+19:15:44.938 32 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:15:44.958 32 W - Select * From tgm_platform Order By  createtime desc
+19:15:59.070 31 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:15:59.090 31 W - Select * From tgm_notice Where end_time>635622165590900888 and player_id=1 Order By id Desc
+19:15:59.697 32 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:15:59.713 32 W - Select * From tgm_platform Order By  createtime desc
+19:16:05.616 34 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:16:05.633 34 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:16:05.652 34 W - Select * From tgm_platform Where id=1
+19:16:05.670 34 W - Select * From tgm_platform Where id=1
+19:16:05.687 34 W - Select * From tgm_platform Where id=1
+19:16:31.426 34 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:16:31.446 34 W - Select * From tgm_notice Where end_time>635622165914467328 and player_id=1 Order By id Desc
+19:16:32.037 31 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:16:32.053 31 W - Select * From tgm_platform Order By  createtime desc
+19:16:32.638 32 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:16:32.654 32 W - Select * From tgm_server Where id=13
+19:16:32.669 32 W - Select * From tgm_role Where id=1
+19:16:32.683 32 W - Select * From tgm_platform Where id=1
+19:16:32.702 32 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:16:32.717 32 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622165926695511, 635622168000000000, 13, '你你你滚蛋', 0, 2);Select SCOPE_IDENTITY()
+19:16:32.734 32 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622165926695511, 635622168000000000, N'你你你滚蛋', 4496);Select SCOPE_IDENTITY()
+19:16:33.352 31 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:16:33.368 31 W - Select * From tgm_notice Where end_time>635622165933680180 and player_id=1 Order By id Desc
+19:16:33.382 31 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:16:33.400 31 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:16:45.673 34 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:16:45.689 34 W - Select * From tgm_notice Where id=47
+19:16:45.709 34 W - Select * From tgm_server Where id=13
+19:16:45.724 34 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:16:45.740 34 W - Select * From tg_system_notice Where id=4496
+19:16:45.805 34 W - Update tg_system_notice Set [state]=-1 Where id=4496
+19:16:45.822 34 W - Delete From tgm_notice Where id=47
+19:16:46.464 32 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:16:46.479 32 W - Select * From tgm_notice Where end_time>635622166064787870 and player_id=1 Order By id Desc
+19:16:47.063 31 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:16:47.079 31 W - Select * From tgm_platform Order By  createtime desc
+19:17:05.893 32 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:17:05.911 32 W - Select * From tgm_role Where id=1
+19:17:05.928 32 W - Select * From tgm_resource Order By id Desc
+19:17:05.944 32 W - Select * From tgm_platform Where id in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) Order By id Desc
+19:17:05.964 32 W - Select * From tgm_server Where id in (13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13) Order By id Desc
+19:17:06.568 33 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:17:06.585 33 W - Select * From tgm_platform Order By  createtime desc
+19:17:10.963 35 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:17:10.980 35 W - Select * From tgm_platform Order By  createtime desc
+19:17:39.264 31 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:17:39.280 31 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 3652
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710647694097642
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:19:41.491 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:19:41.500 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:19:41.500 6 W - 使用数据库方式：独占，加大缓存权重
+19:19:41.500 6 W - 一级缓存：关闭缓存
+19:19:41.557 6 W - [tgm]GetSchema("MetaDataCollections")
+19:19:41.575 6 W - [tgm]GetSchema("ReservedWords")
+19:19:41.593 6 W - [tgm]GetSchema("Databases", "tgm")
+19:19:41.678 6 W - [tgm]GetSchema("Tables")
+19:19:41.801 6 W - [tgm]GetSchema("Columns")
+19:19:41.841 6 W - [tgm]GetSchema("Indexes")
+19:19:41.861 6 W - [tgm]GetSchema("IndexColumns")
+19:19:41.885 6 W - [tgm]GetSchema("DataTypes")
+19:19:41.971 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:19:41.996 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:19:42.078 6 W - [tgm]的所有实体类（0个）：
+19:19:42.078 6 W - [tgm]需要检查架构的实体类（0个）：
+19:19:42.078 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时83ms
+19:19:42.079 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+19:19:42.113 6 W - [DB]GetSchema("MetaDataCollections")
+19:19:42.117 6 W - [DB]GetSchema("ReservedWords")
+19:19:42.126 6 W - [DB]GetSchema("Databases", "tgm")
+19:19:42.177 6 W - [DB]GetSchema("Tables")
+19:19:42.302 6 W - [DB]GetSchema("Columns")
+19:19:42.340 6 W - [DB]GetSchema("Indexes")
+19:19:42.362 6 W - [DB]GetSchema("IndexColumns")
+19:19:42.384 6 W - [DB]GetSchema("DataTypes")
+19:19:42.447 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:19:42.468 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:19:42.505 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:19:42.505 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:19:42.506 6 W - DB待检查表架构的实体个数：14
+19:19:42.642 6 W - 检查连接[DB/SqlServer]的数据库架构耗时174ms
+19:19:42.642 6 W - Select * From tgm_platform Where id=1
+19:19:43.206 7 W - [tgm]GetSchema("Tables")
+19:19:43.328 7 W - [tgm]GetSchema("Columns")
+19:19:43.367 7 W - [tgm]GetSchema("Indexes")
+19:19:43.395 7 W - [tgm]GetSchema("IndexColumns")
+19:19:43.429 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:19:43.459 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:19:43.475 7 W - Select * From tgm_platform Order By  createtime desc
+19:19:45.747 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:19:45.882 6 W - Select * From tgm_notice Where end_time>635622167857647045 and player_id=1 Order By id Desc
+19:19:46.264 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:19:46.280 7 W - Select * From tgm_platform Order By  createtime desc
+19:19:49.667 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:19:49.817 7 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:19:49.850 7 W - Select * From tgm_platform Where id=1
+19:19:49.869 7 W - Select * From tgm_platform Where id=1
+19:19:49.886 7 W - Select * From tgm_platform Where id=1
+19:20:10.002 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:20:10.018 6 W - Select * From tgm_notice Where end_time>635622168100189297 and player_id=1 Order By id Desc
+19:20:10.387 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:20:10.404 7 W - Select * From tgm_platform Order By  createtime desc
+19:20:19.874 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:20:19.897 7 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:20:19.913 7 W - Select * From tgm_platform Where id=1
+19:20:19.928 7 W - Select * From tgm_platform Where id=1
+19:20:19.943 7 W - Select * From tgm_platform Where id=1
+19:20:46.639 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:20:46.655 7 W - Select * From tgm_notice Where end_time>635622168466554349 and player_id=1 Order By id Desc
+19:20:47.025 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:20:47.041 6 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 9480
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710649143637263
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:22:09.707 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:22:09.715 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:22:09.716 7 W - 使用数据库方式：独占，加大缓存权重
+19:22:09.716 7 W - 一级缓存：关闭缓存
+19:22:09.748 7 W - [tgm]GetSchema("MetaDataCollections")
+19:22:09.766 7 W - [tgm]GetSchema("ReservedWords")
+19:22:09.783 7 W - [tgm]GetSchema("Databases", "tgm")
+19:22:09.847 7 W - [tgm]GetSchema("Tables")
+19:22:09.970 7 W - [tgm]GetSchema("Columns")
+19:22:10.010 7 W - [tgm]GetSchema("Indexes")
+19:22:10.037 7 W - [tgm]GetSchema("IndexColumns")
+19:22:10.062 7 W - [tgm]GetSchema("DataTypes")
+19:22:10.140 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:22:10.168 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:22:10.254 7 W - [tgm]的所有实体类（0个）：
+19:22:10.254 7 W - [tgm]需要检查架构的实体类（0个）：
+19:22:10.254 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时86ms
+19:22:10.254 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+19:22:10.289 7 W - [DB]GetSchema("MetaDataCollections")
+19:22:10.292 7 W - [DB]GetSchema("ReservedWords")
+19:22:10.299 7 W - [DB]GetSchema("Databases", "tgm")
+19:22:10.344 7 W - [DB]GetSchema("Tables")
+19:22:10.471 7 W - [DB]GetSchema("Columns")
+19:22:10.511 7 W - [DB]GetSchema("Indexes")
+19:22:10.536 7 W - [DB]GetSchema("IndexColumns")
+19:22:10.557 7 W - [DB]GetSchema("DataTypes")
+19:22:10.611 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:22:10.634 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:22:10.685 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:22:10.685 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:22:10.685 7 W - DB待检查表架构的实体个数：14
+19:22:10.813 7 W - 检查连接[DB/SqlServer]的数据库架构耗时179ms
+19:22:10.814 7 W - Select * From tgm_platform Where id=1
+19:22:11.457 8 W - [tgm]GetSchema("Tables")
+19:22:11.575 8 W - [tgm]GetSchema("Columns")
+19:22:11.614 8 W - [tgm]GetSchema("Indexes")
+19:22:11.637 8 W - [tgm]GetSchema("IndexColumns")
+19:22:11.661 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:22:11.684 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:22:11.702 8 W - Select * From tgm_platform Order By  createtime desc
+19:22:14.324 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:22:14.358 6 W - [tgm]GetSchema("Tables")
+19:22:14.470 6 W - [tgm]GetSchema("Columns")
+19:22:14.506 6 W - [tgm]GetSchema("Indexes")
+19:22:14.526 6 W - [tgm]GetSchema("IndexColumns")
+19:22:14.547 6 W - Select * From tgm_notice Where end_time>635622169343410894 and player_id=1 Order By id Desc
+19:22:15.007 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:22:15.027 7 W - Select * From tgm_platform Order By  createtime desc
+19:22:18.637 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:22:18.767 7 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:22:18.786 7 W - Select * From tgm_platform Where id=1
+19:22:18.808 7 W - Select * From tgm_platform Where id=1
+19:22:18.825 7 W - Select * From tgm_platform Where id=1
+19:22:41.267 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:22:41.283 7 W - Select * From tgm_notice Where end_time>635622169612831122 and player_id=1 Order By id Desc
+19:22:41.749 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:22:41.765 6 W - Select * From tgm_platform Order By  createtime desc
+19:22:42.282 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:22:42.299 8 W - Select * From tgm_server Where id=13
+19:22:42.316 8 W - Select * From tgm_role Where id=1
+19:22:42.335 8 W - Select * From tgm_platform Where id=1
+19:22:42.351 8 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:22:42.375 8 W - [13_1_DY-01]GetSchema("MetaDataCollections")
+19:22:42.378 8 W - [13_1_DY-01]GetSchema("Databases", "tgg")
+19:22:42.422 8 W - [13_1_DY-01]GetSchema("Tables")
+19:22:42.565 8 W - [13_1_DY-01]GetSchema("Columns")
+19:22:42.683 8 W - [13_1_DY-01]GetSchema("Indexes")
+19:22:42.706 8 W - [13_1_DY-01]GetSchema("IndexColumns")
+19:22:42.735 8 W - [13_1_DY-01]GetSchema("DataTypes")
+19:22:42.790 8 W - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+19:22:42.842 8 W - [13_1_DY-01]的所有实体类（0个）：
+19:22:42.842 8 W - [13_1_DY-01]需要检查架构的实体类（0个）：
+19:22:42.842 8 W - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时52ms
+19:22:42.853 8 W - [13_1_DY-01]GetSchema("ReservedWords")
+19:22:42.856 8 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622192160000000, 635622195160000000, 112, '发射点法', 0, 2);Select SCOPE_IDENTITY()
+19:22:42.887 8 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622192160000000, 635622195160000000, N'发射点法', 4497);Select SCOPE_IDENTITY()
+19:22:43.383 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:22:43.399 7 W - Select * From tgm_notice Where end_time>635622169633985259 and player_id=1 Order By id Desc
+19:22:43.414 7 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:22:43.430 7 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:23:02.664 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:23:02.681 8 W - Select * From tgm_notice Where id=48
+19:23:02.699 8 W - Select * From tgm_server Where id=13
+19:23:02.714 8 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:23:02.730 8 W - Select * From tg_system_notice Where id=4497
+19:23:02.750 8 W - Delete From tg_system_notice Where id=4497
+19:23:02.772 8 W - Delete From tgm_notice Where id=48
+19:23:03.228 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:23:03.243 9 W - Select * From tgm_notice Where end_time>635622169832438019 and player_id=1 Order By id Desc
+19:23:03.710 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:23:03.726 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 204
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710652513177234
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:27:44.902 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:27:44.912 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:27:44.912 6 W - 使用数据库方式：独占，加大缓存权重
+19:27:44.912 6 W - 一级缓存：关闭缓存
+19:27:44.943 6 W - [tgm]GetSchema("MetaDataCollections")
+19:27:44.961 6 W - [tgm]GetSchema("ReservedWords")
+19:27:44.979 6 W - [tgm]GetSchema("Databases", "tgm")
+19:27:45.061 6 W - [tgm]GetSchema("Tables")
+19:27:45.187 6 W - [tgm]GetSchema("Columns")
+19:27:45.246 6 W - [tgm]GetSchema("Indexes")
+19:27:45.266 6 W - [tgm]GetSchema("IndexColumns")
+19:27:45.290 6 W - [tgm]GetSchema("DataTypes")
+19:27:45.385 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:27:45.410 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:27:45.494 6 W - [tgm]的所有实体类（0个）：
+19:27:45.494 6 W - [tgm]需要检查架构的实体类（0个）：
+19:27:45.494 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时84ms
+19:27:45.494 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+19:27:45.531 6 W - [DB]GetSchema("MetaDataCollections")
+19:27:45.534 6 W - [DB]GetSchema("ReservedWords")
+19:27:45.541 6 W - [DB]GetSchema("Databases", "tgm")
+19:27:45.584 6 W - [DB]GetSchema("Tables")
+19:27:45.723 6 W - [DB]GetSchema("Columns")
+19:27:45.763 6 W - [DB]GetSchema("Indexes")
+19:27:45.821 6 W - [DB]GetSchema("IndexColumns")
+19:27:45.845 6 W - [DB]GetSchema("DataTypes")
+19:27:45.919 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:27:45.939 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:27:45.990 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:27:45.990 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:27:45.990 6 W - DB待检查表架构的实体个数：14
+19:27:46.134 6 W - 检查连接[DB/SqlServer]的数据库架构耗时196ms
+19:27:46.134 6 W - Select * From tgm_platform Where id=1
+19:27:46.806 8 W - [tgm]GetSchema("Tables")
+19:27:46.942 8 W - [tgm]GetSchema("Columns")
+19:27:46.982 8 W - [tgm]GetSchema("Indexes")
+19:27:47.003 8 W - [tgm]GetSchema("IndexColumns")
+19:27:47.028 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:27:47.066 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:27:47.084 8 W - Select * From tgm_platform Order By  createtime desc
+19:27:50.428 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:27:50.445 6 W - Select * From tgm_platform Order By  createtime desc
+19:30:02.895 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:30:02.913 6 W - Select * From tgm_platform Order By  createtime desc
+19:31:51.493 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:31:51.510 6 W - Select * From tgm_platform Order By  createtime desc
+19:33:23.696 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:33:23.713 11 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 8356
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710656862856234
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:35:03.957 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:35:03.965 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:35:03.965 6 W - 使用数据库方式：独占，加大缓存权重
+19:35:03.965 6 W - 一级缓存：关闭缓存
+19:35:03.996 6 W - [tgm]GetSchema("MetaDataCollections")
+19:35:04.015 6 W - [tgm]GetSchema("ReservedWords")
+19:35:04.033 6 W - [tgm]GetSchema("Databases", "tgm")
+19:35:04.099 6 W - [tgm]GetSchema("Tables")
+19:35:04.224 6 W - [tgm]GetSchema("Columns")
+19:35:04.263 6 W - [tgm]GetSchema("Indexes")
+19:35:04.284 6 W - [tgm]GetSchema("IndexColumns")
+19:35:04.310 6 W - [tgm]GetSchema("DataTypes")
+19:35:04.392 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:35:04.419 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:35:04.502 6 W - [tgm]的所有实体类（0个）：
+19:35:04.502 6 W - [tgm]需要检查架构的实体类（0个）：
+19:35:04.502 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时84ms
+19:35:04.502 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+19:35:04.539 6 W - [DB]GetSchema("MetaDataCollections")
+19:35:04.542 6 W - [DB]GetSchema("ReservedWords")
+19:35:04.549 6 W - [DB]GetSchema("Databases", "tgm")
+19:35:04.599 6 W - [DB]GetSchema("Tables")
+19:35:04.733 6 W - [DB]GetSchema("Columns")
+19:35:04.771 6 W - [DB]GetSchema("Indexes")
+19:35:04.793 6 W - [DB]GetSchema("IndexColumns")
+19:35:04.816 6 W - [DB]GetSchema("DataTypes")
+19:35:04.876 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:35:04.896 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:35:04.947 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:35:04.947 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:35:04.947 6 W - DB待检查表架构的实体个数：14
+19:35:05.081 6 W - 检查连接[DB/SqlServer]的数据库架构耗时184ms
+19:35:05.081 6 W - Select * From tgm_platform Where id=1
+19:35:05.719 8 W - [tgm]GetSchema("Tables")
+19:35:05.859 8 W - [tgm]GetSchema("Columns")
+19:35:05.906 8 W - [tgm]GetSchema("Indexes")
+19:35:05.938 8 W - [tgm]GetSchema("IndexColumns")
+19:35:05.961 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:35:05.980 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:35:05.999 8 W - Select * From tgm_platform Order By  createtime desc
+19:35:23.504 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:35:23.522 6 W - Select * From tgm_platform Order By  createtime desc
+19:36:13.676 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:36:13.727 6 W - [tgm]GetSchema("Tables")
+19:36:13.853 6 W - [tgm]GetSchema("Columns")
+19:36:13.901 6 W - [tgm]GetSchema("Indexes")
+19:36:13.920 6 W - [tgm]GetSchema("IndexColumns")
+19:36:13.943 6 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:36:13.963 6 W - Select * From tgm_platform Where id=1
+19:36:13.987 6 W - Select * From tgm_platform Where id=1
+19:36:14.004 6 W - Select * From tgm_platform Where id=1
+19:37:57.189 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:37:57.210 7 W - Select * From tgm_platform Order By  createtime desc
+19:37:58.054 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:37:58.088 8 W - Select * From tgm_role Where id=1
+19:37:58.105 8 W - Select * From tgm_platform Where id=1
+19:37:58.162 8 W - [tgm]GetSchema("Tables")
+19:37:58.276 8 W - [tgm]GetSchema("Columns")
+19:37:58.315 8 W - [tgm]GetSchema("Indexes")
+19:37:58.348 8 W - [tgm]GetSchema("IndexColumns")
+19:37:58.381 8 W - SET NOCOUNT ON;Insert Into tgm_resource(name, pid, sid, player_name, user_code, [time], type, [state], content, attachment) Values('', 1, 13, N'', N'lgy', 635622178781395324, 2, 1, '也太敷衍', N'');Select SCOPE_IDENTITY()
+19:37:58.409 8 W - Select * From tgm_server Where id=13
+19:38:01.576 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:38:01.597 6 W - Select * From tgm_role Where id=1
+19:38:01.614 6 W - Select * From tgm_resource Order By id Desc
+19:38:01.631 6 W - Select * From tgm_platform Where id in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) Order By id Desc
+19:38:01.649 6 W - Select * From tgm_server Where id in (13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13) Order By id Desc
+19:38:02.186 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:38:02.203 8 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 2336
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710661100006251
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:42:04.235 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:42:04.243 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:42:04.244 6 W - 使用数据库方式：独占，加大缓存权重
+19:42:04.244 6 W - 一级缓存：关闭缓存
+19:42:04.274 6 W - [tgm]GetSchema("MetaDataCollections")
+19:42:04.293 6 W - [tgm]GetSchema("ReservedWords")
+19:42:04.310 6 W - [tgm]GetSchema("Databases", "tgm")
+19:42:04.393 6 W - [tgm]GetSchema("Tables")
+19:42:04.528 6 W - [tgm]GetSchema("Columns")
+19:42:04.569 6 W - [tgm]GetSchema("Indexes")
+19:42:04.592 6 W - [tgm]GetSchema("IndexColumns")
+19:42:04.617 6 W - [tgm]GetSchema("DataTypes")
+19:42:04.712 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:42:04.739 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:42:04.823 6 W - [tgm]的所有实体类（0个）：
+19:42:04.823 6 W - [tgm]需要检查架构的实体类（0个）：
+19:42:04.823 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时85ms
+19:42:04.824 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+19:42:04.859 6 W - [DB]GetSchema("MetaDataCollections")
+19:42:04.862 6 W - [DB]GetSchema("ReservedWords")
+19:42:04.869 6 W - [DB]GetSchema("Databases", "tgm")
+19:42:04.933 6 W - [DB]GetSchema("Tables")
+19:42:05.068 6 W - [DB]GetSchema("Columns")
+19:42:05.109 6 W - [DB]GetSchema("Indexes")
+19:42:05.132 6 W - [DB]GetSchema("IndexColumns")
+19:42:05.154 6 W - [DB]GetSchema("DataTypes")
+19:42:05.228 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:42:05.248 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:42:05.299 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:42:05.299 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:42:05.299 6 W - DB待检查表架构的实体个数：14
+19:42:05.445 6 W - 检查连接[DB/SqlServer]的数据库架构耗时197ms
+19:42:05.445 6 W - Select * From tgm_platform Where id=1
+19:42:06.087 9 W - [tgm]GetSchema("Tables")
+19:42:06.219 9 W - [tgm]GetSchema("Columns")
+19:42:06.258 9 W - [tgm]GetSchema("Indexes")
+19:42:06.280 9 W - [tgm]GetSchema("IndexColumns")
+19:42:06.305 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:42:06.342 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:42:06.359 9 W - Select * From tgm_platform Order By  createtime desc
+19:42:10.379 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:42:10.396 8 W - Select * From tgm_platform Order By  createtime desc
+19:42:14.155 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:42:14.302 6 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:42:14.321 6 W - Select * From tgm_platform Where id=1
+19:42:14.358 6 W - Select * From tgm_platform Where id=1
+19:42:14.376 6 W - Select * From tgm_platform Where id=1
+19:42:25.256 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:42:25.290 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 8156
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710663146895433
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:45:29.140 9 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:45:29.148 9 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:45:29.149 9 W - 使用数据库方式：独占，加大缓存权重
+19:45:29.149 9 W - 一级缓存：关闭缓存
+19:45:29.180 9 W - [tgm]GetSchema("MetaDataCollections")
+19:45:29.193 9 W - [tgm]GetSchema("ReservedWords")
+19:45:29.217 9 W - [tgm]GetSchema("Databases", "tgm")
+19:45:29.282 9 W - [tgm]GetSchema("Tables")
+19:45:29.401 9 W - [tgm]GetSchema("Columns")
+19:45:29.442 9 W - [tgm]GetSchema("Indexes")
+19:45:29.464 9 W - [tgm]GetSchema("IndexColumns")
+19:45:29.496 9 W - [tgm]GetSchema("DataTypes")
+19:45:29.573 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:45:29.601 9 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:45:29.688 9 W - [tgm]的所有实体类（0个）：
+19:45:29.688 9 W - [tgm]需要检查架构的实体类（0个）：
+19:45:29.688 9 W - 检查连接[tgm/SqlServer]的数据库架构耗时87ms
+19:45:29.688 9 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+19:45:29.737 9 W - [DB]GetSchema("MetaDataCollections")
+19:45:29.741 9 W - [DB]GetSchema("ReservedWords")
+19:45:29.747 9 W - [DB]GetSchema("Databases", "tgm")
+19:45:29.790 9 W - [DB]GetSchema("Tables")
+19:45:29.910 9 W - [DB]GetSchema("Columns")
+19:45:29.950 9 W - [DB]GetSchema("Indexes")
+19:45:29.982 9 W - [DB]GetSchema("IndexColumns")
+19:45:30.005 9 W - [DB]GetSchema("DataTypes")
+19:45:30.063 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:45:30.082 9 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:45:30.133 9 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:45:30.133 9 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:45:30.134 9 W - DB待检查表架构的实体个数：14
+19:45:30.261 9 W - 检查连接[DB/SqlServer]的数据库架构耗时179ms
+19:45:30.261 9 W - Select * From tgm_platform Where id=1
+19:45:30.919 11 W - [tgm]GetSchema("Tables")
+19:45:31.035 11 W - [tgm]GetSchema("Columns")
+19:45:31.075 11 W - [tgm]GetSchema("Indexes")
+19:45:31.101 11 W - [tgm]GetSchema("IndexColumns")
+19:45:31.124 11 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:45:31.144 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:45:31.161 11 W - Select * From tgm_platform Order By  createtime desc
+19:45:33.728 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:45:33.883 9 W - Select * From tgm_notice Where end_time>635622183337462925 and player_id=1 Order By id Desc
+19:45:34.374 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:45:34.412 10 W - Select * From tgm_platform Order By  createtime desc
+19:46:02.867 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:46:02.906 9 W - [tgm]GetSchema("Tables")
+19:46:03.015 9 W - [tgm]GetSchema("Columns")
+19:46:03.057 9 W - [tgm]GetSchema("Indexes")
+19:46:03.076 9 W - [tgm]GetSchema("IndexColumns")
+19:46:03.097 9 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:46:03.115 9 W - Select * From tgm_platform Where id=1
+19:46:03.136 9 W - Select * From tgm_platform Where id=1
+19:46:03.156 9 W - Select * From tgm_platform Where id=1
+19:46:31.175 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:46:31.191 9 W - Select * From tgm_notice Where end_time>635622183911917792 and player_id=1 Order By id Desc
+19:46:31.640 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:46:31.661 10 W - Select * From tgm_platform Order By  createtime desc
+19:46:32.173 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:46:32.191 11 W - Select * From tgm_server Where id=13
+19:46:32.210 11 W - Select * From tgm_role Where id=1
+19:46:32.226 11 W - Select * From tgm_platform Where id=1
+19:46:32.241 11 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:46:32.289 11 W - [13_1_DY-01]GetSchema("MetaDataCollections")
+19:46:32.292 11 W - [13_1_DY-01]GetSchema("Databases", "tgg")
+19:46:32.337 11 W - [13_1_DY-01]GetSchema("Tables")
+19:46:32.481 11 W - [13_1_DY-01]GetSchema("Columns")
+19:46:32.595 11 W - [13_1_DY-01]GetSchema("Indexes")
+19:46:32.618 11 W - [13_1_DY-01]GetSchema("IndexColumns")
+19:46:32.647 11 W - [13_1_DY-01]GetSchema("DataTypes")
+19:46:32.708 11 W - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+19:46:32.760 11 W - [13_1_DY-01]的所有实体类（0个）：
+19:46:32.760 11 W - [13_1_DY-01]需要检查架构的实体类（0个）：
+19:46:32.760 11 W - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时52ms
+19:46:32.771 11 W - [13_1_DY-01]GetSchema("ReservedWords")
+19:46:32.775 11 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622183922094596, 635622186350000000, 15, '嘻嘻', 0, 2);Select SCOPE_IDENTITY()
+19:46:32.830 11 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622183922094596, 635622186350000000, N'嘻嘻', 4506);Select SCOPE_IDENTITY()
+19:46:35.215 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:46:35.230 9 W - Select * From tgm_notice Where end_time>635622183952304804 and player_id=1 Order By id Desc
+19:46:35.246 9 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:46:35.261 9 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:47:00.511 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:47:00.527 9 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:47:00.541 9 W - Select * From tgm_platform Where id=1
+19:47:00.556 9 W - Select * From tgm_platform Where id=1
+19:47:00.575 9 W - Select * From tgm_platform Where id=1
+19:47:17.848 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:47:17.868 10 W - Select * From tgm_notice Where end_time>635622184378680014 and player_id=1 Order By id Desc
+19:47:17.883 10 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:47:17.898 10 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:47:18.470 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:47:18.487 9 W - Select * From tgm_platform Order By  createtime desc
+19:47:19.063 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:47:19.082 10 W - Select * From tgm_server Where id=13
+19:47:19.097 10 W - Select * From tgm_role Where id=1
+19:47:19.112 10 W - Select * From tgm_platform Where id=1
+19:47:19.127 10 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:47:19.143 10 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622184390978241, 635622186350000000, 10, '更好发挥', 0, 2);Select SCOPE_IDENTITY()
+19:47:19.162 10 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622184390978241, 635622186350000000, N'更好发挥', 4507);Select SCOPE_IDENTITY()
+19:47:19.818 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:47:19.833 9 W - Select * From tgm_notice Where end_time>635622184398333157 and player_id=1 Order By id Desc
+19:47:19.848 9 W - Select * From tgm_platform Where id in (1,1) Order By id Desc
+19:47:19.862 9 W - Select * From tgm_server Where id in (13,13) Order By id Desc
+19:48:32.231 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:48:32.251 10 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:48:32.272 10 W - Select * From tgm_platform Where id=1
+19:48:32.298 10 W - Select * From tgm_platform Where id=1
+19:48:32.318 10 W - Select * From tgm_platform Where id=1
+19:48:57.256 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:48:57.272 11 W - Select * From tgm_notice Where end_time>635622185372714922 and player_id=1 Order By id Desc
+19:48:57.286 11 W - Select * From tgm_platform Where id in (1,1) Order By id Desc
+19:48:57.301 11 W - Select * From tgm_server Where id in (13,13) Order By id Desc
+19:48:57.906 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:48:57.922 10 W - Select * From tgm_platform Order By  createtime desc
+19:48:58.512 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:48:58.533 12 W - Select * From tgm_server Where id=13
+19:48:58.548 12 W - Select * From tgm_role Where id=1
+19:48:58.563 12 W - Select * From tgm_platform Where id=1
+19:48:58.578 12 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:48:58.594 12 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635622210200000000, 635622219200000000, 122, '手动阀', 0, 2);Select SCOPE_IDENTITY()
+19:48:58.615 12 W - SET NOCOUNT ON;Insert Into tgm_notice(pid, sid, player_id, start_time, end_time, content, gameid) Values(1, 13, 1, 635622210200000000, 635622219200000000, N'手动阀', 4508);Select SCOPE_IDENTITY()
+19:48:59.193 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:48:59.209 10 W - Select * From tgm_notice Where end_time>635622185392088262 and player_id=1 Order By id Desc
+19:48:59.223 10 W - Select * From tgm_platform Where id in (1,1,1) Order By id Desc
+19:48:59.237 10 W - Select * From tgm_server Where id in (13,13,13) Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 8780
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710668068107897
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:53:42.001 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:53:42.010 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:53:42.010 6 W - 使用数据库方式：独占，加大缓存权重
+19:53:42.011 6 W - 一级缓存：关闭缓存
+19:53:42.042 6 W - [tgm]GetSchema("MetaDataCollections")
+19:53:42.060 6 W - [tgm]GetSchema("ReservedWords")
+19:53:42.079 6 W - [tgm]GetSchema("Databases", "tgm")
+19:53:42.149 6 W - [tgm]GetSchema("Tables")
+19:53:42.267 6 W - [tgm]GetSchema("Columns")
+19:53:42.306 6 W - [tgm]GetSchema("Indexes")
+19:53:42.331 6 W - [tgm]GetSchema("IndexColumns")
+19:53:42.355 6 W - [tgm]GetSchema("DataTypes")
+19:53:42.435 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:53:42.460 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:53:42.545 6 W - [tgm]的所有实体类（0个）：
+19:53:42.545 6 W - [tgm]需要检查架构的实体类（0个）：
+19:53:42.545 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时85ms
+19:53:42.545 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+19:53:42.580 6 W - [DB]GetSchema("MetaDataCollections")
+19:53:42.583 6 W - [DB]GetSchema("ReservedWords")
+19:53:42.590 6 W - [DB]GetSchema("Databases", "tgm")
+19:53:42.631 6 W - [DB]GetSchema("Tables")
+19:53:42.748 6 W - [DB]GetSchema("Columns")
+19:53:42.788 6 W - [DB]GetSchema("Indexes")
+19:53:42.814 6 W - [DB]GetSchema("IndexColumns")
+19:53:42.837 6 W - [DB]GetSchema("DataTypes")
+19:53:42.895 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:53:42.919 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:53:42.969 6 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:53:42.969 6 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:53:42.969 6 W - DB待检查表架构的实体个数：14
+19:53:43.094 6 W - 检查连接[DB/SqlServer]的数据库架构耗时176ms
+19:53:43.095 6 W - Select * From tgm_platform Where id=1
+19:53:43.724 8 W - [tgm]GetSchema("Tables")
+19:53:43.842 8 W - [tgm]GetSchema("Columns")
+19:53:43.880 8 W - [tgm]GetSchema("Indexes")
+19:53:43.901 8 W - [tgm]GetSchema("IndexColumns")
+19:53:43.932 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:53:43.951 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:53:43.967 8 W - Select * From tgm_platform Order By  createtime desc
+19:53:49.261 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:53:49.438 8 W - Select * From tgm_notice Where end_time>635622188293188475 and player_id=1 Order By id Desc
+19:53:49.461 8 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:53:49.590 8 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:53:50.081 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:53:50.103 7 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 8940
+#AppDomain: /LM/W3SVC/2/ROOT-1-130710668589646760
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-17
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:54:34.641 5 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:54:34.649 5 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:54:34.649 5 W - 使用数据库方式：独占，加大缓存权重
+19:54:34.649 5 W - 一级缓存：关闭缓存
+19:54:34.706 5 W - [tgm]GetSchema("MetaDataCollections")
+19:54:34.724 5 W - [tgm]GetSchema("ReservedWords")
+19:54:34.741 5 W - [tgm]GetSchema("Databases", "tgm")
+19:54:34.823 5 W - [tgm]GetSchema("Tables")
+19:54:34.942 5 W - [tgm]GetSchema("Columns")
+19:54:34.982 5 W - [tgm]GetSchema("Indexes")
+19:54:35.008 5 W - [tgm]GetSchema("IndexColumns")
+19:54:35.049 5 W - [tgm]GetSchema("DataTypes")
+19:54:35.127 5 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:54:35.156 5 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:54:35.230 5 W - [tgm]的所有实体类（0个）：
+19:54:35.230 5 W - [tgm]需要检查架构的实体类（0个）：
+19:54:35.230 5 W - 检查连接[tgm/SqlServer]的数据库架构耗时74ms
+19:54:35.230 5 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+19:54:35.265 5 W - [DB]GetSchema("MetaDataCollections")
+19:54:35.268 5 W - [DB]GetSchema("ReservedWords")
+19:54:35.275 5 W - [DB]GetSchema("Databases", "tgm")
+19:54:35.320 5 W - [DB]GetSchema("Tables")
+19:54:35.438 5 W - [DB]GetSchema("Columns")
+19:54:35.479 5 W - [DB]GetSchema("Indexes")
+19:54:35.505 5 W - [DB]GetSchema("IndexColumns")
+19:54:35.527 5 W - [DB]GetSchema("DataTypes")
+19:54:35.583 5 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:54:35.606 5 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:54:35.646 5 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:54:35.646 5 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+19:54:35.646 5 W - DB待检查表架构的实体个数：14
+19:54:35.774 5 W - 检查连接[DB/SqlServer]的数据库架构耗时168ms
+19:54:35.774 5 W - Select * From tgm_platform Where id=1
+19:54:36.332 6 W - [tgm]GetSchema("Tables")
+19:54:36.465 6 W - [tgm]GetSchema("Columns")
+19:54:36.513 6 W - [tgm]GetSchema("Indexes")
+19:54:36.538 6 W - [tgm]GetSchema("IndexColumns")
+19:54:36.565 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+19:54:36.587 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:54:36.612 6 W - Select * From tgm_platform Order By  createtime desc
+19:54:38.986 5 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:54:39.122 5 W - Select * From tgm_notice Where end_time>635622188790070823 and player_id=1 Order By id Desc
+19:54:39.138 5 W - Select * From tgm_platform Where id in (1) Order By id Desc
+19:54:39.276 5 W - Select * From tgm_server Where id in (13) Order By id Desc
+19:54:39.612 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:54:39.630 7 W - Select * From tgm_platform Order By  createtime desc
+19:55:28.816 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:55:28.835 6 W - Select * From tgm_notice Where id=51
+19:55:28.855 6 W - Select * From tgm_server Where id=13
+19:55:28.872 6 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:55:28.921 6 W - [13_1_DY-01]GetSchema("MetaDataCollections")
+19:55:28.925 6 W - [13_1_DY-01]GetSchema("ReservedWords")
+19:55:28.930 6 W - [13_1_DY-01]GetSchema("Databases", "tgg")
+19:55:28.975 6 W - [13_1_DY-01]GetSchema("Tables")
+19:55:29.132 6 W - [13_1_DY-01]GetSchema("Columns")
+19:55:29.243 6 W - [13_1_DY-01]GetSchema("Indexes")
+19:55:29.268 6 W - [13_1_DY-01]GetSchema("IndexColumns")
+19:55:29.300 6 W - [13_1_DY-01]GetSchema("DataTypes")
+19:55:29.355 6 W - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+19:55:29.396 6 W - [13_1_DY-01]的所有实体类（0个）：
+19:55:29.396 6 W - [13_1_DY-01]需要检查架构的实体类（0个）：
+19:55:29.396 6 W - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时41ms
+19:55:29.396 6 W - Select * From tg_system_notice Where id=4508
+19:55:30.834 6 W - Update tg_system_notice Set [state]=-1 Where id=4508
+19:55:30.870 6 W - Delete From tgm_notice Where id=51
+19:55:31.394 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:55:31.409 8 W - Select * From tgm_notice Where end_time>635622189314091345 and player_id=1 Order By id Desc
+19:55:31.907 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:55:31.925 6 W - Select * From tgm_platform Order By  createtime desc
+19:58:12.319 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:12.336 8 W - Select * From tgm_platform Order By  createtime desc
+19:58:17.073 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:17.089 12 W - Select * From tgm_notice Where end_time>635622190970895371 and player_id=1 Order By id Desc
+19:58:17.614 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:17.631 11 W - Select * From tgm_platform Order By  createtime desc
+19:58:23.377 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:23.395 14 W - Select * From tgm_platform Order By  createtime desc
+19:58:25.352 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:25.385 11 W - Select * From tgm_role Where id=1
+19:58:25.435 11 W - [tgm]GetSchema("Tables")
+19:58:25.547 11 W - [tgm]GetSchema("Columns")
+19:58:25.587 11 W - [tgm]GetSchema("Indexes")
+19:58:25.611 11 W - [tgm]GetSchema("IndexColumns")
+19:58:25.635 11 W - Select * From tgm_resource Order By id Desc
+19:58:25.655 11 W - Select * From tgm_platform Where id in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) Order By id Desc
+19:58:25.672 11 W - Select * From tgm_server Where id in (13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13) Order By id Desc
+19:58:26.275 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:26.297 14 W - Select * From tgm_platform Order By  createtime desc
+19:58:37.164 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:37.182 12 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:58:37.200 12 W - Select * From tgm_platform Where id=1
+19:58:37.219 12 W - Select * From tgm_platform Where id=1
+19:58:37.239 12 W - Select * From tgm_platform Where id=1
+19:58:38.874 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:38.891 12 W - Select * From tgm_role Where id=1
+19:58:38.908 12 W - Select * From tgm_platform Where id=1
+19:58:38.923 12 W - Select * From tgm_server Where id=13
+19:58:38.939 12 W - Select * From tgm_resource Where pid=1 and sid=13 and state=2 Order By id Desc
+19:58:39.578 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:39.595 16 W - Select * From tgm_platform Order By  createtime desc
+19:58:51.234 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:51.252 14 W - Select * From tgm_platform Order By  createtime desc
+19:58:54.265 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:58:54.281 12 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+19:58:54.300 12 W - Select * From tgm_platform Where id=1
+19:58:54.317 12 W - Select * From tgm_platform Where id=1
+19:58:54.333 12 W - Select * From tgm_platform Where id=1
+19:59:12.312 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:59:12.330 14 W - Select * From tgm_platform Order By  createtime desc
+19:59:13.275 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:59:13.294 12 W - Select * From tgm_role Where id=1
+19:59:13.309 12 W - Select * From tgm_platform Where id=1
+19:59:13.334 12 W - SET NOCOUNT ON;Insert Into tgm_resource(name, pid, sid, player_name, user_code, [time], type, [state], content, attachment) Values('', 1, 13, N'', N'lgy', 635622191533291711, 2, 1, '嘻嘻嘻', N'3_100');Select SCOPE_IDENTITY()
+19:59:13.354 12 W - Select * From tgm_server Where id=13
+19:59:16.037 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:59:16.054 12 W - Select * From tgm_role Where id=1
+19:59:16.075 12 W - Select * From tgm_resource Order By id Desc
+19:59:16.092 12 W - Select * From tgm_platform Where id in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) Order By id Desc
+19:59:16.110 12 W - Select * From tgm_server Where id in (13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13) Order By id Desc
+19:59:16.640 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:59:16.656 16 W - Select * From tgm_platform Order By  createtime desc
+19:59:20.384 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:59:20.402 14 W - Select * From tgm_resource Where id=45
+19:59:20.422 14 W - Update tgm_resource Set [state]=2, [operation]=N'admin' Where id=45
+19:59:20.457 14 W - Select * From tgm_server Where id=13
+19:59:20.473 14 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:59:20.490 14 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:59:20.656 14 W - [13_1_DY-01]GetSchema("Tables")
+19:59:20.820 14 W - [13_1_DY-01]GetSchema("Columns")
+19:59:20.955 14 W - [13_1_DY-01]GetSchema("Indexes")
+19:59:20.978 14 W - [13_1_DY-01]GetSchema("IndexColumns")
+19:59:21.013 14 W - Select Top 1 * From tg_user Where user_code=N'lgy' Order By id Desc
+19:59:21.206 14 W - SET NOCOUNT ON;Insert Into tg_messages(receive_id, send_id, type, title, contents, isread, isattachment, attachment, create_time) Values(4, 0, 1, N'游戏补偿', N'嘻嘻嘻', 0, 1, N'3_100', 1426622361032);Select SCOPE_IDENTITY()
+19:59:21.226 14 W - Select Top 1 * From tgm_server Where  name='DY-01' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+19:59:21.873 16 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:59:21.890 16 W - Select * From tgm_role Where id=1
+19:59:21.907 16 W - Select * From tgm_resource Order By id Desc
+19:59:21.923 16 W - Select * From tgm_platform Where id in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) Order By id Desc
+19:59:21.940 16 W - Select * From tgm_server Where id in (13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13) Order By id Desc
+19:59:22.506 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+19:59:22.527 12 W - Select * From tgm_platform Order By  createtime desc

@@ -1,0 +1,4 @@
+E:\Bin\TGG\Debug\TGG.Module.Prison.dll
+E:\Bin\TGG\Debug\TGG.Module.Prison.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Prison\obj\Debug\TGG.Module.Prison.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Prison\obj\Debug\TGG.Module.Prison.pdb

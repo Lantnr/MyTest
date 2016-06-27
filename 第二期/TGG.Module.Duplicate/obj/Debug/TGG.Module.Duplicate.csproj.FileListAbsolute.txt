@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Duplicate.dll
+E:\Bin\TGG\Debug\TGG.Module.Duplicate.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Duplicate\obj\Debug\TGG.Module.Duplicate.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Duplicate\obj\Debug\TGG.Module.Duplicate.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Duplicate\obj\Debug\TGG.Module.Duplicate.csprojResolveAssemblyReference.cache

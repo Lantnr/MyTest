@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Guide.dll
+E:\Bin\TGG\Debug\TGG.Module.Guide.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Guide\obj\Debug\TGG.Module.Guide.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Guide\obj\Debug\TGG.Module.Guide.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Guide\obj\Debug\TGG.Module.Guide.csprojResolveAssemblyReference.cache

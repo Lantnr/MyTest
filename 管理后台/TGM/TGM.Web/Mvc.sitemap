@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+  <!-- 
+    key 数字越大,权限越高:默认0:表都能访问 规则:0,1000,10000....
+    10000为最高权限账号,只应该有一个账号 只能创建1000的账号
+    1000为管理员账号 能创建0,10,100等级的账号
+    开发商权限：10000
+    联运方运营权限：1000
+    客服权限：0
+    icon  图标下标 暂定0-10
+  -->
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index" role="0">
+    <mvcSiteMapNode title="首页" controller="Home" action="Index" icon="icon-home" role="0"/>
+    <mvcSiteMapNode title="游戏管理" controller="Record" action="Index" icon="icon-leaf" role="0">
+      <mvcSiteMapNode title="游戏服务列表" controller="Record" action="Index" icon="" role="0"/>
+      <mvcSiteMapNode title="存留查询" controller="Record" action="ServerKeep" icon="" role="0"/>
+      <mvcSiteMapNode title="元宝充值/消费记录" controller="Record" action="GoldRecord" icon="" role="0"/>
+      <mvcSiteMapNode title="等级分布记录" controller="Record" action="StruLevel" icon="" role="0"/>
+      <mvcSiteMapNode title="身份分布记录" controller="Record" action="StruIdentity" icon="" role="0"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="系统公告" controller="Message" action="Index" icon="icon-bullhorn" role="0">
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="资源管理" controller="Resource" action="Index" icon="icon-sitemap" role="1000">
+      <mvcSiteMapNode title="资源申请" controller="Resource" action="Index" icon="" role="1000"/>
+      <mvcSiteMapNode title="申请列表" controller="Resource" action="Approval" icon="" role="10000"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="充值查询" controller="Pay" action="Index" icon="icon-jpy" role="1000">
+      <mvcSiteMapNode title="充值统计" controller="Pay" action="Index" icon="" role="1000"/>
+      <mvcSiteMapNode title="玩家充值详情" controller="Pay" action="Paylist" icon="" role="1000"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="玩家信息查询" controller="Player" action="Index" icon="icon-male" role="0">
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="GM管理" controller="GM" action="Index" icon="icon-legal" role="1000">
+      <mvcSiteMapNode title="封号/冻结" controller="GM" action="Index" icon="" role="1000"/>
+      <mvcSiteMapNode title="GM操作记录" controller="GM" action="RecordList" icon="" role="1000"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="后台设置" controller="System" action="Reset" icon="icon-cogs" role="1000">
+      <mvcSiteMapNode title="平台管理" controller="System" action="Index" icon="" role="10000"/>
+      <mvcSiteMapNode title="启服管理" controller="System" action="Server" icon="" role="10000"/>
+      <mvcSiteMapNode title="账号管理" controller="System" action="Account" icon="" role="1000"/>
+      <mvcSiteMapNode title="密码重置" controller="System" action="Reset" icon="" role="0"/>
+      <mvcSiteMapNode title="游戏卡" controller="System" action="GameGoods" icon="" role="10000"/>
+      <mvcSiteMapNode title="福利卡类型管理" controller="Goods" action="GoodsManage" icon="" role="10000"/>
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

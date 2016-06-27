@@ -1,0 +1,4 @@
+E:\Bin\TGG\Debug\TGG.Module.RoleTrain.dll
+E:\Bin\TGG\Debug\TGG.Module.RoleTrain.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.RoleTrain\obj\Debug\TGG.Module.RoleTrain.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.RoleTrain\obj\Debug\TGG.Module.RoleTrain.pdb

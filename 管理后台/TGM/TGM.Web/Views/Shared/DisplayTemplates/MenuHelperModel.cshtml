@@ -1,0 +1,30 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.MenuHelperModel
+@using System.Web.Mvc.Html
+@{
+    var IsActive = string.Empty;
+    var IsOpen = string.Empty;
+}
+<ul class="sidebar-menu">
+    @foreach (var node in Model.Nodes)
+    {
+        IsActive = "";
+        if (node.IsInCurrentPath)
+        {
+            IsActive = " active";
+        }
+        <li @(Html.Raw(" class=\"sub-menu" + @IsActive + "\""))>
+            @Html.DisplayFor(m => node, "MenuSiteMapNodeModel")           
+            @if (node.Children.Any())
+            {
+                <ul class="sub">
+                    @foreach (var item in node.Children)
+                    {
+                        <li @(Html.Raw(item.IsInCurrentPath ? " class=\"active\"" : " class "))>
+                            @Html.DisplayFor(m => item, "MenuSiteMapNodeModel")
+                        </li>
+                    }
+                </ul>
+            }
+        </li>
+    }
+</ul>

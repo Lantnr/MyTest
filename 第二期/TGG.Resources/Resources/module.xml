@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<modules>
+  <module name="定时任务" type="0" value="TGG.Module.Timer" order="0"></module>
+  <module name="通信系统" type="0" value="TGG.Module.Socket" order="1"></module>
+  <module name="地图系统" type="1" value="TGG.Module.Scene" order="1"></module>
+  <module name="用户系统" type="1" value="TGG.Module.User" order="2"></module>
+  <module name="跑商系统" type="1" value="TGG.Module.Business" order="3"></module>
+  <module name="道具系统" type="1" value="TGG.Module.Props" order="4"></module>
+  <module name="聊天系统" type="1" value="TGG.Module.Chat" order="5"></module>
+  <module name="邮箱系统" type="1" value="TGG.Module.Messages" order="6"></module>
+  <module name="武将系统" type="1" value="TGG.Module.Role" order="7"></module>
+  <module name="战斗系统" type="1" value="TGG.Module.Fight" order="8"></module>
+  <module name="任务系统" type="1" value="TGG.Module.Task" order="9"></module>
+  <module name="装备系统" type="1" value="TGG.Module.Equip" order="10"></module>
+  <module name="技能系统" type="1" value="TGG.Module.Skill" order="11"></module>
+  <module name="修行系统" type="1" value="TGG.Module.RoleTrain" order="12"></module>
+  <module name="副本系统" type="1" value="TGG.Module.Duplicate" order="13"></module>
+  <module name="家族系统" type="1" value="TGG.Module.Family" order="14"></module>
+  <module name="公告系统" type="1" value="TGG.Module.Notice" order="15"></module>
+  <module name="好友系统" type="1" value="TGG.Module.Friend" order="16"></module>
+  <module name="评定系统" type="1" value="TGG.Module.Appraise" order="17"></module>
+  <module name="一将讨系统" type="1" value="TGG.Module.SingleFight" order="18"></module>
+  <module name="竞技场系统" type="1" value="TGG.Module.Arena" order="19"></module>
+  <module name="称号系统" type="1" value="TGG.Module.Title" order="20"></module>
+  <module name="监狱系统" type="1" value="TGG.Module.Prison" order="21"></module>
+  <module name="美浓攻略" type="1" value="TGG.Module.Siege" order="22"></module>
+  <module name="一夜墨俣" type="1" value="TGG.Module.Building" order="23"></module>
+  <module name="排名系统" type="1" value="TGG.Module.Rankings" order="24"></module>
+  <module name="工作系统" type="1" value="TGG.Module.Work" order="25"></module>
+  <module name="大名令系统" type="1" value="TGG.Module.Guide" order="26"></module>
+  <module name="游戏集系统" type="1" value="TGG.Module.Games" order="27"></module>
+  <!--
+  
+  
+  
+  <module name="排名系统" type="1" value="TGG.Module.Rankings" order="10"></module>
+  <module name="卡牌系统" type="1" value="TGG.Module.Card" order="11"></module>
+  <module name="自宅系统" type="1" value="TGG.Module.Home" order="14"></module>
+  <module name="宝石系统" type="1" value="TGG.Module.Gem" order="15"></module>
+  
+ 
+  <module name="API推送" value="TGG.Module.API" order="99"></module>-->
+</modules> 

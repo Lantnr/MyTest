@@ -1,0 +1,1310 @@
+﻿@using TGM.API.Entity.Model
+@{
+    ViewBag.Title = "资源管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var platforms = ViewBag.Platform as List<Platform>;
+}
+
+@section css {}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="~/Home">首页</a>
+                    <span class="divider">/</span>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            @if (ViewBag.Error < 0)
+            {
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">×</button>
+                    <center> @ViewBag.Message</center>
+                </div>
+            }
+            <div class="widget green">
+                <div class="widget-title">
+                    <h4><i class="icon-reorder"></i>@ViewBag.Title</h4>
+                    <span class="tools">
+                        <a href="javascript:;" class="icon-chevron-down"></a>
+                    </span>
+                </div>
+                <div class="widget-body form-horizontal">
+                    @using (Html.BeginForm("Index", "Resource", FormMethod.Post))
+                    {
+                        <div class="widget-body">
+
+                            <table class="table table-bordered" class="table table-striped table-hover table-bordered" id="editable-sample">
+                                <tbody>
+                                    <tr>
+                                        <td>*指定平台</td>
+                                        <td>
+                                            <select data-placeholder="Choose a Category" tabindex="1" name="platform" id="platform">
+                                                <option value="">请选择</option>
+                                                @foreach (var item in platforms)
+                                                {
+                                                    <option value="@item.id">@item.name</option>
+                                                }
+                                            </select>
+                                        </td>
+                                        <td>*服务器</td>
+                                        <td>
+                                            <select data-placeholder="Choose a Category" tabindex="1" name="server" id="server"></select>
+                                            带*号的为必选项
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="input-medium" data-placeholder="Choose a Category" tabindex="1" name="type" id="type">
+                                                <option value="0">昵称查询</option>
+                                                <option value="1">账号查询</option>
+                                            </select>
+                                        </td>
+                                        <td><input size="16" type="text" value="" name="playname"></td>
+
+                                        <td>
+                                            礼包名称
+                                        </td>
+                                        <td>
+                                            <input size="16" type="text" value="" name="gift">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            申请类型
+                                            <select data-placeholder="Choose a Category" tabindex="1" name="gifttype">
+                                                <option value="0">请选择</option>
+                                                <option value="1">全服礼包</option>
+                                                <option value="2">个人礼包</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">申请原因<textarea class="span6" rows="3" id="notice_content" name="reason"></textarea></td>
+                                        <td colspan="2">邮件内容<textarea class="span6" rows="3" id="message" name="message"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="widget-body">
+                            <table class="table table-bordered" id="tablex">
+                                <tr>
+                                    <td width="100px">
+                                        @*<div>*@
+                                        <input type="hidden" id="h_v_1" value="" />
+                                        <select class="input-medium" tabindex="1" name="m_1" id="m_1">
+                                            <option value="0">资源</option>
+                                            <option value="3">元宝</option>
+                                            <option value="1">金钱</option>
+                                            <option value="5">经验</option>
+                                            <option value="8">功勋</option>
+                                            <option value="9">声望</option>
+                                            <option value="10">魂</option>
+                                            <option value="13">战功值</option>
+                                            <option value="6">道具</option>
+                                            <option value="7">装备</option>
+                                            <option value="12">熔炼道具</option>
+                                        </select><br>
+                                    <td>
+                                        <label id="n1" style="display:none;">名称</label>
+                                    <td>
+                                    <select class="input-medium" tabindex="1" name="name_1" id="name_1" style="display:none;">                                    
+                                    </select>
+                                        @*<input type="text" class="input-medium" id="name_1" name="name_1" style="display:none;" />*@
+                                    <td>
+                                        <label id="c1" style="display:none;">数量</label>
+                                    <td>
+                                        <input type="text" class="input-mini" id="count_1" name="count_1" style="display:none;" />
+                                    <td>
+                                        <label id="p1" style="display:none;">品质</label>
+                                    <td>
+                                        <select class="input-mini" tabindex="1" name="pin_1" id="pin_1" style="display:none;"></select>
+                                        @*<input type="text" class="input-medium" id="pin_1" name="pin_1" style="display:none;" />*@
+                                        @*<div>*@
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_1_1" id="att_1_1" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td><input type="text" class="input-mini" id="att_v_1_1" name="att_v_1_1" style="display:none;" />
+
+
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_1_2" id="att_1_2" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_1_2" name="att_v_1_2" style="display:none;" />
+
+
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_1_3" id="att_1_3" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_1_3" name="att_v_1_3" style="display:none;" />
+                                </tr>
+
+                                @*</div>*@
+                                @*</div>*@
+                                <tr>
+                                    <td width="100px">
+                                        @*<div>*@
+                                        <input type="hidden" id="h_v_1" value="" />
+                                        <select class="input-medium" tabindex="1" name="m_2" id="m_2">
+                                            <option value="0">资源</option>
+                                            <option value="3">元宝</option>
+                                            <option value="1">金钱</option>
+                                            <option value="5">经验</option>
+                                            <option value="8">功勋</option>
+                                            <option value="9">声望</option>
+                                            <option value="10">魂</option>
+                                            <option value="13">战功值</option>
+                                            <option value="6">道具</option>
+                                            <option value="7">装备</option>
+                                            <option value="12">熔炼道具</option>
+                                        </select>
+<td>
+                                        <label id="n2" style="display:none;">名称</label>
+                                    <td>
+                                        <select class="input-medium" tabindex="1" name="name_2" id="name_2" style="display:none;"></select>
+                                        @*<input type="text" class="input-medium" id="name_2" name="name_2" style="display:none;" />*@
+                                    <td>
+                                        <label id="c2" style="display:none;">数量</label>
+                                    <td>
+                                        <input type="text" class="input-mini" id="count_2" name="count_2" style="display:none;" />
+                                    <td>
+                                        <label id="p2" style="display:none;">品质</label>
+                                    <td>
+                                        <select class="input-mini" tabindex="1" name="pin_2" id="pin_2" style="display:none;"></select>
+                                        @*<input type="text" class="input-medium" id="pin_2" name="pin_2" style="display:none;" />*@
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_2_1" id="att_2_1" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_2_1" name="att_v_2_1" style="display:none;" />
+
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_2_2" id="att_2_2" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_2_2" name="att_v_2_2" style="display:none;" />
+
+
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_2_3" id="att_2_3" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td>
+                                        <input type="text" class="input-mini" id="att_v_2_3" name="att_v_2_3" style="display:none;" />
+
+                                        @*</div>*@
+                                </tr>
+                                <tr>
+                                    @*<div>*@
+                                    <td width="100px">
+                                        <input type="hidden" id="h_v_1" value="" />
+                                        <select class="input-medium" tabindex="1" name="m_3" id="m_3">
+                                            <option value="0">资源</option>
+                                            <option value="3">元宝</option>
+                                            <option value="1">金钱</option>
+                                            <option value="5">经验</option>
+                                            <option value="8">功勋</option>
+                                            <option value="9">声望</option>
+                                            <option value="10">魂</option>
+                                            <option value="13">战功值</option>
+                                            <option value="6">道具</option>
+                                            <option value="7">装备</option>
+                                            <option value="12">熔炼道具</option>
+                                        </select>
+<td>
+                                        <label id="n3" style="display:none;">名称</label>
+                                    <td>
+                                        <select class="input-medium" tabindex="1" name="name_3" id="name_3" style="display:none;"></select>
+                                        @*<input type="text" class="input-medium" id="name_3" name="name_3" style="display:none;" />*@
+                                    <td>
+                                        <label id="c3" style="display:none;">数量</label>
+                                    <td>
+                                        <input type="text" class="input-mini" id="count_3" name="count_3" style="display:none;" />
+                                    <td>
+                                        <label id="p3" style="display:none;">品质</label>
+                                    <td>
+                                        <select class="input-mini" tabindex="1" name="pin_3" id="pin_3" style="display:none;"></select>
+                                        @*<input type="text" class="input-medium" id="pin_3" name="pin_3" style="display:none;" />*@
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_3_1" id="att_3_1" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_3_1" name="att_v_3_1" style="display:none;" />
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_3_2" id="att_3_2" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_3_2" name="att_v_3_2" style="display:none;" />
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_3_3" id="att_3_3" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td><input type="text" class="input-mini" id="att_v_3_3" name="att_v_3_3" style="display:none;" />
+                                </tr>
+                                @*</div>*@
+                                <tr>
+                                    <td width="100px">
+                                        @*<div>*@
+                                        <input type="hidden" id="h_v_1" value="" />
+                                        <select class="input-medium" tabindex="1" name="m_4" id="m_4">
+                                            <option value="0">资源</option>
+                                            <option value="3">元宝</option>
+                                            <option value="1">金钱</option>
+                                            <option value="5">经验</option>
+                                            <option value="8">功勋</option>
+                                            <option value="9">声望</option>
+                                            <option value="10">魂</option>
+                                            <option value="13">战功值</option>
+                                            <option value="6">道具</option>
+                                            <option value="7">装备</option>
+                                            <option value="12">熔炼道具</option>
+                                        </select>
+<td>
+                                        <label id="n4" style="display:none;">名称</label>
+                                    <td>
+                                        <select class="input-medium" tabindex="1" name="name_4" id="name_4" style="display:none;"></select>
+                                        @*<input type="text" class="input-medium" id="name_4" name="name_4" style="display:none;" />*@
+                                    <td>
+                                        <label id="c4" style="display:none;">数量</label>
+                                    <td>
+                                        <input type="text" class="input-mini" id="count_4" name="count_4" style="display:none;" />
+                                    <td>
+                                        <label id="p4" style="display:none;">品质</label>
+                                    <td>
+                                        <select class="input-mini" tabindex="1" name="pin_4" id="pin_4" style="display:none;"></select>
+                                        @*<input type="text" class="input-medium" id="pin_4" name="pin_4" style="display:none;" />*@
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_4_1" id="att_4_1" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_4_1" name="att_v_4_1" style="display:none;" />
+
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_4_2" id="att_4_2" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_4_2" name="att_v_4_2" style="display:none;" />
+
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_4_3" id="att_4_3" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_4_3" name="att_v_4_3" style="display:none;" />
+                                </tr>
+                                @*</div>*@
+                                <tr>
+                                    <td width="100px">
+                                        @*<div>*@
+                                        <input type="hidden" id="h_v_1" value="" />
+                                        <select class="input-medium" tabindex="1" name="m_5" id="m_5">
+                                            <option value="0">资源</option>
+                                            <option value="3">元宝</option>
+                                            <option value="1">金钱</option>
+                                            <option value="5">经验</option>
+                                            <option value="8">功勋</option>
+                                            <option value="9">声望</option>
+                                            <option value="10">魂</option>
+                                            <option value="13">战功值</option>
+                                            <option value="6">道具</option>
+                                            <option value="7">装备</option>
+                                            <option value="12">熔炼道具</option>
+                                        </select>
+<td>
+                                        <label id="n5" style="display:none;">名称</label>
+                                    <td>
+                                        <select class="input-medium" tabindex="1" name="name_5" id="name_5" style="display:none;"></select>
+                                        @*<input type="text" class="input-medium" id="name_5" name="name_5" style="display:none;" />*@
+                                    <td>
+                                        <label id="c5" style="display:none;">数量</label>
+                                    <td>
+                                        <input type="text" class="input-mini" id="count_5" name="count_5" style="display:none;" />
+                                    <td>
+                                        <label id="p5" style="display:none;">品质</label>
+                                    <td>
+                                        <select class="input-mini" tabindex="1" name="pin_5" id="pin_5" style="display:none;"></select>
+                                        @*<input type="text" class="input-medium" id="pin_5" name="pin_5" style="display:none;" />*@
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_5_1" id="att_5_1" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_5_1" name="att_v_5_1" style="display:none;" />
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_5_2" id="att_5_2" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_5_2" name="att_v_5_2" style="display:none;" />
+
+                                    <td>
+                                        <select class="input-mini" data-placeholder="Choose a Category" tabindex="1" name="att_5_3" id="att_5_3" style="display:none;">
+                                            <option value="0">属性</option>
+                                            <option value="1">统率</option>
+                                            <option value="2">武力</option>
+                                            <option value="3">智谋</option>
+                                            <option value="4">政务</option>
+                                            <option value="5">魅力</option>
+                                            <option value="6">攻击力</option>
+                                            <option value="7">增伤</option>
+                                            <option value="8">防御力</option>
+                                            <option value="9">减伤</option>
+                                            <option value="10">生命值</option>
+                                            <option value="101">合战攻击力</option>
+                                            <option value="102">合战防御力</option>
+                                        </select>
+                                    <td> <input type="text" class="input-mini" id="att_v_5_3" name="att_v_5_3" style="display:none;" />
+                                </tr>
+
+                                @*</div>*@
+                            </table>
+                        </div>
+                        <center>
+                            <button type="submit" class="btn btn-success"><i class="icon-ok"></i> 确定</button>
+                        </center>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {
+    <script type="text/javascript">
+
+        //绑定第一个下拉选择事件
+        $("#platform").change(function () {
+            get_d_2();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function get_d_2(obj) {
+            $("#server").empty(); //清空第二个下拉框数据
+            var sv = $("#platform").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Common/AjaxServer?id=" + sv, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#server").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+    </script>
+
+
+
+
+
+
+    <script type="text/javascript">
+        function get_prop() {
+            var propid = document.getElementById("propid").value;
+            var propcount = document.getElementById("propcount").value;
+            if (propid != "" && propcount != "") {
+                var props = document.getElementById("props").value;
+                if (props != "") {
+                    document.getElementById("props").value += "|" + propid + "_" + propcount;
+                } else {
+                    document.getElementById("props").value = propid + "_" + propcount;
+                }
+                //document.getElementById('props').disabled = 'disabled';
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        function delete_prop() {
+            document.getElementById("props").value = "";
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        //绑定第一个下拉选择事件
+        $("#m_1").change(function () {
+            reset_m_v();
+            var v = $("#m_1").find("option:selected").val();
+            if (v == "3" || v == "1" || v == "5" || v == "8" || v == "9" || v == "10" || v == "13" || v == "14") {
+                $("#c1").css('display', 'block');
+                $("#count_1").css('display', 'block');
+            } else if (v == "6") {
+                $("#name_1").css('display', 'block');
+                $("#count_1").css('display', 'block');
+                $("#c1").css('display', 'block');
+                $("#n1").css('display', 'block');
+                p_1();
+            } else if (v == "12") {
+                $("#name_1").css('display', 'block');
+                $("#count_1").css('display', 'block');
+                $("#c1").css('display', 'block');
+                $("#n1").css('display', 'block');
+                f_1();
+            } else if (v == "7") {
+                $("#name_1").css('display', 'block');
+                $("#count_1").css('display', 'block');
+                $("#pin_1").css('display', 'block');
+                $("#att_1_1").css('display', 'block');
+                $("#att_v_1_1").css('display', 'block');
+                $("#att_1_2").css('display', 'block');
+                $("#att_v_1_2").css('display', 'block');
+                $("#att_1_3").css('display', 'block');
+                $("#att_v_1_3").css('display', 'block');
+                $("#c1").css('display', 'block');
+                $("#n1").css('display', 'block');
+                $("#p1").css('display', 'block');
+                $("#table1").css('display', 'block');
+                e_1();
+            }
+        });
+
+        function reset_m_v() {
+            $("#name_1").css('display', 'none');
+            $("#count_1").css('display', 'none');
+            $("#pin_1").css('display', 'none');
+            $("#att_1_1").css('display', 'none');
+            $("#att_v_1_1").css('display', 'none');
+            $("#att_1_2").css('display', 'none');
+            $("#att_v_1_2").css('display', 'none');
+            $("#att_1_3").css('display', 'none');
+            $("#att_v_1_3").css('display', 'none');
+            $("#c1").css('display', 'none');
+            $("#n1").css('display', 'none');
+            $("#p1").css('display', 'none');
+            $("#table1").css('display', 'none');
+        };
+
+        function p_1(obj) {
+            $("#name_1").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxProps?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_1").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+
+        function e_1(obj) {
+            $("#name_1").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxEquips?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    $("#name_1").append("<option value='" + 0 + "'>" + "请选择" + "</option>"); //添加一项option
+                    var i = "";
+                    for (var n = 0; n < r.length; n++) {                     
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        if (name == "GM神器（测试数据）")
+                            continue;
+                        if (i != name) {
+                            $("#name_1").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                            i = name;
+                        }
+
+                       
+                    }
+                }
+            });
+        }
+
+        function f_1(obj) {
+            $("#name_1").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxFusions?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_1").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+        function reset_m_v_2() {
+            $("#name_2").css('display', 'none');
+            $("#count_2").css('display', 'none');
+            $("#pin_2").css('display', 'none');
+            $("#att_2_1").css('display', 'none');
+            $("#att_v_2_1").css('display', 'none');
+            $("#att_2_2").css('display', 'none');
+            $("#att_v_2_2").css('display', 'none');
+            $("#att_2_3").css('display', 'none');
+            $("#att_v_2_3").css('display', 'none');
+            $("#c2").css('display', 'none');
+            $("#n2").css('display', 'none');
+            $("#p2").css('display', 'none');
+            $("#table2").css('display', 'none');
+        };
+
+        function p_2(obj) {
+            $("#name_2").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxProps?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_2").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+
+        function e_2(obj) {
+            $("#name_2").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxEquips?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    $("#name_2").append("<option value='" + 0 + "'>" + "请选择" + "</option>"); //添加一项option
+                    var i = "";
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        if (name == "GM神器（测试数据）")
+                            continue;
+                        if (i != name) {
+                            $("#name_2").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                            i = name;
+                        }
+                    }
+                }
+            });
+        }
+
+        function f_2(obj) {
+            $("#name_2").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxFusions?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_2").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+        function reset_m_v_3() {
+            $("#name_3").css('display', 'none');
+            $("#count_3").css('display', 'none');
+            $("#pin_3").css('display', 'none');
+            $("#att_3_1").css('display', 'none');
+            $("#att_v_3_1").css('display', 'none');
+            $("#att_3_2").css('display', 'none');
+            $("#att_v_3_2").css('display', 'none');
+            $("#att_3_3").css('display', 'none');
+            $("#att_v_3_3").css('display', 'none');
+            $("#c3").css('display', 'none');
+            $("#n3").css('display', 'none');
+            $("#p3").css('display', 'none');
+            $("#table3").css('display', 'none');
+        };
+
+        function p_3(obj) {
+            $("#name_3").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxProps?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_3").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+
+        function e_3(obj) {
+            $("#name_3").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxEquips?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    $("#name_3").append("<option value='" + 0 + "'>" + "请选择" + "</option>"); //添加一项option
+                    var i = "";
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        if (name == "GM神器（测试数据）")
+                            continue;
+                        if (i != name) {
+                            $("#name_3").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                            i = name;
+                        }
+                    }
+                }
+            });
+        }
+
+        function f_3(obj) {
+            $("#name_3").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxFusions?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_3").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+        function reset_m_v_4() {
+            $("#name_4").css('display', 'none');
+            $("#count_4").css('display', 'none');
+            $("#pin_4").css('display', 'none');
+            $("#att_4_1").css('display', 'none');
+            $("#att_v_4_1").css('display', 'none');
+            $("#att_4_2").css('display', 'none');
+            $("#att_v_4_2").css('display', 'none');
+            $("#att_4_3").css('display', 'none');
+            $("#att_v_4_3").css('display', 'none');
+            $("#c4").css('display', 'none');
+            $("#n4").css('display', 'none');
+            $("#p4").css('display', 'none');
+            $("#table4").css('display', 'none');
+        };
+
+        function p_4(obj) {
+            $("#name_4").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxProps?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_4").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+
+        function e_4(obj) {
+            $("#name_4").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxEquips?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    $("#name_4").append("<option value='" + 0 + "'>" + "请选择" + "</option>"); //添加一项option
+                    var i = "";
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        if (name == "GM神器（测试数据）")
+                            continue;
+                        if (i != name) {
+                            $("#name_4").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                            i = name;
+                        }
+                    }
+                }
+            });
+        }
+
+        function f_4(obj) {
+            $("#name_4").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxFusions?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_4").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+        function reset_m_v_5() {
+            $("#name_5").css('display', 'none');
+            $("#count_5").css('display', 'none');
+            $("#pin_5").css('display', 'none');
+            $("#att_5_1").css('display', 'none');
+            $("#att_v_5_1").css('display', 'none');
+            $("#att_5_2").css('display', 'none');
+            $("#att_v_5_2").css('display', 'none');
+            $("#att_5_3").css('display', 'none');
+            $("#att_v_5_3").css('display', 'none');
+            $("#c5").css('display', 'none');
+            $("#n5").css('display', 'none');
+            $("#p5").css('display', 'none');
+            $("#table5").css('display', 'none');
+        };
+
+        function p_5(obj) {
+            $("#name_5").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxProps?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_5").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+
+        function e_5(obj) {
+            $("#name_5").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxEquips?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    $("#name_5").append("<option value='" + 0 + "'>" + "请选择" + "</option>"); //添加一项option
+                    var i = "";
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        if (name == "GM神器（测试数据）")
+                            continue;
+                        if (i != name) {
+                            $("#name_5").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                            i = name;
+                        }
+                    }
+                }
+            });
+        }
+
+        function f_5(obj) {
+            $("#name_5").empty(); //清空第二个下拉框数据
+            //var sv = $("#m_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Resource/AjaxFusions?id=" + 1, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function (r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#name_5").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+        $("#m_2").change(function () {
+            reset_m_v_2();
+            var v = $("#m_2").find("option:selected").val();
+            if (v == "3" || v == "1" || v == "5" || v == "8" || v == "9" || v == "10" || v == "13" || v == "14") {
+                $("#count_2").css('display', 'block');
+                $("#c2").css('display', 'block');
+            } else if (v == "6") {
+                $("#name_2").css('display', 'block');
+                $("#count_2").css('display', 'block');
+                $("#c2").css('display', 'block');
+                $("#n2").css('display', 'block');
+                p_2();
+            } else if (v == "12") {
+                $("#name_2").css('display', 'block');
+                $("#count_2").css('display', 'block');
+                $("#c2").css('display', 'block');
+                $("#n2").css('display', 'block');
+                f_2();
+            } else if (v == "7") {
+                $("#name_2").css('display', 'block');
+                $("#count_2").css('display', 'block');
+                $("#pin_2").css('display', 'block');
+                $("#att_2_1").css('display', 'block');
+                $("#att_v_2_1").css('display', 'block');
+                $("#att_2_2").css('display', 'block');
+                $("#att_v_2_2").css('display', 'block');
+                $("#att_2_3").css('display', 'block');
+                $("#att_v_2_3").css('display', 'block');
+                $("#c2").css('display', 'block');
+                $("#n2").css('display', 'block');
+                $("#p2").css('display', 'block');
+                $("#table2").css('display', 'block');
+                e_2();
+            }
+        });
+
+        $("#m_3").change(function () {
+            reset_m_v_3();
+            var v = $("#m_3").find("option:selected").val();
+            if (v == "3" || v == "1" || v == "5" || v == "8" || v == "9" || v == "10" || v == "13" || v == "14") {
+                $("#count_3").css('display', 'block');
+                $("#c3").css('display', 'block');
+            } else if (v == "6") {
+                $("#name_3").css('display', 'block');
+                $("#count_3").css('display', 'block');
+                $("#c3").css('display', 'block');
+                $("#n3").css('display', 'block');
+                p_3();
+            } else if (v == "12") {
+                $("#name_3").css('display', 'block');
+                $("#count_3").css('display', 'block');
+                $("#c3").css('display', 'block');
+                $("#n3").css('display', 'block');
+                f_3();
+            } else if (v == "7") {
+                $("#name_3").css('display', 'block');
+                $("#count_3").css('display', 'block');
+                $("#pin_3").css('display', 'block');
+                $("#att_3_1").css('display', 'block');
+                $("#att_v_3_1").css('display', 'block');
+                $("#att_3_2").css('display', 'block');
+                $("#att_v_3_2").css('display', 'block');
+                $("#att_3_3").css('display', 'block');
+                $("#att_v_3_3").css('display', 'block');
+                $("#c3").css('display', 'block');
+                $("#n3").css('display', 'block');
+                $("#p3").css('display', 'block');
+                $("#table3").css('display', 'block');
+                e_3();
+            }
+        });
+
+        $("#m_4").change(function () {
+            reset_m_v_4();
+            var v = $("#m_4").find("option:selected").val();
+            if (v == "3" || v == "1" || v == "5" || v == "8" || v == "9" || v == "10" || v == "13" || v == "14") {
+                $("#count_4").css('display', 'block');
+                $("#c4").css('display', 'block');
+            } else if (v == "6") {
+                $("#name_4").css('display', 'block');
+                $("#count_4").css('display', 'block');
+                $("#c4").css('display', 'block');
+                $("#n4").css('display', 'block');
+                p_4();
+            } else if (v == "12") {
+                $("#name_4").css('display', 'block');
+                $("#count_4").css('display', 'block');
+                $("#c4").css('display', 'block');
+                $("#n4").css('display', 'block');
+                f_4();
+            } else if (v == "7") {
+                $("#name_4").css('display', 'block');
+                $("#count_4").css('display', 'block');
+                $("#pin_4").css('display', 'block');
+                $("#att_4_1").css('display', 'block');
+                $("#att_v_4_1").css('display', 'block');
+                $("#att_4_2").css('display', 'block');
+                $("#att_v_4_2").css('display', 'block');
+                $("#att_4_3").css('display', 'block');
+                $("#att_v_4_3").css('display', 'block');
+                $("#c4").css('display', 'block');
+                $("#n4").css('display', 'block');
+                $("#p4").css('display', 'block');
+                $("#table4").css('display', 'block');
+                e_4();
+            }
+        });
+
+        $("#m_5").change(function () {
+            reset_m_v_5();
+            var v = $("#m_5").find("option:selected").val();
+            if (v == "3" || v == "1" || v == "5" || v == "8" || v == "9" || v == "10" || v == "13" || v == "14") {
+                $("#count_5").css('display', 'block');
+                $("#c5").css('display', 'block');
+            } else if (v == "6") {
+                $("#name_5").css('display', 'block');
+                $("#count_5").css('display', 'block');
+                $("#c5").css('display', 'block');
+                $("#n5").css('display', 'block');
+                p_5();
+            } else if (v == "12") {
+                $("#name_5").css('display', 'block');
+                $("#count_5").css('display', 'block');
+                $("#c5").css('display', 'block');
+                $("#n5").css('display', 'block');
+                f_5();
+            } else if (v == "7") {
+                $("#name_5").css('display', 'block');
+                $("#count_5").css('display', 'block');
+                $("#pin_5").css('display', 'block');
+                $("#att_5_1").css('display', 'block');
+                $("#att_v_5_1").css('display', 'block');
+                $("#att_5_2").css('display', 'block');
+                $("#att_v_5_2").css('display', 'block');
+                $("#att_5_3").css('display', 'block');
+                $("#att_v_5_3").css('display', 'block');
+                $("#c5").css('display', 'block');
+                $("#n5").css('display', 'block');
+                $("#p5").css('display', 'block');
+                $("#table5").css('display', 'block');
+                e_5();
+            }
+        });
+
+
+    </script>
+
+
+    <script type="text/javascript">
+
+        //绑定第一个下拉选择事件
+        $("#name_1").change(function () {
+            n1();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function n1(obj) {
+            $("#pin_1").empty(); //清空第二个下拉框数据
+            var s = $("#m_1").find("option:selected").val();
+            var sv = $("#name_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            if (s == "7") {
+                $.ajax({
+                    url: "/Resource/AjaxPin1?id=" + sv, //mvc请求地址
+                    type: "get", //ajax请求类型
+                    dataType: "json", //请求返还数据格式
+                    success: function (r) { //ajax请求成功数据处理
+                        for (var n = 0; n < r.length; n++) {
+                            var v = r[n].grade;
+                            //var name = r[n].name;
+                            $("#pin_1").append("<option value='" + v + "'>" + v + "</option>"); //添加一项option
+                        }
+                    }
+                });
+            }
+        }
+
+        //绑定第一个下拉选择事件
+        $("#name_2").change(function () {
+            n2();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function n2(obj) {
+            $("#pin_2").empty(); //清空第二个下拉框数据
+            var s = $("#m_2").find("option:selected").val();
+            var sv = $("#name_2").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            if (s == "7") {
+                $.ajax({
+                    url: "/Resource/AjaxPin1?id=" + sv, //mvc请求地址
+                    type: "get", //ajax请求类型
+                    dataType: "json", //请求返还数据格式
+                    success: function (r) { //ajax请求成功数据处理
+                        for (var n = 0; n < r.length; n++) {
+                            var v = r[n].grade;
+                            //var name = r[n].name;
+                            $("#pin_2").append("<option value='" + v + "'>" + v + "</option>"); //添加一项option
+                        }
+                    }
+                });
+            }
+        }
+
+        //绑定第一个下拉选择事件
+        $("#name_3").change(function () {
+            n3();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function n3(obj) {
+            $("#pin_3").empty(); //清空第二个下拉框数据
+            var s = $("#m_3").find("option:selected").val();
+            var sv = $("#name_3").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            if (s == "7") {
+                $.ajax({
+                    url: "/Resource/AjaxPin1?id=" + sv, //mvc请求地址
+                    type: "get", //ajax请求类型
+                    dataType: "json", //请求返还数据格式
+                    success: function (r) { //ajax请求成功数据处理
+                        for (var n = 0; n < r.length; n++) {
+                            var v = r[n].grade;
+                            //var name = r[n].name;
+                            $("#pin_3").append("<option value='" + v + "'>" + v + "</option>"); //添加一项option
+                        }
+                    }
+                });
+            }
+        }
+
+        //绑定第一个下拉选择事件
+        $("#name_4").change(function () {
+            n4();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function n4(obj) {
+            $("#pin_4").empty(); //清空第二个下拉框数据
+            var s = $("#m_4").find("option:selected").val();
+            var sv = $("#name_4").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            if (s == "7") {
+                $.ajax({
+                    url: "/Resource/AjaxPin1?id=" + sv, //mvc请求地址
+                    type: "get", //ajax请求类型
+                    dataType: "json", //请求返还数据格式
+                    success: function (r) { //ajax请求成功数据处理
+                        for (var n = 0; n < r.length; n++) {
+                            var v = r[n].grade;
+                            //var name = r[n].name;
+                            $("#pin_4").append("<option value='" + v + "'>" + v + "</option>"); //添加一项option
+                        }
+                    }
+                });
+            }
+        }
+
+        //绑定第一个下拉选择事件
+        $("#name_5").change(function () {
+            n5();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function n5(obj) {
+            $("#pin_5").empty(); //清空第二个下拉框数据
+            var s = $("#m_5").find("option:selected").val();
+            var sv = $("#name_5").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            if (s == "7") {
+                $.ajax({
+                    url: "/Resource/AjaxPin1?id=" + sv, //mvc请求地址
+                    type: "get", //ajax请求类型
+                    dataType: "json", //请求返还数据格式
+                    success: function (r) { //ajax请求成功数据处理
+                        for (var n = 0; n < r.length; n++) {
+                            var v = r[n].grade;
+                            //var name = r[n].name;
+                            $("#pin_5").append("<option value='" + v + "'>" + v + "</option>"); //添加一项option
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+
+
+}

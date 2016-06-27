@@ -1,0 +1,88 @@
+﻿@model TGM.API.Entity.Model.User
+@{
+    ViewBag.Title = "账号注册";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("Register", "System", FormMethod.Post))
+                    {
+                        <input type="hidden"  id="pid" name="pid" value="@Model.pid" />
+                        <div class="control-group success">
+                            <label class="control-label">账号权限</label>
+                            <div class="controls">
+                                <select class="input-xlarge" tabindex="1" name="role_type" id="role_type">
+                                    @if (Model.role == 10000)
+                                    {
+                                        <option value="10000">开发商权限</option>
+                                    }
+                                    <option value="1000">联运方运营权限</option>
+                                    <option value="0">客服权限</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("账号")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="role_name" name="role_name" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label">@Html.Label("密码")</label>
+                            <div class="controls">
+                                <input type="password" class="input-xlarge" id="role_password" name="role_password" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label">@Html.Label("确认密码")</label>
+                            <div class="controls">
+                                <input type="password" class="input-xlarge" id="role_confirmpassword" name="role_confirmpassword" />
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">注册</button>
+                            <a type="button" class="btn" href="javascript: history.go(-1)">取消</a>
+                        </div>
+
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {}
+
+

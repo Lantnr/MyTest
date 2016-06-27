@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "平台信息编辑";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using TGM.API.Entity.Model;
+@model TGM.API.Entity.Model.Platform
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("PlatformEdit", "System", FormMethod.Post))
+                    {
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("平台名称")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="platfrom_name" name="platfrom_name" value="@Model.name" />
+                                <input type="hidden" class="input-xlarge" id="platform_id" name="platform_id" value="@Model.id" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("令牌")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="platform_token" readonly="readonly" name="platform_token" value="@Model.token" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("加密字符串")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="platform_encrtpy" name="platform_encrtpy" value="@Model.encrypt" />
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">确认</button>
+                            <a type="button" class="btn" href="javascript: history.go(-1)">取消</a>
+                        </div>
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {}
+
+

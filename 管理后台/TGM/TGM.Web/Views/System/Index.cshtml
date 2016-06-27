@@ -1,0 +1,98 @@
+﻿@using TGM.API.Entity.Model;
+
+@model  PagerQuery<PagerInfo, List<Platform>>
+
+@{
+    ViewBag.Title = "平台管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = ViewBag.user as User;
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN EXAMPLE TABLE widget-->
+            <div class="widget orange">
+                <div class="widget-title">
+                    <h4><i class="icon-reorder"></i>@ViewBag.Title</h4>
+                    <span class="tools">
+                        <a href="javascript:;" class="icon-chevron-down"></a>
+                    </span>
+                </div>
+                <div class="widget-body success">
+                    <div>
+                        <div class="clearfix">
+                            <div class="btn-group">
+                                <a href="~/System/Platform" class="btn btn-success"><i class="icon-plus"></i> 创建新平台</a>
+                            </div>
+                        </div>
+                        <div class="space15"></div>
+                        @if (ViewBag.Error < 0)
+                        {
+                            <div class="alert alert-error">
+                                <button class="close" data-dismiss="alert">×</button>
+                                <center> @ViewBag.Message</center>
+                            </div>
+                        }
+                        <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>平台名称</th>
+                                    <th>令牌</th>
+                                    <th>加密字符串</th>
+                                    <th>创建时间</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in @Model.EntityList)
+                                {
+                                    <tr class="">
+                                        <td>@item.id</td>
+                                        <td>@item.name</td>
+                                        <td>@item.token</td>
+                                        <td>@item.encrypt</td>
+                                        <td>
+                                            @{
+                                    var dt = new DateTime(item.createtime);
+                                            }
+                                            @dt
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-small btn-success" href="~/System/RegisterServer">
+                                                <i class="icon-plus icon-white"></i>新增服务器
+                                            </a>
+                                            <a class="btn btn-small btn-danger" href="~/System/DeletePlatform/@item.id">
+                                                <i class="icon-remove icon-white"></i>
+                                                删除
+                                            </a>
+                                            @if (user.role == 10000 || user.role == 1000)
+                                            {
+                                                <a class="btn btn-small btn-primary" href="~/System/PlatformEdit/@item.id">
+                                                    <i class="icon-pencil icon-white"></i>
+                                                    编辑
+                                                </a>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <div class="row-fluid">
+                            @Html.ShowPageNavigate(Model.Pager.CurrentPageIndex, Model.Pager.PageSize, Model.Pager.RecordCount)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE widget-->
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {}

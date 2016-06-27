@@ -1,0 +1,205 @@
+﻿@using Microsoft.Ajax.Utilities
+@using TGM.API.Entity.Model
+
+@{
+    ViewBag.Title = "申请列表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var platforms = ViewBag.Platform as List<Platform>;
+    var resource = ViewBag.Resource as List<Resource>;
+
+}
+
+@section css {}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="~/Home">首页</a>
+                    <span class="divider">/</span>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            @if (ViewBag.Error < 0)
+            {
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">×</button>
+                    <center> @ViewBag.Message</center>
+                </div>
+            }
+            <div class="widget green">
+                <div class="widget-title">
+                    <h4><i class="icon-reorder"></i>@ViewBag.Title</h4>
+                    <span class="tools">
+                        <a href="javascript:;" class="icon-chevron-down"></a>
+                    </span>
+                </div>
+                <div class="widget-body form-horizontal">
+                    <div class="nicescroll-rails" style="overflow: hidden; outline: none;" tabindex="5001">
+                        @using (Html.BeginForm("Approval", "Resource", FormMethod.Post))
+                        {
+                            <table class="table table-bordered" class="table table-striped table-hover table-bordered" id="editable-sample">
+                                <tbody>
+                                    <tr>
+                                        <td>指定平台</td>
+                                        <td>
+                                            <select class="input-medium" data-placeholder="Choose a Category" tabindex="1" name="platform" id="platform">
+                                                <option value="">请选择</option>
+                                                @foreach (var item in platforms)
+                                                {
+                                                    <option value="@item.id">@item.name</option>
+                                                }
+                                            </select>
+                                        </td>
+                                        <td>服务器</td>
+                                        <td>
+                                            <select class="input-medium" data-placeholder="Choose a Category" tabindex="1" name="server" id="server"></select>
+                                        </td>
+                                        <td>状态</td>
+                                        <td>
+                                            <select class="input-medium" data-placeholder="Choose a Category" tabindex="1" name="type" id="type">
+                                                <option value="1">待审批</option>
+                                                <option value="2">审批通过已发放</option>
+                                                <option value="3">未通过</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="2"><button type="submit" class="btn btn-success"><i class="icon-ok"></i> 查询</button> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>平台</td>
+                                        <td>服务器</td>
+                                        <td>申请类型</td>
+                                        <td>申请时间</td>
+                                        <td>申请状态</td>
+                                        <td>申请原因</td>
+                                        <td>申请内容</td>
+                                        <td>操作</td>
+                                    </tr>
+                                    @if (resource.Any())
+                                    {
+                                        foreach (var item in resource)
+                                        {
+                                            <tr>
+                                                <td>@item.platform</td>
+                                                <td>@item.server</td>
+                                                @if (item.type == 1)
+                                                {
+                                                    <td>全服礼包</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        个人礼包
+                                                        <br/>
+                                                        @item.player
+                                                </td>
+                                                }
+
+                                                <td>@item.time</td>
+                                                @if (item.state == 1)
+                                                {
+                                                    <td>待审批</td>
+                                                }
+                                                else if (item.state == 2)
+                                                {
+                                                    <td>审批通过已发放</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>未通过</td>
+                                                }
+                                                <td>@item.content</td>
+                                                <td width="250">                                                  
+                                                    @if (item.goods != "")
+                                                    {
+                                                        <font>@item.goods</font>
+                                                    }
+
+
+                                                </td>
+                                                <td>
+                                                    @if (ViewBag.operation != null)
+                                                    {
+                                                        @ViewBag.operation;
+                                                    }
+                                                    @if (item.operation == null)
+                                                    {
+                                                        <a class="btn btn-small btn-danger" href="~/Resource/Update1/@item.id">
+                                                            <i class="icon-ok"></i>
+                                                            通过
+                                                        </a>
+                                                        <a class="btn btn-small btn-danger" href="~/Resource/Update2/@item.id">
+                                                            <i class="icon-remove icon-white"></i>
+                                                            拒绝
+                                                        </a>
+                                                        <a class="btn btn-small btn-danger" href="~/Resource/Delete/@item.id">
+                                                            <i class="icon-remove icon-white"></i>
+                                                            删除
+                                                        </a>
+                                                    }
+                                                    else
+                                                    {
+                                                        @item.operation;
+                                                        <a class="btn btn-small btn-danger" href="~/Resource/Delete/@item.id">
+                                                            <i class="icon-remove icon-white"></i>
+                                                            删除
+                                                        </a>
+                                                    }
+
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+
+                                </tbody>
+                            </table>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE CONTENT-->
+
+    </div>
+    <!-- END PAGE CONTENT-->
+    @section Scripts {
+        <script type="text/javascript">
+
+            //绑定第一个下拉选择事件
+            $("#platform").change(function () {
+                get_d_2();
+            });
+
+            //第一个下拉框选择后绑定第二个下拉框数据
+            function get_d_2(obj) {
+                $("#server").empty();                                  //清空第二个下拉框数据
+                var sv = $("#platform").find("option:selected").val();   //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+                $.ajax({
+                    url: "/Common/AjaxServer?id=" + sv, //mvc请求地址
+                    type: "get",                    //ajax请求类型
+                    dataType: "json",               //请求返还数据格式
+                    success: function (r) {         //ajax请求成功数据处理
+                        for (var n = 0; n < r.length; n++) {
+                            var v = r[n].id;
+                            var name = r[n].name;
+                            $("#server").append("<option value='" + v + "'>" + name + "</option>");  //添加一项option
+                        }
+                    }
+                });
+            }
+
+        </script>
+    }

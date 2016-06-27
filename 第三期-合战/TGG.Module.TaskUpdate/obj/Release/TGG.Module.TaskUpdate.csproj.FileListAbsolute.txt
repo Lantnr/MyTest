@@ -1,0 +1,5 @@
+E:\Bin\TGG\Release\TGG.Module.TaskUpdate.dll
+E:\Bin\TGG\Release\TGG.Module.TaskUpdate.pdb
+E:\192.168.1.254\TGG\第三期-合战\TGG.Module.TaskUpdate\obj\Release\TGG.Module.TaskUpdate.dll
+E:\192.168.1.254\TGG\第三期-合战\TGG.Module.TaskUpdate\obj\Release\TGG.Module.TaskUpdate.pdb
+E:\192.168.1.254\TGG\第三期-合战\TGG.Module.TaskUpdate\obj\Release\TGG.Module.TaskUpdate.csprojResolveAssemblyReference.cache

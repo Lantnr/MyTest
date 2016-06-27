@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Task.dll
+E:\Bin\TGG\Debug\TGG.Module.Task.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Task\obj\Debug\TGG.Module.Task.csprojResolveAssemblyReference.cache
+E:\192.168.1.254\TGG\第二期\TGG.Module.Task\obj\Debug\TGG.Module.Task.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Task\obj\Debug\TGG.Module.Task.pdb

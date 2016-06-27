@@ -1,0 +1,251 @@
+﻿@using TGM.API.Entity.Model
+
+@{
+    ViewBag.Title = "太阁后台";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@{
+    var error = ViewBag.error;
+    var platforms = ViewBag.Platform as List<Platform>;
+}
+
+
+@section css {
+
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                控制台
+            </h3>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="widget">
+                <div class="widget-body">
+                    <!--BEGIN METRO STATES-->
+                    <div class="clearfix span12">
+                        <div class="control-group success span2">
+                            <select class="input-large" tabindex="1" name="d_1" id="d_1">
+                                <option value="0">--请选择--</option>
+                                @foreach (var item in platforms)
+                                {
+                                    <option value="@item.id">@item.name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="control-group success span3">
+                            <span class="span1"></span>
+                            <label class="control-label span3">服务器</label>
+                            <div class="controls controls-row span8">
+                                <select class="input-large" tabindex="1" name="d_2" id="d_2">
+                                    <option value="0">全部</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group success span2">
+                            <a class="btn btn-small btn-success" id="search_record"><i class="icon-search icon-white"></i> 查询</a>
+                        </div>
+                    </div>
+                    <!--END METRO STATES-->
+                    <!--BEGIN ECHARTS-->
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <!-- BEGIN CHART PORTLET-->
+                            <div id="chart_payler" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
+                            <!-- END CHART PORTLET-->
+                        </div>
+                        <div class="span6">
+                            <!-- BEGIN CHART PORTLET-->
+                            <div id="chart_pay" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
+                            <!-- END CHART PORTLET-->
+                        </div>
+                    </div>
+                    <!--END ECHARTS-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {
+    <script src="~/echarts/echarts.js"></script>
+    <script type="text/javascript">
+        var chart_payler, chart_pay;
+        require.config({
+            paths: {
+                echarts: './echarts'
+            }
+        });
+        require(
+            [
+                'echarts',
+                'echarts/chart/bar',
+                'echarts/chart/line',
+                'echarts/chart/pie'
+            ],
+            function(ec) {
+                //--- 折柱 ---
+                chart_payler = ec.init(document.getElementById('chart_payler'));
+                chart_payler.setOption({
+                    color: ['#63B8FF'],
+                    title: {
+                        text: '服务器玩家统计',
+                        subtext: '今日',
+                        textStyle: { color: '#63B8FF' },
+                        subtextStyle: { color: '#63B8FF' }
+                    },
+                    tooltip: { trigger: 'axis' },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: { show: true },
+                            dataView: { show: true, readOnly: false },
+                            magicType: { show: true, type: ['line', 'bar'] },
+                            saveAsImage: { show: true }
+                        }
+                    },
+                    calculable: true,
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: ['在线人数', '今日最高在线人数', '今日注册人数', '今日登陆人数']
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            splitArea: { show: true }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '显示数据',
+                            type: 'bar',
+                            itemStyle: { normal: { label: { show: true, position: 'top' } } },
+                            data: game_data
+                        }
+                    ],
+                    
+                });
+
+                // ---  ---
+                chart_pay = ec.init(document.getElementById('chart_pay'));
+                chart_pay.setOption({
+                    color: ['#458B00'],
+                    title: {
+                        text: '充值统计',
+                        subtext: '今日',
+                        textStyle: { color: '#458B00' },
+                        subtextStyle: { color: '#458B00' }
+                    },
+                    tooltip: { trigger: 'axis' },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: { show: true },
+                            dataView: { show: true, readOnly: false },
+                            magicType: { show: true, type: ['line', 'bar'] },
+                            saveAsImage: { show: true }
+                        }
+                    },
+                    calculable: true,
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: ['今日充值人数', '今日充值次数', '今日充值', '月充值']
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            splitArea: { show: true }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '显示数据',
+                            type: 'bar',
+                            itemStyle: { normal: { label: { show: true, position: 'top' } } },
+                            data: pay_data
+                        }
+                    ]
+                });
+                // ---  ---
+            });
+        var game_data = [0, 0, 0, 0];
+        var pay_data = [0, 0, 0, 0];
+        $("#search_record").click(function() {
+            var sid = $("#d_2").find("option:selected").val();
+            $.ajax({
+                url: "/Home/RealTimeGame?sid=" + sid, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function(r) { //ajax请求成功数据处理
+                    game_data = r.server;
+                    chart_payler.setOption({
+                        series: [
+                            {
+                                name: '显示数据',
+                                type: 'bar',
+                                itemStyle: { normal: { label: { show: true, position: 'top' } } },
+                                data: game_data
+                            }
+                        ]
+                    });
+                    pay_data = r.pay;
+                    chart_pay.setOption({
+                        series: [
+                            {
+                                name: '显示数据',
+                                type: 'bar',
+                                itemStyle: { normal: { label: { show: true, position: 'top' } } },
+                                data: pay_data
+                            }
+                        ]
+                    });
+                    //
+                }
+            });
+        });
+
+        //绑定第一个下拉选择事件
+        $("#d_1").change(function() {
+            get_d_2();
+        });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function get_d_2() {
+            $("#d_2").empty(); //清空第二个下拉框数据
+            var sv = $("#d_1").find("option:selected").val(); //获取第一个下拉框选择内容 .val():下拉框value值 .text():下拉框显示值
+            $.ajax({
+                url: "/Common/AjaxServer?id=" + sv, //mvc请求地址
+                type: "get", //ajax请求类型
+                dataType: "json", //请求返还数据格式
+                success: function(r) { //ajax请求成功数据处理
+                    for (var n = 0; n < r.length; n++) {
+                        var v = r[n].id;
+                        var name = r[n].name;
+                        $("#d_2").append("<option value='" + v + "'>" + name + "</option>"); //添加一项option
+                    }
+                }
+            });
+        }
+
+    </script>
+}

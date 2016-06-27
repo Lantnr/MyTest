@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Timer.dll
+E:\Bin\TGG\Debug\TGG.Module.Timer.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Timer\obj\Debug\TGG.Module.Timer.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Timer\obj\Debug\TGG.Module.Timer.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Timer\obj\Debug\TGG.Module.Timer.csprojResolveAssemblyReference.cache

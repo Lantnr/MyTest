@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "密码重置";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                密码重置
+            </h3>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    else if (ViewBag.Error == 0)
+                    {
+                        <div class="alert alert-success">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> 密码重置成功!</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("Reset", "System", FormMethod.Post))
+                    {
+                        <div class="control-group success">
+                            <label class="control-label" for="inputSuccess">@Html.Label("账号")</label>
+                            <div class="controls input-icon">
+                                @Html.Editor("Name")
+                                <span data-original-title="Success input!" class="input-success tooltips">
+                                    <i class="icon-ok"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="control-group success">
+                            <label class="control-label">@Html.Label("旧密码")</label>
+                            <div class="controls input-icon">
+                                @Html.Password("OldPassWord")
+                                <span data-original-title="Success input!" class="input-success tooltips">
+                                    <i class="icon-ok"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="control-group error">
+                            <label class="control-label">@Html.Label("新密码")</label>
+                            <div class="controls input-icon">
+                                @Html.Password("NewPassWord")
+                                <span data-original-title="please write a valid email" class="input-error tooltips">
+                                    <i class="icon-exclamation-sign"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="control-group error">
+                            <label class="control-label">@Html.Label("确认密码")</label>
+                            <div class="controls input-icon">
+                                @Html.Password("ConfirmPassWord")
+                                <span data-original-title="please write a valid email" class="input-error tooltips">
+                                    <i class="icon-exclamation-sign"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">确定</button>
+                            <a type="button" class="btn" href="javascript: history.go(-1)">返回</a>
+                        </div>
+
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {}
+
+
+

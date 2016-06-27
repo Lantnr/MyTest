@@ -1,0 +1,163 @@
+﻿@{
+    ViewBag.Title = "玩家查询";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css{
+    <link href="~/css/pagination.css" rel="stylesheet" />
+}
+
+@{
+    var error = ViewBag.Error;
+}
+@if (error < 1)
+{
+    <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <div style="text-align: center;"> @ViewBag.Message</div>
+    </div>
+}
+
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <ul class="breadcrumb">
+            <li>
+                <a href="~/?Home">首页</a>
+                <span class="divider">/</span>
+                <a href="~/Record/Index">游戏服列表</a>
+            </li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label class="btn-small">查询方式 ：</label></td>
+            <td>
+                <label>
+                    <select class="input-large" tabindex="1" name="type" id="type">
+                        <option value="0">全部</option>
+                        <option value="1">玩家账号</option>
+                        <option value="2">玩家昵称</option>
+                    </select>
+                </label>
+            </td>
+            <td><label class="btn-small">查询值 ：</label></td>
+            <td><label><input size="16" type="text" value="" name="value" id="value"></label></td>
+            <td><label class="btn-small"><button class="btn btn-success btn-small" type="button" id="search">查询</button></label></td>
+        </tr>
+    </table>
+
+    <div class="btn-toolbar"></div>
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN BASIC PORTLET-->
+            <div class="widget green">
+                <div class="widget-title">
+                    <h4><i class="icon-reorder"></i> 玩家信息</h4>
+                    <span class="tools">
+                        <a href="javascript:;" class="icon-chevron-down"></a>
+                    </span>
+                </div>
+                <div class="widget-body">
+                    <table class="table table-hover" id="player_detail">
+                        <thead>
+                            <tr>
+                                <th>玩家昵称（账号）</th>
+                                <th>等级</th>
+                                <th>VIP</th>
+                                <th>身份</th>
+                                <th>金钱</th>
+                                <th>元宝</th>
+                                <th>累计充值金额</th>
+                                <th>最近一次登录时间</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="row-fluid" id="player_consume"></div>
+                </div>
+            </div>
+            <!-- END BASIC PORTLET-->
+        </div>
+    </div>
+</body>
+</html>
+
+@section Scripts
+{
+    <script src="~/js/jquery.pagination.js"></script>
+    <script type="text/javascript">
+
+        var sid = '@ViewBag.Sid';
+        var page = 0;
+        var size = 10;
+
+        get_search(page);
+
+        //翻页调用
+        function PageCallback(page) {
+            get_search(page);
+        }
+
+        $("#search").click(function () {
+            get_search(page);
+        });
+
+        //查询方法
+        function get_search(page) {
+            if (sid == 0) {
+                alert("请选择平台"); return;
+            }
+
+            var type = $("#type").find("option:selected").val();
+            var value = $("#value").val();
+
+            $.ajax({
+                url: "/Record/AjaxPlayer?sid=" + sid + "&type=" + type + "&value=" + value + "&page=" + page + "&size=" + size,
+                type: "get",
+                dataType: "json",
+                success: function (r) {
+                    $("#player_detail tbody").empty();
+                    if (r.length > 0) return;
+
+                    var players = r.Players;
+                    for (var n = 0; n < players.length; n++) {
+                        var _html = "<tr>";
+                        _html += "<td>" + players[n].name + "(" + players[n].code + ")" + "</td>";
+                        _html += "<td>" + players[n].level + "</td>";
+                        _html += "<td>" + players[n].vip + "</td>";
+                        _html += "<td>" + players[n].identity + "</td>";
+                        _html += "<td>" + players[n].coin + "</td>";
+                        _html += "<td>" + players[n].gold + "</td>";
+                        _html += "<td>" + players[n].vip_gold + "</td>";
+                        _html += "<td>" + players[n].login_time + "</td>";
+                        _html += "</tr>";
+                        $("#player_detail tbody").append(_html);
+                    }
+                    var p = r.Pager;
+                    size = p.PageSize;
+                    page = p.CurrentPageIndex;
+
+                    $("#player_consume").pagination(p.RecordCount, {
+                        callback: PageCallback,
+                        prev_text: '上一页',
+                        next_text: '下一页',
+                        items_per_page: size, //显示条数
+                        num_display_entries: 5, //连续分页主体部分分页条目数
+                        current_page: page, //当前页索引
+                        num_edge_entries: 3 //两侧首尾分页条目数
+                    });
+                }
+            });
+        }
+    </script>
+}

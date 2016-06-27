@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD106589-D026-4AF2-8E42-3C8A701E8F79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGG.Resources</RootNamespace>
+    <AssemblyName>TGG.Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\TGG\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\TGG\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Solution Items\TGGAssemblyInfo.cs">
+      <Link>Properties\TGGAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArenaRankingReward.json" />
+    <None Include="Resources\BuildingReward.json" />
+    <None Include="Resources\BuildProbability.json" />
+    <None Include="Resources\BusinessArea.json" />
+    <None Include="Resources\BusinessCarPart.json" />
+    <None Include="Resources\BusinessCity.json" />
+    <None Include="Resources\BusinessGoods.json" />
+    <None Include="Resources\BusinessGoodsPrice.json" />
+    <None Include="Resources\BuyPower.json" />
+    <None Include="Resources\CollectGoodsBuild.json" />
+    <None Include="Resources\CollectGoodsSiege.json" />
+    <None Include="Resources\CopyFamePass.json" />
+    <None Include="Resources\DaMingLog.json" />
+    <None Include="Resources\EntryPointSiege.json" />
+    <None Include="Resources\Equip.json" />
+    <None Include="Resources\EquipAttRate.json" />
+    <None Include="Resources\EquipRate.json" />
+    <None Include="Resources\FamilyBadge.json" />
+    <None Include="Resources\FamilyLevel.json" />
+    <None Include="Resources\FamilyLog.json" />
+    <None Include="Resources\FamilyPost.json" />
+    <None Include="Resources\FightSkill.json" />
+    <None Include="Resources\FightSkillEffect.json" />
+    <None Include="Resources\Identity.json" />
+    <None Include="Resources\LifeSkill.json" />
+    <None Include="Resources\LifeSkillEffect.json" />
+    <None Include="Resources\ModuleOpen.json" />
+    <None Include="Resources\modulequeue.xml" />
+    <None Include="Resources\Npc.json" />
+    <None Include="Resources\NpcArmy.json" />
+    <None Include="Resources\NpcBuild.json" />
+    <None Include="Resources\NpcHire.json" />
+    <None Include="Resources\NpcMonster.json" />
+    <None Include="Resources\NpcRole.json" />
+    <None Include="Resources\NpcSiege.json" />
+    <None Include="Resources\Prop.json" />
+    <None Include="Resources\RecruitRate.json" />
+    <None Include="Resources\RoleBornPoint.json" />
+    <None Include="Resources\RoleGroup.json" />
+    <None Include="Resources\RoleHome.json" />
+    <None Include="Resources\RoleInfo.json" />
+    <None Include="Resources\RoleLvUpdate.json" />
+    <None Include="Resources\RoleTitle.json" />
+    <None Include="Resources\Rule.json" />
+    <None Include="Resources\Scene.json" />
+    <None Include="Resources\Siege.json" />
+    <None Include="Resources\SiegeBossReward.json" />
+    <None Include="Resources\SiegeReward.json" />
+    <None Include="Resources\Spirit.json" />
+    <None Include="Resources\StealAddProb.json" />
+    <None Include="Resources\TaskMain.json" />
+    <None Include="Resources\TaskNpc.json" />
+    <None Include="Resources\TaskRetainers.json" />
+    <None Include="Resources\TaskVocation.json" />
+    <None Include="Resources\TaskVocationProb.json" />
+    <None Include="Resources\TowerEloquence.json" />
+    <None Include="Resources\TowerEnemy.json" />
+    <None Include="Resources\TowerGame.json" />
+    <None Include="Resources\TowerPass.json" />
+    <None Include="Resources\TowerTea.json" />
+    <None Include="Resources\Train.json" />
+    <None Include="Resources\Vip.json" />
+    <None Include="Resources\Vocation.json" />
+    <None Include="Resources\YiJiangTao.json" />
+    <None Include="Resources\Yin.json" />
+    <None Include="Resources\YinEffect.json" />
+    <None Include="Resources\YouYiYuan.json" />
+    <None Include="Resources\YouYiYuanReward.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\module.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tgg_view.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

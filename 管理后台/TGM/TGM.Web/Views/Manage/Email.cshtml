@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "邮箱功能";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var error = ViewBag.Error;
+}
+@if (error < 1)
+{
+    <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <center> @ViewBag.Message</center>
+    </div>
+}
+
+<h2>发送系统邮件</h2>
+@using (Html.BeginForm("Email", "Manage", FormMethod.Post))
+{
+    <div class="control-group">
+        <label class="control-label"> 输入标题</label>
+        <div class="controls">
+            <input type="text" placeholder="标题" class="input-large" id="title" name="title">
+            <span class="help-inline"> </span>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">邮件内容</label>
+        <div class="controls">
+            <textarea class="input-large" rows="3" name="content"></textarea>
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn blue"><i class="icon-ok"></i> 确定</button>
+    </div>
+}
+
+
+
+

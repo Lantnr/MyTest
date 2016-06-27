@@ -1,0 +1,206 @@
+﻿@using TGM.API.Entity.Model
+
+@model  PagerQuery<PagerInfo, List<GmManage>>
+@{
+    ViewBag.Title = "GM操作记录";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var platforms = ViewBag.Platform as List<Platform>;
+    var role = ViewBag.Role;
+}
+
+@{
+    var error = ViewBag.Error;
+}
+@if (error < 1)
+{
+    <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <center> @ViewBag.Message</center>
+    </div>
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="~/Home">首页</a>
+                    <span class="divider">/</span>
+                    <a href="~/GM/RecordList">GM操作记录</a>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <!-- END PAGE CONTENT-->
+</div>
+<!-- END PAGE CONTENT-->
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("RecordList", "GM", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><label class="btn-small">平台</label></td>
+                <td>
+                    <select class=" input-medium" tabindex="1" name="platform" id="platform">
+                        @if (role == 10000)
+                        {
+                            <option value="0">--全部--</option>
+                        }
+                        else
+                        {
+                            <option>--请选择平台--</option>
+                        }
+                        @foreach (var item in platforms)
+                        {
+                            <option value="@item.id">@item.name</option>
+                        }
+                    </select>
+                </td>
+                <td><label class="btn-small">服务器</label></td>
+                <td>
+                    <select class="input-medium" tabindex="1" name="server" id="server"></select>
+                </td>
+                <td><label class="btn-small">状态</label></td>
+                <td>
+                    <select class="input-medium" tabindex="1" name="state_type" id="state_type">
+                        <option value="1">冻结</option>
+                        <option value="2">封号</option>
+                    </select>
+                </td>
+
+                <td width="70px"></td>
+                <td>
+                    <select class="input-medium" tabindex="1" name="user_type" id="user_type">
+                        <option value="1">玩家账号</option>
+                        <option value="2">玩家名称</option>
+                    </select>
+                </td>
+                <td>
+                    <form class="hidden-phone">
+                        <div class="input-append search-input-area">
+                            <input class="text" id="number" type="text" name="value" title="查询指定玩家请输入信息">
+                            <button class="btn" type="submit" id="search"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn-toolbar"></div>
+
+        <div class="row-fluid">
+            <div class="span12">
+                <!-- BEGIN EXAMPLE TABLE widget-->
+                <div class="widget green">
+                    <div class="widget-title">
+                        <h4><i class="icon-reorder"></i>@ViewBag.Title</h4>
+                        <span class="tools">
+                            <a href="javascript:;" class="icon-chevron-down"></a>
+                        </span>
+                    </div>
+                    <div class="widget-body">
+                        <div>
+                            <div class="clearfix">
+                            </div>
+                            <div class="space15"></div>
+                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                <thead>
+                                    <tr>
+                                        <th>类型</th>
+                                        <th>服务器</th>
+                                        <th>玩家昵称（账号）</th>
+                                        <th>处罚情况</th>
+                                        <th>时间</th>
+                                        <th>操作人</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in @Model.EntityList)
+                                    {
+                                        <tr class="">
+                                            @if (@item.state == 1)
+                                            {
+                                                <td>冻结</td>
+                                            }
+                                            else
+                                            {
+                                                <td>封号</td>
+                                            }
+                                            <td>@item.platform_name _@item.server_name</td>
+                                            <td>@item.player_name（@item.player_code）</td>
+                                            <td>@item.describe</td>
+                                            <td>@item.createtime</td>
+                                            <td>@item.operate</td>
+                                            @if (@item.state == 1)
+                                            {
+                                                <td><a class="btn btn-success" type="button" href="~/GM/RescueGm/@item.id"><i class="icon-ok icon-white"></i> 解除冻结</a></td>
+                                            }
+                                            else
+                                            {
+                                                <td><a class="btn btn-success" type="button" href="~/GM/RescueGm/@item.id"><i class="icon-ok icon-white"></i> 解除封号</a></td>
+                                            }
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="row-fluid">
+                                @Html.ShowPageNavigate(Model.Pager.CurrentPageIndex, Model.Pager.PageSize, Model.Pager.RecordCount)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END EXAMPLE TABLE widget-->
+            </div>
+        </div>
+    }
+</body>
+</html>
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        //绑定选择平台下来列表事件
+        $("#platform").change(function () { get_server(); });
+
+        //第一个下拉框选择后绑定第二个下拉框数据
+        function get_server() {
+            $("#server").empty();
+            var sv = $("#platform").find("option:selected").val();
+            if (sv == 0) {
+                $("#server").empty();
+            } else {
+                $.ajax({
+                    url: "/Common/AjaxServer?id=" + sv,
+                    type: "get",
+                    dataType: "json",
+                    success: function (r) {
+                        $("#server").append("<option value='" + 0 + "'>" + '所有服务器' + "</option>");
+
+                        for (var n = 0; n < r.length; n++) {
+                            var v = r[n].id;
+                            var name = r[n].name;
+                            $("#server").append("<option value='" + v + "'>" + name + "</option>");
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+}

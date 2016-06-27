@@ -1,0 +1,231 @@
+﻿#Software: iisexpress
+#ProcessID: 9088
+#AppDomain: /LM/W3SVC/2/ROOT-1-130664561010405960
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-23
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+11:08:26.617 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+11:08:26.646 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+11:08:26.646 1 N - 使用数据库方式：独占，加大缓存权重
+11:08:26.646 1 N - 一级缓存：关闭缓存
+11:08:26.696 1 N - [DB]GetSchema("MetaDataCollections")
+11:08:26.726 1 N - [DB]GetSchema("ReservedWords")
+11:08:26.740 1 N - [DB]GetSchema("Databases", "tgm")
+11:08:26.752 1 N - [DB]GetSchema("Tables")
+11:08:26.827 1 N - [DB]GetSchema("Columns")
+11:08:26.842 1 N - [DB]GetSchema("Indexes")
+11:08:26.845 1 N - [DB]GetSchema("IndexColumns")
+11:08:26.852 1 N - [DB]GetSchema("DataTypes")
+11:08:26.900 1 N - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:08:26.906 1 N - 开始检查连接[DB/SqlServer]的数据库架构……
+11:08:26.977 1 N - [DB]的所有实体类（9个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_hours,tgm_record_pay,tgm_resource,tgm_role,tgm_server
+11:08:26.977 1 N - [DB]需要检查架构的实体类（9个）：tgm_gm,tgm_notice,tgm_platform,tgm_record_game,tgm_record_hours,tgm_record_pay,tgm_resource,tgm_role,tgm_server
+11:08:26.978 1 N - DB待检查表架构的实体个数：8
+11:08:27.021 1 N - 检查连接[DB/SqlServer]的数据库架构耗时115ms
+11:08:27.021 1 N - Select Top 1 * From tgm_platform Where id=0 Order By id Desc
+11:08:27.028 1 N - Select Top 1 * From tgm_role Where id=0 Order By id Desc
+11:08:27.049 1 N - IF  EXISTS (SELECT * FROM sys.triggers WHERE object_id = OBJECT_ID(N'[trigger_pay_insert]'))
+DROP TRIGGER [trigger_pay_insert]
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[sp_pay]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [sp_pay]
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[sp_pay]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'
+CREATE PROCEDURE [sp_pay]
+@sid INT
+AS
+BEGIN
+	DECLARE @_begin_time BIGINT,@_taday_time BIGINT,@_next_time BIGINT,@_end_time BIGINT;
+	DECLARE @time_0 BIGINT,@time_31 BIGINT,@M_BEGIN BIGINT,@M_END BIGINT;
+	DECLARE @pay_count INT,@pay_number INT,@pay_taday INT,@pay_total INT,@pay_month INT;
+	SET @_taday_time=CAST(DATEDIFF(s,''1970-01-01 00:00:00'',GETDATE()) AS BIGINT) * 10000000 + 621355968000000000 
+	SET @_next_time=CAST(DATEDIFF(s,''1970-01-01 00:00:00'',GETDATE()+1) AS BIGINT) * 10000000 + 621355968000000000 
+	SET @_begin_time=(CAST(DATEDIFF(d,''1970-01-01 00:00:00'',DATEADD(s,(@_taday_time-621355968000000000)/ 10000000,''1970-01-01 00:00:00''))AS BIGINT) * 10000000*24*60*60 + 621355968000000000); 
+	SET @_end_time=(CAST(DATEDIFF(d,''1970-01-01 00:00:00'',DATEADD(s,(@_next_time-621355968000000000)/ 10000000,''1970-01-01 00:00:00''))AS BIGINT) * 10000000*24*60*60 + 621355968000000000); 		
+	SET @M_BEGIN=CAST(DATEDIFF(s,''1970-01-01 00:00:00'',DATEADD(D,-DAY(GETDATE())+1,GETDATE())) AS BIGINT) * 10000000 + 621355968000000000 
+	SET @time_0=(CAST(DATEDIFF(d,''1970-01-01 00:00:00'',DATEADD(s,(@M_BEGIN-621355968000000000)/ 10000000,''1970-01-01 00:00:00''))AS BIGINT) * 10000000*24*60*60 + 621355968000000000); 
+	SET @M_END=CAST(DATEDIFF(s,''1970-01-01 00:00:00'',DATEADD(D,-DAY(GETDATE()),DATEADD(M,1,GETDATE()))) AS BIGINT) * 10000000 + 621355968000000000 
+	SET @time_31=(CAST(DATEDIFF(d,''1970-01-01 00:00:00'',DATEADD(s,(@M_END-621355968000000000)/ 10000000,''1970-01-01 00:00:00''))AS BIGINT) * 10000000*24*60*60 + 621355968000000000); 
+	--今日充值人数
+	SELECT @pay_number=COUNT(*) FROM (SELECT DISTINCT [id] FROM [tgm_record_pay] WHERE  [sid]=@sid AND [createtime]>@_begin_time AND [createtime]<@_end_time) AS T
+	--今日充值次数
+	SELECT @pay_count=COUNT(*) FROM [tgm_record_pay] WHERE [sid]=@sid AND [createtime]>@_begin_time AND [createtime]<@_end_time	
+	--当天总充值
+	SELECT @pay_taday=SUM([amount])  FROM [tgm_record_pay] WHERE [sid]=@sid AND [createtime]>@_begin_time AND [createtime]<@_end_time
+	--总充值
+	SELECT @pay_total=SUM([amount])  FROM [tgm_record_pay] WHERE [sid]=@sid 	
+	--当月充值
+	SELECT @pay_month=SUM([amount])  FROM [tgm_record_pay] WHERE [sid]=@sid AND [createtime]>@M_BEGIN AND [createtime]<@M_END
+	IF @pay_taday IS NULL
+		SET @pay_taday=0;
+	IF @pay_total IS NULL
+		SET @pay_total=0;
+	IF @pay_month IS NULL
+		SET @pay_month=0;
+	SELECT @pay_count AS pay_count,@pay_number AS pay_number,@pay_taday AS pay_taday,@pay_total AS pay_total,@pay_month AS pay_month	
+END
+' 
+END
+
+IF NOT EXISTS (SELECT * FROM sys.triggers WHERE object_id = OBJECT_ID(N'[trigger_pay_insert]'))
+EXEC dbo.sp_executesql @statement = N'
+CREATE TRIGGER [trigger_pay_insert]
+   ON [tgm_record_pay]
+   AFTER  INSERT
+AS 
+BEGIN
+	DECLARE @sid INT, @amount INT,@createtime BIGINT,@ID BIGINT;
+	DECLARE @_begin_time BIGINT,@_taday_time BIGINT,@_next_time BIGINT,@_end_time BIGINT;
+	SET @_taday_time=CAST(DATEDIFF(s,''1970-01-01 00:00:00'',GETDATE()) AS BIGINT) * 10000000 + 621355968000000000 
+	SET @_next_time=CAST(DATEDIFF(s,''1970-01-01 00:00:00'',GETDATE()+1) AS BIGINT) * 10000000 + 621355968000000000 
+	SET @_begin_time=(CAST(DATEDIFF(d,''1970-01-01 00:00:00'',DATEADD(s,(@_taday_time-621355968000000000)/ 10000000,''1970-01-01 00:00:00''))AS BIGINT) * 10000000*24*60*60 + 621355968000000000); 
+	SET @_end_time=(CAST(DATEDIFF(d,''1970-01-01 00:00:00'',DATEADD(s,(@_next_time-621355968000000000)/ 10000000,''1970-01-01 00:00:00''))AS BIGINT) * 10000000*24*60*60 + 621355968000000000); 		
+	SELECT @sid =[sid], @amount = [amount],@createtime=[createtime] FROM inserted;
+	DECLARE @pay_count INT,@pay_number INT,@pay_taday INT,@pay_total INT,@pay_month INT;
+	--今日充值人数
+	SELECT @pay_number=COUNT(*) FROM (SELECT DISTINCT [id] FROM [tgm_record_pay] WHERE  [sid]=@sid AND [createtime]>@_begin_time AND [createtime]<@_end_time) AS T
+	--今日充值次数
+	SELECT @pay_count=COUNT(*) FROM [tgm_record_pay] WHERE [sid]=@sid AND [createtime]>@_begin_time AND [createtime]<@_end_time	
+	--当天总充值
+	SELECT @pay_taday=SUM([amount])  FROM [tgm_record_pay] WHERE [sid]=@sid AND [createtime]>@_begin_time AND [createtime]<@_end_time
+	--总充值
+	SELECT @pay_total=SUM([amount])  FROM [tgm_record_pay] WHERE [sid]=@sid 
+	DECLARE @time_0 BIGINT,@time_31 BIGINT,@M_BEGIN BIGINT,@M_END BIGINT;
+	SET @M_BEGIN=CAST(DATEDIFF(s,''1970-01-01 00:00:00'',DATEADD(D,-DAY(GETDATE())+1,GETDATE())) AS BIGINT) * 10000000 + 621355968000000000 
+	SET @time_0=(CAST(DATEDIFF(d,''1970-01-01 00:00:00'',DATEADD(s,(@M_BEGIN-621355968000000000)/ 10000000,''1970-01-01 00:00:00''))AS BIGINT) * 10000000*24*60*60 + 621355968000000000); 
+	SET @M_END=CAST(DATEDIFF(s,''1970-01-01 00:00:00'',DATEADD(D,-DAY(GETDATE()),DATEADD(M,1,GETDATE()))) AS BIGINT) * 10000000 + 621355968000000000 
+	SET @time_31=(CAST(DATEDIFF(d,''1970-01-01 00:00:00'',DATEADD(s,(@M_END-621355968000000000)/ 10000000,''1970-01-01 00:00:00''))AS BIGINT) * 10000000*24*60*60 + 621355968000000000); 
+	--当月充值
+	SELECT @pay_month=SUM([amount])  FROM [tgm_record_pay] WHERE [sid]=@sid AND [createtime]>@M_BEGIN AND [createtime]<@M_END
+	SET @pay_count+=1;
+	SELECT TOP 1 @ID=id FROM [tgm_record_hours] WHERE sid=@sid ORDER BY createtime DESC
+	UPDATE [tgm_record_hours] SET [pay_count]=@pay_count,[pay_number]=@pay_number,[pay_taday]=@pay_taday,[pay_total]=@pay_total,[pay_month]=@pay_month
+	WHERE [id]=@ID
+END
+' 
+
+11:08:27.085 1 N - 初始化数据库及脚本
+11:08:27.092 1 N - [tgm]GetSchema("MetaDataCollections")
+11:08:27.096 1 N - [tgm]GetSchema("ReservedWords")
+11:08:27.101 1 N - [tgm]GetSchema("Databases", "tgm")
+11:08:27.107 1 N - [tgm]GetSchema("Tables")
+11:08:27.145 1 N - [tgm]GetSchema("Columns")
+11:08:27.160 1 N - [tgm]GetSchema("Indexes")
+11:08:27.162 1 N - [tgm]GetSchema("IndexColumns")
+11:08:27.164 1 N - [tgm]GetSchema("DataTypes")
+11:08:27.178 1 N - 开始检查连接[tgm/SqlServer]的数据库架构……
+11:08:27.235 1 N - [tgm]的所有实体类（0个）：
+11:08:27.235 1 N - [tgm]需要检查架构的实体类（0个）：
+11:08:27.235 1 N - 检查连接[tgm/SqlServer]的数据库架构耗时57ms
+11:08:27.235 1 N - Select * From tgm_server Order By id Desc
+11:08:27.272 1 N - [7_1_DY-04]GetSchema("MetaDataCollections")
+11:08:27.275 1 N - [7_1_DY-04]GetSchema("ReservedWords")
+11:08:27.281 1 N - [7_1_DY-04]GetSchema("Databases", "tgg2")
+11:08:27.288 1 N - [7_1_DY-04]GetSchema("Tables")
+11:08:27.735 1 N - [7_1_DY-04]GetSchema("Columns")
+11:08:27.824 1 N - [7_1_DY-04]GetSchema("Indexes")
+11:08:27.829 1 N - [7_1_DY-04]GetSchema("IndexColumns")
+11:08:27.837 1 N - [7_1_DY-04]GetSchema("DataTypes")
+11:08:27.855 1 N - 开始检查连接[7_1_DY-04/SqlServer]的数据库架构……
+11:08:27.899 1 N - [7_1_DY-04]的所有实体类（0个）：
+11:08:27.899 1 N - [7_1_DY-04]需要检查架构的实体类（0个）：
+11:08:27.899 1 N - 检查连接[7_1_DY-04/SqlServer]的数据库架构耗时44ms
+11:08:27.899 1 N - Select Top 1 * From report_day Where  createtime >635575680000000000 and createtime<635576544000000000 Order By id Desc
+11:08:27.903 1 N - [StoredProcedure]sp_pay[Int32:@sid=7]
+11:08:27.911 1 N - 单服作业失败
+11:08:27.917 1 N - [6_4_DY-03]GetSchema("MetaDataCollections")
+11:08:27.920 1 N - [6_4_DY-03]GetSchema("ReservedWords")
+11:08:27.925 1 N - [6_4_DY-03]GetSchema("Databases", "tgg")
+11:08:27.933 1 N - [6_4_DY-03]GetSchema("Tables")
+11:08:28.236 1 N - [6_4_DY-03]GetSchema("Columns")
+11:08:28.325 1 N - [6_4_DY-03]GetSchema("Indexes")
+11:08:28.329 1 N - [6_4_DY-03]GetSchema("IndexColumns")
+11:08:28.337 1 N - [6_4_DY-03]GetSchema("DataTypes")
+11:08:28.353 1 N - 开始检查连接[6_4_DY-03/SqlServer]的数据库架构……
+11:08:28.396 1 N - [6_4_DY-03]的所有实体类（0个）：
+11:08:28.396 1 N - [6_4_DY-03]需要检查架构的实体类（0个）：
+11:08:28.396 1 N - 检查连接[6_4_DY-03/SqlServer]的数据库架构耗时43ms
+11:08:28.396 1 N - Select Top 1 * From report_day Where  createtime >635575680000000000 and createtime<635576544000000000 Order By id Desc
+11:08:28.399 1 N - [StoredProcedure]sp_pay[Int32:@sid=6]
+11:08:28.455 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime) Values(4, 6, N'DY-03', 4, 12, 0, 16, 5, 6, 2, 0, 0, 0, 1002000, 1002000, 635576081084012152);Select SCOPE_IDENTITY()
+11:08:28.472 1 N - [1_1_DY-02]GetSchema("MetaDataCollections")
+11:08:28.475 1 N - [1_1_DY-02]GetSchema("ReservedWords")
+11:08:28.481 1 N - [1_1_DY-02]GetSchema("Databases", "tg_test")
+11:08:28.488 1 N - [1_1_DY-02]GetSchema("Tables")
+11:08:28.637 1 N - [1_1_DY-02]GetSchema("Columns")
+11:08:28.735 1 N - [1_1_DY-02]GetSchema("Indexes")
+11:08:28.741 1 N - [1_1_DY-02]GetSchema("IndexColumns")
+11:08:28.753 1 N - [1_1_DY-02]GetSchema("DataTypes")
+11:08:28.775 1 N - 开始检查连接[1_1_DY-02/SqlServer]的数据库架构……
+11:08:28.835 1 N - [1_1_DY-02]的所有实体类（0个）：
+11:08:28.836 1 N - [1_1_DY-02]需要检查架构的实体类（0个）：
+11:08:28.836 1 N - 检查连接[1_1_DY-02/SqlServer]的数据库架构耗时60ms
+11:08:28.836 1 N - Select Top 1 * From report_day Where  createtime >635575680000000000 and createtime<635576544000000000 Order By id Desc
+11:08:28.837 1 N - [StoredProcedure]sp_pay[Int32:@sid=1]
+11:08:28.840 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime) Values(1, 1, N'DY-02', 3, 42, 0, 45, 4, 10, 5, 0, 0, 0, 34520, 34520, 635576081088381091);Select SCOPE_IDENTITY()
+11:08:37.009 7 W - [tgm]GetSchema("Tables")
+11:08:37.069 7 W - [tgm]GetSchema("Columns")
+11:08:37.083 7 W - [tgm]GetSchema("Indexes")
+11:08:37.085 7 W - [tgm]GetSchema("IndexColumns")
+11:08:37.088 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:08:37.090 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+11:08:37.097 7 W - Select * From tgm_platform Where id=1
+11:08:37.327 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:08:37.329 7 W - Select * From tgm_server Where  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:37.353 7 W - Select * From tgm_platform Where id=1
+11:08:37.354 7 W - Select * From tgm_platform Where id=1
+11:08:40.564 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:08:40.565 7 W - Select * From tgm_platform Order By  createtime desc
+11:08:41.439 13 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:08:41.440 13 W - Select * From tgm_server Order By id Desc
+11:08:41.444 13 W - [tgm]GetSchema("Tables")
+11:08:41.506 13 W - [tgm]GetSchema("Columns")
+11:08:41.520 13 W - [tgm]GetSchema("Indexes")
+11:08:41.523 13 W - [tgm]GetSchema("IndexColumns")
+11:08:41.526 13 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+11:08:41.528 13 W - Select Count(*) From tgm_record_pay
+11:08:41.530 13 W - Select Top 10 * From tgm_record_pay Order By id Desc
+11:08:41.532 13 W - Select * From tgm_platform Order By id Desc
+11:08:41.535 13 W - Select Top 1 * From tgm_server Where  name='DY-04' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:41.540 13 W - [7_1_DY-04]GetSchema("Tables")
+11:08:41.894 13 W - [7_1_DY-04]GetSchema("Columns")
+11:08:41.992 13 W - [7_1_DY-04]GetSchema("Indexes")
+11:08:41.996 13 W - [7_1_DY-04]GetSchema("IndexColumns")
+11:08:42.010 13 W - Select * From tg_user_login_log Order By id Desc
+11:08:42.013 13 W - Select Top 1 * From tgm_server Where  name='DY-03' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:42.080 13 W - Select * From tg_user_login_log Order By id Desc
+11:08:42.081 13 W - Select Top 1 * From tgm_server Where  name='DY-02' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:42.086 13 W - [1_1_DY-02]GetSchema("Tables")
+11:08:42.259 13 W - [1_1_DY-02]GetSchema("Columns")
+11:08:42.359 13 W - [1_1_DY-02]GetSchema("Indexes")
+11:08:42.365 13 W - [1_1_DY-02]GetSchema("IndexColumns")
+11:08:42.375 13 W - Select * From tg_user_login_log Order By id Desc
+11:08:46.234 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:08:46.235 12 W - Select * From tgm_server Order By id Desc
+11:08:46.236 12 W - Select Count(*) From tgm_record_pay
+11:08:46.238 12 W - Select * From (Select *, row_number() over(Order By id Desc) as rowNumber From tgm_record_pay) XCode_T1 Where rowNumber Between 11 And 20
+11:08:46.242 12 W - Select * From tgm_platform Order By id Desc
+11:08:46.244 12 W - Select Top 1 * From tgm_server Where  name='DY-04' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:46.245 12 W - Select * From tg_user_login_log Order By id Desc
+11:08:46.246 12 W - Select Top 1 * From tgm_server Where  name='DY-03' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:46.247 12 W - Select * From tg_user_login_log Order By id Desc
+11:08:46.248 12 W - Select Top 1 * From tgm_server Where  name='DY-02' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:46.249 12 W - Select * From tg_user_login_log Order By id Desc
+11:08:50.486 12 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+11:08:50.487 12 W - Select * From tgm_server Order By id Desc
+11:08:50.489 12 W - Select Count(*) From tgm_record_pay
+11:08:50.490 12 W - Select Top 10 * From tgm_record_pay Order By id Desc
+11:08:50.491 12 W - Select * From tgm_platform Order By id Desc
+11:08:50.493 12 W - Select Top 1 * From tgm_server Where  name='DY-04' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:50.494 12 W - Select * From tg_user_login_log Order By id Desc
+11:08:50.495 12 W - Select Top 1 * From tgm_server Where  name='DY-03' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:50.496 12 W - Select * From tg_user_login_log Order By id Desc
+11:08:50.497 12 W - Select Top 1 * From tgm_server Where  name='DY-02' AND  pid in  (select id from tgm_platform where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3') Order By id Desc
+11:08:50.498 12 W - Select * From tg_user_login_log Order By id Desc

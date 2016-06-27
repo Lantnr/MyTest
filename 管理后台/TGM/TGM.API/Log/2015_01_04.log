@@ -1,0 +1,136 @@
+﻿#Software: iisexpress
+#ProcessID: 7740
+#AppDomain: /LM/W3SVC/2/ROOT-1-130648104067249545
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-04
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+10:00:08.813 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+10:00:08.823 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+10:00:08.825 6 W - 使用数据库方式：独占，加大缓存权重
+10:00:08.825 6 W - 一级缓存：关闭缓存
+
+#Software: iisexpress
+#ProcessID: 7676
+#AppDomain: /LM/W3SVC/2/ROOT-1-130648122173673137
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-04
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+10:30:20.879 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+10:30:20.888 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+10:30:20.889 6 W - 使用数据库方式：独占，加大缓存权重
+10:30:20.889 6 W - 一级缓存：关闭缓存
+10:30:20.918 6 W - [DB]GetSchema("MetaDataCollections")
+10:30:20.926 6 W - [DB]GetSchema("ReservedWords")
+10:30:20.947 6 W - [DB]GetSchema("Databases", "tgm")
+10:30:21.028 6 W - [DB]GetSchema("Tables")
+10:30:21.133 6 W - [DB]GetSchema("Columns")
+10:30:21.156 6 W - [DB]GetSchema("Indexes")
+10:30:21.174 6 W - [DB]GetSchema("IndexColumns")
+10:30:21.207 6 W - [DB]GetSchema("DataTypes")
+10:30:21.277 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+10:30:21.279 6 W - 检查连接[DB/SqlServer]的数据库架构耗时2ms
+10:30:21.282 6 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+10:30:21.282 6 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+10:30:21.309 6 W - Select * From tgm_admin Where id=1
+10:30:21.508 9 W - [tgm]GetSchema("MetaDataCollections")
+10:30:21.511 9 W - [tgm]GetSchema("ReservedWords")
+10:30:21.517 9 W - [tgm]GetSchema("Databases", "tgm")
+10:30:21.522 9 W - [tgm]GetSchema("Tables")
+10:30:21.530 9 W - [tgm]GetSchema("Columns")
+10:30:21.535 9 W - [tgm]GetSchema("Indexes")
+10:30:21.536 9 W - [tgm]GetSchema("IndexColumns")
+10:30:21.538 9 W - [tgm]GetSchema("DataTypes")
+10:30:21.551 9 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+10:30:21.552 9 W - 检查连接[tgm/SqlServer]的数据库架构耗时0ms
+10:30:21.552 9 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+10:30:21.552 9 W - Select Top 1 * From tgm_server Where  name='' AND admin_id in (select id from tgm_admin where token='7e8ead4e-d03d-4c9d-8b22-b8f536c4026c') Order By id Desc
+10:30:21.555 9 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='7e8ead4e-d03d-4c9d-8b22-b8f536c4026c') Order By id Desc
+10:34:47.630 8 W - SET NOCOUNT ON;Insert Into tgm_admin(createtime, token) Values(635559644875519163, '2f5fd4f9-f840-4cf0-a604-719b689ead27');Select SCOPE_IDENTITY()
+10:34:47.642 8 W - SET NOCOUNT ON;Insert Into tgm_role(admin_id, name, password, [role], createtime) Values(16, N'abc', N'G8R/1aNvMpc=', 10000, 635559644875519163);Select SCOPE_IDENTITY()
+10:34:47.719 6 W - Select Top 1 * From tgm_server Where  name='' AND admin_id in (select id from tgm_admin where token='7e8ead4e-d03d-4c9d-8b22-b8f536c4026c') Order By id Desc
+10:34:47.721 6 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='7e8ead4e-d03d-4c9d-8b22-b8f536c4026c') Order By id Desc
+10:35:34.404 15 W - SET NOCOUNT ON;Insert Into tgm_admin(createtime, token) Values(635559645343998552, 'ca556c3c-ac44-4fb2-b31f-d24604a2b3af');Select SCOPE_IDENTITY()
+10:35:34.408 15 W - SET NOCOUNT ON;Insert Into tgm_role(admin_id, name, password, [role], createtime) Values(17, N'abc', N'G8R/1aNvMpc=', 10000, 635559645343998552);Select SCOPE_IDENTITY()
+10:35:34.456 9 W - Select Top 1 * From tgm_server Where  name='' AND admin_id in (select id from tgm_admin where token='7e8ead4e-d03d-4c9d-8b22-b8f536c4026c') Order By id Desc
+10:35:34.458 9 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='7e8ead4e-d03d-4c9d-8b22-b8f536c4026c') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7676
+#AppDomain: /LM/W3SVC/2/ROOT-2-130648285695701431
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-04
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+15:02:51.259 24 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+15:02:51.268 24 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+15:02:51.269 24 W - 使用数据库方式：独占，加大缓存权重
+15:02:51.269 24 W - 一级缓存：关闭缓存
+15:02:51.292 24 W - [DB]GetSchema("MetaDataCollections")
+15:02:51.300 24 W - [DB]GetSchema("ReservedWords")
+15:02:51.320 24 W - [DB]GetSchema("Databases", "tgm")
+15:02:51.330 24 W - [DB]GetSchema("Tables")
+15:02:51.341 24 W - [DB]GetSchema("Columns")
+15:02:51.346 24 W - [DB]GetSchema("Indexes")
+15:02:51.347 24 W - [DB]GetSchema("IndexColumns")
+15:02:51.353 24 W - [DB]GetSchema("DataTypes")
+15:02:51.397 24 W - 开始检查连接[DB/SqlServer]的数据库架构……
+15:02:51.399 24 W - 检查连接[DB/SqlServer]的数据库架构耗时2ms
+15:02:51.401 24 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+15:02:51.401 24 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+15:02:51.407 21 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+15:02:51.426 24 W - Select * From tgm_admin Where id=1
+15:02:51.426 21 W - Select * From tgm_admin Where id=1
+15:02:51.634 23 W - [tgm]GetSchema("MetaDataCollections")
+15:02:51.637 23 W - [tgm]GetSchema("ReservedWords")
+15:02:51.643 23 W - [tgm]GetSchema("Databases", "tgm")
+15:02:51.654 23 W - [tgm]GetSchema("Tables")
+15:02:51.661 23 W - [tgm]GetSchema("Columns")
+15:02:51.666 23 W - [tgm]GetSchema("Indexes")
+15:02:51.667 23 W - [tgm]GetSchema("IndexColumns")
+15:02:51.669 23 W - [tgm]GetSchema("DataTypes")
+15:02:51.682 23 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+15:02:51.683 23 W - 检查连接[tgm/SqlServer]的数据库架构耗时0ms
+15:02:51.683 23 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+15:02:51.683 23 W - Select Top 1 * From tgm_server Where  name='' AND admin_id in (select id from tgm_admin where token='7e8ead4e-d03d-4c9d-8b22-b8f536c4026c') Order By id Desc
+15:02:51.684 23 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='7e8ead4e-d03d-4c9d-8b22-b8f536c4026c') Order By id Desc

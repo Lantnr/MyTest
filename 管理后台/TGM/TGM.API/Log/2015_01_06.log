@@ -1,0 +1,2095 @@
+﻿#Software: iisexpress
+#ProcessID: 4616
+#AppDomain: /LM/W3SVC/2/ROOT-1-130649831229679561
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+09:58:46.678 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+09:58:46.688 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+09:58:46.689 6 W - 使用数据库方式：独占，加大缓存权重
+09:58:46.689 6 W - 一级缓存：关闭缓存
+09:58:46.729 6 W - [DB]GetSchema("MetaDataCollections")
+09:58:46.739 6 W - [DB]GetSchema("ReservedWords")
+09:58:46.759 6 W - [DB]GetSchema("Databases", "tgm")
+09:58:46.771 6 W - [DB]GetSchema("Tables")
+09:58:46.781 6 W - [DB]GetSchema("Columns")
+09:58:46.785 6 W - [DB]GetSchema("Indexes")
+09:58:46.787 6 W - [DB]GetSchema("IndexColumns")
+09:58:46.792 6 W - [DB]GetSchema("DataTypes")
+09:58:46.833 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+09:58:46.836 6 W - 检查连接[DB/SqlServer]的数据库架构耗时3ms
+09:58:46.867 6 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+09:58:46.867 6 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+09:58:46.892 6 W - Select * From tgm_admin Where id=26
+09:58:47.169 6 W - [tgm]GetSchema("MetaDataCollections")
+09:58:47.173 6 W - [tgm]GetSchema("ReservedWords")
+09:58:47.179 6 W - [tgm]GetSchema("Databases", "tgm")
+09:58:47.184 6 W - [tgm]GetSchema("Tables")
+09:58:47.191 6 W - [tgm]GetSchema("Columns")
+09:58:47.196 6 W - [tgm]GetSchema("Indexes")
+09:58:47.197 6 W - [tgm]GetSchema("IndexColumns")
+09:58:47.198 6 W - [tgm]GetSchema("DataTypes")
+09:58:47.211 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+09:58:47.212 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时0ms
+09:58:47.212 6 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+09:58:47.212 6 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 4616
+#AppDomain: /LM/W3SVC/2/ROOT-2-130649838457366404
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+10:10:48.558 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+10:10:48.567 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+10:10:48.567 6 W - 使用数据库方式：独占，加大缓存权重
+10:10:48.568 6 W - 一级缓存：关闭缓存
+10:10:48.591 6 W - [DB]GetSchema("MetaDataCollections")
+10:10:48.598 6 W - [DB]GetSchema("ReservedWords")
+10:10:48.619 6 W - [DB]GetSchema("Databases", "tgm")
+10:10:48.630 6 W - [DB]GetSchema("Tables")
+10:10:48.642 6 W - [DB]GetSchema("Columns")
+10:10:48.647 6 W - [DB]GetSchema("Indexes")
+10:10:48.649 6 W - [DB]GetSchema("IndexColumns")
+10:10:48.655 6 W - [DB]GetSchema("DataTypes")
+10:10:48.697 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+10:10:48.699 6 W - 检查连接[DB/SqlServer]的数据库架构耗时2ms
+10:10:48.701 6 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+10:10:48.701 6 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+10:10:48.725 6 W - Select * From tgm_admin Where id=26
+10:10:48.909 16 W - [tgm]GetSchema("MetaDataCollections")
+10:10:48.912 16 W - [tgm]GetSchema("ReservedWords")
+10:10:48.918 16 W - [tgm]GetSchema("Databases", "tgm")
+10:10:48.923 16 W - [tgm]GetSchema("Tables")
+10:10:48.931 16 W - [tgm]GetSchema("Columns")
+10:10:48.936 16 W - [tgm]GetSchema("Indexes")
+10:10:48.937 16 W - [tgm]GetSchema("IndexColumns")
+10:10:48.939 16 W - [tgm]GetSchema("DataTypes")
+10:10:48.953 16 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+10:10:48.954 16 W - 检查连接[tgm/SqlServer]的数据库架构耗时0ms
+10:10:48.954 16 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+10:10:48.954 16 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+10:11:04.603 6 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+10:11:21.851 6 W - Select Top 1 * From tgm_role Where name=N'lgy在' Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 10912
+#AppDomain: /LM/W3SVC/2/ROOT-1-130649949820777456
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+13:16:27.386 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+13:16:27.396 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+13:16:27.396 6 W - 使用数据库方式：独占，加大缓存权重
+13:16:27.396 6 W - 一级缓存：关闭缓存
+13:16:27.424 6 W - [DB]GetSchema("MetaDataCollections")
+13:16:27.433 6 W - [DB]GetSchema("ReservedWords")
+13:16:27.453 6 W - [DB]GetSchema("Databases", "tgm")
+13:16:27.464 6 W - [DB]GetSchema("Tables")
+13:16:27.475 6 W - [DB]GetSchema("Columns")
+13:16:27.480 6 W - [DB]GetSchema("Indexes")
+13:16:27.481 6 W - [DB]GetSchema("IndexColumns")
+13:16:27.487 6 W - [DB]GetSchema("DataTypes")
+13:16:27.530 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+13:16:27.532 6 W - 检查连接[DB/SqlServer]的数据库架构耗时2ms
+13:16:27.535 6 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+13:16:27.535 6 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+13:16:27.562 6 W - Select * From tgm_admin Where id=26
+13:16:27.801 6 W - [tgm]GetSchema("MetaDataCollections")
+13:16:27.805 6 W - [tgm]GetSchema("ReservedWords")
+13:16:27.811 6 W - [tgm]GetSchema("Databases", "tgm")
+13:16:27.816 6 W - [tgm]GetSchema("Tables")
+13:16:27.824 6 W - [tgm]GetSchema("Columns")
+13:16:27.830 6 W - [tgm]GetSchema("Indexes")
+13:16:27.831 6 W - [tgm]GetSchema("IndexColumns")
+13:16:27.832 6 W - [tgm]GetSchema("DataTypes")
+13:16:27.846 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+13:16:27.846 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时0ms
+13:16:27.846 6 W - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XCode.EntityFactory.<>c__DisplayClass4.<LoadEntities>b__3(Type t)
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 XCode.EntityFactory.GetTables(String connName)
+   在 XCode.DataAccessLayer.DAL.CheckTables()
+   在 XCode.DataAccessLayer.DAL.SetTables()
+   在 XCode.DataAccessLayer.DAL.CheckBeforeUseDatabase()
+13:16:27.846 6 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 10064
+#AppDomain: /LM/W3SVC/2/ROOT-1-130649959172889922
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+13:32:01.592 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+13:32:01.602 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+13:32:01.603 7 W - 使用数据库方式：独占，加大缓存权重
+13:32:01.603 7 W - 一级缓存：关闭缓存
+13:32:01.631 7 W - [DB]GetSchema("MetaDataCollections")
+13:32:01.640 7 W - [DB]GetSchema("ReservedWords")
+13:32:01.660 7 W - [DB]GetSchema("Databases", "tgm")
+13:32:01.683 7 W - [DB]GetSchema("Tables")
+13:32:01.693 7 W - [DB]GetSchema("Columns")
+13:32:01.698 7 W - [DB]GetSchema("Indexes")
+13:32:01.699 7 W - [DB]GetSchema("IndexColumns")
+13:32:01.705 7 W - [DB]GetSchema("DataTypes")
+13:32:01.746 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+13:32:01.804 7 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+13:32:01.804 7 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+13:32:01.804 7 W - DB待检查表架构的实体个数：10
+13:32:01.815 7 W - 创建表：report_user(用户报表)
+13:32:01.822 7 W - Create Table report_user(
+	id bigint IDENTITY(1,1) Primary Key,
+	total int NOT NULL Default 0,
+	online int NOT NULL Default 0,
+	unonline int NOT NULL Default 0,
+	[time] datetime NOT NULL Default getdate()
+)
+13:32:01.825 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'用户报表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'report_user'
+13:32:01.826 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'report_user', @level2type=N'COLUMN',@level2name=N'id'
+13:32:01.828 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'当前总人数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'report_user', @level2type=N'COLUMN',@level2name=N'total'
+13:32:01.829 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'当前在线人数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'report_user', @level2type=N'COLUMN',@level2name=N'online'
+13:32:01.830 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'当前不在线人数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'report_user', @level2type=N'COLUMN',@level2name=N'unonline'
+13:32:01.832 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'当前时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'report_user', @level2type=N'COLUMN',@level2name=N'time'
+13:32:01.833 7 W - 创建表：tg_bag_log(背包日志表)
+13:32:01.833 7 W - Create Table tg_bag_log(
+	id bigint IDENTITY(1,1) Primary Key,
+	bid bigint NOT NULL Default 0,
+	base_id int NOT NULL Default 0,
+	user_id bigint NOT NULL Default 0,
+	type int NOT NULL Default 0,
+	equip_type int NOT NULL Default 0,
+	bind int NOT NULL Default 0,
+	[state] int NOT NULL Default 0,
+	[count] int NOT NULL Default 0,
+	attribute1_type int NOT NULL Default 0,
+	attribute1_value float NOT NULL Default 0,
+	attribute2_type int NOT NULL Default 0,
+	attribute2_value float NOT NULL Default 0,
+	attribute3_type int NOT NULL Default 0,
+	attribute3_value float NOT NULL Default 0,
+	attribute1_spirit_level int NOT NULL Default 0,
+	attribute1_spirit_value int NOT NULL Default 0,
+	attribute1_spirit_lock int NOT NULL Default 0,
+	attribute2_spirit_level int NOT NULL Default 0,
+	attribute2_spirit_value int NOT NULL Default 0,
+	attribute2_spirit_lock int NOT NULL Default 0,
+	attribute3_spirit_level int NOT NULL Default 0,
+	attribute3_spirit_value int NOT NULL Default 0,
+	attribute3_spirit_lock int NOT NULL Default 0,
+	sell_time bigint NOT NULL,
+	module_number int NOT NULL Default 0,
+	command_number int NOT NULL Default 0,
+	get_coin bigint NOT NULL Default 0
+)
+13:32:01.838 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'背包日志表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log'
+13:32:01.840 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'主键ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'id'
+13:32:01.842 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'道具主Id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'bid'
+13:32:01.843 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'物品基表ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'base_id'
+13:32:01.845 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'user_id'
+13:32:01.846 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'物品类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'type'
+13:32:01.848 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'装备类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'equip_type'
+13:32:01.849 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'是否绑定' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'bind'
+13:32:01.851 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'装备状态' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'state'
+13:32:01.852 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'数量' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'count'
+13:32:01.854 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性1类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute1_type'
+13:32:01.855 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性1值' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute1_value'
+13:32:01.857 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性2类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute2_type'
+13:32:01.858 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性2值' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute2_value'
+13:32:01.860 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性3类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute3_type'
+13:32:01.861 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性3值' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute3_value'
+13:32:01.863 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性1铸魂等级' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute1_spirit_level'
+13:32:01.865 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性1铸魂当前值' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute1_spirit_value'
+13:32:01.866 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性1下一阶是否锁定' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute1_spirit_lock'
+13:32:01.868 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性2铸魂等级' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute2_spirit_level'
+13:32:01.869 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性2铸魂当前值' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute2_spirit_value'
+13:32:01.871 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性2下一阶是否锁定' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute2_spirit_lock'
+13:32:01.872 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性3铸魂等级' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute3_spirit_level'
+13:32:01.874 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性3铸魂当前值' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute3_spirit_value'
+13:32:01.875 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'属性3下一阶是否锁定' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'attribute3_spirit_lock'
+13:32:01.876 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'出售时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'sell_time'
+13:32:01.877 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'模块号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'module_number'
+13:32:01.878 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'指令号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'command_number'
+13:32:01.879 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'获得金钱' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_bag_log', @level2type=N'COLUMN',@level2name=N'get_coin'
+13:32:01.880 7 W - 创建表：tg_gold_log()
+13:32:01.880 7 W - Create Table tg_gold_log(
+	id bigint IDENTITY(1,1) Primary Key,
+	consume int NOT NULL Default 0,
+	module_number int NOT NULL Default 0,
+	command_number int NOT NULL Default 0,
+	user_id bigint NOT NULL Default 0,
+	[time] bigint NOT NULL Default 0
+)
+13:32:01.882 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'主键Id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_gold_log', @level2type=N'COLUMN',@level2name=N'id'
+13:32:01.884 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'消费' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_gold_log', @level2type=N'COLUMN',@level2name=N'consume'
+13:32:01.885 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'模块号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_gold_log', @level2type=N'COLUMN',@level2name=N'module_number'
+13:32:01.886 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'指令号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_gold_log', @level2type=N'COLUMN',@level2name=N'command_number'
+13:32:01.888 7 W - 创建表：tg_messages(邮件信息表)
+13:32:01.888 7 W - Create Table tg_messages(
+	id bigint IDENTITY(1,1) Primary Key,
+	receive_id bigint NOT NULL Default 0,
+	send_id bigint NOT NULL Default 0,
+	type int NOT NULL Default 0,
+	title nvarchar(10) NOT NULL,
+	contents nvarchar(200) NOT NULL,
+	isread int NOT NULL Default 0,
+	isattachment int NOT NULL Default 0,
+	attachment nvarchar(200) NOT NULL,
+	create_time bigint NOT NULL
+)
+13:32:01.890 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'邮件信息表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages'
+13:32:01.892 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'id'
+13:32:01.905 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'接收玩家id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'receive_id'
+13:32:01.906 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'发送玩家id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'send_id'
+13:32:01.908 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'消息类型 0:玩家邮件 1:系统邮件' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'type'
+13:32:01.910 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'标题' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'title'
+13:32:01.911 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'内容' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'contents'
+13:32:01.913 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'是否已读' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'isread'
+13:32:01.924 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'是否有附件' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'isattachment'
+13:32:01.926 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'附件' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'attachment'
+13:32:01.927 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'创建时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_messages', @level2type=N'COLUMN',@level2name=N'create_time'
+13:32:01.929 7 W - 创建表：tg_role(武将表)
+13:32:01.929 7 W - Create Table tg_role(
+	id bigint IDENTITY(1,1) Primary Key,
+	user_id bigint NOT NULL Default 0,
+	role_id int NOT NULL Default 0,
+	power int NOT NULL Default 0,
+	role_genre int NOT NULL Default 0,
+	role_ninja int NOT NULL Default 0,
+	role_level int NOT NULL Default 1,
+	role_state int NOT NULL Default 0,
+	role_exp int NOT NULL Default 0,
+	role_honor int NOT NULL Default 0,
+	role_identity int NOT NULL Default 0,
+	base_captain float NOT NULL Default 0,
+	base_force float NOT NULL Default 0,
+	base_brains float NOT NULL Default 0,
+	base_charm float NOT NULL Default 0,
+	base_govern float NOT NULL Default 0,
+	att_points int NOT NULL Default 0,
+	att_life int NOT NULL Default 0,
+	att_attack float NOT NULL Default 0,
+	att_defense float NOT NULL Default 0,
+	att_sub_hurtIncrease float NOT NULL Default 0,
+	att_sub_hurtReduce float NOT NULL Default 0,
+	att_crit_probability float NOT NULL Default 0,
+	att_crit_addition float NOT NULL Default 0,
+	att_mystery_probability float NOT NULL Default 0,
+	att_dodge_probability float NOT NULL Default 0,
+	art_cheat_code bigint NOT NULL Default 0,
+	art_mystery bigint NOT NULL Default 0,
+	equip_weapon bigint NOT NULL Default 0,
+	equip_barbarian bigint NOT NULL Default 0,
+	equip_mounts bigint NOT NULL Default 0,
+	equip_armor bigint NOT NULL Default 0,
+	equip_gem bigint NOT NULL Default 0,
+	equip_tea bigint NOT NULL Default 0,
+	equip_craft bigint NOT NULL Default 0,
+	equip_book bigint NOT NULL Default 0,
+	base_captain_life float NOT NULL Default 0,
+	base_captain_train float NOT NULL Default 0,
+	base_captain_level float NOT NULL Default 0,
+	base_captain_spirit float NOT NULL Default 0,
+	base_captain_equip float NOT NULL Default 0,
+	base_captain_title float NOT NULL Default 0,
+	base_force_life float NOT NULL Default 0,
+	base_force_train float NOT NULL Default 0,
+	base_force_level float NOT NULL Default 0,
+	base_force_spirit float NOT NULL Default 0,
+	base_force_equip float NOT NULL Default 0,
+	base_force_title float NOT NULL Default 0,
+	base_brains_life float NOT NULL Default 0,
+	base_brains_train float NOT NULL Default 0,
+	base_brains_level float NOT NULL Default 0,
+	base_brains_spirit float NOT NULL Default 0,
+	base_brains_equip float NOT NULL Default 0,
+	base_brains_title float NOT NULL Default 0,
+	base_charm_life float NOT NULL Default 0,
+	base_charm_train float NOT NULL Default 0,
+	base_charm_level float NOT NULL Default 0,
+	base_charm_spirit float NOT NULL Default 0,
+	base_charm_equip float NOT NULL Default 0,
+	base_charm_title float NOT NULL Default 0,
+	base_govern_life float NOT NULL Default 0,
+	base_govern_train float NOT NULL Default 0,
+	base_govern_level float NOT NULL Default 0,
+	base_govern_spirit float NOT NULL Default 0,
+	base_govern_equip float NOT NULL Default 0,
+	base_govern_title float NOT NULL Default 0,
+	title_sword bigint NOT NULL Default 0,
+	title_gun bigint NOT NULL Default 0,
+	title_tea bigint NOT NULL Default 0,
+	title_eloquence bigint NOT NULL Default 0,
+	buff_power int NOT NULL Default 0,
+	total_honor int NOT NULL Default 0,
+	total_exp int NOT NULL Default 0,
+	character1 int NOT NULL Default 0,
+	character2 int NOT NULL Default 0,
+	character3 int NOT NULL Default 0
+)
+13:32:01.945 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role'
+13:32:01.947 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'user_id'
+13:32:01.948 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将基表编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'role_id'
+13:32:01.950 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'体力' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'power'
+13:32:01.951 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将默认流派' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'role_genre'
+13:32:01.953 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将默认忍者冢' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'role_ninja'
+13:32:01.954 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将等级' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'role_level'
+13:32:01.956 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将状态' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'role_state'
+13:32:01.957 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将经验' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'role_exp'
+13:32:01.959 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将功勋' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'role_honor'
+13:32:01.960 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'身份' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'role_identity'
+13:32:01.962 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'统帅(初始值)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_captain'
+13:32:01.963 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武力(初始值)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_force'
+13:32:01.965 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'智谋(初始值)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_brains'
+13:32:01.967 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'魅力(初始值)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_charm'
+13:32:01.968 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'政务(初始值)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_govern'
+13:32:01.970 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将剩余属性点' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_points'
+13:32:01.971 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'生命' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_life'
+13:32:01.973 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'攻击' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_attack'
+13:32:01.975 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'防御' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_defense'
+13:32:01.976 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'增伤' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_sub_hurtIncrease'
+13:32:01.978 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'减伤' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_sub_hurtReduce'
+13:32:01.979 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'会心几率' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_crit_probability'
+13:32:01.981 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'会心效果' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_crit_addition'
+13:32:01.982 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'奥义触发几率' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_mystery_probability'
+13:32:01.984 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'闪避几率' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'att_dodge_probability'
+13:32:01.985 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'秘技' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'art_cheat_code'
+13:32:01.987 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'奥义' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'art_mystery'
+13:32:01.988 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武器(对应装备表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'equip_weapon'
+13:32:01.990 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'南蛮物(对应装备表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'equip_barbarian'
+13:32:01.991 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'坐骑(对应装备表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'equip_mounts'
+13:32:01.993 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'铠甲(对应装备表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'equip_armor'
+13:32:01.994 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'宝石(对应装备表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'equip_gem'
+13:32:01.996 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'茶器(对应装备表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'equip_tea'
+13:32:01.997 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'艺术品(对应装备表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'equip_craft'
+13:32:01.999 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'书籍(对应装备表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'equip_book'
+13:32:02.001 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'统帅(生活技能加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_captain_life'
+13:32:02.002 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'统帅(锻炼加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_captain_train'
+13:32:02.004 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'统帅(升级加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_captain_level'
+13:32:02.005 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'统帅(铸魂加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_captain_spirit'
+13:32:02.007 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'统帅(装备加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_captain_equip'
+13:32:02.008 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'统帅(称号加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_captain_title'
+13:32:02.010 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武力(生活技能加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_force_life'
+13:32:02.011 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武力(锻炼加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_force_train'
+13:32:02.013 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武力(升级加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_force_level'
+13:32:02.014 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武力(铸魂加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_force_spirit'
+13:32:02.016 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武力(装备加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_force_equip'
+13:32:02.017 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武力(称号加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_force_title'
+13:32:02.019 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'智谋(生活技能加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_brains_life'
+13:32:02.020 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'智谋(锻炼加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_brains_train'
+13:32:02.022 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'智谋(升级加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_brains_level'
+13:32:02.023 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'智谋(铸魂加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_brains_spirit'
+13:32:02.025 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'智谋(装备加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_brains_equip'
+13:32:02.027 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'智谋(称号加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_brains_title'
+13:32:02.028 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'魅力(生活技能加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_charm_life'
+13:32:02.030 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'魅力(锻炼加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_charm_train'
+13:32:02.032 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'魅力(升级加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_charm_level'
+13:32:02.033 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'魅力(铸魂加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_charm_spirit'
+13:32:02.035 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'魅力(装备加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_charm_equip'
+13:32:02.036 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'魅力(称号加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_charm_title'
+13:32:02.038 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'政务(生活技能加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_govern_life'
+13:32:02.039 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'政务(锻炼加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_govern_train'
+13:32:02.041 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'政务(升级加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_govern_level'
+13:32:02.043 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'政务(铸魂加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_govern_spirit'
+13:32:02.045 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'政务(装备加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_govern_equip'
+13:32:02.047 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'政务(称号加点)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'base_govern_title'
+13:32:02.049 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'剑称号(对应家臣称号表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'title_sword'
+13:32:02.050 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'枪称号(对应家臣称号表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'title_gun'
+13:32:02.052 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'茶道称号(对应家臣称号表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'title_tea'
+13:32:02.053 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'讲价称号(对应家臣称号表主键编号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'title_eloquence'
+13:32:02.055 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'体力buff' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'buff_power'
+13:32:02.056 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'总功勋值' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'total_honor'
+13:32:02.058 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'特性1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'character1'
+13:32:02.060 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'特性2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'character2'
+13:32:02.061 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'特性3' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_role', @level2type=N'COLUMN',@level2name=N'character3'
+13:32:02.063 7 W - 创建表：tg_system_notice()
+13:32:02.063 7 W - Create Table tg_system_notice(
+	id int IDENTITY(1,1) Primary Key,
+	base_Id int NOT NULL,
+	start_time bigint NOT NULL,
+	end_time bigint NOT NULL,
+	time_interval int NOT NULL,
+	content varchar(500) NOT NULL,
+	[state] int NOT NULL Default 0,
+	[level] int NOT NULL
+)
+13:32:02.065 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'主键Id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_system_notice', @level2type=N'COLUMN',@level2name=N'id'
+13:32:02.066 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'基表Id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_system_notice', @level2type=N'COLUMN',@level2name=N'base_Id'
+13:32:02.068 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'开始时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_system_notice', @level2type=N'COLUMN',@level2name=N'start_time'
+13:32:02.070 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'结束时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_system_notice', @level2type=N'COLUMN',@level2name=N'end_time'
+13:32:02.071 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'时间间隔' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_system_notice', @level2type=N'COLUMN',@level2name=N'time_interval'
+13:32:02.073 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'内容' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_system_notice', @level2type=N'COLUMN',@level2name=N'content'
+13:32:02.075 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'状态' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_system_notice', @level2type=N'COLUMN',@level2name=N'state'
+13:32:02.076 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'优先级别' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_system_notice', @level2type=N'COLUMN',@level2name=N'level'
+13:32:02.078 7 W - 创建表：tg_user(玩家信息表)
+13:32:02.078 7 W - Create Table tg_user(
+	id bigint IDENTITY(1,1) Primary Key,
+	user_code nvarchar(200) NOT NULL,
+	player_name nvarchar(10) NOT NULL,
+	role_id int NOT NULL Default 0,
+	player_sex int NOT NULL Default 0,
+	player_vocation int NOT NULL Default 0,
+	player_position int NOT NULL Default 0,
+	player_camp int NOT NULL Default 0,
+	player_influence int NOT NULL Default 0,
+	birthplace int NOT NULL Default 0,
+	spirit int NOT NULL Default 0,
+	fame int NOT NULL Default 0,
+	coin bigint NOT NULL Default 0,
+	gold int NOT NULL Default 0,
+	rmb int NOT NULL Default 0,
+	coupon int NOT NULL Default 0,
+	createtime bigint NOT NULL Default 0,
+	office int NOT NULL Default 0,
+	donate int NOT NULL Default 0,
+	merit int NOT NULL Default 0
+)
+13:32:02.082 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家信息表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user'
+13:32:02.084 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'id'
+13:32:02.086 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'关联代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'user_code'
+13:32:02.087 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'player_name'
+13:32:02.089 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将基表编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'role_id'
+13:32:02.090 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家性别' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'player_sex'
+13:32:02.092 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家职业' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'player_vocation'
+13:32:02.093 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'官位' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'player_position'
+13:32:02.095 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'阵营' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'player_camp'
+13:32:02.096 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家势力' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'player_influence'
+13:32:02.098 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'出生地' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'birthplace'
+13:32:02.099 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'魂' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'spirit'
+13:32:02.101 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'声望' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'fame'
+13:32:02.103 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'铜币' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'coin'
+13:32:02.104 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'金币' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'gold'
+13:32:02.106 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'内币' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'rmb'
+13:32:02.107 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'礼券' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'coupon'
+13:32:02.108 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'创建时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'createtime'
+13:32:02.109 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'官职' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'office'
+13:32:02.109 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'贡献度' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'donate'
+13:32:02.110 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'功勋值(战争副本获取)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user', @level2type=N'COLUMN',@level2name=N'merit'
+13:32:02.112 7 W - 创建表：tg_user_extend(玩家扩展表)
+13:32:02.112 7 W - Create Table tg_user_extend(
+	id bigint IDENTITY(1,1) Primary Key,
+	user_id bigint NOT NULL Default 0,
+	train_bar int NOT NULL Default 3,
+	task_vocation_refresh int NOT NULL Default 0,
+	shot_count int NOT NULL Default 3,
+	bag_count int NOT NULL Default 0,
+	daySalary int NOT NULL Default 0,
+	donate int NOT NULL Default 0,
+	sword_win_count int NOT NULL Default 0,
+	gun_win_count int NOT NULL Default 0,
+	tea_table_count int NOT NULL Default 0,
+	bargain_success_count int NOT NULL Default 0,
+	task_role_refresh int NOT NULL Default 0,
+	npc_refresh_count int NOT NULL Default 3,
+	bargain_count int NOT NULL Default 0,
+	challenge_count int NOT NULL Default 1,
+	salary_state int NOT NULL Default 0,
+	power_buy_count int NOT NULL Default 0,
+	task_vocation_isgo int NOT NULL Default 0,
+	hire_id bigint NOT NULL Default 0,
+	hire_time bigint NOT NULL Default 0,
+	recruit_time bigint NOT NULL Default 0,
+	fcm int NOT NULL Default 0,
+	dml int NOT NULL Default 0,
+	eloquence_count int NOT NULL Default 0,
+	tea_count int NOT NULL Default 0,
+	calculate_count int NOT NULL Default 0,
+	ninjutsu_count int NOT NULL Default 0,
+	ball_count int NOT NULL Default 0,
+	game_finish_count int NOT NULL Default 0,
+	game_receive int NOT NULL Default 0,
+	refresh_count int NOT NULL Default 0,
+	steal_fail_count int NOT NULL Default 0,
+	fight_count int NOT NULL Default 0,
+	fight_buy int NOT NULL Default 0,
+	war_base_time bigint NOT NULL Default 0,
+	fusion_prop_packet int NOT NULL Default 0,
+	war_total_own int NOT NULL Default 0
+)
+13:32:02.119 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家扩展表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend'
+13:32:02.121 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'玩家编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'user_id'
+13:32:02.123 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将修行栏开启数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'train_bar'
+13:32:02.124 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'职业任务刷新' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'task_vocation_refresh'
+13:32:02.126 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'名塔闯关次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'shot_count'
+13:32:02.127 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'背包格子总数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'bag_count'
+13:32:02.129 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'家族领取俸禄状态' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'daySalary'
+13:32:02.130 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'家族每天捐献金钱' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'donate'
+13:32:02.132 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'使用剑击杀胜利次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'sword_win_count'
+13:32:02.133 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'使用枪击杀胜利次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'gun_win_count'
+13:32:02.134 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'使用茶席次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'tea_table_count'
+13:32:02.136 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'讲价成功次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'bargain_success_count'
+13:32:02.137 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'家臣任务刷新次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'task_role_refresh'
+13:32:02.139 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'翻将次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'npc_refresh_count'
+13:32:02.140 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将已经议价次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'bargain_count'
+13:32:02.142 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'爬塔挑战次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'challenge_count'
+13:32:02.143 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'购买体力次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'power_buy_count'
+13:32:02.145 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'身份替身后是否继续原来身份的任务  0：是 1：否' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'task_vocation_isgo'
+13:32:02.146 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'雇佣id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'hire_id'
+13:32:02.148 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'雇佣到达时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'hire_time'
+13:32:02.149 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'酒馆招募刷新冷却时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'recruit_time'
+13:32:02.151 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'防沉迷 0:未验证 1:已验证' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'fcm'
+13:32:02.152 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'大名令  0:未激活 1:已激活 ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'dml'
+13:32:02.154 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'辩才游戏使用次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'eloquence_count'
+13:32:02.156 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'茶道游戏使用次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'tea_count'
+13:32:02.157 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'算术游戏使用次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'calculate_count'
+13:32:02.159 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'忍术游戏使用次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'ninjutsu_count'
+13:32:02.160 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'打气球次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'ball_count'
+13:32:02.162 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'每日完成次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'game_finish_count'
+13:32:02.163 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'小游戏领取奖励状态 0：未领取  1：可领取  2：已领取' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'game_receive'
+13:32:02.165 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将宅刷新次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'refresh_count'
+13:32:02.165 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将宅偷窃失败次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'steal_fail_count'
+13:32:02.166 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将宅已挑战次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'fight_count'
+13:32:02.168 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'武将宅已购买挑战次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'fight_buy'
+13:32:02.169 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'合战据点转移冷却时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'war_base_time'
+13:32:02.171 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'炼化道具卡位数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'fusion_prop_packet'
+13:32:02.172 7 W - EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'合战据点占有数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'tg_user_extend', @level2type=N'COLUMN',@level2name=N'war_total_own'
+13:32:02.174 7 W - 检查连接[DB/SqlServer]的数据库架构耗时427ms
+13:32:02.174 7 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+13:32:02.191 7 W - Select * From tgm_admin Where id=26
+13:32:02.380 9 W - [tgm]GetSchema("MetaDataCollections")
+13:32:02.383 9 W - [tgm]GetSchema("ReservedWords")
+13:32:02.389 9 W - [tgm]GetSchema("Databases", "tgm")
+13:32:02.394 9 W - [tgm]GetSchema("Tables")
+13:32:02.539 9 W - [tgm]GetSchema("Columns")
+13:32:02.580 9 W - [tgm]GetSchema("Indexes")
+13:32:02.583 9 W - [tgm]GetSchema("IndexColumns")
+13:32:02.585 9 W - [tgm]GetSchema("DataTypes")
+13:32:02.599 9 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+13:32:02.649 9 W - [tgm]的所有实体类（0个）：
+13:32:02.649 9 W - [tgm]需要检查架构的实体类（0个）：
+13:32:02.649 9 W - 检查连接[tgm/SqlServer]的数据库架构耗时50ms
+13:32:02.649 9 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+13:37:33.370 8 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+13:37:33.372 8 W - Select * From tgm_admin Where id=26
+13:37:33.430 14 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+13:37:34.764 8 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+13:37:34.766 8 W - Select * From tgm_admin Where id=26
+13:37:34.850 7 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 10500
+#AppDomain: /LM/W3SVC/2/ROOT-1-130649979593535513
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:06:03.570 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+14:06:03.580 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+14:06:03.580 6 W - 使用数据库方式：独占，加大缓存权重
+14:06:03.580 6 W - 一级缓存：关闭缓存
+14:06:03.609 6 W - [DB]GetSchema("MetaDataCollections")
+14:06:03.618 6 W - [DB]GetSchema("ReservedWords")
+14:06:03.639 6 W - [DB]GetSchema("Databases", "tgm")
+14:06:03.650 6 W - [DB]GetSchema("Tables")
+14:06:03.712 6 W - [DB]GetSchema("Columns")
+14:06:03.732 6 W - [DB]GetSchema("Indexes")
+14:06:03.734 6 W - [DB]GetSchema("IndexColumns")
+14:06:03.740 6 W - [DB]GetSchema("DataTypes")
+14:06:03.784 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+14:06:03.843 6 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:06:03.843 6 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:06:03.843 6 W - DB待检查表架构的实体个数：10
+14:06:03.924 6 W - 检查连接[DB/SqlServer]的数据库架构耗时140ms
+14:06:03.924 6 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+14:06:03.941 6 W - Select * From tgm_admin Where id=26
+14:06:04.133 9 W - [tgm]GetSchema("MetaDataCollections")
+14:06:04.136 9 W - [tgm]GetSchema("ReservedWords")
+14:06:04.141 9 W - [tgm]GetSchema("Databases", "tgm")
+14:06:04.148 9 W - [tgm]GetSchema("Tables")
+14:06:04.209 9 W - [tgm]GetSchema("Columns")
+14:06:04.230 9 W - [tgm]GetSchema("Indexes")
+14:06:04.232 9 W - [tgm]GetSchema("IndexColumns")
+14:06:04.234 9 W - [tgm]GetSchema("DataTypes")
+14:06:04.249 9 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+14:06:04.296 9 W - [tgm]的所有实体类（0个）：
+14:06:04.296 9 W - [tgm]需要检查架构的实体类（0个）：
+14:06:04.296 9 W - 检查连接[tgm/SqlServer]的数据库架构耗时47ms
+14:06:04.296 9 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 10500
+#AppDomain: /LM/W3SVC/2/ROOT-2-130649981004559363
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:08:24.536 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+14:08:24.547 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+14:08:24.548 6 W - 使用数据库方式：独占，加大缓存权重
+14:08:24.548 6 W - 一级缓存：关闭缓存
+14:08:24.571 6 W - [DB]GetSchema("MetaDataCollections")
+14:08:24.578 6 W - [DB]GetSchema("ReservedWords")
+14:08:24.598 6 W - [DB]GetSchema("Databases", "tgm")
+14:08:24.608 6 W - [DB]GetSchema("Tables")
+14:08:24.689 6 W - [DB]GetSchema("Columns")
+14:08:24.709 6 W - [DB]GetSchema("Indexes")
+14:08:24.712 6 W - [DB]GetSchema("IndexColumns")
+14:08:24.718 6 W - [DB]GetSchema("DataTypes")
+14:08:24.760 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+14:08:24.817 6 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:08:24.817 6 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:08:24.817 6 W - DB待检查表架构的实体个数：10
+14:08:24.885 6 W - 检查连接[DB/SqlServer]的数据库架构耗时125ms
+14:08:24.885 6 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+14:08:24.902 6 W - Select * From tgm_admin Where id=26
+14:08:25.080 8 W - [tgm]GetSchema("MetaDataCollections")
+14:08:25.083 8 W - [tgm]GetSchema("ReservedWords")
+14:08:25.089 8 W - [tgm]GetSchema("Databases", "tgm")
+14:08:25.095 8 W - [tgm]GetSchema("Tables")
+14:08:25.153 8 W - [tgm]GetSchema("Columns")
+14:08:25.173 8 W - [tgm]GetSchema("Indexes")
+14:08:25.175 8 W - [tgm]GetSchema("IndexColumns")
+14:08:25.177 8 W - [tgm]GetSchema("DataTypes")
+14:08:25.191 8 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+14:08:25.238 8 W - [tgm]的所有实体类（0个）：
+14:08:25.238 8 W - [tgm]需要检查架构的实体类（0个）：
+14:08:25.239 8 W - 检查连接[tgm/SqlServer]的数据库架构耗时47ms
+14:08:25.239 8 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 10500
+#AppDomain: /LM/W3SVC/2/ROOT-3-130649982479458673
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:10:51.830 5 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+14:10:51.840 5 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+14:10:51.840 5 W - 使用数据库方式：独占，加大缓存权重
+14:10:51.840 5 W - 一级缓存：关闭缓存
+14:10:51.860 5 W - [DB]GetSchema("MetaDataCollections")
+14:10:51.867 5 W - [DB]GetSchema("ReservedWords")
+14:10:51.888 5 W - [DB]GetSchema("Databases", "tgm")
+14:10:51.898 5 W - [DB]GetSchema("Tables")
+14:10:51.966 5 W - [DB]GetSchema("Columns")
+14:10:51.985 5 W - [DB]GetSchema("Indexes")
+14:10:51.987 5 W - [DB]GetSchema("IndexColumns")
+14:10:51.993 5 W - [DB]GetSchema("DataTypes")
+14:10:52.035 5 W - 开始检查连接[DB/SqlServer]的数据库架构……
+14:10:52.092 5 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:10:52.092 5 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:10:52.093 5 W - DB待检查表架构的实体个数：10
+14:10:52.175 5 W - 检查连接[DB/SqlServer]的数据库架构耗时140ms
+14:10:52.176 5 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+14:10:52.195 5 W - Select * From tgm_admin Where id=26
+14:10:52.422 14 W - [tgm]GetSchema("MetaDataCollections")
+14:10:52.426 14 W - [tgm]GetSchema("ReservedWords")
+14:10:52.431 14 W - [tgm]GetSchema("Databases", "tgm")
+14:10:52.436 14 W - [tgm]GetSchema("Tables")
+14:10:52.494 14 W - [tgm]GetSchema("Columns")
+14:10:52.513 14 W - [tgm]GetSchema("Indexes")
+14:10:52.515 14 W - [tgm]GetSchema("IndexColumns")
+14:10:52.517 14 W - [tgm]GetSchema("DataTypes")
+14:10:52.531 14 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+14:10:52.580 14 W - [tgm]的所有实体类（0个）：
+14:10:52.580 14 W - [tgm]需要检查架构的实体类（0个）：
+14:10:52.580 14 W - 检查连接[tgm/SqlServer]的数据库架构耗时49ms
+14:10:52.580 14 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 10500
+#AppDomain: /LM/W3SVC/2/ROOT-4-130649984079774084
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:13:31.492 9 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+14:13:31.501 9 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+14:13:31.502 9 W - 使用数据库方式：独占，加大缓存权重
+14:13:31.502 9 W - 一级缓存：关闭缓存
+14:13:31.522 9 W - [DB]GetSchema("MetaDataCollections")
+14:13:31.531 9 W - [DB]GetSchema("ReservedWords")
+14:13:31.552 9 W - [DB]GetSchema("Databases", "tgm")
+14:13:31.563 9 W - [DB]GetSchema("Tables")
+14:13:31.653 9 W - [DB]GetSchema("Columns")
+14:13:31.675 9 W - [DB]GetSchema("Indexes")
+14:13:31.678 9 W - [DB]GetSchema("IndexColumns")
+14:13:31.691 9 W - [DB]GetSchema("DataTypes")
+14:13:31.747 9 W - 开始检查连接[DB/SqlServer]的数据库架构……
+14:13:31.813 9 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:13:31.813 9 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:13:31.813 9 W - DB待检查表架构的实体个数：10
+14:13:31.892 9 W - 检查连接[DB/SqlServer]的数据库架构耗时144ms
+14:13:31.892 9 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+14:13:31.909 9 W - Select * From tgm_admin Where id=26
+14:13:32.088 12 W - [tgm]GetSchema("MetaDataCollections")
+14:13:32.091 12 W - [tgm]GetSchema("ReservedWords")
+14:13:32.097 12 W - [tgm]GetSchema("Databases", "tgm")
+14:13:32.103 12 W - [tgm]GetSchema("Tables")
+14:13:32.176 12 W - [tgm]GetSchema("Columns")
+14:13:32.196 12 W - [tgm]GetSchema("Indexes")
+14:13:32.198 12 W - [tgm]GetSchema("IndexColumns")
+14:13:32.200 12 W - [tgm]GetSchema("DataTypes")
+14:13:32.214 12 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+14:13:32.258 12 W - [tgm]的所有实体类（0个）：
+14:13:32.258 12 W - [tgm]需要检查架构的实体类（0个）：
+14:13:32.258 12 W - 检查连接[tgm/SqlServer]的数据库架构耗时44ms
+14:13:32.258 12 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 10500
+#AppDomain: /LM/W3SVC/2/ROOT-5-130649985314013654
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:15:35.125 13 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+14:15:35.134 13 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+14:15:35.135 13 W - 使用数据库方式：独占，加大缓存权重
+14:15:35.135 13 W - 一级缓存：关闭缓存
+14:15:35.155 13 W - [DB]GetSchema("MetaDataCollections")
+14:15:35.162 13 W - [DB]GetSchema("ReservedWords")
+14:15:35.184 13 W - [DB]GetSchema("Databases", "tgm")
+14:15:35.194 13 W - [DB]GetSchema("Tables")
+14:15:35.264 13 W - [DB]GetSchema("Columns")
+14:15:35.285 13 W - [DB]GetSchema("Indexes")
+14:15:35.288 13 W - [DB]GetSchema("IndexColumns")
+14:15:35.294 13 W - [DB]GetSchema("DataTypes")
+14:15:35.336 13 W - 开始检查连接[DB/SqlServer]的数据库架构……
+14:15:35.394 13 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:15:35.394 13 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:15:35.395 13 W - DB待检查表架构的实体个数：10
+14:15:35.477 13 W - 检查连接[DB/SqlServer]的数据库架构耗时141ms
+14:15:35.477 13 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+14:15:35.494 13 W - Select * From tgm_admin Where id=26
+14:15:35.674 20 W - [tgm]GetSchema("MetaDataCollections")
+14:15:35.678 20 W - [tgm]GetSchema("ReservedWords")
+14:15:35.683 20 W - [tgm]GetSchema("Databases", "tgm")
+14:15:35.689 20 W - [tgm]GetSchema("Tables")
+14:15:35.757 20 W - [tgm]GetSchema("Columns")
+14:15:35.776 20 W - [tgm]GetSchema("Indexes")
+14:15:35.777 20 W - [tgm]GetSchema("IndexColumns")
+14:15:35.779 20 W - [tgm]GetSchema("DataTypes")
+14:15:35.795 20 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+14:15:35.857 20 W - [tgm]的所有实体类（0个）：
+14:15:35.857 20 W - [tgm]需要检查架构的实体类（0个）：
+14:15:35.857 20 W - 检查连接[tgm/SqlServer]的数据库架构耗时62ms
+14:15:35.857 20 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-1-130649996394050541
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:34:03.497 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+14:34:03.506 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+14:34:03.507 7 W - 使用数据库方式：独占，加大缓存权重
+14:34:03.507 7 W - 一级缓存：关闭缓存
+14:34:03.535 7 W - [DB]GetSchema("MetaDataCollections")
+14:34:03.544 7 W - [DB]GetSchema("ReservedWords")
+14:34:03.565 7 W - [DB]GetSchema("Databases", "tgm")
+14:34:03.576 7 W - [DB]GetSchema("Tables")
+14:34:03.655 7 W - [DB]GetSchema("Columns")
+14:34:03.679 7 W - [DB]GetSchema("Indexes")
+14:34:03.682 7 W - [DB]GetSchema("IndexColumns")
+14:34:03.695 7 W - [DB]GetSchema("DataTypes")
+14:34:03.761 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+14:34:03.824 7 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:34:03.824 7 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:34:03.825 7 W - DB待检查表架构的实体个数：10
+14:34:03.957 7 W - 检查连接[DB/SqlServer]的数据库架构耗时196ms
+14:34:03.957 7 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+14:34:03.975 7 W - Select * From tgm_admin Where id=26
+14:34:04.167 6 W - [tgm]GetSchema("MetaDataCollections")
+14:34:04.195 6 W - [tgm]GetSchema("ReservedWords")
+14:34:04.202 6 W - [tgm]GetSchema("Databases", "tgm")
+14:34:04.208 6 W - [tgm]GetSchema("Tables")
+14:34:04.286 6 W - [tgm]GetSchema("Columns")
+14:34:04.306 6 W - [tgm]GetSchema("Indexes")
+14:34:04.309 6 W - [tgm]GetSchema("IndexColumns")
+14:34:04.311 6 W - [tgm]GetSchema("DataTypes")
+14:34:04.325 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+14:34:04.372 6 W - [tgm]的所有实体类（0个）：
+14:34:04.372 6 W - [tgm]需要检查架构的实体类（0个）：
+14:34:04.372 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时47ms
+14:34:04.373 6 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-2-130649998496061808
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:37:33.433 8 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+14:37:33.442 8 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+14:37:33.443 8 W - 使用数据库方式：独占，加大缓存权重
+14:37:33.443 8 W - 一级缓存：关闭缓存
+14:37:33.463 8 W - [DB]GetSchema("MetaDataCollections")
+14:37:33.471 8 W - [DB]GetSchema("ReservedWords")
+14:37:33.491 8 W - [DB]GetSchema("Databases", "tgm")
+14:37:33.502 8 W - [DB]GetSchema("Tables")
+14:37:33.561 8 W - [DB]GetSchema("Columns")
+14:37:33.580 8 W - [DB]GetSchema("Indexes")
+14:37:33.582 8 W - [DB]GetSchema("IndexColumns")
+14:37:33.588 8 W - [DB]GetSchema("DataTypes")
+14:37:33.630 8 W - 开始检查连接[DB/SqlServer]的数据库架构……
+14:37:33.687 8 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:37:33.687 8 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:37:33.688 8 W - DB待检查表架构的实体个数：10
+14:37:33.758 8 W - 检查连接[DB/SqlServer]的数据库架构耗时128ms
+14:37:33.758 8 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+14:37:33.775 8 W - Select * From tgm_admin Where id=26
+14:37:33.956 9 W - [tgm]GetSchema("MetaDataCollections")
+14:37:33.960 9 W - [tgm]GetSchema("ReservedWords")
+14:37:33.965 9 W - [tgm]GetSchema("Databases", "tgm")
+14:37:33.970 9 W - [tgm]GetSchema("Tables")
+14:37:34.057 9 W - [tgm]GetSchema("Columns")
+14:37:34.077 9 W - [tgm]GetSchema("Indexes")
+14:37:34.079 9 W - [tgm]GetSchema("IndexColumns")
+14:37:34.081 9 W - [tgm]GetSchema("DataTypes")
+14:37:34.098 9 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+14:37:34.172 9 W - [tgm]的所有实体类（0个）：
+14:37:34.172 9 W - [tgm]需要检查架构的实体类（0个）：
+14:37:34.172 9 W - 检查连接[tgm/SqlServer]的数据库架构耗时74ms
+14:37:34.172 9 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-3-130649999487160666
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:39:12.249 11 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+14:39:12.258 11 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+14:39:12.259 11 W - 使用数据库方式：独占，加大缓存权重
+14:39:12.259 11 W - 一级缓存：关闭缓存
+14:39:12.279 11 W - [DB]GetSchema("MetaDataCollections")
+14:39:12.286 11 W - [DB]GetSchema("ReservedWords")
+14:39:12.306 11 W - [DB]GetSchema("Databases", "tgm")
+14:39:12.317 11 W - [DB]GetSchema("Tables")
+14:39:12.388 11 W - [DB]GetSchema("Columns")
+14:39:12.408 11 W - [DB]GetSchema("Indexes")
+14:39:12.409 11 W - [DB]GetSchema("IndexColumns")
+14:39:12.416 11 W - [DB]GetSchema("DataTypes")
+14:39:12.457 11 W - 开始检查连接[DB/SqlServer]的数据库架构……
+14:39:12.517 11 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:39:12.517 11 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:39:12.517 11 W - DB待检查表架构的实体个数：10
+14:39:12.630 11 W - 检查连接[DB/SqlServer]的数据库架构耗时173ms
+14:39:12.630 11 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+14:39:12.647 11 W - Select * From tgm_admin Where id=26
+14:39:12.828 6 W - [tgm]GetSchema("MetaDataCollections")
+14:39:12.831 6 W - [tgm]GetSchema("ReservedWords")
+14:39:12.836 6 W - [tgm]GetSchema("Databases", "tgm")
+14:39:12.841 6 W - [tgm]GetSchema("Tables")
+14:39:12.930 6 W - [tgm]GetSchema("Columns")
+14:39:12.949 6 W - [tgm]GetSchema("Indexes")
+14:39:12.951 6 W - [tgm]GetSchema("IndexColumns")
+14:39:12.953 6 W - [tgm]GetSchema("DataTypes")
+14:39:12.967 6 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+14:39:13.011 6 W - [tgm]的所有实体类（0个）：
+14:39:13.011 6 W - [tgm]需要检查架构的实体类（0个）：
+14:39:13.011 6 W - 检查连接[tgm/SqlServer]的数据库架构耗时45ms
+14:39:13.012 6 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-4-130650001593805503
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:42:43.029 10 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+14:42:43.038 10 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+14:42:43.039 10 W - 使用数据库方式：独占，加大缓存权重
+14:42:43.039 10 W - 一级缓存：关闭缓存
+14:42:43.059 10 W - [DB]GetSchema("MetaDataCollections")
+14:42:43.066 10 W - [DB]GetSchema("ReservedWords")
+14:42:43.087 10 W - [DB]GetSchema("Databases", "tgm")
+14:42:43.097 10 W - [DB]GetSchema("Tables")
+14:42:43.173 10 W - [DB]GetSchema("Columns")
+14:42:43.193 10 W - [DB]GetSchema("Indexes")
+14:42:43.194 10 W - [DB]GetSchema("IndexColumns")
+14:42:43.201 10 W - [DB]GetSchema("DataTypes")
+14:42:43.243 10 W - 开始检查连接[DB/SqlServer]的数据库架构……
+14:42:43.300 10 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:42:43.300 10 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+14:42:43.300 10 W - DB待检查表架构的实体个数：10
+14:42:43.384 10 W - 检查连接[DB/SqlServer]的数据库架构耗时141ms
+14:42:43.384 10 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+14:42:43.403 10 W - Select * From tgm_admin Where id=26
+14:42:43.587 11 W - [tgm]GetSchema("MetaDataCollections")
+14:42:43.590 11 W - [tgm]GetSchema("ReservedWords")
+14:42:43.596 11 W - [tgm]GetSchema("Databases", "tgm")
+14:42:43.601 11 W - [tgm]GetSchema("Tables")
+14:42:43.669 11 W - [tgm]GetSchema("Columns")
+14:42:43.688 11 W - [tgm]GetSchema("Indexes")
+14:42:43.689 11 W - [tgm]GetSchema("IndexColumns")
+14:42:43.691 11 W - [tgm]GetSchema("DataTypes")
+14:42:43.705 11 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+14:42:43.749 11 W - [tgm]的所有实体类（0个）：
+14:42:43.749 11 W - [tgm]需要检查架构的实体类（0个）：
+14:42:43.749 11 W - 检查连接[tgm/SqlServer]的数据库架构耗时44ms
+14:42:43.749 11 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-5-130650039346748904
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+15:45:38.316 77 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+15:45:38.326 77 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+15:45:38.326 77 W - 使用数据库方式：独占，加大缓存权重
+15:45:38.326 77 W - 一级缓存：关闭缓存
+15:45:38.346 77 W - [DB]GetSchema("MetaDataCollections")
+15:45:38.353 77 W - [DB]GetSchema("ReservedWords")
+15:45:38.373 77 W - [DB]GetSchema("Databases", "tgm")
+15:45:38.383 77 W - [DB]GetSchema("Tables")
+15:45:38.460 77 W - [DB]GetSchema("Columns")
+15:45:38.480 77 W - [DB]GetSchema("Indexes")
+15:45:38.482 77 W - [DB]GetSchema("IndexColumns")
+15:45:38.489 77 W - [DB]GetSchema("DataTypes")
+15:45:38.531 77 W - 开始检查连接[DB/SqlServer]的数据库架构……
+15:45:38.588 77 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+15:45:38.588 77 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+15:45:38.589 77 W - DB待检查表架构的实体个数：10
+15:45:38.672 77 W - 检查连接[DB/SqlServer]的数据库架构耗时141ms
+15:45:38.672 77 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+15:45:38.688 77 W - Select * From tgm_admin Where id=26
+15:45:38.895 85 W - [tgm]GetSchema("MetaDataCollections")
+15:45:38.899 85 W - [tgm]GetSchema("ReservedWords")
+15:45:38.904 85 W - [tgm]GetSchema("Databases", "tgm")
+15:45:38.910 85 W - [tgm]GetSchema("Tables")
+15:45:38.973 85 W - [tgm]GetSchema("Columns")
+15:45:38.993 85 W - [tgm]GetSchema("Indexes")
+15:45:38.995 85 W - [tgm]GetSchema("IndexColumns")
+15:45:38.998 85 W - [tgm]GetSchema("DataTypes")
+15:45:39.014 85 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+15:45:39.060 85 W - [tgm]的所有实体类（0个）：
+15:45:39.060 85 W - [tgm]需要检查架构的实体类（0个）：
+15:45:39.060 85 W - 检查连接[tgm/SqlServer]的数据库架构耗时46ms
+15:45:39.060 85 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-6-130650049941574630
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:03:17.830 79 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:03:17.839 79 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:03:17.840 79 W - 使用数据库方式：独占，加大缓存权重
+16:03:17.840 79 W - 一级缓存：关闭缓存
+16:03:17.860 79 W - [DB]GetSchema("MetaDataCollections")
+16:03:17.866 79 W - [DB]GetSchema("ReservedWords")
+16:03:17.887 79 W - [DB]GetSchema("Databases", "tgm")
+16:03:17.898 79 W - [DB]GetSchema("Tables")
+16:03:17.958 79 W - [DB]GetSchema("Columns")
+16:03:17.977 79 W - [DB]GetSchema("Indexes")
+16:03:17.980 79 W - [DB]GetSchema("IndexColumns")
+16:03:17.986 79 W - [DB]GetSchema("DataTypes")
+16:03:18.027 79 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:03:18.084 79 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:03:18.084 79 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:03:18.084 79 W - DB待检查表架构的实体个数：10
+16:03:18.154 79 W - 检查连接[DB/SqlServer]的数据库架构耗时127ms
+16:03:18.154 79 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:03:18.172 79 W - Select * From tgm_admin Where id=26
+16:03:18.357 81 W - [tgm]GetSchema("MetaDataCollections")
+16:03:18.361 81 W - [tgm]GetSchema("ReservedWords")
+16:03:18.367 81 W - [tgm]GetSchema("Databases", "tgm")
+16:03:18.373 81 W - [tgm]GetSchema("Tables")
+16:03:18.441 81 W - [tgm]GetSchema("Columns")
+16:03:18.463 81 W - [tgm]GetSchema("Indexes")
+16:03:18.466 81 W - [tgm]GetSchema("IndexColumns")
+16:03:18.468 81 W - [tgm]GetSchema("DataTypes")
+16:03:18.482 81 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:03:18.532 81 W - [tgm]的所有实体类（0个）：
+16:03:18.532 81 W - [tgm]需要检查架构的实体类（0个）：
+16:03:18.532 81 W - 检查连接[tgm/SqlServer]的数据库架构耗时50ms
+16:03:18.532 81 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+16:03:49.438 81 W - [tgm]GetSchema("Tables")
+16:03:49.516 81 W - [tgm]GetSchema("Columns")
+16:03:49.538 81 W - [tgm]GetSchema("Indexes")
+16:03:49.541 81 W - [tgm]GetSchema("IndexColumns")
+16:03:49.545 81 W - Select * From tgm_role Order By id Desc
+16:03:49.546 81 W - Select * From tgm_admin Where id=35
+16:03:49.547 81 W - Select * From tgm_admin Where id=32
+16:03:49.548 81 W - Select * From tgm_admin Where id=31
+16:03:49.549 81 W - Select * From tgm_admin Where id=30
+16:03:49.550 81 W - Select * From tgm_admin Where id=28
+16:03:49.551 81 W - Select * From tgm_admin Where id=27
+16:03:49.552 81 W - Select * From tgm_admin Where id=26
+16:03:49.552 81 W - Select * From tgm_admin Where id=23
+16:03:49.553 81 W - Select * From tgm_admin Where id=22
+16:03:49.554 81 W - Select * From tgm_admin Where id=19
+16:03:49.555 81 W - Select * From tgm_admin Where id=18
+16:03:49.556 81 W - Select * From tgm_admin Where id=15
+16:03:49.557 81 W - Select * From tgm_admin Where id=14
+16:03:49.557 81 W - Select * From tgm_admin Where id=1
+16:04:18.884 14 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:04:18.886 14 W - Select * From tgm_admin Where id=26
+16:04:18.940 81 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+16:05:31.076 14 W - Select * From tgm_role Order By id Desc
+16:05:31.078 14 W - Select * From tgm_admin Where id=35
+16:05:31.080 14 W - Select * From tgm_admin Where id=32
+16:05:31.080 14 W - Select * From tgm_admin Where id=31
+16:05:31.081 14 W - Select * From tgm_admin Where id=30
+16:05:31.082 14 W - Select * From tgm_admin Where id=28
+16:05:31.083 14 W - Select * From tgm_admin Where id=27
+16:05:31.084 14 W - Select * From tgm_admin Where id=26
+16:05:31.085 14 W - Select * From tgm_admin Where id=23
+16:05:31.086 14 W - Select * From tgm_admin Where id=22
+16:05:31.087 14 W - Select * From tgm_admin Where id=19
+16:05:31.087 14 W - Select * From tgm_admin Where id=18
+16:05:31.088 14 W - Select * From tgm_admin Where id=15
+16:05:31.089 14 W - Select * From tgm_admin Where id=14
+16:05:31.090 14 W - Select * From tgm_admin Where id=1
+16:06:24.479 83 W - Select * From tgm_role Order By id Desc
+16:06:24.481 83 W - Select * From tgm_admin Where id=35
+16:06:24.483 83 W - Select * From tgm_admin Where id=32
+16:06:24.483 83 W - Select * From tgm_admin Where id=31
+16:06:24.484 83 W - Select * From tgm_admin Where id=30
+16:06:24.485 83 W - Select * From tgm_admin Where id=28
+16:06:24.486 83 W - Select * From tgm_admin Where id=27
+16:06:24.487 83 W - Select * From tgm_admin Where id=26
+16:06:24.488 83 W - Select * From tgm_admin Where id=23
+16:06:24.489 83 W - Select * From tgm_admin Where id=22
+16:06:24.490 83 W - Select * From tgm_admin Where id=19
+16:06:24.491 83 W - Select * From tgm_admin Where id=18
+16:06:24.492 83 W - Select * From tgm_admin Where id=15
+16:06:24.493 83 W - Select * From tgm_admin Where id=14
+16:06:24.494 83 W - Select * From tgm_admin Where id=1
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-7-130650053148513873
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:08:38.497 83 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:08:38.522 83 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:08:38.522 83 W - 使用数据库方式：独占，加大缓存权重
+16:08:38.522 83 W - 一级缓存：关闭缓存
+16:08:38.543 83 W - [DB]GetSchema("MetaDataCollections")
+16:08:38.550 83 W - [DB]GetSchema("ReservedWords")
+16:08:38.571 83 W - [DB]GetSchema("Databases", "tgm")
+16:08:38.582 83 W - [DB]GetSchema("Tables")
+16:08:38.662 83 W - [DB]GetSchema("Columns")
+16:08:38.682 83 W - [DB]GetSchema("Indexes")
+16:08:38.684 83 W - [DB]GetSchema("IndexColumns")
+16:08:38.690 83 W - [DB]GetSchema("DataTypes")
+16:08:38.732 83 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:08:38.789 83 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:08:38.789 83 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:08:38.789 83 W - DB待检查表架构的实体个数：10
+16:08:38.893 83 W - 检查连接[DB/SqlServer]的数据库架构耗时161ms
+16:08:38.893 83 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:08:38.922 83 W - Select * From tgm_admin Where id=26
+16:08:39.111 81 W - [tgm]GetSchema("MetaDataCollections")
+16:08:39.115 81 W - [tgm]GetSchema("ReservedWords")
+16:08:39.120 81 W - [tgm]GetSchema("Databases", "tgm")
+16:08:39.125 81 W - [tgm]GetSchema("Tables")
+16:08:39.189 81 W - [tgm]GetSchema("Columns")
+16:08:39.208 81 W - [tgm]GetSchema("Indexes")
+16:08:39.210 81 W - [tgm]GetSchema("IndexColumns")
+16:08:39.212 81 W - [tgm]GetSchema("DataTypes")
+16:08:39.226 81 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:08:39.284 81 W - [tgm]的所有实体类（0个）：
+16:08:39.284 81 W - [tgm]需要检查架构的实体类（0个）：
+16:08:39.284 81 W - 检查连接[tgm/SqlServer]的数据库架构耗时58ms
+16:08:39.284 81 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+16:08:52.140 81 W - Select * From (Select *, row_number() over(Order By name, password, role, token, id, rid, createtime) as rowNumber From view_user Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' And name=N'lgy') XCode_T1 Where rowNumber Between 1 And 1
+16:09:32.942 14 W - Select * From (Select *, row_number() over(Order By name, password, role, token, id, rid, createtime) as rowNumber From view_user Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' And name=N'lgy') XCode_T1 Where rowNumber Between 1 And 1
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-8-130650056095371060
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:13:33.307 16 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:13:33.316 16 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:13:33.317 16 W - 使用数据库方式：独占，加大缓存权重
+16:13:33.317 16 W - 一级缓存：关闭缓存
+16:13:33.338 16 W - [DB]GetSchema("MetaDataCollections")
+16:13:33.345 16 W - [DB]GetSchema("ReservedWords")
+16:13:33.364 16 W - [DB]GetSchema("Databases", "tgm")
+16:13:33.375 16 W - [DB]GetSchema("Tables")
+16:13:33.455 16 W - [DB]GetSchema("Columns")
+16:13:33.476 16 W - [DB]GetSchema("Indexes")
+16:13:33.478 16 W - [DB]GetSchema("IndexColumns")
+16:13:33.484 16 W - [DB]GetSchema("DataTypes")
+16:13:33.525 16 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:13:33.582 16 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:13:33.582 16 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:13:33.582 16 W - DB待检查表架构的实体个数：10
+16:13:33.665 16 W - 检查连接[DB/SqlServer]的数据库架构耗时141ms
+16:13:33.666 16 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:13:33.685 16 W - Select * From tgm_admin Where id=26
+16:13:33.949 14 W - [tgm]GetSchema("MetaDataCollections")
+16:13:33.952 14 W - [tgm]GetSchema("ReservedWords")
+16:13:33.959 14 W - [tgm]GetSchema("Databases", "tgm")
+16:13:33.964 14 W - [tgm]GetSchema("Tables")
+16:13:34.028 14 W - [tgm]GetSchema("Columns")
+16:13:34.048 14 W - [tgm]GetSchema("Indexes")
+16:13:34.050 14 W - [tgm]GetSchema("IndexColumns")
+16:13:34.054 14 W - [tgm]GetSchema("DataTypes")
+16:13:34.070 14 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:13:34.145 14 W - [tgm]的所有实体类（0个）：
+16:13:34.145 14 W - [tgm]需要检查架构的实体类（0个）：
+16:13:34.145 14 W - 检查连接[tgm/SqlServer]的数据库架构耗时76ms
+16:13:34.146 14 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+16:13:58.678 7 W - Select * From (Select *, row_number() over(Order By name, password, role, token, id, rid, createtime) as rowNumber From view_user Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' And name=N'lgy') XCode_T1 Where rowNumber Between 1 And 1
+16:13:58.697 7 W - Update tgm_role Set password=N'/WR6nuZUpZ8=' Where id=12
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-9-130650058688216686
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:17:52.634 79 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:17:52.643 79 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:17:52.644 79 W - 使用数据库方式：独占，加大缓存权重
+16:17:52.644 79 W - 一级缓存：关闭缓存
+16:17:52.665 79 W - [DB]GetSchema("MetaDataCollections")
+16:17:52.672 79 W - [DB]GetSchema("ReservedWords")
+16:17:52.692 79 W - [DB]GetSchema("Databases", "tgm")
+16:17:52.703 79 W - [DB]GetSchema("Tables")
+16:17:52.787 79 W - [DB]GetSchema("Columns")
+16:17:52.810 79 W - [DB]GetSchema("Indexes")
+16:17:52.813 79 W - [DB]GetSchema("IndexColumns")
+16:17:52.825 79 W - [DB]GetSchema("DataTypes")
+16:17:52.901 79 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:17:52.975 79 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:17:52.975 79 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:17:52.976 79 W - DB待检查表架构的实体个数：10
+16:17:53.063 79 W - 检查连接[DB/SqlServer]的数据库架构耗时161ms
+16:17:53.063 79 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:18:01.219 79 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:18:01.226 79 W - Select * From tgm_admin Where id=26
+16:18:01.284 8 W - [tgm]GetSchema("MetaDataCollections")
+16:18:01.287 8 W - [tgm]GetSchema("ReservedWords")
+16:18:01.294 8 W - [tgm]GetSchema("Databases", "tgm")
+16:18:01.299 8 W - [tgm]GetSchema("Tables")
+16:18:01.366 8 W - [tgm]GetSchema("Columns")
+16:18:01.386 8 W - [tgm]GetSchema("Indexes")
+16:18:01.388 8 W - [tgm]GetSchema("IndexColumns")
+16:18:01.391 8 W - [tgm]GetSchema("DataTypes")
+16:18:01.405 8 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:18:01.449 8 W - [tgm]的所有实体类（0个）：
+16:18:01.449 8 W - [tgm]需要检查架构的实体类（0个）：
+16:18:01.449 8 W - 检查连接[tgm/SqlServer]的数据库架构耗时44ms
+16:18:01.449 8 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+16:18:17.409 14 W - Select * From (Select *, row_number() over(Order By name, password, role, token, id, rid, createtime) as rowNumber From view_user Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' And name=N'lgy') XCode_T1 Where rowNumber Between 1 And 1
+16:18:17.413 14 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:18:17.428 14 W - Select * From tgm_admin Where id=26
+16:18:48.347 16 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:18:54.975 79 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:18:54.977 79 W - Select * From tgm_admin Where id=26
+16:18:55.024 16 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+16:19:08.981 8 W - Select * From (Select *, row_number() over(Order By name, password, role, token, id, rid, createtime) as rowNumber From view_user Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' And name=N'lgy') XCode_T1 Where rowNumber Between 1 And 1
+16:19:08.982 8 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:19:08.986 8 W - Select * From tgm_admin Where id=26
+16:19:17.087 16 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:19:26.065 79 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:19:26.067 79 W - Select * From tgm_admin Where id=26
+16:19:26.119 8 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-10-130650060106136321
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:20:14.562 81 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:20:14.571 81 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:20:14.572 81 W - 使用数据库方式：独占，加大缓存权重
+16:20:14.572 81 W - 一级缓存：关闭缓存
+16:20:14.593 81 W - [DB]GetSchema("MetaDataCollections")
+16:20:14.599 81 W - [DB]GetSchema("ReservedWords")
+16:20:14.620 81 W - [DB]GetSchema("Databases", "tgm")
+16:20:14.631 81 W - [DB]GetSchema("Tables")
+16:20:14.700 81 W - [DB]GetSchema("Columns")
+16:20:14.723 81 W - [DB]GetSchema("Indexes")
+16:20:14.727 81 W - [DB]GetSchema("IndexColumns")
+16:20:14.739 81 W - [DB]GetSchema("DataTypes")
+16:20:14.802 81 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:20:14.858 81 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:20:14.858 81 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:20:14.859 81 W - DB待检查表架构的实体个数：10
+16:20:14.942 81 W - 检查连接[DB/SqlServer]的数据库架构耗时141ms
+16:20:14.942 81 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:20:14.959 81 W - Select * From tgm_admin Where id=26
+16:20:15.144 8 W - [tgm]GetSchema("MetaDataCollections")
+16:20:15.147 8 W - [tgm]GetSchema("ReservedWords")
+16:20:15.153 8 W - [tgm]GetSchema("Databases", "tgm")
+16:20:15.159 8 W - [tgm]GetSchema("Tables")
+16:20:15.227 8 W - [tgm]GetSchema("Columns")
+16:20:15.247 8 W - [tgm]GetSchema("Indexes")
+16:20:15.248 8 W - [tgm]GetSchema("IndexColumns")
+16:20:15.251 8 W - [tgm]GetSchema("DataTypes")
+16:20:15.265 8 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:20:15.309 8 W - [tgm]的所有实体类（0个）：
+16:20:15.309 8 W - [tgm]需要检查架构的实体类（0个）：
+16:20:15.309 8 W - 检查连接[tgm/SqlServer]的数据库架构耗时44ms
+16:20:15.309 8 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+16:20:39.226 81 W - [tgm]GetSchema("Tables")
+16:20:39.295 81 W - [tgm]GetSchema("Columns")
+16:20:39.317 81 W - [tgm]GetSchema("Indexes")
+16:20:39.320 81 W - [tgm]GetSchema("IndexColumns")
+16:20:39.329 81 W - Select * From (Select *, row_number() over(Order By name, password, role, token, id, rid, createtime) as rowNumber From view_user Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' And name=N'lgy') XCode_T1 Where rowNumber Between 1 And 1
+16:20:39.335 81 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:20:39.362 81 W - Select * From tgm_admin Where id=26
+16:22:18.793 81 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:22:18.795 81 W - Select * From tgm_admin Where id=26
+16:22:18.849 79 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+16:22:31.561 81 W - Select * From (Select *, row_number() over(Order By name, password, role, token, id, rid, createtime) as rowNumber From view_user Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' And name=N'lgy') XCode_T1 Where rowNumber Between 1 And 1
+16:22:31.563 81 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:22:31.567 81 W - Select * From tgm_admin Where id=26
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-11-130650064466929671
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:27:30.402 81 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:27:30.411 81 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:27:30.412 81 W - 使用数据库方式：独占，加大缓存权重
+16:27:30.412 81 W - 一级缓存：关闭缓存
+16:27:30.433 81 W - [DB]GetSchema("MetaDataCollections")
+16:27:30.439 81 W - [DB]GetSchema("ReservedWords")
+16:27:30.460 81 W - [DB]GetSchema("Databases", "tgm")
+16:27:30.470 81 W - [DB]GetSchema("Tables")
+16:27:30.529 81 W - [DB]GetSchema("Columns")
+16:27:30.549 81 W - [DB]GetSchema("Indexes")
+16:27:30.552 81 W - [DB]GetSchema("IndexColumns")
+16:27:30.558 81 W - [DB]GetSchema("DataTypes")
+16:27:30.600 81 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:27:30.657 81 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:27:30.657 81 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:27:30.657 81 W - DB待检查表架构的实体个数：10
+16:27:30.742 81 W - 检查连接[DB/SqlServer]的数据库架构耗时142ms
+16:27:30.742 81 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:27:30.758 81 W - Select * From tgm_admin Where id=26
+16:27:30.941 8 W - [tgm]GetSchema("MetaDataCollections")
+16:27:30.945 8 W - [tgm]GetSchema("ReservedWords")
+16:27:30.950 8 W - [tgm]GetSchema("Databases", "tgm")
+16:27:30.955 8 W - [tgm]GetSchema("Tables")
+16:27:31.025 8 W - [tgm]GetSchema("Columns")
+16:27:31.044 8 W - [tgm]GetSchema("Indexes")
+16:27:31.047 8 W - [tgm]GetSchema("IndexColumns")
+16:27:31.049 8 W - [tgm]GetSchema("DataTypes")
+16:27:31.064 8 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:27:31.107 8 W - [tgm]的所有实体类（0个）：
+16:27:31.107 8 W - [tgm]需要检查架构的实体类（0个）：
+16:27:31.107 8 W - 检查连接[tgm/SqlServer]的数据库架构耗时44ms
+16:27:31.107 8 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+16:27:45.222 79 W - Select * From (Select *, row_number() over(Order By name, password, role, token, id, rid, createtime) as rowNumber From view_user Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' And name=N'lgy') XCode_T1 Where rowNumber Between 1 And 1
+16:27:45.226 79 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:27:45.241 79 W - Update tgm_role Set password=N'MDrR5r/r9qY=' Where id=12
+16:27:45.249 79 W - Select * From tgm_admin Where id=26
+16:27:56.435 14 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:28:03.515 14 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:28:03.518 14 W - Select * From tgm_admin Where id=26
+16:28:03.568 8 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 7356
+#AppDomain: /LM/W3SVC/2/ROOT-12-130650066362367389
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:30:39.827 24 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+16:30:39.836 24 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+16:30:39.836 24 W - 使用数据库方式：独占，加大缓存权重
+16:30:39.836 24 W - 一级缓存：关闭缓存
+16:30:39.856 24 W - [DB]GetSchema("MetaDataCollections")
+16:30:39.863 24 W - [DB]GetSchema("ReservedWords")
+16:30:39.883 24 W - [DB]GetSchema("Databases", "tgm")
+16:30:39.893 24 W - [DB]GetSchema("Tables")
+16:30:39.974 24 W - [DB]GetSchema("Columns")
+16:30:39.994 24 W - [DB]GetSchema("Indexes")
+16:30:39.995 24 W - [DB]GetSchema("IndexColumns")
+16:30:40.002 24 W - [DB]GetSchema("DataTypes")
+16:30:40.044 24 W - 开始检查连接[DB/SqlServer]的数据库架构……
+16:30:40.109 24 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:30:40.109 24 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+16:30:40.110 24 W - DB待检查表架构的实体个数：10
+16:30:40.201 24 W - 检查连接[DB/SqlServer]的数据库架构耗时157ms
+16:30:40.201 24 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+16:30:40.218 24 W - Select * From tgm_admin Where id=26
+16:30:40.393 79 W - [tgm]GetSchema("MetaDataCollections")
+16:30:40.396 79 W - [tgm]GetSchema("ReservedWords")
+16:30:40.402 79 W - [tgm]GetSchema("Databases", "tgm")
+16:30:40.407 79 W - [tgm]GetSchema("Tables")
+16:30:40.470 79 W - [tgm]GetSchema("Columns")
+16:30:40.490 79 W - [tgm]GetSchema("Indexes")
+16:30:40.491 79 W - [tgm]GetSchema("IndexColumns")
+16:30:40.493 79 W - [tgm]GetSchema("DataTypes")
+16:30:40.508 79 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+16:30:40.552 79 W - [tgm]的所有实体类（0个）：
+16:30:40.552 79 W - [tgm]需要检查架构的实体类（0个）：
+16:30:40.552 79 W - 检查连接[tgm/SqlServer]的数据库架构耗时44ms
+16:30:40.552 79 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 3292
+#AppDomain: /LM/W3SVC/2/ROOT-1-130650092178855897
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:13:41.768 6 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:13:41.779 6 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:13:41.779 6 W - 使用数据库方式：独占，加大缓存权重
+17:13:41.779 6 W - 一级缓存：关闭缓存
+17:13:41.809 6 W - [DB]GetSchema("MetaDataCollections")
+17:13:41.818 6 W - [DB]GetSchema("ReservedWords")
+17:13:41.840 6 W - [DB]GetSchema("Databases", "tgm")
+17:13:41.851 6 W - [DB]GetSchema("Tables")
+17:13:41.948 6 W - [DB]GetSchema("Columns")
+17:13:41.970 6 W - [DB]GetSchema("Indexes")
+17:13:41.973 6 W - [DB]GetSchema("IndexColumns")
+17:13:41.980 6 W - [DB]GetSchema("DataTypes")
+17:13:42.026 6 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:13:42.092 6 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+17:13:42.092 6 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+17:13:42.093 6 W - DB待检查表架构的实体个数：10
+17:13:42.188 6 W - 检查连接[DB/SqlServer]的数据库架构耗时161ms
+17:13:42.188 6 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+17:13:42.208 6 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:13:42.222 6 W - Select * From tgm_admin Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 3292
+#AppDomain: /LM/W3SVC/2/ROOT-2-130650095593780772
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:19:23.072 13 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:19:23.082 13 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:19:23.082 13 W - 使用数据库方式：独占，加大缓存权重
+17:19:23.083 13 W - 一级缓存：关闭缓存
+17:19:23.103 13 W - [DB]GetSchema("MetaDataCollections")
+17:19:23.110 13 W - [DB]GetSchema("ReservedWords")
+17:19:23.131 13 W - [DB]GetSchema("Databases", "tgm")
+17:19:23.142 13 W - [DB]GetSchema("Tables")
+17:19:23.209 13 W - [DB]GetSchema("Columns")
+17:19:23.229 13 W - [DB]GetSchema("Indexes")
+17:19:23.233 13 W - [DB]GetSchema("IndexColumns")
+17:19:23.238 13 W - [DB]GetSchema("DataTypes")
+17:19:23.281 13 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:19:23.344 13 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+17:19:23.345 13 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+17:19:23.345 13 W - DB待检查表架构的实体个数：10
+17:19:23.438 13 W - 检查连接[DB/SqlServer]的数据库架构耗时157ms
+17:19:23.438 13 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+17:19:23.455 13 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:19:23.463 13 W - Select * From tgm_admin Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 3292
+#AppDomain: /LM/W3SVC/2/ROOT-3-130650098834261546
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:24:47.010 14 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:24:47.020 14 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:24:47.021 14 W - 使用数据库方式：独占，加大缓存权重
+17:24:47.021 14 W - 一级缓存：关闭缓存
+17:24:47.040 14 W - [DB]GetSchema("MetaDataCollections")
+17:24:47.048 14 W - [DB]GetSchema("ReservedWords")
+17:24:47.069 14 W - [DB]GetSchema("Databases", "tgm")
+17:24:47.079 14 W - [DB]GetSchema("Tables")
+17:24:47.145 14 W - [DB]GetSchema("Columns")
+17:24:47.167 14 W - [DB]GetSchema("Indexes")
+17:24:47.170 14 W - [DB]GetSchema("IndexColumns")
+17:24:47.182 14 W - [DB]GetSchema("DataTypes")
+17:24:47.239 14 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:24:47.296 14 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+17:24:47.297 14 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+17:24:47.297 14 W - DB待检查表架构的实体个数：10
+17:24:47.385 14 W - 检查连接[DB/SqlServer]的数据库架构耗时146ms
+17:24:47.385 14 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+17:24:47.403 14 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:24:47.411 14 W - Select * From tgm_admin Order By id Desc
+17:25:43.666 14 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+17:26:24.269 19 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+17:28:56.311 18 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 3292
+#AppDomain: /LM/W3SVC/2/ROOT-4-130650106484009103
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:37:32.420 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+17:37:32.430 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+17:37:32.430 7 W - 使用数据库方式：独占，加大缓存权重
+17:37:32.431 7 W - 一级缓存：关闭缓存
+17:37:32.451 7 W - [DB]GetSchema("MetaDataCollections")
+17:37:32.457 7 W - [DB]GetSchema("ReservedWords")
+17:37:32.476 7 W - [DB]GetSchema("Databases", "tgm")
+17:37:32.487 7 W - [DB]GetSchema("Tables")
+17:37:32.549 7 W - [DB]GetSchema("Columns")
+17:37:32.570 7 W - [DB]GetSchema("Indexes")
+17:37:32.572 7 W - [DB]GetSchema("IndexColumns")
+17:37:32.578 7 W - [DB]GetSchema("DataTypes")
+17:37:32.620 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+17:37:32.675 7 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+17:37:32.675 7 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+17:37:32.676 7 W - DB待检查表架构的实体个数：10
+17:37:32.747 7 W - 检查连接[DB/SqlServer]的数据库架构耗时127ms
+17:37:32.747 7 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+17:37:32.764 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+17:37:32.771 7 W - Select * From tgm_admin Order By id Desc
+17:39:02.024 16 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+17:39:32.023 8 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 2736
+#AppDomain: /LM/W3SVC/2/ROOT-1-130650126506089294
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:10:52.101 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:10:52.111 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:10:52.112 7 W - 使用数据库方式：独占，加大缓存权重
+18:10:52.112 7 W - 一级缓存：关闭缓存
+18:10:52.152 7 W - [DB]GetSchema("MetaDataCollections")
+18:10:52.161 7 W - [DB]GetSchema("ReservedWords")
+18:10:52.182 7 W - [DB]GetSchema("Databases", "tgm")
+18:10:52.193 7 W - [DB]GetSchema("Tables")
+18:10:52.272 7 W - [DB]GetSchema("Columns")
+18:10:52.294 7 W - [DB]GetSchema("Indexes")
+18:10:52.297 7 W - [DB]GetSchema("IndexColumns")
+18:10:52.303 7 W - [DB]GetSchema("DataTypes")
+18:10:52.347 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:10:52.396 7 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:10:52.396 7 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:10:52.396 7 W - DB待检查表架构的实体个数：10
+18:10:52.469 7 W - 检查连接[DB/SqlServer]的数据库架构耗时122ms
+18:10:52.469 7 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+18:10:52.487 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:10:52.494 7 W - Select * From tgm_admin Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 2736
+#AppDomain: /LM/W3SVC/2/ROOT-2-130650127483304362
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:12:32.295 15 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:12:32.304 15 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:12:32.305 15 W - 使用数据库方式：独占，加大缓存权重
+18:12:32.305 15 W - 一级缓存：关闭缓存
+18:12:32.329 15 W - [DB]GetSchema("MetaDataCollections")
+18:12:32.336 15 W - [DB]GetSchema("ReservedWords")
+18:12:32.357 15 W - [DB]GetSchema("Databases", "tgm")
+18:12:32.367 15 W - [DB]GetSchema("Tables")
+18:12:32.441 15 W - [DB]GetSchema("Columns")
+18:12:32.463 15 W - [DB]GetSchema("Indexes")
+18:12:32.465 15 W - [DB]GetSchema("IndexColumns")
+18:12:32.473 15 W - [DB]GetSchema("DataTypes")
+18:12:32.514 15 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:12:32.574 15 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:12:32.574 15 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:12:32.575 15 W - DB待检查表架构的实体个数：10
+18:12:32.680 15 W - 检查连接[DB/SqlServer]的数据库架构耗时166ms
+18:12:32.680 15 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+18:12:32.699 15 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:12:32.706 15 W - Select * From tgm_admin Order By id Desc
+18:12:32.891 10 W - [tgm]GetSchema("MetaDataCollections")
+18:12:32.894 10 W - [tgm]GetSchema("Databases", "tgm")
+18:12:32.901 10 W - [tgm]GetSchema("Tables")
+18:12:32.966 10 W - [tgm]GetSchema("Columns")
+18:12:32.986 10 W - [tgm]GetSchema("Indexes")
+18:12:32.988 10 W - [tgm]GetSchema("IndexColumns")
+18:12:32.991 10 W - [tgm]GetSchema("DataTypes")
+18:12:33.005 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:12:33.006 10 W - [tgm]GetSchema("ReservedWords")
+18:12:33.007 10 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:12:33.060 10 W - [tgm]的所有实体类（0个）：
+18:12:33.061 10 W - [tgm]需要检查架构的实体类（0个）：
+18:12:33.061 10 W - 检查连接[tgm/SqlServer]的数据库架构耗时54ms
+18:12:33.061 10 W - Select * From tgm_admin Order By id Desc
+18:13:36.645 15 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 2736
+#AppDomain: /LM/W3SVC/2/ROOT-3-130650129513638709
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:15:54.942 9 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:15:54.952 9 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:15:54.952 9 W - 使用数据库方式：独占，加大缓存权重
+18:15:54.953 9 W - 一级缓存：关闭缓存
+18:15:54.972 9 W - [DB]GetSchema("MetaDataCollections")
+18:15:54.978 9 W - [DB]GetSchema("ReservedWords")
+18:15:54.999 9 W - [DB]GetSchema("Databases", "tgm")
+18:15:55.009 9 W - [DB]GetSchema("Tables")
+18:15:55.080 9 W - [DB]GetSchema("Columns")
+18:15:55.100 9 W - [DB]GetSchema("Indexes")
+18:15:55.102 9 W - [DB]GetSchema("IndexColumns")
+18:15:55.108 9 W - [DB]GetSchema("DataTypes")
+18:15:55.150 9 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:15:55.218 9 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:15:55.218 9 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:15:55.219 9 W - DB待检查表架构的实体个数：10
+18:15:55.292 9 W - 检查连接[DB/SqlServer]的数据库架构耗时142ms
+18:15:55.293 9 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+18:15:55.310 9 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:15:55.317 9 W - Select * From tgm_admin Order By id Desc
+18:15:55.506 15 W - [tgm]GetSchema("MetaDataCollections")
+18:15:55.509 15 W - [tgm]GetSchema("Databases", "tgm")
+18:15:55.516 15 W - [tgm]GetSchema("Tables")
+18:15:55.593 15 W - [tgm]GetSchema("Columns")
+18:15:55.613 15 W - [tgm]GetSchema("Indexes")
+18:15:55.615 15 W - [tgm]GetSchema("IndexColumns")
+18:15:55.617 15 W - [tgm]GetSchema("DataTypes")
+18:15:55.631 15 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:15:55.632 15 W - [tgm]GetSchema("ReservedWords")
+18:15:55.633 15 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:15:55.679 15 W - [tgm]的所有实体类（0个）：
+18:15:55.679 15 W - [tgm]需要检查架构的实体类（0个）：
+18:15:55.679 15 W - 检查连接[tgm/SqlServer]的数据库架构耗时46ms
+18:15:55.679 15 W - Select * From tgm_admin Order By id Desc
+18:19:37.924 10 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+18:26:24.089 13 W - 实体缓存<tgm_admin>总次数5，命中4（80.00%）
+
+#Software: iisexpress
+#ProcessID: 2736
+#AppDomain: /LM/W3SVC/2/ROOT-4-130650142831566782
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:38:06.762 21 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:38:06.771 21 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:38:06.772 21 W - 使用数据库方式：独占，加大缓存权重
+18:38:06.772 21 W - 一级缓存：关闭缓存
+18:38:06.793 21 W - [DB]GetSchema("MetaDataCollections")
+18:38:06.799 21 W - [DB]GetSchema("ReservedWords")
+18:38:06.819 21 W - [DB]GetSchema("Databases", "tgm")
+18:38:06.829 21 W - [DB]GetSchema("Tables")
+18:38:06.891 21 W - [DB]GetSchema("Columns")
+18:38:06.911 21 W - [DB]GetSchema("Indexes")
+18:38:06.913 21 W - [DB]GetSchema("IndexColumns")
+18:38:06.920 21 W - [DB]GetSchema("DataTypes")
+18:38:06.962 21 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:38:07.019 21 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:38:07.019 21 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:38:07.020 21 W - DB待检查表架构的实体个数：10
+18:38:07.119 21 W - 检查连接[DB/SqlServer]的数据库架构耗时157ms
+18:38:07.119 21 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+18:38:07.139 21 W - Select * From tgm_admin Where id=26
+18:38:07.318 13 W - [tgm]GetSchema("MetaDataCollections")
+18:38:07.321 13 W - [tgm]GetSchema("ReservedWords")
+18:38:07.327 13 W - [tgm]GetSchema("Databases", "tgm")
+18:38:07.332 13 W - [tgm]GetSchema("Tables")
+18:38:07.404 13 W - [tgm]GetSchema("Columns")
+18:38:07.424 13 W - [tgm]GetSchema("Indexes")
+18:38:07.427 13 W - [tgm]GetSchema("IndexColumns")
+18:38:07.429 13 W - [tgm]GetSchema("DataTypes")
+18:38:07.443 13 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:38:07.489 13 W - [tgm]的所有实体类（0个）：
+18:38:07.489 13 W - [tgm]需要检查架构的实体类（0个）：
+18:38:07.489 13 W - 检查连接[tgm/SqlServer]的数据库架构耗时45ms
+18:38:07.489 13 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+18:38:07.561 13 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+18:38:27.020 23 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+18:38:27.025 23 W - [tgm]GetSchema("Tables")
+18:38:27.107 23 W - [tgm]GetSchema("Columns")
+18:38:27.128 23 W - [tgm]GetSchema("Indexes")
+18:38:27.130 23 W - [tgm]GetSchema("IndexColumns")
+18:38:27.133 23 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+18:38:27.148 23 W - Update tgm_role Set password=N'/WR6nuZUpZ8=' Where id=12
+18:38:27.158 23 W - Select * From tgm_admin Where id=26
+18:38:34.868 22 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+18:38:34.870 22 W - Select * From tgm_admin Where id=26
+18:38:34.918 21 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+18:38:34.919 21 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 2736
+#AppDomain: /LM/W3SVC/2/ROOT-5-130650144076254778
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:40:11.412 22 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:40:11.421 22 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:40:11.421 22 W - 使用数据库方式：独占，加大缓存权重
+18:40:11.422 22 W - 一级缓存：关闭缓存
+18:40:11.441 22 W - [DB]GetSchema("MetaDataCollections")
+18:40:11.447 22 W - [DB]GetSchema("ReservedWords")
+18:40:11.467 22 W - [DB]GetSchema("Databases", "tgm")
+18:40:11.478 22 W - [DB]GetSchema("Tables")
+18:40:11.549 22 W - [DB]GetSchema("Columns")
+18:40:11.569 22 W - [DB]GetSchema("Indexes")
+18:40:11.571 22 W - [DB]GetSchema("IndexColumns")
+18:40:11.584 22 W - [DB]GetSchema("DataTypes")
+18:40:11.650 22 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:40:11.714 22 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:40:11.715 22 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:40:11.715 22 W - DB待检查表架构的实体个数：10
+18:40:11.793 22 W - 检查连接[DB/SqlServer]的数据库架构耗时143ms
+18:40:11.793 22 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+18:40:11.810 22 W - Select * From tgm_admin Where id=26
+18:40:11.993 12 W - [tgm]GetSchema("MetaDataCollections")
+18:40:11.996 12 W - [tgm]GetSchema("ReservedWords")
+18:40:12.002 12 W - [tgm]GetSchema("Databases", "tgm")
+18:40:12.007 12 W - [tgm]GetSchema("Tables")
+18:40:12.079 12 W - [tgm]GetSchema("Columns")
+18:40:12.099 12 W - [tgm]GetSchema("Indexes")
+18:40:12.101 12 W - [tgm]GetSchema("IndexColumns")
+18:40:12.103 12 W - [tgm]GetSchema("DataTypes")
+18:40:12.118 12 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:40:12.161 12 W - [tgm]的所有实体类（0个）：
+18:40:12.161 12 W - [tgm]需要检查架构的实体类（0个）：
+18:40:12.161 12 W - 检查连接[tgm/SqlServer]的数据库架构耗时44ms
+18:40:12.161 12 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+18:40:12.239 12 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 2736
+#AppDomain: /LM/W3SVC/2/ROOT-6-130650144765462810
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:41:20.091 23 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:41:20.100 23 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:41:20.101 23 W - 使用数据库方式：独占，加大缓存权重
+18:41:20.101 23 W - 一级缓存：关闭缓存
+18:41:20.122 23 W - [DB]GetSchema("MetaDataCollections")
+18:41:20.129 23 W - [DB]GetSchema("ReservedWords")
+18:41:20.149 23 W - [DB]GetSchema("Databases", "tgm")
+18:41:20.159 23 W - [DB]GetSchema("Tables")
+18:41:20.238 23 W - [DB]GetSchema("Columns")
+18:41:20.263 23 W - [DB]GetSchema("Indexes")
+18:41:20.267 23 W - [DB]GetSchema("IndexColumns")
+18:41:20.280 23 W - [DB]GetSchema("DataTypes")
+18:41:20.339 23 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:41:20.395 23 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:41:20.395 23 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:41:20.395 23 W - DB待检查表架构的实体个数：10
+18:41:20.517 23 W - 检查连接[DB/SqlServer]的数据库架构耗时178ms
+18:41:20.517 23 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+18:41:20.536 23 W - Select * From tgm_admin Where id=26
+18:41:20.718 18 W - [tgm]GetSchema("MetaDataCollections")
+18:41:20.722 18 W - [tgm]GetSchema("ReservedWords")
+18:41:20.729 18 W - [tgm]GetSchema("Databases", "tgm")
+18:41:20.734 18 W - [tgm]GetSchema("Tables")
+18:41:20.796 18 W - [tgm]GetSchema("Columns")
+18:41:20.816 18 W - [tgm]GetSchema("Indexes")
+18:41:20.817 18 W - [tgm]GetSchema("IndexColumns")
+18:41:20.819 18 W - [tgm]GetSchema("DataTypes")
+18:41:20.834 18 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:41:20.911 18 W - [tgm]的所有实体类（0个）：
+18:41:20.911 18 W - [tgm]需要检查架构的实体类（0个）：
+18:41:20.911 18 W - 检查连接[tgm/SqlServer]的数据库架构耗时77ms
+18:41:20.912 18 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+18:41:20.998 18 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+
+#Software: iisexpress
+#ProcessID: 2736
+#AppDomain: /LM/W3SVC/2/ROOT-7-130650155565197627
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:59:20.231 16 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:59:20.240 16 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:59:20.240 16 W - 使用数据库方式：独占，加大缓存权重
+18:59:20.241 16 W - 一级缓存：关闭缓存
+18:59:20.262 16 W - [DB]GetSchema("MetaDataCollections")
+18:59:20.269 16 W - [DB]GetSchema("ReservedWords")
+18:59:20.289 16 W - [DB]GetSchema("Databases", "tgm")
+18:59:20.301 16 W - [DB]GetSchema("Tables")
+18:59:20.376 16 W - [DB]GetSchema("Columns")
+18:59:20.397 16 W - [DB]GetSchema("Indexes")
+18:59:20.398 16 W - [DB]GetSchema("IndexColumns")
+18:59:20.405 16 W - [DB]GetSchema("DataTypes")
+18:59:20.448 16 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:59:20.509 16 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:59:20.509 16 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+18:59:20.509 16 W - DB待检查表架构的实体个数：10
+18:59:20.603 16 W - 检查连接[DB/SqlServer]的数据库架构耗时156ms
+18:59:20.603 16 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+19:00:37.791 18 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+19:00:37.799 18 W - Select * From tgm_admin Where id=26
+
+#Software: iisexpress
+#ProcessID: 6192
+#AppDomain: /LM/W3SVC/2/ROOT-1-130650165807563409
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:16:25.463 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:16:25.473 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:16:25.474 7 W - 使用数据库方式：独占，加大缓存权重
+19:16:25.474 7 W - 一级缓存：关闭缓存
+19:16:25.502 7 W - [DB]GetSchema("MetaDataCollections")
+19:16:25.512 7 W - [DB]GetSchema("ReservedWords")
+19:16:25.533 7 W - [DB]GetSchema("Databases", "tgm")
+19:16:25.544 7 W - [DB]GetSchema("Tables")
+19:16:25.617 7 W - [DB]GetSchema("Columns")
+19:16:25.641 7 W - [DB]GetSchema("Indexes")
+19:16:25.644 7 W - [DB]GetSchema("IndexColumns")
+19:16:25.656 7 W - [DB]GetSchema("DataTypes")
+19:16:25.724 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:16:25.784 7 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+19:16:25.784 7 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+19:16:25.784 7 W - DB待检查表架构的实体个数：10
+19:16:25.861 7 W - 检查连接[DB/SqlServer]的数据库架构耗时137ms
+19:16:25.861 7 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+19:16:25.878 7 W - Select * From tgm_admin Where id=26
+19:16:34.308 7 W - [tgm]GetSchema("MetaDataCollections")
+19:16:34.311 7 W - [tgm]GetSchema("ReservedWords")
+19:16:34.317 7 W - [tgm]GetSchema("Databases", "tgm")
+19:16:34.322 7 W - [tgm]GetSchema("Tables")
+19:16:34.394 7 W - [tgm]GetSchema("Columns")
+19:16:34.413 7 W - [tgm]GetSchema("Indexes")
+19:16:34.415 7 W - [tgm]GetSchema("IndexColumns")
+19:16:34.417 7 W - [tgm]GetSchema("DataTypes")
+19:16:34.432 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:16:34.478 7 W - [tgm]的所有实体类（0个）：
+19:16:34.478 7 W - [tgm]需要检查架构的实体类（0个）：
+19:16:34.478 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时46ms
+19:16:34.479 7 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+19:16:34.536 7 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+19:19:39.614 11 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+19:19:39.616 11 W - Select * From tgm_admin Where id=26
+19:19:39.679 10 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+19:19:39.681 10 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+19:19:50.988 12 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+19:19:50.989 12 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+19:20:33.245 10 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+19:20:33.247 10 W - Select Top 1 * From tgm_server Where  name='TGM.API.Entity.Model.Server' AND admin_id in (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+19:20:33.254 10 W - [tgm]GetSchema("Tables")
+19:20:33.353 10 W - [tgm]GetSchema("Columns")
+19:20:33.374 10 W - [tgm]GetSchema("Indexes")
+19:20:33.376 10 W - [tgm]GetSchema("IndexColumns")
+19:20:33.403 10 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635561694570000000, 635561706570000000, 100, '啊发的通过', 0, 0);Select SCOPE_IDENTITY()
+19:22:43.736 12 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+19:22:43.738 12 W - Select Top 1 * From tgm_server Where  name='TGM.API.Entity.Model.Server' AND admin_id in (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+19:22:43.740 12 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635561703370000000, 635561706370000000, 100, '富商大贾多少分', 0, 0);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 6192
+#AppDomain: /LM/W3SVC/2/ROOT-2-130650173823207120
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:29:46.941 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:29:46.950 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:29:46.951 7 W - 使用数据库方式：独占，加大缓存权重
+19:29:46.951 7 W - 一级缓存：关闭缓存
+19:29:46.980 7 W - [DB]GetSchema("MetaDataCollections")
+19:29:46.987 7 W - [DB]GetSchema("ReservedWords")
+19:29:47.009 7 W - [DB]GetSchema("Databases", "tgm")
+19:29:47.019 7 W - [DB]GetSchema("Tables")
+19:29:47.091 7 W - [DB]GetSchema("Columns")
+19:29:47.110 7 W - [DB]GetSchema("Indexes")
+19:29:47.112 7 W - [DB]GetSchema("IndexColumns")
+19:29:47.118 7 W - [DB]GetSchema("DataTypes")
+19:29:47.176 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:29:47.237 7 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+19:29:47.237 7 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+19:29:47.237 7 W - DB待检查表架构的实体个数：10
+19:29:47.319 7 W - 检查连接[DB/SqlServer]的数据库架构耗时144ms
+19:29:47.319 7 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+19:29:47.336 7 W - Select * From tgm_admin Where id=26
+19:29:47.531 5 W - [tgm]GetSchema("MetaDataCollections")
+19:29:47.535 5 W - [tgm]GetSchema("ReservedWords")
+19:29:47.540 5 W - [tgm]GetSchema("Databases", "tgm")
+19:29:47.545 5 W - [tgm]GetSchema("Tables")
+19:29:47.622 5 W - [tgm]GetSchema("Columns")
+19:29:47.643 5 W - [tgm]GetSchema("Indexes")
+19:29:47.645 5 W - [tgm]GetSchema("IndexColumns")
+19:29:47.648 5 W - [tgm]GetSchema("DataTypes")
+19:29:47.662 5 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:29:47.706 5 W - [tgm]的所有实体类（0个）：
+19:29:47.706 5 W - [tgm]需要检查架构的实体类（0个）：
+19:29:47.706 5 W - 检查连接[tgm/SqlServer]的数据库架构耗时44ms
+19:29:47.706 5 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+19:29:47.778 5 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+19:30:48.208 15 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+19:30:48.210 15 W - Select Top 1 * From tgm_server Where  name='TGM.API.Entity.Model.Server' AND admin_id in (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+19:30:48.215 15 W - [tgm]GetSchema("Tables")
+19:30:48.271 15 W - [tgm]GetSchema("Columns")
+19:30:48.293 15 W - [tgm]GetSchema("Indexes")
+19:30:48.295 15 W - [tgm]GetSchema("IndexColumns")
+19:30:48.309 15 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635562558110000000, 635562570120000000, 100, '范德萨范德萨', 0, 0);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 6192
+#AppDomain: /LM/W3SVC/2/ROOT-3-130650175713292519
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-01-06
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:32:55.586 13 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+19:32:55.596 13 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+19:32:55.597 13 W - 使用数据库方式：独占，加大缓存权重
+19:32:55.597 13 W - 一级缓存：关闭缓存
+19:32:55.616 13 W - [DB]GetSchema("MetaDataCollections")
+19:32:55.623 13 W - [DB]GetSchema("ReservedWords")
+19:32:55.643 13 W - [DB]GetSchema("Databases", "tgm")
+19:32:55.653 13 W - [DB]GetSchema("Tables")
+19:32:55.728 13 W - [DB]GetSchema("Columns")
+19:32:55.748 13 W - [DB]GetSchema("Indexes")
+19:32:55.751 13 W - [DB]GetSchema("IndexColumns")
+19:32:55.763 13 W - [DB]GetSchema("DataTypes")
+19:32:55.822 13 W - 开始检查连接[DB/SqlServer]的数据库架构……
+19:32:55.879 13 W - [DB]的所有实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+19:32:55.879 13 W - [DB]需要检查架构的实体类（12个）：tgm_admin,report_user,tg_bag_log,tg_gold_log,tg_messages,tg_role,tg_system_notice,tg_user,tg_user_extend,view_user,tgm_role,tgm_server
+19:32:55.879 13 W - DB待检查表架构的实体个数：10
+19:32:55.969 13 W - 检查连接[DB/SqlServer]的数据库架构耗时147ms
+19:32:55.969 13 W - Select Top 1 * From tgm_role Where name=N'lgy' Order By id Desc
+19:32:56.005 13 W - Select * From tgm_admin Where id=26
+19:32:56.197 15 W - [tgm]GetSchema("MetaDataCollections")
+19:32:56.200 15 W - [tgm]GetSchema("ReservedWords")
+19:32:56.207 15 W - [tgm]GetSchema("Databases", "tgm")
+19:32:56.213 15 W - [tgm]GetSchema("Tables")
+19:32:56.286 15 W - [tgm]GetSchema("Columns")
+19:32:56.306 15 W - [tgm]GetSchema("Indexes")
+19:32:56.308 15 W - [tgm]GetSchema("IndexColumns")
+19:32:56.310 15 W - [tgm]GetSchema("DataTypes")
+19:32:56.324 15 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+19:32:56.367 15 W - [tgm]的所有实体类（0个）：
+19:32:56.367 15 W - [tgm]需要检查架构的实体类（0个）：
+19:32:56.367 15 W - 检查连接[tgm/SqlServer]的数据库架构耗时43ms
+19:32:56.367 15 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+19:32:56.444 15 W - Select * From tgm_server Where  admin_id in  (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+19:33:24.301 9 W - Select Top 1 * From tgm_admin Where token='b76ef7d0-8e01-4e1e-b599-987d5c985460' Order By id Desc
+19:33:24.303 9 W - Select Top 1 * From tgm_server Where  name='TGM.API.Entity.Model.Server' AND admin_id in (select id from tgm_admin where token='b76ef7d0-8e01-4e1e-b599-987d5c985460') Order By id Desc
+19:33:24.309 9 W - [tgm]GetSchema("Tables")
+19:33:24.380 9 W - [tgm]GetSchema("Columns")
+19:33:24.400 9 W - [tgm]GetSchema("Indexes")
+19:33:24.403 9 W - [tgm]GetSchema("IndexColumns")
+19:33:24.417 9 W - SET NOCOUNT ON;Insert Into tg_system_notice(base_Id, start_time, end_time, time_interval, content, [state], [level]) Values(0, 635562018010000000, 635562558010000000, 100, '反对的时光', 1, 2);Select SCOPE_IDENTITY()

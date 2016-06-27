@@ -1,0 +1,204 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using FluorineFx;
+using NewLife.Log;
+using System.Linq;
+using System.Threading;
+using TGG.Core.AMF;
+using TGG.Core.Common;
+using TGG.Core.Common.Util;
+using TGG.Core.Entity;
+using TGG.Core.Enum.Type;
+using TGG.Core.Global;
+using TGG.Share.Event;
+using TGG.SocketServer;
+using tg_user_login_log = TGG.Core.Entity.tg_user_login_log;
+using tg_user = TGG.Core.Entity.tg_user;
+
+namespace TGG.Module.User.Service
+{
+    /// <summary>
+    /// 玩家登陆指令
+    /// </summary>
+    public class USER_LOGIN : IDisposable
+    {
+        #region IDisposable 成员
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>析构函数</summary>
+        ~USER_LOGIN()
+        {
+            Dispose();
+        }
+
+        #endregion
+
+        //private static USER_LOGIN ObjInstance;
+        ///// <summary>LOGIN单例模式</summary>
+        //public static USER_LOGIN GetInstance()
+        //{
+        //    return ObjInstance ?? (ObjInstance = new USER_LOGIN());
+        //}
+
+        /// <summary>玩家登陆指令</summary>
+        public ASObject CommandStart(TGGSession session, ASObject data)
+        {
+#if DEBUG
+            XTrace.WriteLine("{0}:{1}", "LOGIN", "玩家登陆指令");
+#endif
+#if DEBUG
+            XTrace.WriteLine("------------   登陆前  {0}     ------------", Variable.OnlinePlayer.Count);
+#endif
+            if (!data.ContainsKey("isAdult") || !data.ContainsKey("userName")) return null;
+            var isAdult = Convert.ToInt32(data.FirstOrDefault(q => q.Key == "isAdult").Value); //是否成年0:未成年 1:成年
+
+            var name = data.FirstOrDefault(q => q.Key == "userName").Value.ToString();
+            var userName = string.Empty;
+            if (CommonHelper.IsKey())
+            {
+                //var decrypt = CommonHelper.GetUserName(name);
+
+                var gamekey = CommonHelper.GetAppSettings("gamekey");//获取游戏加密
+                var game_name = String.Empty;
+                var cb = false;
+                try
+                {
+                    var str = CommonHelper.Decode(name);
+                    game_name = CryptoHelper.Decrypt(str, gamekey);
+                    cb = true;
+                }
+                catch { XTrace.WriteLine("name:{0}", name); }
+
+                if (!cb) return CommonHelper.ErrorResult((int)ResultType.USER_SUBMIT_ERROR);
+                userName = game_name;
+            }
+            else
+            {
+                userName = name;
+            }
+
+            if (string.IsNullOrEmpty(userName)) return CommonHelper.ErrorResult((int)ResultType.USER_SUBMIT_ERROR);
+
+            var user = tg_user.Find(string.Format("user_code='{0}'", userName));
+            if (user == null) return new ASObject(BuildData((int)ResultType.NO_DATA, null, 0));
+            if (user.state == (int)UserStateType.Block) return CommonHelper.ErrorResult((int)ResultType.BASE_PLAYER_BLOCK_ERROR);
+            if (user.state == (int)UserStateType.Frozen) return CommonHelper.ErrorResult((int)ResultType.BASE_PLAYER_FROZEN_ERROR);
+            var b = Variable.OnlinePlayer.ContainsKey(user.id);
+#if DEBUG
+            XTrace.WriteLine("OnlinePlayer:{0} {1}", user.id, b);
+#endif
+            if (b)
+            {
+                var user_id = Convert.ToInt64(user.id);
+                var s = Variable.OnlinePlayer[user_id] as TGGSession;
+                if (s != null) s.Close();
+            }
+
+            var player = Common.GetInstance().GetPlayer(user, isAdult);
+            if (player == null) return null;
+            session.Player = player;
+            session.Fight = Common.GetInstance().GetFight(session.Player);
+
+            Variable.OnlinePlayer.AddOrUpdate(user.id, session, (k, v) => session);
+            tg_user_login_log.LoginLog(user.id, Common.GetInstance().GetRemoteIP(session));
+
+            ReLoadTask(session);
+            RemoveFightState(user.id);
+
+            Int64 opentime = 0;
+            if (CommonHelper.CheckOpenTime())
+            {
+                if (session.Player.UserExtend.fcm == (int)FCMType.Yes)
+                {
+                    var fcm = new Share.User().GetFCM(user.id);
+                    if (fcm != null)
+                    {
+                        session.Player.onlinetime = fcm.login_time_longer_day * 60;
+                        opentime = fcm.login_open_time;
+                    }
+                }
+            }
+            report_record_login.Login(player.User.id);
+            report_day.OnOffLine();
+            //new Share.ActivityOpenService().ActivityPush(session.Player.User.id);
+            return new ASObject(BuildData((int)ResultType.SUCCESS, session.Player, opentime));
+        }
+
+        /// <summary>返回注册</summary>
+        public Dictionary<String, Object> BuildData(int result, Player player, Int64 time)
+        {
+            var dic = new Dictionary<string, object>
+            {
+                {"result",  result},
+                {"userInfoVo", player != null ? AMFConvert.ToASObject(EntityToVo.ToUserInfoVo(player)) : null},
+                {"influence", tg_user.FindCampInfluence()},
+                {"loginTime", time}
+            };
+            return dic;
+        }
+
+        /// <summary>登陆重新加载当前账号未完成任务 >10s</summary>
+        private void ReLoadTask(TGGSession session)
+        {
+            CarRecovery(session.Player.User.id);
+            CarTask(session.Player.User.id);
+        }
+
+        /// <summary> 将玩家移除战斗 </summary>
+        /// <param name="userid">要修改的玩家Id</param>
+        private void RemoveFightState(Int64 userid, int count = 0)
+        {
+            int a;
+            if (!Variable.PlayerFight.ContainsKey(userid)) return;
+            if (count > 5) return;
+            count++;
+
+            var flag = Variable.PlayerFight.TryRemove(userid, out a);
+            if (!flag) RemoveFightState(userid, count);
+        }
+
+        /// <summary>跑商马车重新加入线程</summary>
+        private void CarRecovery(Int64 user_id)
+        {
+            try
+            {
+                //dynamic obje = CommonHelper.ReflectionMethods("TGG.Module.Business", "Common");
+                //obje.LoginCar(user_id);
+                var ticks = (DateTime.Now.Ticks - 621355968000000000) / 10000;
+                var time = ticks + 5000;//+5000毫秒预热
+                var list = tg_car.GetEntityListByState((int)CarStatusType.RUNNING, user_id, time);
+                foreach (var item in list)
+                {
+                    var key = string.Format("{0}_{1}_{2}", (int)CDType.Businss, item.user_id, item.id);
+                    Variable.CD.AddOrUpdate(key, true, (k, v) => true);
+                }
+            }
+            catch (Exception ex)
+            {
+                XTrace.WriteException(ex);
+            }
+
+        }
+
+        private void CarTask(Int64 user_id)
+        {
+            var time = (DateTime.Now.Ticks - 621355968000000000) / 10000;
+            var endtime = time + 5000;
+            var list_car = tg_car.GetEntityListByState((int)CarStatusType.RUNNING, user_id, endtime);
+            if (!list_car.Any()) return;
+            foreach (var item in list_car)
+            {
+                //结束全局线程
+                var key = string.Format("{0}_{1}_{2}", (int)CDType.Businss, item.user_id, item.id);
+                Variable.CD.AddOrUpdate(key, true, (k, v) => true);
+
+                tg_car.GetTaskCarUpdate(item.id);
+            }
+        }
+
+    }
+}

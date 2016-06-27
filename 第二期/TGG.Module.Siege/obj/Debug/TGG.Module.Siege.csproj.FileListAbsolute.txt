@@ -1,0 +1,5 @@
+E:\Bin\TGG\Debug\TGG.Module.Siege.dll
+E:\Bin\TGG\Debug\TGG.Module.Siege.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Siege\obj\Debug\TGG.Module.Siege.dll
+E:\192.168.1.254\TGG\第二期\TGG.Module.Siege\obj\Debug\TGG.Module.Siege.pdb
+E:\192.168.1.254\TGG\第二期\TGG.Module.Siege\obj\Debug\TGG.Module.Siege.csprojResolveAssemblyReference.cache

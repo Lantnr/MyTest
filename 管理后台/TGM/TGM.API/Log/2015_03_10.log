@@ -1,0 +1,609 @@
+﻿#Software: iisexpress
+#ProcessID: 25924
+#AppDomain: /LM/W3SVC/2/ROOT-1-130704558279007483
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-10
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:10:32.132 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:10:32.156 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:10:32.157 1 N - 使用数据库方式：独占，加大缓存权重
+18:10:32.157 1 N - 一级缓存：关闭缓存
+18:10:32.191 1 N - [tgm]GetSchema("MetaDataCollections")
+18:10:32.202 1 N - [tgm]GetSchema("ReservedWords")
+18:10:32.216 1 N - [tgm]GetSchema("Databases", "tgm")
+18:10:32.227 1 N - [tgm]GetSchema("Tables")
+18:10:32.289 1 N - [tgm]GetSchema("Columns")
+18:10:32.310 1 N - [tgm]GetSchema("Indexes")
+18:10:32.313 1 N - [tgm]GetSchema("IndexColumns")
+18:10:32.326 1 N - [tgm]GetSchema("DataTypes")
+18:10:32.394 1 N - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:10:32.472 1 N - [tgm]的所有实体类（0个）：
+18:10:32.472 1 N - [tgm]需要检查架构的实体类（0个）：
+18:10:32.472 1 N - 检查连接[tgm/SqlServer]的数据库架构耗时79ms
+18:10:32.473 1 N - Select * From tgm_server Order By id Desc
+18:10:32.492 1 N - [14_6_体验测试服 天下布武]GetSchema("MetaDataCollections")
+18:10:32.495 1 N - [14_6_体验测试服 天下布武]GetSchema("ReservedWords")
+18:10:32.501 1 N - [14_6_体验测试服 天下布武]GetSchema("Databases", "tgg")
+18:10:32.508 1 N - [14_6_体验测试服 天下布武]GetSchema("Tables")
+18:10:32.598 1 N - [14_6_体验测试服 天下布武]GetSchema("Columns")
+18:10:32.692 1 N - [14_6_体验测试服 天下布武]GetSchema("Indexes")
+18:10:32.696 1 N - [14_6_体验测试服 天下布武]GetSchema("IndexColumns")
+18:10:32.707 1 N - [14_6_体验测试服 天下布武]GetSchema("DataTypes")
+18:10:32.727 1 N - 开始检查连接[14_6_体验测试服 天下布武/SqlServer]的数据库架构……
+18:10:32.770 1 N - [14_6_体验测试服 天下布武]的所有实体类（0个）：
+18:10:32.770 1 N - [14_6_体验测试服 天下布武]需要检查架构的实体类（0个）：
+18:10:32.770 1 N - 检查连接[14_6_体验测试服 天下布武/SqlServer]的数据库架构耗时43ms
+18:10:32.770 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:10:32.788 1 N - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:10:32.880 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616078327935750, 0);Select SCOPE_IDENTITY()
+18:10:32.902 1 N - [13_1_DY-01]GetSchema("MetaDataCollections")
+18:10:32.906 1 N - [13_1_DY-01]GetSchema("ReservedWords")
+18:10:32.911 1 N - [13_1_DY-01]GetSchema("Databases", "tg_test")
+18:10:32.919 1 N - [13_1_DY-01]GetSchema("Tables")
+18:10:33.000 1 N - [13_1_DY-01]GetSchema("Columns")
+18:10:33.096 1 N - [13_1_DY-01]GetSchema("Indexes")
+18:10:33.101 1 N - [13_1_DY-01]GetSchema("IndexColumns")
+18:10:33.112 1 N - [13_1_DY-01]GetSchema("DataTypes")
+18:10:33.133 1 N - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+18:10:33.193 1 N - [13_1_DY-01]的所有实体类（0个）：
+18:10:33.193 1 N - [13_1_DY-01]需要检查架构的实体类（0个）：
+18:10:33.193 1 N - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时60ms
+18:10:33.193 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:10:33.195 1 N - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:10:33.197 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616078331963965, 0);Select SCOPE_IDENTITY()
+18:10:33.203 1 N - [7_1_DY-03]GetSchema("MetaDataCollections")
+18:10:33.206 1 N - [7_1_DY-03]GetSchema("ReservedWords")
+18:10:33.212 1 N - [7_1_DY-03]GetSchema("Databases", "tgg2")
+18:10:33.259 1 N - [7_1_DY-03]GetSchema("Tables")
+18:10:33.997 1 N - [7_1_DY-03]GetSchema("Columns")
+18:10:34.156 1 N - [7_1_DY-03]GetSchema("Indexes")
+18:10:34.169 1 N - [7_1_DY-03]GetSchema("IndexColumns")
+18:10:34.195 1 N - [7_1_DY-03]GetSchema("DataTypes")
+18:10:34.337 1 N - 开始检查连接[7_1_DY-03/SqlServer]的数据库架构……
+18:10:34.393 1 N - [7_1_DY-03]的所有实体类（0个）：
+18:10:34.393 1 N - [7_1_DY-03]需要检查架构的实体类（0个）：
+18:10:34.393 1 N - 检查连接[7_1_DY-03/SqlServer]的数据库架构耗时55ms
+18:10:34.393 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:10:34.438 1 N - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:10:34.445 1 N - 单服作业失败
+18:10:34.450 1 N - [6_4_TS-01]GetSchema("MetaDataCollections")
+18:10:34.456 1 N - [6_4_TS-01]GetSchema("ReservedWords")
+18:10:34.462 1 N - [6_4_TS-01]GetSchema("Databases", "tgg")
+18:10:34.472 1 N - [6_4_TS-01]GetSchema("Tables")
+18:10:34.564 1 N - [6_4_TS-01]GetSchema("Columns")
+18:10:34.657 1 N - [6_4_TS-01]GetSchema("Indexes")
+18:10:34.662 1 N - [6_4_TS-01]GetSchema("IndexColumns")
+18:10:34.676 1 N - [6_4_TS-01]GetSchema("DataTypes")
+18:10:34.699 1 N - 开始检查连接[6_4_TS-01/SqlServer]的数据库架构……
+18:10:34.750 1 N - [6_4_TS-01]的所有实体类（0个）：
+18:10:34.750 1 N - [6_4_TS-01]需要检查架构的实体类（0个）：
+18:10:34.750 1 N - 检查连接[6_4_TS-01/SqlServer]的数据库架构耗时51ms
+18:10:34.750 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:10:34.751 1 N - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:10:34.753 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616078347526394, 0);Select SCOPE_IDENTITY()
+18:10:34.759 1 N - [1_1_DY-02]GetSchema("MetaDataCollections")
+18:10:34.761 1 N - [1_1_DY-02]GetSchema("ReservedWords")
+18:10:34.766 1 N - [1_1_DY-02]GetSchema("Databases", "tg_test")
+18:10:34.774 1 N - [1_1_DY-02]GetSchema("Tables")
+18:10:34.854 1 N - [1_1_DY-02]GetSchema("Columns")
+18:10:34.949 1 N - [1_1_DY-02]GetSchema("Indexes")
+18:10:34.954 1 N - [1_1_DY-02]GetSchema("IndexColumns")
+18:10:34.965 1 N - [1_1_DY-02]GetSchema("DataTypes")
+18:10:34.988 1 N - 开始检查连接[1_1_DY-02/SqlServer]的数据库架构……
+18:10:35.033 1 N - [1_1_DY-02]的所有实体类（0个）：
+18:10:35.033 1 N - [1_1_DY-02]需要检查架构的实体类（0个）：
+18:10:35.033 1 N - 检查连接[1_1_DY-02/SqlServer]的数据库架构耗时45ms
+18:10:35.033 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:10:35.035 1 N - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:10:35.036 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616078350356889, 0);Select SCOPE_IDENTITY()
+18:10:35.373 7 W - [tgm]GetSchema("Tables")
+18:10:35.429 7 W - [tgm]GetSchema("Columns")
+18:10:35.449 7 W - [tgm]GetSchema("Indexes")
+18:10:35.453 7 W - [tgm]GetSchema("IndexColumns")
+18:10:35.466 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:10:35.468 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+18:10:35.495 7 W - [DB]GetSchema("MetaDataCollections")
+18:10:35.501 7 W - [DB]GetSchema("ReservedWords")
+18:10:35.507 7 W - [DB]GetSchema("Databases", "tgm")
+18:10:35.514 7 W - [DB]GetSchema("Tables")
+18:10:35.570 7 W - [DB]GetSchema("Columns")
+18:10:35.589 7 W - [DB]GetSchema("Indexes")
+18:10:35.592 7 W - [DB]GetSchema("IndexColumns")
+18:10:35.596 7 W - [DB]GetSchema("DataTypes")
+18:10:35.613 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:10:35.615 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:10:35.674 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:10:35.674 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:10:35.675 7 W - DB待检查表架构的实体个数：14
+18:10:35.741 7 W - 检查连接[DB/SqlServer]的数据库架构耗时127ms
+18:10:35.741 7 W - Select * From tgm_platform Where id=1
+18:10:35.965 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:10:35.967 7 W - Select * From tgm_platform Order By  createtime desc
+18:10:46.313 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:10:46.315 7 W - Select * From tgm_platform Order By  createtime desc
+18:11:30.889 10 Y - Select * From tgm_server Order By id Desc
+18:11:30.891 10 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:11:30.892 10 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:11:30.895 10 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616078908950433, 0);Select SCOPE_IDENTITY()
+18:11:30.897 10 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:11:30.898 10 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:11:30.899 10 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616078908998227, 0);Select SCOPE_IDENTITY()
+18:11:30.901 10 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:11:30.902 10 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:11:30.903 10 Y - 单服作业失败
+18:11:30.903 10 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:11:30.905 10 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:11:30.906 10 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616078909059730, 0);Select SCOPE_IDENTITY()
+18:11:30.909 10 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:11:30.910 10 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:11:30.911 10 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616078909109092, 0);Select SCOPE_IDENTITY()
+18:11:45.266 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:11:45.267 14 W - Select * From tgm_platform Order By  createtime desc
+18:11:48.422 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:11:52.875 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:11:52.876 14 W - Select * From tgm_platform Order By  createtime desc
+18:12:30.900 8 Y - Select * From tgm_server Order By id Desc
+18:12:30.902 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:12:30.904 8 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:12:30.906 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616079509060124, 0);Select SCOPE_IDENTITY()
+18:12:30.909 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:12:30.910 8 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:12:30.911 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616079509113515, 0);Select SCOPE_IDENTITY()
+18:12:30.913 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:12:30.914 8 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:12:30.915 8 Y - 单服作业失败
+18:12:30.915 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:12:30.916 8 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:12:30.918 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616079509176015, 0);Select SCOPE_IDENTITY()
+18:12:30.919 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:12:30.920 8 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:12:30.922 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616079509216298, 0);Select SCOPE_IDENTITY()
+18:13:30.901 12 Y - Select * From tgm_server Order By id Desc
+18:13:30.903 12 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:13:30.904 12 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:13:30.906 12 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616080109050069, 0);Select SCOPE_IDENTITY()
+18:13:30.908 12 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:13:30.909 12 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:13:30.909 12 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616080109098492, 0);Select SCOPE_IDENTITY()
+18:13:30.911 12 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:13:30.912 12 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:13:30.913 12 Y - 单服作业失败
+18:13:30.913 12 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:13:30.913 12 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:13:30.915 12 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616080109148089, 0);Select SCOPE_IDENTITY()
+18:13:30.916 12 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:13:30.917 12 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:13:30.919 12 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616080109188103, 0);Select SCOPE_IDENTITY()
+18:14:30.900 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:14:30.902 8 W - Select * From tgm_role Where id=1
+18:14:30.909 8 W - [tgm]GetSchema("Tables")
+18:14:30.909 7 Y - Select * From tgm_server Order By id Desc
+18:14:30.911 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:14:30.928 7 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:14:30.970 7 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616080709576508, 0);Select SCOPE_IDENTITY()
+18:14:30.972 8 W - [tgm]GetSchema("Columns")
+18:14:30.973 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:14:30.993 7 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:14:30.993 8 W - [tgm]GetSchema("Indexes")
+18:14:30.996 7 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616080709954448, 0);Select SCOPE_IDENTITY()
+18:14:30.996 8 W - [tgm]GetSchema("IndexColumns")
+18:14:30.999 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:14:30.999 7 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:14:31.001 7 Y - 单服作业失败
+18:14:31.001 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:14:31.001 8 W - Select * From tgm_resource Order By id Desc
+18:14:31.002 7 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:14:31.008 7 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616080710074541, 0);Select SCOPE_IDENTITY()
+18:14:31.009 8 W - Select * From tgm_platform Where id in (4,4,4,1,1,1,1,1) Order By id Desc
+18:14:31.011 8 W - Select * From tgm_server Where id in (6,6,6,1,1,1,1,1) Order By id Desc
+18:14:31.014 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:14:31.015 7 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:14:31.016 7 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616080710163273, 0);Select SCOPE_IDENTITY()
+18:14:31.099 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:14:31.100 14 W - Select * From tgm_platform Order By  createtime desc
+18:14:38.520 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:14:38.522 14 W - Select * From tgm_platform Order By  createtime desc
+18:14:40.858 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:14:40.859 8 W - Select * From tgm_server Where [pid] =5  Order By  createtime desc
+18:14:54.683 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:14:54.685 8 W - Select * From tgm_platform Order By  createtime desc
+18:15:14.502 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:15:14.504 7 W - Select * From tgm_server Where [pid] =5  Order By  createtime desc
+18:15:25.885 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:15:25.886 8 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+18:15:25.913 8 W - Select * From tgm_platform Where id=1
+18:15:25.915 8 W - Select * From tgm_platform Where id=1
+18:15:25.916 8 W - Select * From tgm_platform Where id=1
+18:15:30.917 8 Y - Select * From tgm_server Order By id Desc
+18:15:30.918 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:15:30.919 8 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:15:30.920 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616081309207882, 0);Select SCOPE_IDENTITY()
+18:15:30.923 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:15:30.924 8 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:15:30.925 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616081309246296, 0);Select SCOPE_IDENTITY()
+18:15:30.927 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:15:30.928 8 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:15:30.928 8 Y - 单服作业失败
+18:15:30.928 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:15:30.929 8 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:15:30.931 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616081309306332, 0);Select SCOPE_IDENTITY()
+18:15:30.932 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:15:30.933 8 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:15:30.934 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616081309346362, 0);Select SCOPE_IDENTITY()
+18:16:02.509 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:16:02.511 7 W - Select * From tgm_platform Order By  createtime desc
+18:16:10.030 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:16:10.032 7 W - Select * From tgm_server Where [pid] =1  Order By  createtime desc
+18:16:10.033 7 W - Select * From tgm_platform Where id=1
+18:16:10.034 7 W - Select * From tgm_platform Where id=1
+18:16:10.035 7 W - Select * From tgm_platform Where id=1
+18:16:30.918 14 Y - Select * From tgm_server Order By id Desc
+18:16:30.920 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:16:30.921 14 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:16:30.922 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616081909214983, 0);Select SCOPE_IDENTITY()
+18:16:30.925 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:16:30.926 14 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:16:30.928 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616081909265029, 0);Select SCOPE_IDENTITY()
+18:16:30.929 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:16:30.930 14 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:16:30.930 14 Y - 单服作业失败
+18:16:30.931 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:16:30.931 14 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:16:30.933 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616081909325152, 0);Select SCOPE_IDENTITY()
+18:16:30.934 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:16:30.935 14 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:16:30.937 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616081909365099, 0);Select SCOPE_IDENTITY()
+18:16:32.129 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:16:32.130 7 W - Select * From tgm_platform Order By  createtime desc
+18:16:32.143 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:16:32.144 7 W - Select * From tgm_role Where id=1
+18:16:32.145 7 W - Select * From tgm_platform Where id=1
+18:16:32.148 7 W - SET NOCOUNT ON;Insert Into tgm_resource(name, pid, sid, player_name, user_code, [time], type, [state], content, gold, coin, exp, honor, fame, spirit, army, devote, props) Values('', 1, 13, N'lgy', N'', 635616081921464925, 2, 1, '谭日贵', 100, 0, 0, 0, 0, 0, 0, 0, '');Select SCOPE_IDENTITY()
+18:16:37.113 17 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:16:37.115 17 W - Select * From tgm_role Where id=1
+18:16:37.115 17 W - Select * From tgm_resource Order By id Desc
+18:16:37.116 17 W - Select * From tgm_platform Where id in (1,4,4,4,1,1,1,1,1) Order By id Desc
+18:16:37.118 17 W - Select * From tgm_server Where id in (13,6,6,6,1,1,1,1,1) Order By id Desc
+18:16:37.123 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:16:37.124 7 W - Select * From tgm_platform Order By  createtime desc
+18:17:30.932 14 Y - Select * From tgm_server Order By id Desc
+18:17:30.934 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:17:30.935 14 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:17:30.936 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616082509360205, 0);Select SCOPE_IDENTITY()
+18:17:30.946 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:17:30.947 14 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:17:30.949 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616082509485214, 0);Select SCOPE_IDENTITY()
+18:17:30.950 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:17:30.951 14 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:17:30.952 14 Y - 单服作业失败
+18:17:30.952 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:17:30.954 14 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:17:30.955 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616082509545234, 0);Select SCOPE_IDENTITY()
+18:17:30.957 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:17:30.958 14 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:17:30.960 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616082509595268, 0);Select SCOPE_IDENTITY()
+18:18:30.939 14 Y - Select * From tgm_server Order By id Desc
+18:18:30.939 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:18:30.939 14 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:18:30.939 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616083109394124, 0);Select SCOPE_IDENTITY()
+18:18:30.955 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:18:30.955 14 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:18:30.955 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616083109550401, 0);Select SCOPE_IDENTITY()
+18:18:30.986 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:18:30.986 14 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:18:30.986 14 Y - 单服作业失败
+18:18:30.986 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:18:30.986 14 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:18:30.986 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616083109862910, 0);Select SCOPE_IDENTITY()
+18:18:31.033 14 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:18:31.033 14 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:18:31.033 14 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616083110331686, 0);Select SCOPE_IDENTITY()
+18:19:30.952 8 Y - Select * From tgm_server Order By id Desc
+18:19:30.952 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:19:30.952 8 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:19:30.952 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616083709528573, 0);Select SCOPE_IDENTITY()
+18:19:30.952 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:19:30.952 8 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:19:30.952 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616083709528573, 0);Select SCOPE_IDENTITY()
+18:19:30.952 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:19:30.952 8 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:19:30.952 8 Y - 单服作业失败
+18:19:30.968 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:19:30.968 8 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:19:30.968 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616083709684837, 0);Select SCOPE_IDENTITY()
+18:19:30.968 8 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:19:30.968 8 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:19:30.968 8 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616083709684837, 0);Select SCOPE_IDENTITY()
+18:20:30.952 7 Y - Select * From tgm_server Order By id Desc
+18:20:30.952 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:20:30.952 7 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:20:30.952 7 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616084309527322, 0);Select SCOPE_IDENTITY()
+18:20:30.952 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:20:30.952 7 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:20:30.952 7 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616084309527322, 0);Select SCOPE_IDENTITY()
+18:20:30.952 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:20:30.952 7 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:20:30.952 7 Y - 单服作业失败
+18:20:30.952 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:20:30.952 7 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:20:30.952 7 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616084309527322, 0);Select SCOPE_IDENTITY()
+18:20:30.968 7 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:20:30.968 7 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:20:30.968 7 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616084309683573, 0);Select SCOPE_IDENTITY()
+18:21:30.961 17 Y - Select * From tgm_server Order By id Desc
+18:21:30.961 17 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:21:30.961 17 Y - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:21:30.961 17 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616084909613405, 0);Select SCOPE_IDENTITY()
+18:21:30.961 17 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:21:30.961 17 Y - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:21:30.961 17 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616084909613405, 0);Select SCOPE_IDENTITY()
+18:21:30.961 17 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:21:30.961 17 Y - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:21:30.961 17 Y - 单服作业失败
+18:21:30.961 17 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:21:30.976 17 Y - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:21:30.976 17 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616084909769665, 0);Select SCOPE_IDENTITY()
+18:21:30.976 17 Y - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:21:30.976 17 Y - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:21:30.976 17 Y - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 9, 31, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616084909769665, 0);Select SCOPE_IDENTITY()
+
+#Software: iisexpress
+#ProcessID: 28440
+#AppDomain: /LM/W3SVC/2/ROOT-1-130704577452997638
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-10
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:42:26.345 1 N - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:42:26.355 1 N - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:42:26.356 1 N - 使用数据库方式：独占，加大缓存权重
+18:42:26.356 1 N - 一级缓存：关闭缓存
+18:42:26.398 1 N - [tgm]GetSchema("MetaDataCollections")
+18:42:26.410 1 N - [tgm]GetSchema("ReservedWords")
+18:42:26.424 1 N - [tgm]GetSchema("Databases", "tgm")
+18:42:26.435 1 N - [tgm]GetSchema("Tables")
+18:42:26.494 1 N - [tgm]GetSchema("Columns")
+18:42:26.514 1 N - [tgm]GetSchema("Indexes")
+18:42:26.516 1 N - [tgm]GetSchema("IndexColumns")
+18:42:26.523 1 N - [tgm]GetSchema("DataTypes")
+18:42:26.567 1 N - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:42:26.624 1 N - [tgm]的所有实体类（0个）：
+18:42:26.624 1 N - [tgm]需要检查架构的实体类（0个）：
+18:42:26.624 1 N - 检查连接[tgm/SqlServer]的数据库架构耗时57ms
+18:42:26.624 1 N - Select * From tgm_server Order By id Desc
+18:42:26.642 1 N - [14_6_体验测试服 天下布武]GetSchema("MetaDataCollections")
+18:42:26.646 1 N - [14_6_体验测试服 天下布武]GetSchema("ReservedWords")
+18:42:26.651 1 N - [14_6_体验测试服 天下布武]GetSchema("Databases", "tgg")
+18:42:26.658 1 N - [14_6_体验测试服 天下布武]GetSchema("Tables")
+18:42:26.748 1 N - [14_6_体验测试服 天下布武]GetSchema("Columns")
+18:42:26.841 1 N - [14_6_体验测试服 天下布武]GetSchema("Indexes")
+18:42:26.845 1 N - [14_6_体验测试服 天下布武]GetSchema("IndexColumns")
+18:42:26.855 1 N - [14_6_体验测试服 天下布武]GetSchema("DataTypes")
+18:42:26.873 1 N - 开始检查连接[14_6_体验测试服 天下布武/SqlServer]的数据库架构……
+18:42:26.901 1 N - [14_6_体验测试服 天下布武]的所有实体类（0个）：
+18:42:26.901 1 N - [14_6_体验测试服 天下布武]需要检查架构的实体类（0个）：
+18:42:26.901 1 N - 检查连接[14_6_体验测试服 天下布武/SqlServer]的数据库架构耗时28ms
+18:42:26.902 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:42:26.913 1 N - [StoredProcedure]sp_pay[Int32:@sid=14]
+18:42:26.991 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(6, 14, N'体验测试服 天下布武', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 0, 0, 635616097469189428, 0);Select SCOPE_IDENTITY()
+18:42:27.005 1 N - [13_1_DY-01]GetSchema("MetaDataCollections")
+18:42:27.008 1 N - [13_1_DY-01]GetSchema("ReservedWords")
+18:42:27.013 1 N - [13_1_DY-01]GetSchema("Databases", "tg_test")
+18:42:27.021 1 N - [13_1_DY-01]GetSchema("Tables")
+18:42:27.100 1 N - [13_1_DY-01]GetSchema("Columns")
+18:42:27.194 1 N - [13_1_DY-01]GetSchema("Indexes")
+18:42:27.199 1 N - [13_1_DY-01]GetSchema("IndexColumns")
+18:42:27.207 1 N - [13_1_DY-01]GetSchema("DataTypes")
+18:42:27.224 1 N - 开始检查连接[13_1_DY-01/SqlServer]的数据库架构……
+18:42:27.263 1 N - [13_1_DY-01]的所有实体类（0个）：
+18:42:27.263 1 N - [13_1_DY-01]需要检查架构的实体类（0个）：
+18:42:27.263 1 N - 检查连接[13_1_DY-01/SqlServer]的数据库架构耗时39ms
+18:42:27.264 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:42:27.265 1 N - [StoredProcedure]sp_pay[Int32:@sid=13]
+18:42:27.266 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 13, N'DY-01', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 330, 330, 635616097472652858, 0);Select SCOPE_IDENTITY()
+18:42:27.272 1 N - [7_1_DY-03]GetSchema("MetaDataCollections")
+18:42:27.275 1 N - [7_1_DY-03]GetSchema("ReservedWords")
+18:42:27.280 1 N - [7_1_DY-03]GetSchema("Databases", "tgg2")
+18:42:27.287 1 N - [7_1_DY-03]GetSchema("Tables")
+18:42:27.356 1 N - [7_1_DY-03]GetSchema("Columns")
+18:42:27.440 1 N - [7_1_DY-03]GetSchema("Indexes")
+18:42:27.445 1 N - [7_1_DY-03]GetSchema("IndexColumns")
+18:42:27.452 1 N - [7_1_DY-03]GetSchema("DataTypes")
+18:42:27.470 1 N - 开始检查连接[7_1_DY-03/SqlServer]的数据库架构……
+18:42:27.495 1 N - [7_1_DY-03]的所有实体类（0个）：
+18:42:27.495 1 N - [7_1_DY-03]需要检查架构的实体类（0个）：
+18:42:27.495 1 N - 检查连接[7_1_DY-03/SqlServer]的数据库架构耗时25ms
+18:42:27.495 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:42:27.496 1 N - [StoredProcedure]sp_pay[Int32:@sid=7]
+18:42:27.497 1 N - 单服作业失败
+18:42:27.500 1 N - [6_4_TS-01]GetSchema("MetaDataCollections")
+18:42:27.503 1 N - [6_4_TS-01]GetSchema("ReservedWords")
+18:42:27.508 1 N - [6_4_TS-01]GetSchema("Databases", "tgg")
+18:42:27.515 1 N - [6_4_TS-01]GetSchema("Tables")
+18:42:27.605 1 N - [6_4_TS-01]GetSchema("Columns")
+18:42:27.698 1 N - [6_4_TS-01]GetSchema("Indexes")
+18:42:27.702 1 N - [6_4_TS-01]GetSchema("IndexColumns")
+18:42:27.712 1 N - [6_4_TS-01]GetSchema("DataTypes")
+18:42:27.729 1 N - 开始检查连接[6_4_TS-01/SqlServer]的数据库架构……
+18:42:27.755 1 N - [6_4_TS-01]的所有实体类（0个）：
+18:42:27.755 1 N - [6_4_TS-01]需要检查架构的实体类（0个）：
+18:42:27.755 1 N - 检查连接[6_4_TS-01/SqlServer]的数据库架构耗时26ms
+18:42:27.755 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:42:27.756 1 N - [StoredProcedure]sp_pay[Int32:@sid=6]
+18:42:27.758 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(4, 6, N'TS-01', 0, 203, 3, 203, 4, 16, 7, 0, 0, 0, 1002000, 0, 635616097477577749, 0);Select SCOPE_IDENTITY()
+18:42:27.765 1 N - [1_1_DY-02]GetSchema("MetaDataCollections")
+18:42:27.768 1 N - [1_1_DY-02]GetSchema("ReservedWords")
+18:42:27.773 1 N - [1_1_DY-02]GetSchema("Databases", "tg_test")
+18:42:27.780 1 N - [1_1_DY-02]GetSchema("Tables")
+18:42:27.859 1 N - [1_1_DY-02]GetSchema("Columns")
+18:42:27.953 1 N - [1_1_DY-02]GetSchema("Indexes")
+18:42:27.957 1 N - [1_1_DY-02]GetSchema("IndexColumns")
+18:42:27.965 1 N - [1_1_DY-02]GetSchema("DataTypes")
+18:42:27.983 1 N - 开始检查连接[1_1_DY-02/SqlServer]的数据库架构……
+18:42:28.009 1 N - [1_1_DY-02]的所有实体类（0个）：
+18:42:28.009 1 N - [1_1_DY-02]需要检查架构的实体类（0个）：
+18:42:28.009 1 N - 检查连接[1_1_DY-02/SqlServer]的数据库架构耗时25ms
+18:42:28.009 1 N - Select Top 1 * From report_day Where  createtime >635615424000000000 and createtime<635616288000000000 Order By id Desc
+18:42:28.010 1 N - [StoredProcedure]sp_pay[Int32:@sid=1]
+18:42:28.012 1 N - SET NOCOUNT ON;Insert Into tgm_record_hours(pid, sid, server_name, online, offline, register, register_total, taday_online, history_online, taday_login, pay_number, pay_count, pay_taday, pay_total, pay_month, createtime, taday_cost) Values(1, 1, N'DY-02', 8, 32, 24, 40, 16, 16, 36, 0, 0, 0, 40520, 0, 635616097480113589, 0);Select SCOPE_IDENTITY()
+18:42:28.261 7 W - [tgm]GetSchema("Tables")
+18:42:28.316 7 W - [tgm]GetSchema("Columns")
+18:42:28.335 7 W - [tgm]GetSchema("Indexes")
+18:42:28.338 7 W - [tgm]GetSchema("IndexColumns")
+18:42:28.345 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:42:28.347 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+18:42:28.354 7 W - [DB]GetSchema("MetaDataCollections")
+18:42:28.357 7 W - [DB]GetSchema("ReservedWords")
+18:42:28.362 7 W - [DB]GetSchema("Databases", "tgm")
+18:42:28.367 7 W - [DB]GetSchema("Tables")
+18:42:28.423 7 W - [DB]GetSchema("Columns")
+18:42:28.443 7 W - [DB]GetSchema("Indexes")
+18:42:28.446 7 W - [DB]GetSchema("IndexColumns")
+18:42:28.449 7 W - [DB]GetSchema("DataTypes")
+18:42:28.464 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:42:28.465 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:42:28.494 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:42:28.494 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:42:28.495 7 W - DB待检查表架构的实体个数：14
+18:42:28.562 7 W - 检查连接[DB/SqlServer]的数据库架构耗时96ms
+18:42:28.562 7 W - Select * From tgm_platform Where id=1
+18:42:28.774 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:42:28.775 7 W - Select * From tgm_platform Order By  createtime desc
+18:42:32.910 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:42:32.911 8 W - Select * From tgm_platform Order By  createtime desc
+18:42:42.808 9 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:42:42.810 9 W - Select * From tgm_platform Order By  createtime desc
+18:42:50.850 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:42:50.854 8 W - [tgm]GetSchema("Tables")
+18:42:50.910 8 W - [tgm]GetSchema("Columns")
+18:42:50.929 8 W - [tgm]GetSchema("Indexes")
+18:42:50.932 8 W - [tgm]GetSchema("IndexColumns")
+18:42:50.937 8 W - Select * From tgm_notice Where end_time>635616097708524396 and player_id=1 Order By id Desc
+18:42:50.955 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:42:50.957 7 W - Select * From tgm_platform Order By  createtime desc
+18:42:59.275 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:42:59.276 8 W - Select * From tgm_platform Order By  createtime desc
+
+#Software: iisexpress
+#ProcessID: 28440
+#AppDomain: /LM/W3SVC/2/ROOT-2-130704578368955843
+#FileName: C:\Program Files (x86)\IIS Express\iisexpress.exe
+#BaseDirectory: E:\192.168.1.254\TGG\管理后台\TGM\TGM.API\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: /config:"C:\Users\TH\Documents\IISExpress\config\applicationhost.config"  /site:"TGM.API" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Console
+#CLR: 4.0.30319.34014
+#OS: Windows 8 x64, TH/TH_KAER
+#Date: 2015-03-10
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:43:59.812 7 W - NewLife.Core v4.6.2014.0731 Build 2014-08-30 18:12:06
+18:43:59.821 7 W - NewLife.XCode v8.13.2014.0720 Build 2014-08-30 18:10:56
+18:43:59.822 7 W - 使用数据库方式：独占，加大缓存权重
+18:43:59.822 7 W - 一级缓存：关闭缓存
+18:43:59.841 7 W - [tgm]GetSchema("MetaDataCollections")
+18:43:59.847 7 W - [tgm]GetSchema("ReservedWords")
+18:43:59.866 7 W - [tgm]GetSchema("Databases", "tgm")
+18:43:59.875 7 W - [tgm]GetSchema("Tables")
+18:43:59.935 7 W - [tgm]GetSchema("Columns")
+18:43:59.955 7 W - [tgm]GetSchema("Indexes")
+18:43:59.957 7 W - [tgm]GetSchema("IndexColumns")
+18:43:59.963 7 W - [tgm]GetSchema("DataTypes")
+18:44:00.003 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:44:00.010 7 W - 开始检查连接[tgm/SqlServer]的数据库架构……
+18:44:00.081 7 W - [tgm]的所有实体类（0个）：
+18:44:00.081 7 W - [tgm]需要检查架构的实体类（0个）：
+18:44:00.081 7 W - 检查连接[tgm/SqlServer]的数据库架构耗时71ms
+18:44:00.081 7 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+18:44:00.099 7 W - [DB]GetSchema("MetaDataCollections")
+18:44:00.102 7 W - [DB]GetSchema("ReservedWords")
+18:44:00.109 7 W - [DB]GetSchema("Databases", "tgm")
+18:44:00.115 7 W - [DB]GetSchema("Tables")
+18:44:00.170 7 W - [DB]GetSchema("Columns")
+18:44:00.190 7 W - [DB]GetSchema("Indexes")
+18:44:00.193 7 W - [DB]GetSchema("IndexColumns")
+18:44:00.195 7 W - [DB]GetSchema("DataTypes")
+18:44:00.211 7 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:44:00.212 7 W - 开始检查连接[DB/SqlServer]的数据库架构……
+18:44:00.254 7 W - [DB]的所有实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:44:00.254 7 W - [DB]需要检查架构的实体类（15个）：tgm_give_log,tgm_gm,tgm_gold_record,tgm_goods_code,tgm_goods_type,tgm_notice,tgm_platform,tgm_record_day,tgm_record_hours,tgm_record_keep,tgm_record_pay,tgm_record_server,tgm_resource,tgm_role,tgm_server
+18:44:00.255 7 W - DB待检查表架构的实体个数：14
+18:44:00.322 7 W - 检查连接[DB/SqlServer]的数据库架构耗时109ms
+18:44:00.322 7 W - Select * From tgm_platform Where id=1
+18:44:00.466 8 W - [tgm]GetSchema("Tables")
+18:44:00.522 8 W - [tgm]GetSchema("Columns")
+18:44:00.541 8 W - [tgm]GetSchema("Indexes")
+18:44:00.543 8 W - [tgm]GetSchema("IndexColumns")
+18:44:00.547 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:44:00.549 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:00.550 8 W - Select * From tgm_platform Order By  createtime desc
+18:44:05.371 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:05.374 7 W - Select Count(*) From tgm_platform
+18:44:05.375 7 W - Select * From (Select *, row_number() over(Order By  createtime desc) as rowNumber From tgm_platform) XCode_T1 Where rowNumber Between 1 And 10
+18:44:11.048 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:11.051 10 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:44:11.053 10 W - Select Count(*) From tgm_server
+18:44:11.053 10 W - Select * From (Select *, row_number() over(Order By  createtime desc) as rowNumber From tgm_server) XCode_T1 Where rowNumber Between 1 And 10
+18:44:11.057 10 W - Select * From tgm_platform Where id=6
+18:44:11.059 10 W - Select * From tgm_platform Where id=1
+18:44:11.060 10 W - Select * From tgm_platform Where id=1
+18:44:11.061 10 W - Select * From tgm_platform Where id=4
+18:44:11.061 10 W - Select * From tgm_platform Where id=1
+18:44:12.700 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:12.701 8 W - Select Count(*) From tgm_role
+18:44:12.701 8 W - Select * From (Select *, row_number() over(Order By  createtime desc) as rowNumber From tgm_role) XCode_T1 Where rowNumber Between 1 And 10
+18:44:12.702 8 W - Select * From tgm_platform Where id=6
+18:44:12.703 8 W - Select * From tgm_platform Where id=5
+18:44:12.704 8 W - Select * From tgm_platform Where id=1
+18:44:12.704 8 W - Select * From tgm_platform Where id=4
+18:44:12.705 8 W - Select * From tgm_platform Where id=1
+18:44:16.106 14 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:16.107 14 W - Select * From tgm_platform Order By  createtime desc
+18:44:16.234 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:16.237 8 W - [tgm]GetSchema("Tables")
+18:44:16.293 8 W - [tgm]GetSchema("Columns")
+18:44:16.312 8 W - [tgm]GetSchema("Indexes")
+18:44:16.315 8 W - [tgm]GetSchema("IndexColumns")
+18:44:16.319 8 W - Select * From tgm_goods_type Order By id Desc
+18:44:31.196 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:31.198 8 W - select object_name(id) as objname,rows from sysindexes where indid in (0,1) and status in (0,2066)
+18:44:31.200 8 W - Select Count(*) From tgm_goods_type
+18:44:31.200 8 W - Select * From (Select *, row_number() over(Order By type_id) as rowNumber From tgm_goods_type) XCode_T1 Where rowNumber Between 1 And 10
+18:44:39.359 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:39.360 10 W - Select * From tgm_platform Order By  createtime desc
+18:44:39.364 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:39.365 8 W - Select * From tgm_goods_type Order By id Desc
+18:44:42.352 10 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:42.353 10 W - Select * From tgm_platform Order By  createtime desc
+18:44:54.111 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:54.113 11 W - Select * From tgm_role Where id=1
+18:44:54.115 11 W - [tgm]GetSchema("Tables")
+18:44:54.171 11 W - [tgm]GetSchema("Columns")
+18:44:54.192 11 W - [tgm]GetSchema("Indexes")
+18:44:54.194 11 W - [tgm]GetSchema("IndexColumns")
+18:44:54.200 11 W - Select * From tgm_resource Order By id Desc
+18:44:54.203 11 W - Select * From tgm_platform Where id in (1,4,4,4,1,1,1,1,1) Order By id Desc
+18:44:54.262 11 W - Select * From tgm_server Where id in (13,6,6,6,1,1,1,1,1) Order By id Desc
+18:44:54.341 8 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:44:54.343 8 W - Select * From tgm_platform Order By  createtime desc
+18:51:40.845 17 W - Select Top 1 * From tgm_role Where name=N'admin' Order By id Desc
+18:51:40.852 17 W - Select * From tgm_platform Where id=1
+18:51:40.887 6 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:40.888 6 W - Select * From tgm_platform Order By  createtime desc
+18:51:44.039 7 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:44.040 7 W - Select * From tgm_role Where id=1
+18:51:44.041 7 W - Select * From tgm_resource Order By id Desc
+18:51:44.042 7 W - Select * From tgm_platform Where id in (1,4,4,4,1,1,1,1,1) Order By id Desc
+18:51:44.042 7 W - Select * From tgm_server Where id in (13,6,6,6,1,1,1,1,1) Order By id Desc
+18:51:44.106 11 W - Select Top 1 * From tgm_platform Where token='0c372ec3-1b00-4286-84a8-9216e7ab59e3' Order By id Desc
+18:51:44.107 11 W - Select * From tgm_platform Order By  createtime desc

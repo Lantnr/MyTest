@@ -1,0 +1,14 @@
+E:\Bin\TGG\Debug\TGG.exe.config
+E:\Bin\TGG\Debug\Config\flash.xml
+E:\Bin\TGG\Debug\Config\log4net.config
+E:\Bin\TGG\Debug\TGG.exe
+E:\Bin\TGG\Debug\TGG.pdb
+E:\192.168.1.254\TGG\第二期\TGG\obj\x86\Debug\TGG.csprojResolveAssemblyReference.cache
+E:\192.168.1.254\TGG\第二期\TGG\obj\x86\Debug\TGG.FrmActivation.resources
+E:\192.168.1.254\TGG\第二期\TGG\obj\x86\Debug\TGG.FrmDBTools.resources
+E:\192.168.1.254\TGG\第二期\TGG\obj\x86\Debug\TGG.FrmManageCenter.resources
+E:\192.168.1.254\TGG\第二期\TGG\obj\x86\Debug\TGG.FrmTools.resources
+E:\192.168.1.254\TGG\第二期\TGG\obj\x86\Debug\TGG.Properties.Resources.resources
+E:\192.168.1.254\TGG\第二期\TGG\obj\x86\Debug\TGG.csproj.GenerateResource.Cache
+E:\192.168.1.254\TGG\第二期\TGG\obj\x86\Debug\TGG.exe
+E:\192.168.1.254\TGG\第二期\TGG\obj\x86\Debug\TGG.pdb

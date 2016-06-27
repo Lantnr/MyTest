@@ -1,0 +1,130 @@
+﻿@using TGM.API.Entity.Model
+@model TGM.API.Entity.Model.User
+@{
+    ViewBag.Title = "注册服务器";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var list_platform = ViewBag.Platform as List<Platform>;
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("RegisterServer", "System", FormMethod.Post))
+                    {
+                        <div class="control-group success">
+                            <label class="control-label" for="server_pid">所属平台</label>
+                            <div class="controls">
+                                <select class="input-xlarge" tabindex="1" name="server_pid" id="server_pid">
+                                    @foreach (var item in list_platform)
+                                    {
+                                        <option value="@item.id">@item.name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="server_name">@Html.Label("服务器名称")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_name" name="server_name" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="server_tg_route">@Html.Label("登陆网站")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_tg_route" name="server_tg_route" value="http://tk2.ya247.com/" />
+                                <span>http://tk2.ya247.com/</span>
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="server_game_domain">@Html.Label("游戏访问域名")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_game_domain" name="server_game_domain" value="cls.tk2.ya247.com" />
+                                <span>域名:端口(80端口可以省略)</span>
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="server_tg_pay">@Html.Label("支付连接")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_tg_pay" name="server_tg_pay" value="http://cls.tk2.ya247.com/pay/recharge/" />
+                                <span>http://cls.tk2.ya247.com/pay/recharge/</span>
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="server_game_pay">@Html.Label("游戏支付路径")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_game_pay" name="server_game_pay" value="http://www.ya247.com/pay" />
+                                <span>http://www.ya247.com/pay</span>
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="server_ip">@Html.Label("游戏IP")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_ip" name="server_ip" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="server_port">@Html.Label("游戏端口")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_port" name="server_port" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="server_port_policy">@Html.Label("策略端口")</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="server_port_policy" name="server_port_policy" />
+                            </div>
+                        </div>
+                        <div class="control-group success">
+                            <label class="control-label" for="server_connect_string">@Html.Label("数据库连接字符串")</label>
+                            <div class="controls">
+                                <input type="text" class="span8" id="server_connect_string" name="server_connect_string" />
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">注册</button>
+                            <button type="button" class="btn" onclick="javascript: history.go(-1)">取消</button>
+                        </div>
+
+                    }
+                    <!-- END FORM-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {}
+
+
+
+

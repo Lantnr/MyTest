@@ -1,0 +1,172 @@
+﻿@using NewLife.Web
+@using TGM.API.Entity.Enum
+@model TGM.API.Entity.Model.Server
+
+@{
+    ViewBag.Title = "服务器状态更改";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css{
+    <link href="~/css/pagination.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+}
+
+<!-- BEGIN PAGE CONTAINER-->
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                @ViewBag.Title
+            </h3>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN SAMPLE FORMPORTLET-->
+            <div class="widget green">
+                <div class="widget-body">
+                    @if (ViewBag.Error < 0)
+                    {
+                        <div class="alert alert-error">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    @if (ViewBag.Error > 0)
+                    {
+                        <div class="alert alert-success">
+                            <button class="close" data-dismiss="alert">×</button>
+                            <center> @ViewBag.Message</center>
+                        </div>
+                    }
+                    <!-- BEGIN FORM-->
+                    @using (Html.BeginForm("ManageServerState", "System", FormMethod.Post))
+                    {
+                        <div class="control-group success">
+                            <label class="control-label">服务器名称</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" name="server_name" id="server_name" readonly="readonly" value="@Model.name " />
+                                <input type="hidden" class="input-xlarge" id="serverid" name="serverid" value="@Model.id" />
+                                <input type="hidden" class="input-xlarge" id="state_name" name="state_name" value="@Model.state_name" />
+                                <input type="hidden" class="input-xlarge" id="server_state" name="server_state" value="@Model.server_state" />
+                            </div>
+                        </div>
+
+                        <div class="control-group success">
+                            <label class="control-label">@Html.Label("更改服务器状态")</label>
+                            <div class="controls">
+                                <select class="input-small" tabindex="1" name="state_type" id="state_type">
+                                    <option value="@Model.server_state ">@Model.state_name</option>
+                                    @switch (Model.server_state)
+                                    {
+                                        case (int)ServerOpenState.未启服:
+                                            {
+                                                <option value="1">停服</option>
+                                                <option value="2">测试</option>
+                                                <option value="3">启服</option>
+                                            }
+                                            break;
+                                        case (int)ServerOpenState.停服:
+                                            {
+                                                <option value="0">未启服</option>
+                                                <option value="2">测试</option>
+                                                <option value="3">启服</option>
+                                            }
+                                            break;
+                                        case (int)ServerOpenState.测试:
+                                            {
+                                                <option value="0">未启服</option>
+                                                <option value="1">停服</option>
+                                                <option value="3">启服</option>
+                                            }
+                                            break;
+                                        case (int)ServerOpenState.启服:
+                                            {
+                                                <option value="0">未启服</option>
+                                                <option value="1">停服</option>
+                                                <option value="2">测试</option>
+                                            }
+                                            break;
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        if (Model.server_state == (int)ServerOpenState.启服)
+                        {
+                            <div class="control-group success" id="select_time">
+                                <label class="control-label">@Html.Label("服务器启服，请选择启服时间")</label>
+                                <div class="controls">
+                                    <div class="input-append date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input1">
+                                        <input type="text" class="input-medium" id="start_time" name="start_time" />
+                                        <span class="add-on"><i class="icon-th"></i></span>
+                                    </div>
+                                    <input type="hidden" id="dtp_input1" value="" /><br />
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="control-group success" id="select_time" style="display:none">
+                                <label class="control-label">@Html.Label("服务器启服，请选择启服时间")</label>
+                                <div class="controls">
+                                    <div class="input-append date form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input1">
+                                        <input type="text" class="input-medium" id="start_time" name="start_time" />
+                                        <span class="add-on"><i class="icon-th"></i></span>
+                                    </div>
+                                    <input type="hidden" id="dtp_input1" value="" /><br />
+                                </div>
+                            </div>
+                        }
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">确定</button>
+                            <a type="button" class="btn btn-primary" href="javascript:history.go(-1)">返回</a>
+                        </div>
+                    }
+                    <!-- END FORM-->
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+
+</div>
+<!-- END PAGE CONTENT-->
+@section Scripts {
+
+    <script src="~/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+        });
+    </script>
+
+    <script type="text/javascript">
+        $("#state_type").change(function () {
+            var stateId = $("#state_type").find("option:selected").val();
+            if (stateId == 3) {
+                document.getElementById("select_time").style.display = "";//显示
+            } else {
+                document.getElementById("select_time").style.display = "none"; //隐藏
+            }
+        });
+    </script>
+}
+
+

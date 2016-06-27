@@ -1,0 +1,12 @@
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\bin\Debug\TGM.API.Entity.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\bin\Debug\TGM.API.Entity.pdb
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\bin\Debug\antlr.runtime.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\bin\Debug\FluorineFx.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\bin\Debug\NewLife.Core.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\bin\Debug\XCode.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\bin\Debug\log4net.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\obj\Debug\TGM.API.Entity.SQLResource.resources
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\obj\Debug\TGM.API.Entity.csproj.GenerateResource.Cache
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\obj\Debug\TGM.API.Entity.dll
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\obj\Debug\TGM.API.Entity.pdb
+E:\192.168.1.254\TGG\管理后台\TGM\TGM.API.Entity\obj\Debug\TGM.API.Entity.csprojResolveAssemblyReference.cache

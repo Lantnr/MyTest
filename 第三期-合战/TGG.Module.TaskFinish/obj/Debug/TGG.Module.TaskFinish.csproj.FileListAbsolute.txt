@@ -1,0 +1,4 @@
+E:\Bin\TGG\Debug\TGG.Module.TaskFinish.dll
+E:\Bin\TGG\Debug\TGG.Module.TaskFinish.pdb
+E:\192.168.1.254\TGG\第三期-合战\TGG.Module.TaskFinish\obj\Debug\TGG.Module.TaskFinish.dll
+E:\192.168.1.254\TGG\第三期-合战\TGG.Module.TaskFinish\obj\Debug\TGG.Module.TaskFinish.pdb

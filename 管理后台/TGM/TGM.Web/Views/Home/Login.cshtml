@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "太阁立志-后台登陆";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    
+}
+@{
+    var error = ViewBag.error;
+}
+
+
+@section css {
+
+}
+@if (error == 1)
+{
+    <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <center> @ViewBag.msg</center>
+    </div>
+}
+<div class="lock-header">
+    <!-- BEGIN LOGO -->
+    <a class="center" id="logo" href="Index">
+        <img class="center" alt="logo" src="~/img/logo.png">
+    </a>
+    <!-- END LOGO -->
+</div>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div class="login-wrap">
+        @*<div class="metro single-size red">
+            <div class="locked">
+                <i class="icon-lock"></i>
+                <span>登录</span>
+            </div>
+        </div>*@
+        <div class="metro double-size green">
+            <div class="input-append lock-input">
+                @Html.Editor("Name")
+            </div>
+        </div>
+        <div class="metro double-size yellow">
+            <div class="input-append lock-input">
+                @Html.Password("PassWord")
+            </div>
+        </div>
+        <div class="metro single-size terques login">
+            <button id="login_in" type="submit" class="btn login-btn">
+                登录
+                <i class=" icon-long-arrow-right"></i>
+            </button>
+        </div>
+        <div class="metro double-size navy-blue ">
+            <a href="index.html" class="social-link">
+                <i class="icon-facebook-sign"></i>
+                <span></span>
+            </a>
+        </div>
+        @*<div class="metro single-size deep-red">
+            <a href="index.html" class="social-link">
+                <i class="icon-google-plus-sign"></i>
+                <span></span>
+            </a>
+        </div>*@
+        <div class="metro double-size blue">
+            <a href="index.html" class="social-link">
+                <i class="icon-twitter-sign"></i>
+                <span></span>
+            </a>
+        </div>
+        <div class="metro single-size purple">
+            <a href="index.html" class="social-link">
+                <i class="icon-skype"></i>
+                <span></span>
+            </a>
+        </div>
+        <div class="login-footer">
+            <div class="remember-hint pull-left">
+                <input type="checkbox" id=""> 记住密码
+            </div>
+            <div class="forgot-hint pull-right">
+                <a id="forget-password" class="" href="javascript:;">忘记密码?</a>
+            </div>
+        </div>
+    </div>
+}
+@section scripts {
+
+
+}

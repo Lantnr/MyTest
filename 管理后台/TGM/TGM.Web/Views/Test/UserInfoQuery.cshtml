@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "玩家信息查询";
+}
+
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            玩家信息查询
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <a href="~/?Home">首页</a>
+                <span class="divider">/</span>
+                <a href="">玩家信息管理</a>
+                <span class="divider">/</span>
+                <a href="">玩家详细信息</a>
+            </li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("UserInfoQuery", "Test", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>
+                    <select class="input-xlarge" tabindex="1" name="platform_type" id="platform_type">
+                        <option>ya247</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </td>
+                <td>选择服务器</td>
+                <td>
+                    <select class="input-xlarge" tabindex="1" name="server_type" id="server_type">
+                        <option>s110</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </td>
+                <td>
+                    <select class="input-xlarge" tabindex="1" name="search_type" id="search_type">
+                        <option>玩家昵称</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </td>
+                <td>
+                    <li class="pull-right search-wrap">
+                        <form action="search_result.html" class="hidden-phone">
+                            <div class="input-append search-input-area">
+                                <input class="" id="appendedInputButton" type="text">
+                                <button class="btn" type="button"><i class="icon-search"></i> </button>
+                            </div>
+                        </form>
+                    </li>
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn-toolbar"></div>
+
+        <div class="row-fluid">
+            <div class="span12">
+                <!-- BEGIN INLINE TABS PORTLET-->
+                <div class="widget orange">
+                    <div class="widget-title">
+                        <h4><i class="icon-reorder"></i>玩家信息</h4>
+                        <span class="tools">
+                            <a href="javascript:;" class="icon-chevron-down"></a>
+                            <a href="javascript:;" class="icon-remove"></a>
+                        </span>
+                    </div>
+                    <div class="widget-body">
+                        <div class="bs-docs-example">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a data-toggle="tab" href="#userinfo">详细信息</a></li>
+                                <li><a data-toggle="tab" href="#role">武将</a></li>
+                                <li><a data-toggle="tab" href="#bag">背包</a></li>
+                                <li><a data-toggle="tab" href="#record">游戏记录</a></li>
+                                <li><a data-toggle="tab" href="#cityquery">据点查询</a></li>
+                                <li><a data-toggle="tab" href="#goldcost">元宝消耗记录</a></li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div id="userinfo" class="tab-pane fade in active">
+                                    <table>
+                                        <tr><td><label>账号： </label></td><td><label id="userId">亚历山大</label></td></tr>
+                                    </table>
+                                </div>
+                                <div id="role" class="tab-pane fade">
+                                    <p></p>
+                                </div>
+                                <div id="bag" class="tab-pane fade">
+                                    <p></p>
+                                </div>
+                                <div id="record" class="tab-pane fade">
+                                    <p></p>
+                                </div>
+                                <div id="cityquery" class="tab-pane fade">
+                                    <p></p>
+                                </div>
+                                <div id="goldcost" class="tab-pane fade">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END INLINE TABS PORTLET-->
+            </div>
+        </div>
+    }
+</body>
+</html>

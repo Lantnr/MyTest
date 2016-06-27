@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<modules>
+  <module name="USER" value="GMQ_USER" order="1" type="0"></module>
+  <module name="BUSINESS" value="GMQ_BUSINESS" order="2" type="0"></module>
+  <module name="SCENE" value="GMQ_SCENE" order="3" type="0"></module>
+  <module name="BAG" value="GMQ_PROP" order="4" type="0"></module>
+  <module name="TASK" value="GMQ_TASK" order="5" type="0"></module>
+  <module name="EQUIP" value="GMQ_EQUIP" order="6" type="0"></module>
+  <module name="ROLE" value="GMQ_ROLE" order="7" type="0"></module>
+  <module name="MESSAGES" value="GMQ_MESSAGES" order="8" type="0"></module>
+  <module name="CHAT" value="GMQ_CHAT" order="9" type="0"></module>
+  <module name="FIGHT" value="GMQ_FIGHT" order="10" type="0"></module>
+  <module name="SKILL" value="GMQ_SKILL" order="11" type="0"></module>
+  <module name="ROLETRAIN" value="GMQ_ROLETRAIN" order="12" type="0"></module>
+  <module name="DUPLICATE" value="GMQ_DUPLICATE" order="13" type="0"></module>
+  <module name="FAMILY" value="GMQ_FAMILY" order="14" type="0"></module>
+  <module name="NOTICE" value="GMQ_NOTICE" order="15" type="0"></module>
+  <module name="FRIEND" value="GMQ_FRIEND" order="16" type="0"></module>
+  <module name="APPRAISE" value="GMQ_APPRAISE" order="17" type="0"></module>
+  <module name="TITLE" value="GMQ_TITLE" order="18" type="0"></module>
+  <module name="RANKINGS" value="GMQ_RANKINGS" order="19" type="0"></module>
+  <module name="WORK" value="GMQ_WORK" order="20" type="0"></module>
+  <module name="PRISON" value="GMQ_PRISON" order="21" type="0"></module>
+  <module name="SIEGE" value="GMQ_SIEGE" order="22" type="0"></module>
+  <module name="BUILDING" value="GMQ_BUILDING" order="23" type="0"></module>
+  <module name="SINGLEFIGHT" value="GMQ_SINGLEFIGHT" order="24" type="0"></module>
+  <module name="ARENA" value="GMQ_ARENA" order="25" type="0"></module>
+  <module name="GUIDE" value="GMQ_GUIDE" order="26" type="0"></module>
+  <module name="GAMES" value="GMQ_GAMES" order="27" type="0"></module>
+  <module name="FUSION" value="GMQ_FUSION" order="28" type="0"></module>
+  <module name="WAR" value="GMQ_WAR" order="29" type="0"></module>
+  <module name="ACTIVITY" value="GMQ_ACTIVITY" order="30" type="0"></module>
+  <module name="TASKUPDATE" value="GMQ_TASKUPDATE" order="31" type="0"></module>
+  <module name="TASKFINISH" value="GMQ_TASKFINISH" order="32" type="0"></module>
+  <module name="API" value="GMQ_API" order="9999" type="0"></module>
+  
+  <!--
+ 
+  <module name="GEM" value="GMQ_GEM" order="13" type="0"></module>
+  <module name="HOME" value="GMQ_HOME" order="14" type="0"></module>
+  -->
+</modules>
